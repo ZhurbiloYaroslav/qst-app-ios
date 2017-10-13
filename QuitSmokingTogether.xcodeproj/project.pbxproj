@@ -12,6 +12,9 @@
 		C461A2C81F8E533400B698FA /* OverviewAdviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C461A2C71F8E533400B698FA /* OverviewAdviceCell.swift */; };
 		C461A2CA1F8E534900B698FA /* OverviewHelpCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C461A2C91F8E534900B698FA /* OverviewHelpCell.swift */; };
 		C461A2CC1F8F8F5300B698FA /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C461A2CB1F8F8F5300B698FA /* TabBarVC.swift */; };
+		C461A2CE1F8F957C00B698FA /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = C461A2CD1F8F957C00B698FA /* Constants.swift */; };
+		C461A2D21F8F9EF400B698FA /* NavBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C461A2D11F8F9EF400B698FA /* NavBarVC.swift */; };
+		C461A2D41F8FB81600B698FA /* ReaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C461A2D31F8FB81600B698FA /* ReaderVC.swift */; };
 		C47317901F8D0C1700A6AE43 /* OverviewReadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C473178F1F8D0C1700A6AE43 /* OverviewReadCell.swift */; };
 		C47317921F8D1C1600A6AE43 /* Notes and links.rtf in Resources */ = {isa = PBXBuildFile; fileRef = C47317911F8D1C1600A6AE43 /* Notes and links.rtf */; };
 		C4D4583E1F8021D100565A3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D4583D1F8021D100565A3F /* AppDelegate.swift */; };
@@ -28,6 +31,9 @@
 		C461A2C71F8E533400B698FA /* OverviewAdviceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewAdviceCell.swift; sourceTree = "<group>"; };
 		C461A2C91F8E534900B698FA /* OverviewHelpCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewHelpCell.swift; sourceTree = "<group>"; };
 		C461A2CB1F8F8F5300B698FA /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
+		C461A2CD1F8F957C00B698FA /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		C461A2D11F8F9EF400B698FA /* NavBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarVC.swift; sourceTree = "<group>"; };
+		C461A2D31F8FB81600B698FA /* ReaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderVC.swift; sourceTree = "<group>"; };
 		C473178F1F8D0C1700A6AE43 /* OverviewReadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewReadCell.swift; sourceTree = "<group>"; };
 		C47317911F8D1C1600A6AE43 /* Notes and links.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Notes and links.rtf"; sourceTree = "<group>"; };
 		C4D4583A1F8021D100565A3F /* QuitSmokingTogether.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuitSmokingTogether.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -54,6 +60,7 @@
 		C455D5821F8CFDEE002846D9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C461A2CD1F8F957C00B698FA /* Constants.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -77,6 +84,8 @@
 				C455D5861F8CFE75002846D9 /* AlertVC.swift */,
 				C455D58A1F8D0024002846D9 /* SettingsVC.swift */,
 				C461A2CB1F8F8F5300B698FA /* TabBarVC.swift */,
+				C461A2D11F8F9EF400B698FA /* NavBarVC.swift */,
+				C461A2D31F8FB81600B698FA /* ReaderVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -194,11 +203,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4D458401F8021D100565A3F /* OverviewVC.swift in Sources */,
+				C461A2D41F8FB81600B698FA /* ReaderVC.swift in Sources */,
 				C461A2CA1F8E534900B698FA /* OverviewHelpCell.swift in Sources */,
 				C455D5871F8CFE75002846D9 /* AlertVC.swift in Sources */,
 				C4D4583E1F8021D100565A3F /* AppDelegate.swift in Sources */,
 				C461A2CC1F8F8F5300B698FA /* TabBarVC.swift in Sources */,
+				C461A2CE1F8F957C00B698FA /* Constants.swift in Sources */,
 				C47317901F8D0C1700A6AE43 /* OverviewReadCell.swift in Sources */,
+				C461A2D21F8F9EF400B698FA /* NavBarVC.swift in Sources */,
 				C4D458461F8021D100565A3F /* QuitSmokingTogether.xcdatamodeld in Sources */,
 				C461A2C81F8E533400B698FA /* OverviewAdviceCell.swift in Sources */,
 				C455D58B1F8D0024002846D9 /* SettingsVC.swift in Sources */,
