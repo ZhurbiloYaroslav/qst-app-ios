@@ -13,7 +13,7 @@ class TabBarVC: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        changeColorOfTabBarItems()
+        // changeColorOfTabBarItems()
         giveShadowToView()
     }
     
@@ -26,7 +26,8 @@ class TabBarVC: UITabBarController {
     }
     
     func changeColorOfTabBarItems() {
-        // let arrayOfImageNameForSelectedState = ["icon_menu","icon_book","icon_settings"]
+        /*
+        let arrayOfImageNameForSelectedState = ["icon_menu","icon_book","icon_settings"]
         let arrayOfImageNameForUnselectedState = ["icon_menu","icon_book","icon_settings"]
         
         if let count = self.tabBar.items?.count {
@@ -38,11 +39,12 @@ class TabBarVC: UITabBarController {
                 self.tabBar.items?[i].image = UIImage(named: imageNameForUnselectedState)?.withRenderingMode(.alwaysOriginal)
             }
         }
+        */
         
-        let selectedColor   = Constants.Color.red
-        let unselectedColor = UIColor.white
+        let selectedColor   = Constants.Color.green
+        // let unselectedColor = UIColor.white
         
-        UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: unselectedColor], for: .normal)
+        // UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: unselectedColor], for: .normal)
         UITabBarItem.appearance().setTitleTextAttributes([NSAttributedStringKey.foregroundColor: selectedColor], for: .selected)
     }
 
