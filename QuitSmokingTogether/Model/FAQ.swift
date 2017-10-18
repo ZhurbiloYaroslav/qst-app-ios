@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CSV
 
 class FAQ {
     
@@ -36,10 +37,10 @@ class FAQ {
     func parseFAQcsv() {
         if let path = Bundle.main.path(forResource: "FAQ", ofType: "csv") {
             do {
-                let csv = try CSV(contentsOfURL: path)
-                let rows = csv.rows
-                for row in rows {
-                    createItemAndCategoryFromParsedRow(row)
+                let stream = InputStream(fileAtPath: path)!
+                let csv = try! CSVReader(stream: stream, hasHeaderRow: true)
+                while csv.next() != nil {
+                    createItemAndCategoryFromParsedRow(csv)
                 }
             } catch {
                 print(error.localizedDescription)
@@ -47,11 +48,11 @@ class FAQ {
         }
     }
     
-    func createItemAndCategoryFromParsedRow(_ row: [String: String]) {
+    func createItemAndCategoryFromParsedRow(_ csv: CSVReader) {
         
-        guard let sectionName = row["Section"] else { return }
-        guard let question = row["Question"] else { return }
-        guard let answer = row["Answer"] else { return }
+        guard let sectionName = csv["Section"] else { return }
+        guard let question = csv["Question"] else { return }
+        guard let answer = csv["Answer"] else { return }
         
         var section = Section(name: sectionName)
         if let sectionIndex = sections.index(where: {$0.name == sectionName}) {
