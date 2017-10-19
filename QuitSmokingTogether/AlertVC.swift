@@ -9,22 +9,23 @@
 import UIKit
 
 class AlertVC: UIViewController {
+    
+    @IBOutlet weak var adviceLabel: UILabel!
+    var advices: Advices!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        initializeVariables()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    func initializeVariables() {
+        self.advices = Advices()
     }
-    */
-
+    
+    @IBAction func nextAdviceButtonPressed(_ sender: UIButton) {
+        adviceLabel.text = advices.getNextAdvice()
+        
+    }
+    
 }

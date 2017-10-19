@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		4B7069F9E91F990C52B2571F /* Pods_QuitSmokingTogether.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C0412BE51CB560767C46C63 /* Pods_QuitSmokingTogether.framework */; };
+		C410E7CE1F97BC5B00EEFB7B /* UIView+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C410E7CD1F97BC5B00EEFB7B /* UIView+IBInspectable.swift */; };
+		C410E7D01F97BEB200EEFB7B /* UIButton+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C410E7CF1F97BEB200EEFB7B /* UIButton+IBInspectable.swift */; };
+		C410E7D41F97C67E00EEFB7B /* Advices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C410E7D31F97C67E00EEFB7B /* Advices.swift */; };
+		C410E7D61F97C9B400EEFB7B /* Advices.csv in Resources */ = {isa = PBXBuildFile; fileRef = C410E7D51F97C9B100EEFB7B /* Advices.csv */; };
 		C455D5871F8CFE75002846D9 /* AlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C455D5861F8CFE75002846D9 /* AlertVC.swift */; };
 		C455D58B1F8D0024002846D9 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C455D58A1F8D0024002846D9 /* SettingsVC.swift */; };
 		C461A2C81F8E533400B698FA /* OverviewAdviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C461A2C71F8E533400B698FA /* OverviewAdviceCell.swift */; };
@@ -39,6 +43,10 @@
 		4838F9FA089BC411AFE9FC69 /* Pods-QuitSmokingTogether.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuitSmokingTogether.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuitSmokingTogether/Pods-QuitSmokingTogether.debug.xcconfig"; sourceTree = "<group>"; };
 		7C0412BE51CB560767C46C63 /* Pods_QuitSmokingTogether.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuitSmokingTogether.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85F707FB449E088EFD99AE21 /* Pods-QuitSmokingTogether.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuitSmokingTogether.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuitSmokingTogether/Pods-QuitSmokingTogether.release.xcconfig"; sourceTree = "<group>"; };
+		C410E7CD1F97BC5B00EEFB7B /* UIView+IBInspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+IBInspectable.swift"; sourceTree = "<group>"; };
+		C410E7CF1F97BEB200EEFB7B /* UIButton+IBInspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+IBInspectable.swift"; sourceTree = "<group>"; };
+		C410E7D31F97C67E00EEFB7B /* Advices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advices.swift; sourceTree = "<group>"; };
+		C410E7D51F97C9B100EEFB7B /* Advices.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = Advices.csv; sourceTree = "<group>"; };
 		C455D5861F8CFE75002846D9 /* AlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertVC.swift; sourceTree = "<group>"; };
 		C455D58A1F8D0024002846D9 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		C461A2C71F8E533400B698FA /* OverviewAdviceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewAdviceCell.swift; sourceTree = "<group>"; };
@@ -97,10 +105,20 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C410E7CC1F97BB7300EEFB7B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C410E7CD1F97BC5B00EEFB7B /* UIView+IBInspectable.swift */,
+				C410E7CF1F97BEB200EEFB7B /* UIButton+IBInspectable.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		C455D5821F8CFDEE002846D9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				C461A2CD1F8F957C00B698FA /* Constants.swift */,
+				C410E7D31F97C67E00EEFB7B /* Advices.swift */,
 				C4CA865E1F94FDCA00A8772D /* FAQ.swift */,
 				C4CA86601F9608EC00A8772D /* CSV.swift */,
 				C4CA86691F964BA900A8772D /* DLog.swift */,
@@ -132,6 +150,7 @@
 		C455D5851F8CFE1C002846D9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C410E7D51F97C9B100EEFB7B /* Advices.csv */,
 				C4CA866B1F9658E800A8772D /* FAQ.csv */,
 				C4D458441F8021D100565A3F /* QuitSmokingTogether.xcdatamodeld */,
 				C4D458471F8021D100565A3F /* Assets.xcassets */,
@@ -195,6 +214,7 @@
 			isa = PBXGroup;
 			children = (
 				C4D4584C1F8021D100565A3F /* Info.plist */,
+				C410E7CC1F97BB7300EEFB7B /* Extensions */,
 				C455D5851F8CFE1C002846D9 /* Resources */,
 				C455D5821F8CFDEE002846D9 /* Model */,
 				C455D5831F8CFDF7002846D9 /* View */,
@@ -270,6 +290,7 @@
 				C4D458481F8021D100565A3F /* Assets.xcassets in Resources */,
 				C4CA866C1F9658F000A8772D /* FAQ.csv in Resources */,
 				C47317921F8D1C1600A6AE43 /* Notes and links.rtf in Resources */,
+				C410E7D61F97C9B400EEFB7B /* Advices.csv in Resources */,
 				C4D458431F8021D100565A3F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -332,6 +353,7 @@
 				C4CECEE61F94CDA9009C85DE /* FAQCell.swift in Sources */,
 				C4D458401F8021D100565A3F /* OverviewVC.swift in Sources */,
 				C4CA866A1F964BA900A8772D /* DLog.swift in Sources */,
+				C410E7CE1F97BC5B00EEFB7B /* UIView+IBInspectable.swift in Sources */,
 				C461A2D41F8FB81600B698FA /* ReaderVC.swift in Sources */,
 				C4CECEDE1F94C877009C85DE /* FAQVC.swift in Sources */,
 				C461A2CA1F8E534900B698FA /* OverviewHelpCell.swift in Sources */,
@@ -341,6 +363,7 @@
 				C461A2CC1F8F8F5300B698FA /* TabBarVC.swift in Sources */,
 				C461A2CE1F8F957C00B698FA /* Constants.swift in Sources */,
 				C4CECEE21F94C924009C85DE /* ShareVC.swift in Sources */,
+				C410E7D01F97BEB200EEFB7B /* UIButton+IBInspectable.swift in Sources */,
 				C47317901F8D0C1700A6AE43 /* OverviewReadCell.swift in Sources */,
 				C4CECEE41F94C950009C85DE /* DonateVC.swift in Sources */,
 				C461A2D21F8F9EF400B698FA /* NavBarVC.swift in Sources */,
@@ -348,6 +371,7 @@
 				C4CA86611F9608EC00A8772D /* CSV.swift in Sources */,
 				C4D458461F8021D100565A3F /* QuitSmokingTogether.xcdatamodeld in Sources */,
 				C461A2C81F8E533400B698FA /* OverviewAdviceCell.swift in Sources */,
+				C410E7D41F97C67E00EEFB7B /* Advices.swift in Sources */,
 				C455D58B1F8D0024002846D9 /* SettingsVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

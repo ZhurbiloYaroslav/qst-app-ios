@@ -19,13 +19,8 @@ class FAQAnswerVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // initializeVariables()
         updateViewWithAnswer()
         
-    }
-    
-    func initializeVariables() {
-        self.faqItem = FAQ.Item(section: FAQ.Section(name: ""), question: "", answer: "")
     }
     
     func updateViewWithAnswer() {

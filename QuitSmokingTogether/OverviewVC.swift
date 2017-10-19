@@ -42,7 +42,7 @@ extension OverviewVC: UITableViewDataSource, UITableViewDelegate {
             
         case [0,1]:
             let cell = tableView.dequeueReusableCell(withIdentifier: "overviewAdviceCell", for: indexPath) as! OverviewAdviceCell
-            cell.adviceTextLabel?.text = "Here will be the text of advice"
+//            cell.adviceTextLabel?.text = "Here will be the text of advice"
             return cell
             
         case [0,2]:
