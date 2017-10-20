@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreData
+import FolioReaderKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {

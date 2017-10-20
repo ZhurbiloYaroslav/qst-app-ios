@@ -54,6 +54,9 @@
                                                     <color key="tintColor" red="0.36862745099999999" green="0.73725490199999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                                     <state key="normal" title="Continue reading"/>
+                                                    <connections>
+                                                        <action selector="continueReadingButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lg0-TV-3Ie"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -162,34 +165,24 @@
             </objects>
             <point key="canvasLocation" x="2130" y="113.02816901408451"/>
         </scene>
-        <!--"Quit Smoking Together"-->
+        <!--ReaderVC-->
         <scene sceneID="4Q1-NN-kQP">
             <objects>
                 <viewController hidesBottomBarWhenPushed="YES" id="6JB-OF-ohU" customClass="ReaderVC" customModule="QuitSmokingTogether" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="dRt-pT-7ES">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="readerText" translatesAutoresizingMaskIntoConstraints="NO" id="Xjh-4c-u50">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="416"/>
-                            </imageView>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="Xjh-4c-u50" firstAttribute="top" secondItem="dRt-pT-7ES" secondAttribute="top" id="3Em-VX-7H2"/>
-                            <constraint firstItem="Xjh-4c-u50" firstAttribute="leading" secondItem="V6F-3i-71v" secondAttribute="leading" id="Gt3-F6-ASC"/>
-                            <constraint firstItem="Xjh-4c-u50" firstAttribute="trailing" secondItem="V6F-3i-71v" secondAttribute="trailing" id="hq3-wZ-izA"/>
-                            <constraint firstItem="Xjh-4c-u50" firstAttribute="bottom" secondItem="V6F-3i-71v" secondAttribute="bottom" id="qIc-sm-hOu"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="V6F-3i-71v"/>
                     </view>
-                    <navigationItem key="navigationItem" title="&quot;Quit Smoking Together&quot;" id="pbC-eK-fXl">
+                    <navigationItem key="navigationItem" id="pbC-eK-fXl">
                         <barButtonItem key="leftBarButtonItem" image="Back" id="Evs-7Q-n8C">
                             <connections>
                                 <action selector="goOutFromReader:" destination="6JB-OF-ohU" id="Kde-3a-bKP"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZIH-dI-k7V" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -566,10 +559,10 @@
                                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="92" id="Vmm-Zk-Cnd"/>
                                                                     <constraint firstAttribute="width" constant="204" id="a4A-th-gRu"/>
                                                                 </constraints>
-                                                                <mutableString key="text">Спросите любую свою подругу о весе и курении, и вы получите массу советов 
+                                                                <string key="text">Спросите любую свою подругу о весе и курении, и вы получите массу советов 
 Спросите любую свою подругу о весе и курении, и вы получите массу советов 
 Спросите любую свою подругу о весе и курении, и вы получите массу советов 
-Спросите любую свою подругу о весе и курении, и вы получите массу советов</mutableString>
+Спросите любую свою подругу о весе и курении, и вы получите массу советов</string>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
@@ -761,7 +754,6 @@
         <image name="icon_share" width="25" height="25"/>
         <image name="overviewCellAdviceImage" width="75" height="69"/>
         <image name="overviewCellHelpImage" width="75" height="74"/>
-        <image name="readerText" width="320" height="568"/>
         <image name="road" width="3744" height="5616"/>
     </resources>
 </document>

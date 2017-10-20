@@ -37,6 +37,7 @@
 		C4D458461F8021D100565A3F /* QuitSmokingTogether.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C4D458441F8021D100565A3F /* QuitSmokingTogether.xcdatamodeld */; };
 		C4D458481F8021D100565A3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4D458471F8021D100565A3F /* Assets.xcassets */; };
 		C4D4584B1F8021D100565A3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4D458491F8021D100565A3F /* LaunchScreen.storyboard */; };
+		C4DB7B891F9A1B7D007DD4DF /* QST-iBook.epub in Resources */ = {isa = PBXBuildFile; fileRef = C4DB7B881F9A1B7A007DD4DF /* QST-iBook.epub */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +75,7 @@
 		C4D458471F8021D100565A3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4D4584A1F8021D100565A3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4D4584C1F8021D100565A3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4DB7B881F9A1B7A007DD4DF /* QST-iBook.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "QST-iBook.epub"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,14 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		C43624151F98DD3700ECD14A /* Books */ = {
+			isa = PBXGroup;
+			children = (
+				C4DB7B881F9A1B7A007DD4DF /* QST-iBook.epub */,
+			);
+			path = Books;
+			sourceTree = "<group>";
+		};
 		C455D5821F8CFDEE002846D9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -150,6 +160,7 @@
 		C455D5851F8CFE1C002846D9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C43624151F98DD3700ECD14A /* Books */,
 				C410E7D51F97C9B100EEFB7B /* Advices.csv */,
 				C4CA866B1F9658E800A8772D /* FAQ.csv */,
 				C4D458441F8021D100565A3F /* QuitSmokingTogether.xcdatamodeld */,
@@ -286,6 +297,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4DB7B891F9A1B7D007DD4DF /* QST-iBook.epub in Resources */,
 				C4D4584B1F8021D100565A3F /* LaunchScreen.storyboard in Resources */,
 				C4D458481F8021D100565A3F /* Assets.xcassets in Resources */,
 				C4CA866C1F9658F000A8772D /* FAQ.csv in Resources */,

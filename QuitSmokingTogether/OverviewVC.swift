@@ -23,7 +23,15 @@ class OverviewVC: UIViewController {
         tableView.delegate = self
         tableView.dataSource = self
     }
-
+    
+    @IBAction func continueReadingButtonPressed(_ sender: UIButton) {
+        showReader()
+    }
+    
+    func showReader() {
+        tabBarController?.selectedIndex = 1
+    }
+    
 }
 
 extension OverviewVC: UITableViewDataSource, UITableViewDelegate {
@@ -52,6 +60,15 @@ extension OverviewVC: UITableViewDataSource, UITableViewDelegate {
             
         default:
             return UITableViewCell()
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath {
+        case [0,0]:
+            showReader()
+        default:
+            return
         }
     }
     
