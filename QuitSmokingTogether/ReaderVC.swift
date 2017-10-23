@@ -17,14 +17,14 @@ class ReaderVC: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        open()
+        openFolioReader()
     }
     
     @IBAction func goOutFromReader(_ sender: UIBarButtonItem) {
         tabBarController?.selectedIndex = 0
     }
     
-    func open() {
+    func openFolioReader() {
         let config = FolioReaderConfig()
         config.shouldHideNavigationOnTap = true
         let bookPath = Bundle.main.path(forResource: "QST-iBook", ofType: "epub")
@@ -36,13 +36,8 @@ class ReaderVC: UIViewController {
     
 }
 
-extension ReaderVC: FolioReaderDelegate {
+extension ReaderVC: FolioReaderDelegate, FolioReaderPageDelegate, FolioReaderCenterDelegate {
     func folioReaderDidClose(_ folioReader: FolioReader) {
-        print("---want to close?")
         tabBarController?.selectedIndex = 0
-    }
-    
-    func folioReaderDidClosed() {
-        print("---closed?")
     }
 }

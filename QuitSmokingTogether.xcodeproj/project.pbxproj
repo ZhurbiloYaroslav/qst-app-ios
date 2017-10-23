@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4B7069F9E91F990C52B2571F /* Pods_QuitSmokingTogether.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C0412BE51CB560767C46C63 /* Pods_QuitSmokingTogether.framework */; };
+		C40F53431F9CE1C800DE58A1 /* ReaderText.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40F53421F9CE1C800DE58A1 /* ReaderText.swift */; };
 		C410E7CE1F97BC5B00EEFB7B /* UIView+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C410E7CD1F97BC5B00EEFB7B /* UIView+IBInspectable.swift */; };
 		C410E7D01F97BEB200EEFB7B /* UIButton+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C410E7CF1F97BEB200EEFB7B /* UIButton+IBInspectable.swift */; };
 		C410E7D41F97C67E00EEFB7B /* Advices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C410E7D31F97C67E00EEFB7B /* Advices.swift */; };
@@ -22,6 +23,7 @@
 		C461A2D41F8FB81600B698FA /* ReaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C461A2D31F8FB81600B698FA /* ReaderVC.swift */; };
 		C47317901F8D0C1700A6AE43 /* OverviewReadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C473178F1F8D0C1700A6AE43 /* OverviewReadCell.swift */; };
 		C47317921F8D1C1600A6AE43 /* Notes and links.rtf in Resources */ = {isa = PBXBuildFile; fileRef = C47317911F8D1C1600A6AE43 /* Notes and links.rtf */; };
+		C4B8088C1F9DE7430099DA49 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8088B1F9DE7430099DA49 /* UserDefaultsManager.swift */; };
 		C4CA865F1F94FDCA00A8772D /* FAQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CA865E1F94FDCA00A8772D /* FAQ.swift */; };
 		C4CA86611F9608EC00A8772D /* CSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CA86601F9608EC00A8772D /* CSV.swift */; };
 		C4CA86681F9641C800A8772D /* FAQAnswerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CA86671F9641C800A8772D /* FAQAnswerVC.swift */; };
@@ -44,6 +46,7 @@
 		4838F9FA089BC411AFE9FC69 /* Pods-QuitSmokingTogether.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuitSmokingTogether.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuitSmokingTogether/Pods-QuitSmokingTogether.debug.xcconfig"; sourceTree = "<group>"; };
 		7C0412BE51CB560767C46C63 /* Pods_QuitSmokingTogether.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuitSmokingTogether.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85F707FB449E088EFD99AE21 /* Pods-QuitSmokingTogether.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuitSmokingTogether.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuitSmokingTogether/Pods-QuitSmokingTogether.release.xcconfig"; sourceTree = "<group>"; };
+		C40F53421F9CE1C800DE58A1 /* ReaderText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderText.swift; sourceTree = "<group>"; };
 		C410E7CD1F97BC5B00EEFB7B /* UIView+IBInspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+IBInspectable.swift"; sourceTree = "<group>"; };
 		C410E7CF1F97BEB200EEFB7B /* UIButton+IBInspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+IBInspectable.swift"; sourceTree = "<group>"; };
 		C410E7D31F97C67E00EEFB7B /* Advices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advices.swift; sourceTree = "<group>"; };
@@ -58,6 +61,7 @@
 		C461A2D31F8FB81600B698FA /* ReaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderVC.swift; sourceTree = "<group>"; };
 		C473178F1F8D0C1700A6AE43 /* OverviewReadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewReadCell.swift; sourceTree = "<group>"; };
 		C47317911F8D1C1600A6AE43 /* Notes and links.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Notes and links.rtf"; sourceTree = "<group>"; };
+		C4B8088B1F9DE7430099DA49 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		C4CA865E1F94FDCA00A8772D /* FAQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQ.swift; sourceTree = "<group>"; };
 		C4CA86601F9608EC00A8772D /* CSV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSV.swift; sourceTree = "<group>"; };
 		C4CA86671F9641C800A8772D /* FAQAnswerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQAnswerVC.swift; sourceTree = "<group>"; };
@@ -132,6 +136,8 @@
 				C4CA865E1F94FDCA00A8772D /* FAQ.swift */,
 				C4CA86601F9608EC00A8772D /* CSV.swift */,
 				C4CA86691F964BA900A8772D /* DLog.swift */,
+				C40F53421F9CE1C800DE58A1 /* ReaderText.swift */,
+				C4B8088B1F9DE7430099DA49 /* UserDefaultsManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -373,6 +379,8 @@
 				C4CA865F1F94FDCA00A8772D /* FAQ.swift in Sources */,
 				C4D4583E1F8021D100565A3F /* AppDelegate.swift in Sources */,
 				C461A2CC1F8F8F5300B698FA /* TabBarVC.swift in Sources */,
+				C4B8088C1F9DE7430099DA49 /* UserDefaultsManager.swift in Sources */,
+				C40F53431F9CE1C800DE58A1 /* ReaderText.swift in Sources */,
 				C461A2CE1F8F957C00B698FA /* Constants.swift in Sources */,
 				C4CECEE21F94C924009C85DE /* ShareVC.swift in Sources */,
 				C410E7D01F97BEB200EEFB7B /* UIButton+IBInspectable.swift in Sources */,

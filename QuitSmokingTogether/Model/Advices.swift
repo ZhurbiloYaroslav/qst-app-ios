@@ -24,7 +24,7 @@ class Advices {
     
     func getNextAdvice() -> String {
         
-        if currentAdviceIndex == numberOfAdvices {
+        if currentAdviceIndex == numberOfAdvices - 1 {
             currentAdviceIndex = 0
         } else {
             currentAdviceIndex += 1

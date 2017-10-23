@@ -241,7 +241,10 @@ class ScrollScrubber: NSObject, UIScrollViewDelegate {
     // MARK: - utility methods
 
     fileprivate func scrollView() -> UIScrollView? {
-        return delegate.currentPage?.webView.scrollView
+        guard let unwrappedCurrentPage = delegate?.currentPage else {
+            return nil
+        }
+        return unwrappedCurrentPage.webView.scrollView
     }
 
     fileprivate func height() -> CGFloat {

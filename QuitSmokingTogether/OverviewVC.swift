@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FolioReaderKit
 
 class OverviewVC: UIViewController {
 
@@ -16,7 +17,14 @@ class OverviewVC: UIViewController {
         super.viewDidLoad()
         
         setDelegates()
+        
+        tableView.estimatedRowHeight = 80
+        tableView.rowHeight = UITableViewAutomaticDimension
 
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        tableView.reloadData()
     }
     
     func setDelegates() {
@@ -45,7 +53,7 @@ extension OverviewVC: UITableViewDataSource, UITableViewDelegate {
         switch indexPath {
         case [0,0]:
             let cell = tableView.dequeueReusableCell(withIdentifier: "overviewReadCell", for: indexPath) as! OverviewReadCell
-            cell.bookTextLabel.text = "Here will be the text of the last chapter"
+            cell.bookTextLabel.text = UserDefaultsManager().firstParagraphInText
             return cell
             
         case [0,1]:

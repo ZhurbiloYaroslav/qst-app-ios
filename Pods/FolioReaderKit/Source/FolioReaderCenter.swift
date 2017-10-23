@@ -1002,9 +1002,22 @@ open class FolioReaderCenter: UIViewController, UICollectionViewDelegate, UIColl
         if let currentPage = currentPage {
             currentPage.webView.createMenu(options: true)
             currentPage.webView.setMenuVisible(false)
+            
+            saveTextFromCurrentPage(webView: currentPage.webView)
         }
 
         scrollScrubber?.scrollViewWillBeginDragging(scrollView)
+    }
+    
+    func saveTextFromCurrentPage(webView: UIWebView) {
+        let indexOfTheFirstParagraphInText = 2
+        let txtFromCurrentPage = webView.stringByEvaluatingJavaScript(from: "document.body.innerText")
+        let arrayWithParagraphs = txtFromCurrentPage?.components(separatedBy: "\n\n")
+        if let arrayWP = arrayWithParagraphs, arrayWP.count > 2 {
+            let firstParagraphInText = arrayWP[indexOfTheFirstParagraphInText]
+            UserDefaults.standard.set(firstParagraphInText, forKey: "firstParagraphInText")
+            UserDefaults.standard.synchronize()
+        }
     }
 
     open func scrollViewDidScroll(_ scrollView: UIScrollView) {
