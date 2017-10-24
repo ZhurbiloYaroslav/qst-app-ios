@@ -6,6 +6,9 @@ target 'QuitSmokingTogether' do
 
 	pod 'FolioReaderKit'
   pod 'CSV.swift', '~> 2.1.0'
+	pod 'FacebookCore'
+	pod 'FacebookLogin'
+	pod 'FacebookShare'
 
 end
 
