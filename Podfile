@@ -9,6 +9,7 @@ target 'QuitSmokingTogether' do
 	pod 'FacebookCore'
 	pod 'FacebookLogin'
 	pod 'FacebookShare'
+	pod 'Firebase/Core'
 
 end
 
