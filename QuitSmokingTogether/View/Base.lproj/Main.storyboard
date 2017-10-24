@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ccH-28-OSF">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DGd-ih-8xL">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -650,6 +650,42 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D2s-yD-7Vu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3243.75" y="111.25"/>
+        </scene>
+        <!--LoginVC-->
+        <scene sceneID="ybH-hr-ngQ">
+            <objects>
+                <viewController id="DGd-ih-8xL" customClass="LoginVC" customModule="QuitSmokingTogether" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yKE-zi-FgJ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c0D-JC-bfl">
+                                <rect key="frame" x="125" y="430" width="70" height="30"/>
+                                <color key="backgroundColor" red="0.86274509799999999" green="0.50196078430000002" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="NyN-QI-sMg"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <inset key="contentEdgeInsets" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                <state key="normal" title="Skip">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="ccH-28-OSF" kind="show" id="yWE-6l-hi5"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TpM-6Y-GqT" firstAttribute="bottom" secondItem="c0D-JC-bfl" secondAttribute="bottom" constant="20" id="9X2-07-gPQ"/>
+                            <constraint firstItem="c0D-JC-bfl" firstAttribute="centerX" secondItem="yKE-zi-FgJ" secondAttribute="centerX" id="p9w-93-Yo2"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TpM-6Y-GqT"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3B9-41-nxj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-579" y="114"/>
         </scene>
         <!--Tab BarVC-->
         <scene sceneID="Zno-uz-2fX">
