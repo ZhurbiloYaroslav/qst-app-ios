@@ -26,6 +26,9 @@ PODS:
     - FBSDKCoreKit
   - FBSDKShareKit (4.27.1):
     - FBSDKCoreKit
+  - Firebase/Auth (4.4.0):
+    - Firebase/Core
+    - FirebaseAuth (= 4.3.0)
   - Firebase/Core (4.4.0):
     - FirebaseAnalytics (= 4.0.4)
     - FirebaseCore (= 4.0.9)
@@ -34,6 +37,10 @@ PODS:
     - FirebaseInstanceID (~> 2.0)
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
     - nanopb (~> 0.3)
+  - FirebaseAuth (4.3.0):
+    - FirebaseAnalytics (~> 4.0)
+    - GoogleToolboxForMac/NSDictionary+URLArguments (~> 2.1)
+    - GTMSessionFetcher/Core (~> 1.1)
   - FirebaseCore (4.0.9):
     - GoogleToolboxForMac/NSData+zlib (~> 2.1)
     - nanopb (~> 0.3)
@@ -47,9 +54,17 @@ PODS:
     - SSZipArchive (~> 1.8)
     - ZFDragableModalTransition (~> 0.6)
   - FontBlaster (3.0.0)
+  - GoogleToolboxForMac/DebugUtils (2.1.3):
+    - GoogleToolboxForMac/Defines (= 2.1.3)
   - GoogleToolboxForMac/Defines (2.1.3)
   - GoogleToolboxForMac/NSData+zlib (2.1.3):
     - GoogleToolboxForMac/Defines (= 2.1.3)
+  - GoogleToolboxForMac/NSDictionary+URLArguments (2.1.3):
+    - GoogleToolboxForMac/DebugUtils (= 2.1.3)
+    - GoogleToolboxForMac/Defines (= 2.1.3)
+    - GoogleToolboxForMac/NSString+URLArguments (= 2.1.3)
+  - GoogleToolboxForMac/NSString+URLArguments (2.1.3)
+  - GTMSessionFetcher/Core (1.1.12)
   - JSQWebViewController (5.0.0)
   - MenuItemKit (2.0)
   - nanopb (0.3.8):
@@ -70,6 +85,7 @@ DEPENDENCIES:
   - FacebookCore
   - FacebookLogin
   - FacebookShare
+  - Firebase/Auth
   - Firebase/Core
   - FolioReaderKit
 
@@ -85,11 +101,13 @@ SPEC CHECKSUMS:
   FBSDKShareKit: 6a6a0ef9e850c741e4e1d7a7d21335205e997ec1
   Firebase: 3e92884a63e8f76d107c43a67d2ab9071e1eda10
   FirebaseAnalytics: 722b53c7b32bfc7806b06e0093a2f5180d4f2c5a
+  FirebaseAuth: e0087d479709b20b9613b804704a928d6eafb052
   FirebaseCore: ebe73f64302705e693b1de9919a76edbdd17a19d
   FirebaseInstanceID: f2b688c66b972f30d7fa9f5f9f91455454a03b47
   FolioReaderKit: d902cb93f79e1d32f7d8bdb730fee6c1d05d1a6f
   FontBlaster: 0f4a3e2f965968e2dfc3f7f5cec7214c3f3b2f07
   GoogleToolboxForMac: 2501e2ad72a52eb3dfe7bd9aee7dad11b858bd20
+  GTMSessionFetcher: ebaa1f79a5366922c1735f1566901f50beba23b7
   JSQWebViewController: 0461aa42612b221571556df61d9c09f080cb2eef
   MenuItemKit: 9af69953dc983803ee85230e205fadbac0f26213
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
@@ -98,6 +116,6 @@ SPEC CHECKSUMS:
   SSZipArchive: 04547dfa448be5ed7ecbaf7eaf8a6e9eb9b42997
   ZFDragableModalTransition: 0d294eaaba6edfcb9839595de765f9ca06a4b524
 
-PODFILE CHECKSUM: b5903db0c9d380f481c186b90f6436f9654bc056
+PODFILE CHECKSUM: 0b6ca7dabf24f43c001f2364b84e793b69b882fe
 
 COCOAPODS: 1.2.1
