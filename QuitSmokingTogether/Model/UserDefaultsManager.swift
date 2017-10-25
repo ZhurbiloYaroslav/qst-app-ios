@@ -26,4 +26,8 @@ class UserDefaultsManager {
     var firstParagraphInText: String {
         return defaults.object(forKey: "firstParagraphInText") as? String ?? "Start to reading"
     }
+    
+    var currentUser: String {
+        return defaults.object(forKey: "firstParagraphInText") as? String ?? "Start to reading"
+    }
 }

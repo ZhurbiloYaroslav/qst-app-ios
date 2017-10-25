@@ -26,6 +26,7 @@
 		C4B8088C1F9DE7430099DA49 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8088B1F9DE7430099DA49 /* UserDefaultsManager.swift */; };
 		C4B8088E1F9F2CCF0099DA49 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8088D1F9F2CCF0099DA49 /* LoginVC.swift */; };
 		C4B808921F9F36FA0099DA49 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4B808911F9F36F60099DA49 /* GoogleService-Info.plist */; };
+		C4B808941F9F3C2A0099DA49 /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B808931F9F3C2A0099DA49 /* FirebaseAuthManager.swift */; };
 		C4CA865F1F94FDCA00A8772D /* FAQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CA865E1F94FDCA00A8772D /* FAQ.swift */; };
 		C4CA86611F9608EC00A8772D /* CSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CA86601F9608EC00A8772D /* CSV.swift */; };
 		C4CA86681F9641C800A8772D /* FAQAnswerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CA86671F9641C800A8772D /* FAQAnswerVC.swift */; };
@@ -66,6 +67,8 @@
 		C4B8088B1F9DE7430099DA49 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		C4B8088D1F9F2CCF0099DA49 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		C4B808911F9F36F60099DA49 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		C4B808931F9F3C2A0099DA49 /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
+		C4B808971F9F8AB80099DA49 /* QuitSmokingTogether.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QuitSmokingTogether.entitlements; sourceTree = "<group>"; };
 		C4CA865E1F94FDCA00A8772D /* FAQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQ.swift; sourceTree = "<group>"; };
 		C4CA86601F9608EC00A8772D /* CSV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSV.swift; sourceTree = "<group>"; };
 		C4CA86671F9641C800A8772D /* FAQAnswerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQAnswerVC.swift; sourceTree = "<group>"; };
@@ -142,6 +145,7 @@
 				C4CA86691F964BA900A8772D /* DLog.swift */,
 				C40F53421F9CE1C800DE58A1 /* ReaderText.swift */,
 				C4B8088B1F9DE7430099DA49 /* UserDefaultsManager.swift */,
+				C4B808931F9F3C2A0099DA49 /* FirebaseAuthManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -236,6 +240,7 @@
 		C4D4583C1F8021D100565A3F /* QuitSmokingTogether */ = {
 			isa = PBXGroup;
 			children = (
+				C4B808971F9F8AB80099DA49 /* QuitSmokingTogether.entitlements */,
 				C4D4584C1F8021D100565A3F /* Info.plist */,
 				C410E7CC1F97BB7300EEFB7B /* Extensions */,
 				C455D5851F8CFE1C002846D9 /* Resources */,
@@ -283,6 +288,11 @@
 					C4D458391F8021D100565A3F = {
 						CreatedOnToolsVersion = 9.0;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Keychain = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -378,6 +388,7 @@
 				C4CECEE61F94CDA9009C85DE /* FAQCell.swift in Sources */,
 				C4D458401F8021D100565A3F /* OverviewVC.swift in Sources */,
 				C4CA866A1F964BA900A8772D /* DLog.swift in Sources */,
+				C4B808941F9F3C2A0099DA49 /* FirebaseAuthManager.swift in Sources */,
 				C410E7CE1F97BC5B00EEFB7B /* UIView+IBInspectable.swift in Sources */,
 				C461A2D41F8FB81600B698FA /* ReaderVC.swift in Sources */,
 				C4CECEDE1F94C877009C85DE /* FAQVC.swift in Sources */,
@@ -538,6 +549,7 @@
 			baseConfigurationReference = 4838F9FA089BC411AFE9FC69 /* Pods-QuitSmokingTogether.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = QuitSmokingTogether/QuitSmokingTogether.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4PM46468DE;
 				INFOPLIST_FILE = QuitSmokingTogether/Info.plist;
@@ -555,6 +567,7 @@
 			baseConfigurationReference = 85F707FB449E088EFD99AE21 /* Pods-QuitSmokingTogether.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = QuitSmokingTogether/QuitSmokingTogether.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4PM46468DE;
 				INFOPLIST_FILE = QuitSmokingTogether/Info.plist;
