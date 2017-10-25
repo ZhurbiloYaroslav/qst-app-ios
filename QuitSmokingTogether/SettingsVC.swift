@@ -12,6 +12,8 @@ class SettingsVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    private let userDefaultsManager = UserDefaultsManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -37,7 +39,7 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
         case 0:
             return 1
         case 1:
-            return 2
+            return 3
         default:
             return 0
         }
@@ -46,6 +48,10 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         switch indexPath {
+        case [0,0]:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "AccountEmail", for: indexPath) as UITableViewCell
+            cell.detailTextLabel?.text = userDefaultsManager.currentUserEmail
+            return cell
         case [0,0]:
             let cell = tableView.dequeueReusableCell(withIdentifier: "FAQ", for: indexPath) as UITableViewCell
             return cell

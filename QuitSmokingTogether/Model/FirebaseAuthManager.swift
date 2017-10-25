@@ -9,12 +9,17 @@
 // https://firebase.google.com/docs/auth/ios/errors
 
 import Foundation
+import UIKit
 import Firebase
 import FirebaseAuth
+import KeychainSwift
 
 class FirebaseAuthManager {
     
     public var handle: AuthStateDidChangeListenerHandle!
+    
+    private let keychainManager = KeychainSwift()
+    private let userDefaultsManager = UserDefaultsManager()
     
     init() {
         //TODO: some code here
@@ -34,15 +39,18 @@ class FirebaseAuthManager {
     
     public func createUser(withEmail email: String, password: String) {
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
-            print("---user", user?.email ?? "user without Email")
-            print("---user", user?.displayName ?? "user without Name")
+            if error == nil {
+                self.userDefaultsManager.saveInfoFor(user)
+            } else {
+                print("---createUser Fail", error!.localizedDescription)
+            }
         }
     }
     
     public func signIn(withEmail email: String, password: String) {
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             if error == nil {
-                print("---user", user?.email ?? "user without Email")
+                self.userDefaultsManager.saveInfoFor(user)
             } else {
                 //
             }
@@ -51,10 +59,10 @@ class FirebaseAuthManager {
     
     public func authenticateUsingFirebaseCredential(_ credential: AuthCredential) {
         Auth.auth().signIn(with: credential) { (user, error) in
-            if let error = error {
-                // ...
-                return
-            }
+//            if let error = error {
+//                // ...
+//                return
+//            }
             // User is signed in
             // ...
         }

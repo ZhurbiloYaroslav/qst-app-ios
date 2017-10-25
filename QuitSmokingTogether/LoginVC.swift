@@ -28,10 +28,9 @@ class LoginVC: UIViewController {
     
     func addFacebookLoginButton() {
         let loginButton = LoginButton(readPermissions: [.publicProfile, .email, .userLocation ])
-        loginButton.center = view.center
         loginButton.delegate = self
         
-        view.addSubview(loginButton)
+        loginFormStackView.addArrangedSubview(loginButton)
     }
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
@@ -43,6 +42,10 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func skipButtonPressed(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func unwindToLogin(segue: UIStoryboardSegue) {
         
     }
     
@@ -66,6 +69,6 @@ extension LoginVC: LoginButtonDelegate {
         }
         print("---logged in to Facebook")
         let credential = FacebookAuthProvider.credential(withAccessToken: (AccessToken.current?.authenticationToken)!)
-        // ...
+        print("--Token", AccessToken.current?.authenticationToken)
     }
 }
