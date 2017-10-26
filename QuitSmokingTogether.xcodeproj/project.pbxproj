@@ -13,6 +13,7 @@
 		C410E7D01F97BEB200EEFB7B /* UIButton+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C410E7CF1F97BEB200EEFB7B /* UIButton+IBInspectable.swift */; };
 		C410E7D41F97C67E00EEFB7B /* Advices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C410E7D31F97C67E00EEFB7B /* Advices.swift */; };
 		C410E7D61F97C9B400EEFB7B /* Advices.csv in Resources */ = {isa = PBXBuildFile; fileRef = C410E7D51F97C9B100EEFB7B /* Advices.csv */; };
+		C41B6F0C1FA2486B00B40F93 /* UIViewController+hideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41B6F0B1FA2486B00B40F93 /* UIViewController+hideKeyboard.swift */; };
 		C455D5871F8CFE75002846D9 /* AlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C455D5861F8CFE75002846D9 /* AlertVC.swift */; };
 		C455D58B1F8D0024002846D9 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C455D58A1F8D0024002846D9 /* SettingsVC.swift */; };
 		C461A2C81F8E533400B698FA /* OverviewAdviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C461A2C71F8E533400B698FA /* OverviewAdviceCell.swift */; };
@@ -54,6 +55,7 @@
 		C410E7CF1F97BEB200EEFB7B /* UIButton+IBInspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+IBInspectable.swift"; sourceTree = "<group>"; };
 		C410E7D31F97C67E00EEFB7B /* Advices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advices.swift; sourceTree = "<group>"; };
 		C410E7D51F97C9B100EEFB7B /* Advices.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = Advices.csv; sourceTree = "<group>"; };
+		C41B6F0B1FA2486B00B40F93 /* UIViewController+hideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+hideKeyboard.swift"; sourceTree = "<group>"; };
 		C455D5861F8CFE75002846D9 /* AlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertVC.swift; sourceTree = "<group>"; };
 		C455D58A1F8D0024002846D9 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		C461A2C71F8E533400B698FA /* OverviewAdviceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewAdviceCell.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			children = (
 				C410E7CD1F97BC5B00EEFB7B /* UIView+IBInspectable.swift */,
 				C410E7CF1F97BEB200EEFB7B /* UIButton+IBInspectable.swift */,
+				C41B6F0B1FA2486B00B40F93 /* UIViewController+hideKeyboard.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -394,6 +397,7 @@
 				C4CECEDE1F94C877009C85DE /* FAQVC.swift in Sources */,
 				C461A2CA1F8E534900B698FA /* OverviewHelpCell.swift in Sources */,
 				C455D5871F8CFE75002846D9 /* AlertVC.swift in Sources */,
+				C41B6F0C1FA2486B00B40F93 /* UIViewController+hideKeyboard.swift in Sources */,
 				C4CA865F1F94FDCA00A8772D /* FAQ.swift in Sources */,
 				C4D4583E1F8021D100565A3F /* AppDelegate.swift in Sources */,
 				C461A2CC1F8F8F5300B698FA /* TabBarVC.swift in Sources */,
