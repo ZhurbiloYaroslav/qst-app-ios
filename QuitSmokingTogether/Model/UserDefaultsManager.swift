@@ -10,6 +10,8 @@ import Foundation
 import CoreData
 import Firebase
 import FirebaseAuth
+import FacebookLogin
+import FacebookCore
 import KeychainSwift
 
 class UserDefaultsManager {
@@ -27,32 +29,52 @@ class UserDefaultsManager {
             defaults.synchronize()
         }
     }
-    
-    var firstParagraphInText: String {
-        return defaults.object(forKey: "firstParagraphInText") as? String ?? "Start to reading"
-    }
 }
 
 extension UserDefaultsManager {
+    
+    public enum Provider: String {
+        case Firebase = "Firebase"
+        case Facebook = "Facebook"
+    }
 
-    func saveInfoFor(_ user: User?) {
+    func saveInfoFor(_ user: User?, andProvider provider: Provider) {
         guard let userID = user?.uid else { return }
-        guard let userEmail = user?.email else { return }
         
-        self.keychainManager.set(userID, forKey: "currentUserID")
-        self.keychainManager.set(userEmail, forKey: "currentUserEmail")
+        saveUserID(userID, andProvider: provider)
         
-        self.currentUserEmail = userEmail
-        self.currentUserLoggedIn = true
+        if let userEmail = user?.email {
+            self.keychainManager.set(userEmail, forKey: "currentUserEmail")
+            self.currentUserEmail = userEmail
+        } else {
+            self.keychainManager.set("Anonymous", forKey: "currentUserEmail")
+            self.currentUserEmail = "Anonymous"
+        }
         
         if let userName = user?.displayName {
             self.currentUserName = userName
         }
-        print("---id-keychain", self.keychainManager.get("currentUserID")!)
-        print("---email-keychain", self.keychainManager.get("currentUserEmail")!)
-        print("---email-userDef", self.currentUserEmail)
-        print("---logIin-userDef", self.currentUserLoggedIn)
     }
+    
+    func saveInfoWith(_ token: AccessToken, andProvider provider: Provider) {
+        guard let userID = token.userId else { return }
+        
+        saveUserID(userID, andProvider: provider)
+        
+        self.keychainManager.set(token.authenticationToken, forKey: "currentUserAuthenticationToken")
+        self.currentUserAuthenticationToken = token.authenticationToken
+        
+    }
+    
+    func saveUserID(_ userID: String, andProvider provider: Provider) {
+        self.keychainManager.set(userID, forKey: "currentUserID")
+        self.keychainManager.set(provider.rawValue, forKey: "currentUserProvider")
+        self.currentUserProvider = provider.rawValue
+        self.currentUserLoggedIn = true
+    }
+}
+
+extension UserDefaultsManager {
     
     var currentUserLoggedIn: Bool {
         
@@ -76,6 +98,17 @@ extension UserDefaultsManager {
         }
     }
     
+    var currentUserAuthenticationToken: String {
+        
+        get {
+            return defaults.object(forKey: "currentUserAuthenticationToken") as? String ?? ""
+        }
+        set {
+            defaults.set(newValue, forKey: "currentUserAuthenticationToken")
+            defaults.synchronize()
+        }
+    }
+    
     var currentUserEmail: String {
         
         get {
@@ -85,5 +118,20 @@ extension UserDefaultsManager {
             defaults.set(newValue, forKey: "currentUserEmail")
             defaults.synchronize()
         }
+    }
+    
+    var currentUserProvider: String {
+        
+        get {
+            return defaults.object(forKey: "currentUserProvider") as? String ?? ""
+        }
+        set {
+            defaults.set(newValue, forKey: "currentUserProvider")
+            defaults.synchronize()
+        }
+    }
+    
+    var firstParagraphInText: String {
+        return defaults.object(forKey: "firstParagraphInText") as? String ?? "Start to reading"
     }
 }

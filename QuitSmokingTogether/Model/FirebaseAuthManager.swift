@@ -16,6 +16,8 @@ import KeychainSwift
 
 class FirebaseAuthManager {
     
+    typealias SuccessBehaviour = () -> ()
+    
     public var handle: AuthStateDidChangeListenerHandle!
     
     private let keychainManager = KeychainSwift()
@@ -23,6 +25,37 @@ class FirebaseAuthManager {
     
     init() {
         //TODO: some code here
+    }
+    
+    public func createUser(withEmail email: String, password: String, completionHandler: @escaping SuccessBehaviour) {
+        
+        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
+            if error == nil {
+                self.userDefaultsManager.saveInfoFor(user, andProvider: .Firebase)
+                completionHandler()
+            } else {
+                print("---createUser Fail", error!.localizedDescription)
+            }
+        }
+    }
+    
+    public func signIn(withEmail email: String, password: String, completionHandler: @escaping SuccessBehaviour) {
+        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
+            if error == nil {
+                self.userDefaultsManager.saveInfoFor(user, andProvider: .Firebase)
+                completionHandler()
+            } else {
+                //
+            }
+        }
+    }
+    
+    public func signInAnonymously(completionHandler: @escaping SuccessBehaviour) {
+        Auth.auth().signInAnonymously() { (user, error) in
+            
+            self.userDefaultsManager.saveInfoFor(user, andProvider: .Firebase)
+            completionHandler()
+        }
     }
     
     //TODO: attach the listener in the view controller's viewWillAppear method:
@@ -37,26 +70,6 @@ class FirebaseAuthManager {
         Auth.auth().removeStateDidChangeListener(handle!)
     }
     
-    public func createUser(withEmail email: String, password: String) {
-        Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
-            if error == nil {
-                self.userDefaultsManager.saveInfoFor(user)
-            } else {
-                print("---createUser Fail", error!.localizedDescription)
-            }
-        }
-    }
-    
-    public func signIn(withEmail email: String, password: String) {
-        Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
-            if error == nil {
-                self.userDefaultsManager.saveInfoFor(user)
-            } else {
-                //
-            }
-        }
-    }
-    
     public func authenticateUsingFirebaseCredential(_ credential: AuthCredential) {
         Auth.auth().signIn(with: credential) { (user, error) in
 //            if let error = error {
@@ -68,18 +81,12 @@ class FirebaseAuthManager {
         }
     }
     
-    public func signInAnonymously() {
-        Auth.auth().signInAnonymously() { (user, error) in
-            
-            self.getAnonymousUsersAccountDataFor(user)
-        }
-    }
-    
     public func getAnonymousUsersAccountDataFor(_ user: User?) {
-        //        if let user = user {
-        //            let isAnonymous = user.isAnonymous  // true
-        //            let uid = user.uid
-        //        }
+//                if let user = user {
+//                    let isAnonymous = user.isAnonymous  // true
+//                    let uid = user.uid
+//                    print("---userinfo", uid, "---", user.email)
+//                }
     }
     
     public func getUserInfo(user: User?) {

@@ -44,6 +44,8 @@
 		C4D458481F8021D100565A3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4D458471F8021D100565A3F /* Assets.xcassets */; };
 		C4D4584B1F8021D100565A3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4D458491F8021D100565A3F /* LaunchScreen.storyboard */; };
 		C4DB7B891F9A1B7D007DD4DF /* QST-iBook.epub in Resources */ = {isa = PBXBuildFile; fileRef = C4DB7B881F9A1B7A007DD4DF /* QST-iBook.epub */; };
+		C4EBF52F1FA5E74A00753D0C /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EBF52E1FA5E74A00753D0C /* RegisterVC.swift */; };
+		C4EBF5321FA61BE900753D0C /* HideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EBF5311FA61BE900753D0C /* HideKeyboard.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -89,6 +91,8 @@
 		C4D4584A1F8021D100565A3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4D4584C1F8021D100565A3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C4DB7B881F9A1B7A007DD4DF /* QST-iBook.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "QST-iBook.epub"; sourceTree = "<group>"; };
+		C4EBF52E1FA5E74A00753D0C /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
+		C4EBF5311FA61BE900753D0C /* HideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboard.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +172,7 @@
 			children = (
 				C4CECEE01F94C89B009C85DE /* Common */,
 				C4B8088D1F9F2CCF0099DA49 /* LoginVC.swift */,
+				C4EBF52E1FA5E74A00753D0C /* RegisterVC.swift */,
 				C4D4583F1F8021D100565A3F /* OverviewVC.swift */,
 				C461A2D31F8FB81600B698FA /* ReaderVC.swift */,
 				C4CECEDF1F94C886009C85DE /* Settings */,
@@ -246,6 +251,7 @@
 				C4B808971F9F8AB80099DA49 /* QuitSmokingTogether.entitlements */,
 				C4D4584C1F8021D100565A3F /* Info.plist */,
 				C410E7CC1F97BB7300EEFB7B /* Extensions */,
+				C4EBF5301FA61B8D00753D0C /* Protocols */,
 				C455D5851F8CFE1C002846D9 /* Resources */,
 				C455D5821F8CFDEE002846D9 /* Model */,
 				C455D5831F8CFDF7002846D9 /* View */,
@@ -253,6 +259,14 @@
 				C4D4583D1F8021D100565A3F /* AppDelegate.swift */,
 			);
 			path = QuitSmokingTogether;
+			sourceTree = "<group>";
+		};
+		C4EBF5301FA61B8D00753D0C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C4EBF5311FA61BE900753D0C /* HideKeyboard.swift */,
+			);
+			path = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -398,6 +412,7 @@
 				C461A2CA1F8E534900B698FA /* OverviewHelpCell.swift in Sources */,
 				C455D5871F8CFE75002846D9 /* AlertVC.swift in Sources */,
 				C41B6F0C1FA2486B00B40F93 /* UIViewController+hideKeyboard.swift in Sources */,
+				C4EBF5321FA61BE900753D0C /* HideKeyboard.swift in Sources */,
 				C4CA865F1F94FDCA00A8772D /* FAQ.swift in Sources */,
 				C4D4583E1F8021D100565A3F /* AppDelegate.swift in Sources */,
 				C461A2CC1F8F8F5300B698FA /* TabBarVC.swift in Sources */,
@@ -414,6 +429,7 @@
 				C4D458461F8021D100565A3F /* QuitSmokingTogether.xcdatamodeld in Sources */,
 				C4B8088E1F9F2CCF0099DA49 /* LoginVC.swift in Sources */,
 				C461A2C81F8E533400B698FA /* OverviewAdviceCell.swift in Sources */,
+				C4EBF52F1FA5E74A00753D0C /* RegisterVC.swift in Sources */,
 				C410E7D41F97C67E00EEFB7B /* Advices.swift in Sources */,
 				C455D58B1F8D0024002846D9 /* SettingsVC.swift in Sources */,
 			);
