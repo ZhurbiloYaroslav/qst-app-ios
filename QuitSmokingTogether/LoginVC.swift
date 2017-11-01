@@ -22,15 +22,15 @@ class LoginVC: UIViewController {
     @IBOutlet weak var facebookLoginButton: UIButton!
     
     private var activeTextField = UITextField()
-    private let facebookLoginManager = LoginManager()
     private var fbLoginSuccess = false
+    private let userDefaultsManager = UserDefaultsManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         initializeDelegates()
         
-        self.hideKeyboardWhenTappedAround()
+        hideKeyboardWhenTappedAround()
         registerForKeyboardNotifications()
         
     }
@@ -42,18 +42,27 @@ class LoginVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         performSegueIfLoggedInFacebook()
+        moveToMainViewIfLoggedIn()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
     }
     
     func performSegueIfLoggedInFacebook() {
         if (AccessToken.current?.authenticationToken != nil && fbLoginSuccess == true) {
-            print("---performed Segue facebookLoginButtonPressed")
+            self.performSegue(withIdentifier: "LoggedInFromLogin", sender: nil)
+            fbLoginSuccess = false
+        }
+    }
+    
+    func moveToMainViewIfLoggedIn() {
+        if CurrentUser.isLoggedIn {
             self.performSegue(withIdentifier: "LoggedInFromLogin", sender: nil)
         }
     }
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
         FirebaseAuthManager().signIn(withEmail: emailField.text!, password: passwordField.text!) {
-            print("---performed Segue loginButtonPressed")
             self.performSegue(withIdentifier: "LoggedInFromLogin", sender: nil)
         }
     }
@@ -63,22 +72,48 @@ class LoginVC: UIViewController {
     }
     
     @IBAction func facebookLoginButtonPressed(_ sender: Any) {
-        facebookLoginManager.logIn(readPermissions: [.publicProfile, .email], viewController: self) { loginResult in
+        LoginManager().logIn(readPermissions: [.publicProfile, .email], viewController: self) { loginResult in
             switch loginResult {
             case .failed(let error):
-                print(error)
+                print(error.localizedDescription)
             case .cancelled:
-                print("User cancelled login.")
-            case .success(let grantedPermissions, let declinedPermissions, let accessToken):
-                UserDefaultsManager().saveInfoWith(accessToken, andProvider: .Facebook)
+                print("canceled")
+            case .success( _, _, let accessToken):
+                CurrentUser.saveInfoWith(accessToken, andProvider: .Facebook)
+                self.getFBUserInfo()
+            }
+        }
+    }
+    
+    func getFBUserInfo() {
+        let request = GraphRequest(graphPath: "me", parameters: ["fields":"email,name"], accessToken: AccessToken.current, httpMethod: .GET, apiVersion: FacebookCore.GraphAPIVersion.defaultVersion)
+        request.start { (response, result) in
+            switch result {
+            case .success(let value):
+                print(value.dictionaryValue)
+                if let currentUserEmail = value.dictionaryValue?["email"] as? String {
+                    CurrentUser.email = currentUserEmail
+                    print("---email:", currentUserEmail)
+                }
+                if let currentUserID = value.dictionaryValue?["id"] as? String {
+                    CurrentUser.id = currentUserID
+                    print("---id:", currentUserID)
+                }
+                if let currentUserName = value.dictionaryValue?["name"] as? String {
+                    CurrentUser.name = currentUserName
+                    print("---name:", currentUserName)
+                }
                 self.fbLoginSuccess = true
+                self.view.setNeedsDisplay()
+                
+            case .failed(let error):
+                print(error)
             }
         }
     }
     
     @IBAction func continueButtonPressed(_ sender: UIButton) {
         FirebaseAuthManager().signInAnonymously() {
-            print("---performed Segue continueButtonPressed")
             self.performSegue(withIdentifier: "SkipButtonPressedInLogin", sender: nil)
         }
         
@@ -146,28 +181,6 @@ extension LoginVC: UITextFieldDelegate {
     func removeKeyboardNotifications() {
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillShow, object: nil)
         NotificationCenter.default.removeObserver(self, name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-    }
-}
-
-extension LoginVC: LoginButtonDelegate {
-    
-    func loginButtonDidCompleteLogin(_ loginButton: LoginButton, result: LoginResult) {
-        print("---logged in to FB ")
-    }
-    
-    func loginButtonDidLogOut(_ loginButton: LoginButton) {
-        
-    }
-    
-    //TODO: In your delegate, implement didCompleteWithResult:error:
-    func loginButton(loginButton: LoginButton!, didCompleteWithResult result: LoginResult!, error: NSError?) {
-        if let error = error {
-            print(error.localizedDescription)
-            return
-        }
-        
-        let credential = FacebookAuthProvider.credential(withAccessToken: (AccessToken.current?.authenticationToken)!)
-        print("--Token", AccessToken.current?.authenticationToken)
     }
 }
 

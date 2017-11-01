@@ -1,5 +1,5 @@
 //
-//  FAQCell.swift
+//  OptAccountCell.swift
 //  QuitSmokingTogether
 //
 //  Created by Yaroslav Zhurbilo on 16.10.17.
@@ -8,13 +8,12 @@
 
 import UIKit
 
-class FAQCell: UITableViewCell {
+class OptAccountCell: UITableViewCell {
 
     @IBOutlet weak var iconImage: UIImageView!
-    @IBOutlet weak var questionTitle: UILabel!
+    @IBOutlet weak var accountName: UILabel!
     
-    func update(item: FAQ.Item) {
-        questionTitle.text = item.question
+    func update() {
+        accountName.text = CurrentUser.getAccountName()
     }
-
 }

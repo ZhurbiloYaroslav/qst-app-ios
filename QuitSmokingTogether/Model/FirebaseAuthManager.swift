@@ -16,8 +16,6 @@ import KeychainSwift
 
 class FirebaseAuthManager {
     
-    typealias SuccessBehaviour = () -> ()
-    
     public var handle: AuthStateDidChangeListenerHandle!
     
     private let keychainManager = KeychainSwift()
@@ -31,7 +29,7 @@ class FirebaseAuthManager {
         
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
             if error == nil {
-                self.userDefaultsManager.saveInfoFor(user, andProvider: .Firebase)
+                CurrentUser.saveInfoFor(user, andProvider: .authEmail)
                 completionHandler()
             } else {
                 print("---createUser Fail", error!.localizedDescription)
@@ -42,8 +40,15 @@ class FirebaseAuthManager {
     public func signIn(withEmail email: String, password: String, completionHandler: @escaping SuccessBehaviour) {
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             if error == nil {
-                self.userDefaultsManager.saveInfoFor(user, andProvider: .Firebase)
-                completionHandler()
+                CurrentUser.saveInfoFor(user, andProvider: .authEmail)
+                
+                Auth.auth().currentUser?.getIDToken() { token, error in
+                    if error == nil, let token = token {
+                        CurrentUser.authToken = token
+                        completionHandler()
+                    }
+                }
+                
             } else {
                 //
             }
@@ -52,9 +57,19 @@ class FirebaseAuthManager {
     
     public func signInAnonymously(completionHandler: @escaping SuccessBehaviour) {
         Auth.auth().signInAnonymously() { (user, error) in
-            
-            self.userDefaultsManager.saveInfoFor(user, andProvider: .Firebase)
-            completionHandler()
+            if error == nil {
+                CurrentUser.saveInfoFor(user, andProvider: .authAnonymous)
+                
+                Auth.auth().currentUser?.getIDToken() { token, error in
+                    if error == nil, let token = token {
+                        CurrentUser.authToken = token
+                        completionHandler()
+                    }
+                }
+                
+            } else {
+                //
+            }
         }
     }
     

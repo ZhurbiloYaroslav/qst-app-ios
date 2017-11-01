@@ -21,6 +21,10 @@ class SettingsVC: UIViewController {
         
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        tableView.reloadData()
+    }
+    
     func setDelegates() {
         tableView.delegate = self
         tableView.dataSource = self
@@ -49,16 +53,16 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
         
         switch indexPath {
         case [0,0]:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "AccountEmail", for: indexPath) as UITableViewCell
-            cell.detailTextLabel?.text = userDefaultsManager.currentUserEmail
-            return cell
-        case [0,0]:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "FAQ", for: indexPath) as UITableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "AccountName", for: indexPath) as! OptAccountCell
+            cell.update()
             return cell
         case [1,0]:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "Share", for: indexPath) as UITableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "FAQ", for: indexPath) as UITableViewCell
             return cell
         case [1,1]:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Share", for: indexPath) as UITableViewCell
+            return cell
+        case [1,2]:
             let cell = tableView.dequeueReusableCell(withIdentifier: "Donate", for: indexPath) as UITableViewCell
             return cell
             

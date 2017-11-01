@@ -24,6 +24,10 @@
 		C461A2D41F8FB81600B698FA /* ReaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C461A2D31F8FB81600B698FA /* ReaderVC.swift */; };
 		C47317901F8D0C1700A6AE43 /* OverviewReadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C473178F1F8D0C1700A6AE43 /* OverviewReadCell.swift */; };
 		C47317921F8D1C1600A6AE43 /* Notes and links.rtf in Resources */ = {isa = PBXBuildFile; fileRef = C47317911F8D1C1600A6AE43 /* Notes and links.rtf */; };
+		C4A4D3041FA87AE800EC9D50 /* OptAccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A4D3031FA87AE800EC9D50 /* OptAccountCell.swift */; };
+		C4A4D3061FA87B3F00EC9D50 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A4D3051FA87B3F00EC9D50 /* CurrentUser.swift */; };
+		C4A4D3081FA8C8AC00EC9D50 /* AccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A4D3071FA8C8AC00EC9D50 /* AccountVC.swift */; };
+		C4A4D30A1FA8D93400EC9D50 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A4D3091FA8D93400EC9D50 /* Typealiases.swift */; };
 		C4B8088C1F9DE7430099DA49 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8088B1F9DE7430099DA49 /* UserDefaultsManager.swift */; };
 		C4B8088E1F9F2CCF0099DA49 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8088D1F9F2CCF0099DA49 /* LoginVC.swift */; };
 		C4B808921F9F36FA0099DA49 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4B808911F9F36F60099DA49 /* GoogleService-Info.plist */; };
@@ -68,6 +72,10 @@
 		C461A2D31F8FB81600B698FA /* ReaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderVC.swift; sourceTree = "<group>"; };
 		C473178F1F8D0C1700A6AE43 /* OverviewReadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewReadCell.swift; sourceTree = "<group>"; };
 		C47317911F8D1C1600A6AE43 /* Notes and links.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Notes and links.rtf"; sourceTree = "<group>"; };
+		C4A4D3031FA87AE800EC9D50 /* OptAccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptAccountCell.swift; sourceTree = "<group>"; };
+		C4A4D3051FA87B3F00EC9D50 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
+		C4A4D3071FA8C8AC00EC9D50 /* AccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountVC.swift; sourceTree = "<group>"; };
+		C4A4D3091FA8D93400EC9D50 /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
 		C4B8088B1F9DE7430099DA49 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		C4B8088D1F9F2CCF0099DA49 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		C4B808911F9F36F60099DA49 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -153,6 +161,8 @@
 				C40F53421F9CE1C800DE58A1 /* ReaderText.swift */,
 				C4B8088B1F9DE7430099DA49 /* UserDefaultsManager.swift */,
 				C4B808931F9F3C2A0099DA49 /* FirebaseAuthManager.swift */,
+				C4A4D3051FA87B3F00EC9D50 /* CurrentUser.swift */,
+				C4A4D3091FA8D93400EC9D50 /* Typealiases.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -202,6 +212,7 @@
 				C4CECEE11F94C924009C85DE /* ShareVC.swift */,
 				C4CECEE31F94C950009C85DE /* DonateVC.swift */,
 				C4CA86671F9641C800A8772D /* FAQAnswerVC.swift */,
+				C4A4D3071FA8C8AC00EC9D50 /* AccountVC.swift */,
 			);
 			name = Settings;
 			sourceTree = "<group>";
@@ -222,6 +233,7 @@
 				C473178F1F8D0C1700A6AE43 /* OverviewReadCell.swift */,
 				C461A2C71F8E533400B698FA /* OverviewAdviceCell.swift */,
 				C461A2C91F8E534900B698FA /* OverviewHelpCell.swift */,
+				C4A4D3031FA87AE800EC9D50 /* OptAccountCell.swift */,
 				C4CECEE51F94CDA9009C85DE /* FAQCell.swift */,
 			);
 			path = Cells;
@@ -413,8 +425,12 @@
 				C455D5871F8CFE75002846D9 /* AlertVC.swift in Sources */,
 				C41B6F0C1FA2486B00B40F93 /* UIViewController+hideKeyboard.swift in Sources */,
 				C4EBF5321FA61BE900753D0C /* HideKeyboard.swift in Sources */,
+				C4A4D3081FA8C8AC00EC9D50 /* AccountVC.swift in Sources */,
 				C4CA865F1F94FDCA00A8772D /* FAQ.swift in Sources */,
+				C4A4D3041FA87AE800EC9D50 /* OptAccountCell.swift in Sources */,
 				C4D4583E1F8021D100565A3F /* AppDelegate.swift in Sources */,
+				C4A4D3061FA87B3F00EC9D50 /* CurrentUser.swift in Sources */,
+				C4A4D30A1FA8D93400EC9D50 /* Typealiases.swift in Sources */,
 				C461A2CC1F8F8F5300B698FA /* TabBarVC.swift in Sources */,
 				C4B8088C1F9DE7430099DA49 /* UserDefaultsManager.swift in Sources */,
 				C40F53431F9CE1C800DE58A1 /* ReaderText.swift in Sources */,
