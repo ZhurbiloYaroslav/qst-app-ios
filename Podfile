@@ -4,6 +4,7 @@ use_frameworks!
 
 target 'QuitSmokingTogether' do
 
+	pod 'Validator'
 	pod 'FolioReaderKit'
   pod 'CSV.swift', '~> 2.1.0'
 	pod 'FacebookCore'

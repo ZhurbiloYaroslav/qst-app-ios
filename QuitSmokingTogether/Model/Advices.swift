@@ -11,8 +11,18 @@ import CSV
 
 class Advices {
     
+    private let defaults = UserDefaults.standard
+    
     var items: [String] = []
-    var currentAdviceIndex = 0
+    var currentAdviceIndex: Int {
+        get {
+            return defaults.object(forKey: "currentAdviceIndex") as? Int ?? 0
+        }
+        set {
+            defaults.set(newValue, forKey: "currentAdviceIndex")
+            defaults.synchronize()
+        }
+    }
     
     init() {
         parseAdvicesCsv()
@@ -20,6 +30,20 @@ class Advices {
     
     var numberOfAdvices: Int {
         return items.count
+    }
+    
+    func getRandomAdvice() -> String {
+        let uIntNumber = UInt32(numberOfAdvices)
+        let randomAdviceIndex = Int(arc4random_uniform(uIntNumber))
+        let randomAdvice = items[randomAdviceIndex]
+        return randomAdvice
+    }
+    
+    func getPreviousAdvice() -> String {
+        
+        //TODO: Implement this method
+        
+        return items[currentAdviceIndex]
     }
     
     func getNextAdvice() -> String {
@@ -31,11 +55,6 @@ class Advices {
         }
         
         return items[currentAdviceIndex]
-    }
-    
-    //TODO: Implement getRandomAdvice()
-    func getRandomAdvice() -> String {
-        return ""
     }
     
     func parseAdvicesCsv() {

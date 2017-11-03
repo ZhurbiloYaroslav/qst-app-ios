@@ -79,6 +79,7 @@ PODS:
   - RealmSwift (2.10.2):
     - Realm (= 2.10.2)
   - SSZipArchive (1.8.1)
+  - Validator (3.0)
   - ZFDragableModalTransition (0.6)
 
 DEPENDENCIES:
@@ -90,6 +91,7 @@ DEPENDENCIES:
   - Firebase/Core
   - FolioReaderKit
   - KeychainSwift (~> 9.0)
+  - Validator
 
 SPEC CHECKSUMS:
   AEXML: 6fc6433aa35bdc15dd8eb8d54eb7aa4520a010eb
@@ -117,8 +119,9 @@ SPEC CHECKSUMS:
   Realm: 0ef72b837fb67e9f4b098bac771ddd72c7fdbb69
   RealmSwift: 07a9ae0505091eda6b2ee7c190c3786d6e90a7b0
   SSZipArchive: 04547dfa448be5ed7ecbaf7eaf8a6e9eb9b42997
+  Validator: 7d9828daffabc757604603052e407f208fa9b6d5
   ZFDragableModalTransition: 0d294eaaba6edfcb9839595de765f9ca06a4b524
 
-PODFILE CHECKSUM: 0212fe8230a622513c6c6d1ac5e09423dbf96eb9
+PODFILE CHECKSUM: 7f41f0276f3c3c21b2150034c36626bea35068ab
 
 COCOAPODS: 1.2.1
