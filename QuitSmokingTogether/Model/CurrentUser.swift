@@ -40,7 +40,6 @@ class CurrentUser {
             removeUserDataWhenLogOut()
         }
         
-        
         FirebaseAuthManager().signInAnonymously {
             completionHandler()
         }

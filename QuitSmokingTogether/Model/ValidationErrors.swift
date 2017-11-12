@@ -9,6 +9,10 @@
 import Foundation
 
 enum ValidationErrors: String {
+    case userNameEmpty = "Username is empty"
+    case userNameInvalid = "Username is invalid"
+    case userNameMustBe = "\nOnly letters, underscores and numbers allowed, length should be 18 characters max and 7 characters minimum"
+    
     case emailEmpty = "Email address is empty"
     case emailInvalid = "Email address is invalid"
     

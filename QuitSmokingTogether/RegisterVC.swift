@@ -11,6 +11,7 @@ import UIKit
 class RegisterVC: UIViewController {
     
     @IBOutlet weak var loginFormStackView: UIStackView!
+    @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
     
@@ -67,6 +68,11 @@ extension RegisterVC {
             validationErrors.append(ValidationErrors.passwordMustBe.message)
         }
         
+        if isUSerNameValid(nameField.text) == false || isEmpty(nameField.text) == true {
+            validationErrors.append(ValidationErrors.passwordInvalid.message)
+            validationErrors.append(ValidationErrors.passwordMustBe.message)            
+        }
+        
         if validationErrors.count > 0 {
             presentAlert(validationErrors)
             return false
@@ -106,6 +112,13 @@ extension RegisterVC {
         let passwordRegEx = "(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{8,}"
         let simplePassword = NSPredicate(format: "SELF MATCHES %@", passwordRegEx)
         return simplePassword.evaluate(with: password)
+    }
+    
+    func isUSerNameValid(_ name : String?) -> Bool {
+        let userNameRegEx = "\\A\\w{7,18}\\z"
+        let userNameRegEx2 = "^[0-9a-zA-Z\\_]{7,18}$"
+        let userName = NSPredicate(format: "SELF MATCHES %@", userNameRegEx)
+        return userName.evaluate(with: userName)
     }
 }
 
