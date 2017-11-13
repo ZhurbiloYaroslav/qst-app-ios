@@ -1010,11 +1010,14 @@ open class FolioReaderCenter: UIViewController, UICollectionViewDelegate, UIColl
     }
     
     func saveTextFromCurrentPage(webView: UIWebView) {
+        let indexOfTheChapterInText = 1
         let indexOfTheFirstParagraphInText = 2
         let txtFromCurrentPage = webView.stringByEvaluatingJavaScript(from: "document.body.innerText")
         let arrayWithParagraphs = txtFromCurrentPage?.components(separatedBy: "\n\n")
         if let arrayWP = arrayWithParagraphs, arrayWP.count > 2 {
+            let chapterInText = arrayWP[indexOfTheChapterInText]
             let firstParagraphInText = arrayWP[indexOfTheFirstParagraphInText]
+            UserDefaults.standard.set(chapterInText, forKey: "chapterInText")
             UserDefaults.standard.set(firstParagraphInText, forKey: "firstParagraphInText")
             UserDefaults.standard.synchronize()
         }

@@ -10,17 +10,12 @@ import UIKit
 
 class OverviewReadCell: UITableViewCell {
 
+    @IBOutlet weak var bookTitleLabel: UILabel!
     @IBOutlet weak var bookTextLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func updateCell() {
+        bookTitleLabel.text = UserDefaultsManager().chapterInText
+        bookTextLabel.text = UserDefaultsManager().firstParagraphInText
     }
 
 }

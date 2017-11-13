@@ -10,6 +10,7 @@ import UIKit
 
 class OverviewAdviceCell: UITableViewCell {
 
+    @IBOutlet weak var adviceTitleLabel: UILabel!
     @IBOutlet weak var adviceTextLabel: UILabel!
     
     override func awakeFromNib() {
@@ -18,7 +19,9 @@ class OverviewAdviceCell: UITableViewCell {
     }
     
     func updateCell() {
-        adviceTextLabel.text = Advices().getRandomAdvice()
+        let advices = Advices()
+        adviceTextLabel.text = advices.getRandomAdvice()
+        adviceTitleLabel.text = advices.currentAdviceTitle
     }
 
 }

@@ -13,7 +13,7 @@ class Advices {
     
     private let defaults = UserDefaults.standard
     
-    var items: [String] = []
+    var items: [[String: Any]] = []
     var currentAdviceIndex: Int {
         get {
             return defaults.object(forKey: "currentAdviceIndex") as? Int ?? 0
@@ -23,9 +23,22 @@ class Advices {
             defaults.synchronize()
         }
     }
+    var currentAdviceTitle: String {
+        guard let adviceTitle = items[currentAdviceIndex]["Title"] as? String else {
+            return ""
+        }
+        return adviceTitle
+    }
+    var currentAdviceMessage: String {
+        guard let adviceMessage = items[currentAdviceIndex]["Advice"] as? String else {
+            return ""
+        }
+        return adviceMessage
+    }
     
     init() {
-        parseAdvicesCsv()
+        parseAdvicesPlist()
+        //        parseAdvicesCsv()
     }
     
     var numberOfAdvices: Int {
@@ -33,17 +46,23 @@ class Advices {
     }
     
     func getRandomAdvice() -> String {
+        
         let uIntNumber = UInt32(numberOfAdvices)
         let randomAdviceIndex = Int(arc4random_uniform(uIntNumber))
-        let randomAdvice = items[randomAdviceIndex]
-        return randomAdvice
+        currentAdviceIndex = randomAdviceIndex
+        
+        return currentAdviceMessage
     }
     
     func getPreviousAdvice() -> String {
         
-        //TODO: Implement this method
+        if currentAdviceIndex == 0 {
+            currentAdviceIndex = numberOfAdvices - 1
+        } else {
+            currentAdviceIndex -= 1
+        }
         
-        return items[currentAdviceIndex]
+        return currentAdviceMessage
     }
     
     func getNextAdvice() -> String {
@@ -54,37 +73,38 @@ class Advices {
             currentAdviceIndex += 1
         }
         
-        return items[currentAdviceIndex]
+        return currentAdviceMessage
     }
     
     func parseAdvicesPlist() {
-        var myDict: NSDictionary?
-        if let path = Bundle.main.path(forResource: "Advices", ofType: "plist") {
-            myDict = NSDictionary(contentsOfFile: path)
+        
+        guard let path = Bundle.main.path(forResource: "Advices", ofType: "plist"),
+            let arrayWithAdvicesDictionaries = NSArray(contentsOfFile: path) as? [[String: Any]] else {
+                return
         }
-        if let dict = myDict {
-            for record in dict {
-                
-            }
+        
+        for adviceDict in arrayWithAdvicesDictionaries {
+            items.append(adviceDict)
         }
+        
     }
     
-    func parseAdvicesCsv() {
-        if let path = Bundle.main.path(forResource: "Advices", ofType: "csv") {
-            do {
-                let stream = InputStream(fileAtPath: path)!
-                let csv = try! CSVReader(stream: stream, hasHeaderRow: true)
-                while csv.next() != nil {
-                    createItemAndCategoryFromParsedRow(csv)
-                }
-            } catch {
-                print(error.localizedDescription)
-            }
-        }
-    }
+    //    func parseAdvicesCsv() {
+    //        if let path = Bundle.main.path(forResource: "Advices", ofType: "csv") {
+    //            do {
+    //                let stream = InputStream(fileAtPath: path)!
+    //                let csv = try! CSVReader(stream: stream, hasHeaderRow: true)
+    //                while csv.next() != nil {
+    //                    createItemAndCategoryFromParsedRow(csv)
+    //                }
+    //            } catch {
+    //                print(error.localizedDescription)
+    //            }
+    //        }
+    //    }
     
-    func createItemAndCategoryFromParsedRow(_ csv: CSVReader) {
-        guard let advice = csv["Advice"] else { return }
-        items.append(advice)
-    }
+    //    func createItemAndCategoryFromParsedRow(_ csv: CSVReader) {
+    //        guard let advice = csv["Advice"] else { return }
+    //        items.append(advice)
+    //    }
 }

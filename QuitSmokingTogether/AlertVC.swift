@@ -10,7 +10,9 @@ import UIKit
 
 class AlertVC: UIViewController {
     
-    @IBOutlet weak var adviceLabel: UILabel!
+    @IBOutlet weak var adviceTitleLabel: UILabel!
+    @IBOutlet weak var adviceMessageLabel: UILabel!
+    @IBOutlet weak var scrollView: UIScrollView!
     var advices: Advices!
 
     override func viewDidLoad() {
@@ -21,11 +23,20 @@ class AlertVC: UIViewController {
     
     func initializeVariables() {
         self.advices = Advices()
+        adviceTitleLabel.text = advices.currentAdviceTitle
+        adviceMessageLabel.text = advices.currentAdviceMessage
+    }
+    
+    @IBAction func backAdviceButtonPressed(_ sender: UIButton) {
+        adviceMessageLabel.text = advices.getPreviousAdvice()
+        adviceTitleLabel.text = advices.currentAdviceTitle
+        scrollView.scrollToTop(animated: false)
     }
     
     @IBAction func nextAdviceButtonPressed(_ sender: UIButton) {
-        adviceLabel.text = advices.getNextAdvice()
-        
+        adviceMessageLabel.text = advices.getNextAdvice()
+        adviceTitleLabel.text = advices.currentAdviceTitle
+        scrollView.scrollToTop(animated: false)
     }
     
 }

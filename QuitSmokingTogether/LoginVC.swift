@@ -43,7 +43,7 @@ class LoginVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         performSegueIfLoggedInFacebook()
-//        moveToMainViewIfLoggedIn()
+        moveToMainViewIfLoggedIn()
     }
     
     override func viewWillAppear(_ animated: Bool) {

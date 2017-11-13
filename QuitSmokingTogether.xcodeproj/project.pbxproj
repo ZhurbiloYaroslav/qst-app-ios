@@ -14,6 +14,7 @@
 		C410E7D41F97C67E00EEFB7B /* Advices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C410E7D31F97C67E00EEFB7B /* Advices.swift */; };
 		C41B6F0C1FA2486B00B40F93 /* UIViewController+hideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41B6F0B1FA2486B00B40F93 /* UIViewController+hideKeyboard.swift */; };
 		C429370A1FB9D3B70016A02F /* Advices.plist in Resources */ = {isa = PBXBuildFile; fileRef = C42937091FB9D3B70016A02F /* Advices.plist */; };
+		C429370C1FB9E9010016A02F /* UIScrollView+scrollToView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429370B1FB9E9000016A02F /* UIScrollView+scrollToView.swift */; };
 		C455D5871F8CFE75002846D9 /* AlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C455D5861F8CFE75002846D9 /* AlertVC.swift */; };
 		C455D58B1F8D0024002846D9 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C455D58A1F8D0024002846D9 /* SettingsVC.swift */; };
 		C45FE1891FB860350080E172 /* QST-iBook.epub in Resources */ = {isa = PBXBuildFile; fileRef = C45FE1881FB860330080E172 /* QST-iBook.epub */; };
@@ -63,6 +64,7 @@
 		C410E7D31F97C67E00EEFB7B /* Advices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advices.swift; sourceTree = "<group>"; };
 		C41B6F0B1FA2486B00B40F93 /* UIViewController+hideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+hideKeyboard.swift"; sourceTree = "<group>"; };
 		C42937091FB9D3B70016A02F /* Advices.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Advices.plist; sourceTree = "<group>"; };
+		C429370B1FB9E9000016A02F /* UIScrollView+scrollToView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+scrollToView.swift"; sourceTree = "<group>"; };
 		C455D5861F8CFE75002846D9 /* AlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertVC.swift; sourceTree = "<group>"; };
 		C455D58A1F8D0024002846D9 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		C45FE1881FB860330080E172 /* QST-iBook.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "QST-iBook.epub"; sourceTree = "<group>"; };
@@ -140,6 +142,7 @@
 				C410E7CD1F97BC5B00EEFB7B /* UIView+IBInspectable.swift */,
 				C410E7CF1F97BEB200EEFB7B /* UIButton+IBInspectable.swift */,
 				C41B6F0B1FA2486B00B40F93 /* UIViewController+hideKeyboard.swift */,
+				C429370B1FB9E9000016A02F /* UIScrollView+scrollToView.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -447,6 +450,7 @@
 				C4CA86681F9641C800A8772D /* FAQAnswerVC.swift in Sources */,
 				C4CA86611F9608EC00A8772D /* CSV.swift in Sources */,
 				C4D458461F8021D100565A3F /* QuitSmokingTogether.xcdatamodeld in Sources */,
+				C429370C1FB9E9010016A02F /* UIScrollView+scrollToView.swift in Sources */,
 				C4B8088E1F9F2CCF0099DA49 /* LoginVC.swift in Sources */,
 				C461A2C81F8E533400B698FA /* OverviewAdviceCell.swift in Sources */,
 				C4EBF52F1FA5E74A00753D0C /* RegisterVC.swift in Sources */,

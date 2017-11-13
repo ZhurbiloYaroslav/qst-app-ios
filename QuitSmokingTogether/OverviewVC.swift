@@ -53,7 +53,7 @@ extension OverviewVC: UITableViewDataSource, UITableViewDelegate {
         switch indexPath {
         case [0,0]:
             let cell = tableView.dequeueReusableCell(withIdentifier: "overviewReadCell", for: indexPath) as! OverviewReadCell
-            cell.bookTextLabel.text = UserDefaultsManager().firstParagraphInText
+            cell.updateCell()
             return cell
             
         case [0,1]:
