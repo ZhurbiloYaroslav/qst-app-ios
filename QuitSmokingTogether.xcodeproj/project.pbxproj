@@ -12,8 +12,8 @@
 		C410E7CE1F97BC5B00EEFB7B /* UIView+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C410E7CD1F97BC5B00EEFB7B /* UIView+IBInspectable.swift */; };
 		C410E7D01F97BEB200EEFB7B /* UIButton+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C410E7CF1F97BEB200EEFB7B /* UIButton+IBInspectable.swift */; };
 		C410E7D41F97C67E00EEFB7B /* Advices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C410E7D31F97C67E00EEFB7B /* Advices.swift */; };
-		C410E7D61F97C9B400EEFB7B /* Advices.csv in Resources */ = {isa = PBXBuildFile; fileRef = C410E7D51F97C9B100EEFB7B /* Advices.csv */; };
 		C41B6F0C1FA2486B00B40F93 /* UIViewController+hideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41B6F0B1FA2486B00B40F93 /* UIViewController+hideKeyboard.swift */; };
+		C429370A1FB9D3B70016A02F /* Advices.plist in Resources */ = {isa = PBXBuildFile; fileRef = C42937091FB9D3B70016A02F /* Advices.plist */; };
 		C455D5871F8CFE75002846D9 /* AlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C455D5861F8CFE75002846D9 /* AlertVC.swift */; };
 		C455D58B1F8D0024002846D9 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C455D58A1F8D0024002846D9 /* SettingsVC.swift */; };
 		C45FE1891FB860350080E172 /* QST-iBook.epub in Resources */ = {isa = PBXBuildFile; fileRef = C45FE1881FB860330080E172 /* QST-iBook.epub */; };
@@ -61,8 +61,8 @@
 		C410E7CD1F97BC5B00EEFB7B /* UIView+IBInspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+IBInspectable.swift"; sourceTree = "<group>"; };
 		C410E7CF1F97BEB200EEFB7B /* UIButton+IBInspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+IBInspectable.swift"; sourceTree = "<group>"; };
 		C410E7D31F97C67E00EEFB7B /* Advices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advices.swift; sourceTree = "<group>"; };
-		C410E7D51F97C9B100EEFB7B /* Advices.csv */ = {isa = PBXFileReference; lastKnownFileType = text; path = Advices.csv; sourceTree = "<group>"; };
 		C41B6F0B1FA2486B00B40F93 /* UIViewController+hideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+hideKeyboard.swift"; sourceTree = "<group>"; };
+		C42937091FB9D3B70016A02F /* Advices.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Advices.plist; sourceTree = "<group>"; };
 		C455D5861F8CFE75002846D9 /* AlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertVC.swift; sourceTree = "<group>"; };
 		C455D58A1F8D0024002846D9 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		C45FE1881FB860330080E172 /* QST-iBook.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "QST-iBook.epub"; sourceTree = "<group>"; };
@@ -197,8 +197,8 @@
 			isa = PBXGroup;
 			children = (
 				C43624151F98DD3700ECD14A /* Books */,
-				C410E7D51F97C9B100EEFB7B /* Advices.csv */,
 				C4CA866B1F9658E800A8772D /* FAQ.csv */,
+				C42937091FB9D3B70016A02F /* Advices.plist */,
 				C4D458441F8021D100565A3F /* QuitSmokingTogether.xcdatamodeld */,
 				C4D458471F8021D100565A3F /* Assets.xcassets */,
 				C47317911F8D1C1600A6AE43 /* Notes and links.rtf */,
@@ -357,7 +357,7 @@
 				C4D458481F8021D100565A3F /* Assets.xcassets in Resources */,
 				C4CA866C1F9658F000A8772D /* FAQ.csv in Resources */,
 				C47317921F8D1C1600A6AE43 /* Notes and links.rtf in Resources */,
-				C410E7D61F97C9B400EEFB7B /* Advices.csv in Resources */,
+				C429370A1FB9D3B70016A02F /* Advices.plist in Resources */,
 				C4D458431F8021D100565A3F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

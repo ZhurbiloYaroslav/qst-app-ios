@@ -57,6 +57,18 @@ class Advices {
         return items[currentAdviceIndex]
     }
     
+    func parseAdvicesPlist() {
+        var myDict: NSDictionary?
+        if let path = Bundle.main.path(forResource: "Advices", ofType: "plist") {
+            myDict = NSDictionary(contentsOfFile: path)
+        }
+        if let dict = myDict {
+            for record in dict {
+                
+            }
+        }
+    }
+    
     func parseAdvicesCsv() {
         if let path = Bundle.main.path(forResource: "Advices", ofType: "csv") {
             do {
