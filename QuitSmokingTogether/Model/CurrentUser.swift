@@ -57,12 +57,12 @@ class CurrentUser {
 
 extension CurrentUser {
     
-    static func saveInfoFor(_ user: User?, andProvider provider: Provider) {
+    static func saveInfoFor(_ user: User?, andProvider provider: Provider, andName username: String? = nil) {
         guard let userID = user?.uid else { return }
 
         saveUserID(userID, andProvider: provider)
         self.email = user?.email
-        self.name = user?.displayName
+        self.name = username ?? user?.displayName
         self.isLoggedIn = true
     }
     

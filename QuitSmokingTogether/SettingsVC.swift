@@ -35,7 +35,7 @@ class SettingsVC: UIViewController {
 extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -44,6 +44,8 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
             return 1
         case 1:
             return 3
+        case 2:
+            return 2
         default:
             return 0
         }
@@ -65,6 +67,12 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
         case [1,2]:
             let cell = tableView.dequeueReusableCell(withIdentifier: "Donate", for: indexPath) as UITableViewCell
             return cell
+        case [2,0]:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Advert", for: indexPath) as UITableViewCell
+            return cell
+        case [2,1]:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "About", for: indexPath) as UITableViewCell
+            return cell
             
         default:
             return UITableViewCell()
@@ -74,7 +82,7 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
         let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: 30))
-        if (section == 1) {
+        if (section == 2) {
             headerView.backgroundColor = Constants.Color.green
         } else {
             headerView.backgroundColor = UIColor.clear

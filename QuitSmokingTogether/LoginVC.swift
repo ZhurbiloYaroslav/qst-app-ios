@@ -43,14 +43,14 @@ class LoginVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         performSegueIfLoggedInFacebook()
-        moveToMainViewIfLoggedIn()
+//        moveToMainViewIfLoggedIn()
     }
     
     override func viewWillAppear(_ animated: Bool) {
     }
     
     func performSegueIfLoggedInFacebook() {
-        if (AccessToken.current?.authenticationToken != nil && fbLoginSuccess == true) {
+        if (AccessToken.current?.authenticationToken == CurrentUser.authToken) {
             self.performSegue(withIdentifier: "LoggedInFromLogin", sender: nil)
             fbLoginSuccess = false
         }
@@ -64,7 +64,9 @@ class LoginVC: UIViewController {
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
         if fieldsAreValidated() {
+            print("fieldsAreValidated")
             FirebaseAuthManager().signIn(withEmail: emailField.text!, password: passwordField.text!) {
+                print("LoggedInFromLogin")
                 self.performSegue(withIdentifier: "LoggedInFromLogin", sender: nil)
             }
         }
@@ -83,6 +85,7 @@ class LoginVC: UIViewController {
                 print("canceled")
             case .success( _, _, let accessToken):
                 CurrentUser.saveInfoWith(accessToken, andProvider: .authFacebook)
+                CurrentUser.authToken = accessToken.authenticationToken
                 self.getFBUserInfo()
             }
         }
@@ -93,7 +96,7 @@ class LoginVC: UIViewController {
         request.start { (response, result) in
             switch result {
             case .success(let value):
-                print(value.dictionaryValue)
+
                 if let currentUserEmail = value.dictionaryValue?["email"] as? String {
                     CurrentUser.email = currentUserEmail
                 }
@@ -145,12 +148,12 @@ extension LoginVC {
             presentAlert(validationErrors)
             return false
         }
-        
+        print("fieldsAreValidated == true")
         return true
     }
     
     func presentAlert(_ arrayWithMessages: [String]) {
-        let title = "Some Alert"
+        let title = "User login"
         var message = ""
         for index in 0...(arrayWithMessages.count - 1) {
             message += arrayWithMessages[index]
@@ -169,7 +172,7 @@ extension LoginVC {
     }
     
     func isEmailValid(_ email : String?) -> Bool {
-        let fullEmailRegEx = "(?:[a-z0-9!#$%\\&'*+/=?\\^_`{|}~-]+(?:\\.[a-z0-9!#$%\\&'*+/=?\\^_`{|}"+"~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\"+"x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-"+"z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5"+"]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-"+"9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21"+"-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])"
+//        let fullEmailRegEx = "(?:[a-z0-9!#$%\\&'*+/=?\\^_`{|}~-]+(?:\\.[a-z0-9!#$%\\&'*+/=?\\^_`{|}"+"~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\"+"x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-"+"z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5"+"]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-"+"9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21"+"-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])"
         let simpleEmailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         
         let emailTest = NSPredicate(format:"SELF MATCHES %@", simpleEmailRegEx)
@@ -177,8 +180,10 @@ extension LoginVC {
     }
     
     func isPasswordValid(_ password : String?) -> Bool {
-        let passwordRegEx = "(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{8,}"
-        let simplePassword = NSPredicate(format: "SELF MATCHES %@", passwordRegEx)
+//        let passwordRegEx = "(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{8,}"
+        let simplePasswordRegEx = "(?=.*[A-Za-z0-9]).{6,}"
+
+        let simplePassword = NSPredicate(format: "SELF MATCHES %@", simplePasswordRegEx)
         return simplePassword.evaluate(with: password)
     }
 }

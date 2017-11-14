@@ -35,9 +35,16 @@ class OverviewVC: UIViewController {
     @IBAction func continueReadingButtonPressed(_ sender: UIButton) {
         showReader()
     }
+    @IBAction func readMoreButtonPressed(_ sender: UIButton) {
+        showAdviceView()
+    }
     
     func showReader() {
         tabBarController?.selectedIndex = 1
+    }
+    
+    func showAdviceView() {
+        performSegue(withIdentifier: "showAdviceFromOverview", sender: nil)
     }
     
 }
@@ -75,6 +82,8 @@ extension OverviewVC: UITableViewDataSource, UITableViewDelegate {
         switch indexPath {
         case [0,0]:
             showReader()
+        case [0,1]:
+            showAdviceView()
         default:
             return
         }

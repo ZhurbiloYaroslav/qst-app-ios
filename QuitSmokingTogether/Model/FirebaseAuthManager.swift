@@ -25,11 +25,11 @@ class FirebaseAuthManager {
         //TODO: some code here
     }
     
-    public func createUser(withEmail email: String, password: String, completionHandler: @escaping SuccessBehaviour) {
+    public func createUser(withEmail email: String, password: String, name: String, completionHandler: @escaping SuccessBehaviour) {
         
         Auth.auth().createUser(withEmail: email, password: password) { (user, error) in
             if error == nil {
-                CurrentUser.saveInfoFor(user, andProvider: .authEmail)
+                CurrentUser.saveInfoFor(user, andProvider: .authEmail, andName: name)
                 completionHandler()
             } else {
                 print("---createUser Fail", error!.localizedDescription)
@@ -38,10 +38,12 @@ class FirebaseAuthManager {
     }
     
     public func signIn(withEmail email: String, password: String, completionHandler: @escaping SuccessBehaviour) {
+        print("signIn")
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             if error == nil {
                 CurrentUser.saveInfoFor(user, andProvider: .authEmail)
-                
+                print("error == nil")
+
                 Auth.auth().currentUser?.getIDToken() { token, error in
                     if error == nil, let token = token {
                         CurrentUser.authToken = token
@@ -50,7 +52,7 @@ class FirebaseAuthManager {
                 }
                 
             } else {
-                //
+                print(error?.localizedDescription)
             }
         }
     }
