@@ -13,6 +13,10 @@
 		C410E7D01F97BEB200EEFB7B /* UIButton+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C410E7CF1F97BEB200EEFB7B /* UIButton+IBInspectable.swift */; };
 		C410E7D41F97C67E00EEFB7B /* Advices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C410E7D31F97C67E00EEFB7B /* Advices.swift */; };
 		C41B6F0C1FA2486B00B40F93 /* UIViewController+hideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41B6F0B1FA2486B00B40F93 /* UIViewController+hideKeyboard.swift */; };
+		C4258EFC1FC2D2AA009FCBC8 /* alex.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4258EFB1FC2D2AA009FCBC8 /* alex.jpg */; };
+		C4258EFE1FC2D2D9009FCBC8 /* qstBook.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4258EFD1FC2D2D9009FCBC8 /* qstBook.jpg */; };
+		C4258F001FC2D338009FCBC8 /* qstBook-bigger.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4258EFF1FC2D338009FCBC8 /* qstBook-bigger.jpg */; };
+		C4258F021FC31D18009FCBC8 /* author-big.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4258F011FC31D17009FCBC8 /* author-big.jpg */; };
 		C429370A1FB9D3B70016A02F /* Advices.plist in Resources */ = {isa = PBXBuildFile; fileRef = C42937091FB9D3B70016A02F /* Advices.plist */; };
 		C429370C1FB9E9010016A02F /* UIScrollView+scrollToView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429370B1FB9E9000016A02F /* UIScrollView+scrollToView.swift */; };
 		C455D5871F8CFE75002846D9 /* AlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C455D5861F8CFE75002846D9 /* AlertVC.swift */; };
@@ -63,6 +67,10 @@
 		C410E7CF1F97BEB200EEFB7B /* UIButton+IBInspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+IBInspectable.swift"; sourceTree = "<group>"; };
 		C410E7D31F97C67E00EEFB7B /* Advices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advices.swift; sourceTree = "<group>"; };
 		C41B6F0B1FA2486B00B40F93 /* UIViewController+hideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+hideKeyboard.swift"; sourceTree = "<group>"; };
+		C4258EFB1FC2D2AA009FCBC8 /* alex.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = alex.jpg; sourceTree = "<group>"; };
+		C4258EFD1FC2D2D9009FCBC8 /* qstBook.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = qstBook.jpg; sourceTree = "<group>"; };
+		C4258EFF1FC2D338009FCBC8 /* qstBook-bigger.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "qstBook-bigger.jpg"; sourceTree = "<group>"; };
+		C4258F011FC31D17009FCBC8 /* author-big.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "author-big.jpg"; sourceTree = "<group>"; };
 		C42937091FB9D3B70016A02F /* Advices.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Advices.plist; sourceTree = "<group>"; };
 		C429370B1FB9E9000016A02F /* UIScrollView+scrollToView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+scrollToView.swift"; sourceTree = "<group>"; };
 		C455D5861F8CFE75002846D9 /* AlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertVC.swift; sourceTree = "<group>"; };
@@ -147,6 +155,17 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		C4258EFA1FC2D291009FCBC8 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				C4258F011FC31D17009FCBC8 /* author-big.jpg */,
+				C4258EFB1FC2D2AA009FCBC8 /* alex.jpg */,
+				C4258EFD1FC2D2D9009FCBC8 /* qstBook.jpg */,
+				C4258EFF1FC2D338009FCBC8 /* qstBook-bigger.jpg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		C43624151F98DD3700ECD14A /* Books */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +218,7 @@
 		C455D5851F8CFE1C002846D9 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C4258EFA1FC2D291009FCBC8 /* Images */,
 				C43624151F98DD3700ECD14A /* Books */,
 				C4CA866B1F9658E800A8772D /* FAQ.csv */,
 				C42937091FB9D3B70016A02F /* Advices.plist */,
@@ -355,13 +375,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4B808921F9F36FA0099DA49 /* GoogleService-Info.plist in Resources */,
+				C4258F001FC2D338009FCBC8 /* qstBook-bigger.jpg in Resources */,
 				C45FE1891FB860350080E172 /* QST-iBook.epub in Resources */,
 				C4D4584B1F8021D100565A3F /* LaunchScreen.storyboard in Resources */,
 				C4D458481F8021D100565A3F /* Assets.xcassets in Resources */,
+				C4258EFC1FC2D2AA009FCBC8 /* alex.jpg in Resources */,
 				C4CA866C1F9658F000A8772D /* FAQ.csv in Resources */,
 				C47317921F8D1C1600A6AE43 /* Notes and links.rtf in Resources */,
 				C429370A1FB9D3B70016A02F /* Advices.plist in Resources */,
 				C4D458431F8021D100565A3F /* Main.storyboard in Resources */,
+				C4258EFE1FC2D2D9009FCBC8 /* qstBook.jpg in Resources */,
+				C4258F021FC31D18009FCBC8 /* author-big.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
