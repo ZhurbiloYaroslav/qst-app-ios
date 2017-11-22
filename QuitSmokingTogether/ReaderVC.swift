@@ -27,6 +27,7 @@ class ReaderVC: UIViewController {
     func openFolioReader() {
         let config = FolioReaderConfig()
         config.shouldHideNavigationOnTap = true
+        config.enableTTS = false
         let bookPath = Bundle.main.path(forResource: "QST-iBook", ofType: "epub")
         let folioReader = FolioReader()
         folioReader.delegate = self

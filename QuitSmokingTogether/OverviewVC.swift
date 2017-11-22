@@ -52,24 +52,31 @@ class OverviewVC: UIViewController {
 extension OverviewVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         switch indexPath {
         case [0,0]:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "overviewReadCell", for: indexPath) as! OverviewReadCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "OverviewReadCell", for: indexPath) as! OverviewReadCell
             cell.updateCell()
             return cell
             
         case [0,1]:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "overviewAdviceCell", for: indexPath) as! OverviewAdviceCell
-//            cell.adviceTextLabel?.text = "Here will be the text of advice"
+            let cell = tableView.dequeueReusableCell(withIdentifier: "OverviewAdviceCell", for: indexPath) as! OverviewAdviceCell
             return cell
             
         case [0,2]:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "overviewHelpCell", for: indexPath) as! OverviewHelpCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "OverviewNewsCell", for: indexPath) as! OverviewNewsCell
+            return cell
+            
+        case [0,3]:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "OverviewCompCell", for: indexPath) as! OverviewCompCell
+            return cell
+            
+        case [0,4]:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "OverviewHelpCell", for: indexPath) as! OverviewHelpCell
             cell.helpTextLabel?.text = "Here will be the text of help cell"
             return cell
             
