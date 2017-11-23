@@ -82,10 +82,10 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
         let headerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: 30))
-        if (section == 2) {
-            headerView.backgroundColor = Constants.Color.green
-        } else {
+        if (section == 0) {
             headerView.backgroundColor = UIColor.clear
+        } else {
+            headerView.backgroundColor = Constants.Color.green
         }
         
         return headerView
@@ -95,10 +95,10 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         
         let footerView = UIView(frame: CGRect(x: 0, y: 0, width: tableView.bounds.size.width, height: 1))
-        if (section == 0) {
-            footerView.backgroundColor = Constants.Color.green
-        } else {
+        if (section == 2) {
             footerView.backgroundColor = UIColor.clear
+        } else {
+            footerView.backgroundColor = Constants.Color.green
         }
         
         return footerView
