@@ -45,6 +45,9 @@
 		C4A4D30D1FAA04FD00EC9D50 /* ValidationErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A4D30C1FAA04FD00EC9D50 /* ValidationErrors.swift */; };
 		C4B057111FC6E32300699B6F /* EventsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B057101FC6E32300699B6F /* EventsListVC.swift */; };
 		C4B057131FC6E35C00699B6F /* OnlineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B057121FC6E35C00699B6F /* OnlineVC.swift */; };
+		C4B057151FC6FF9400699B6F /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B057141FC6FF9400699B6F /* EventCell.swift */; };
+		C4B057171FC701DF00699B6F /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B057161FC701DF00699B6F /* Event.swift */; };
+		C4B057191FC7025D00699B6F /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B057181FC7025D00699B6F /* Image.swift */; };
 		C4B8088C1F9DE7430099DA49 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8088B1F9DE7430099DA49 /* UserDefaultsManager.swift */; };
 		C4B8088E1F9F2CCF0099DA49 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8088D1F9F2CCF0099DA49 /* LoginVC.swift */; };
 		C4B808921F9F36FA0099DA49 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4B808911F9F36F60099DA49 /* GoogleService-Info.plist */; };
@@ -108,6 +111,9 @@
 		C4A4D30C1FAA04FD00EC9D50 /* ValidationErrors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationErrors.swift; sourceTree = "<group>"; };
 		C4B057101FC6E32300699B6F /* EventsListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListVC.swift; sourceTree = "<group>"; };
 		C4B057121FC6E35C00699B6F /* OnlineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineVC.swift; sourceTree = "<group>"; };
+		C4B057141FC6FF9400699B6F /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
+		C4B057161FC701DF00699B6F /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
+		C4B057181FC7025D00699B6F /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		C4B8088B1F9DE7430099DA49 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		C4B8088D1F9F2CCF0099DA49 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		C4B808911F9F36F60099DA49 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -209,6 +215,8 @@
 				C4A4D3091FA8D93400EC9D50 /* Typealiases.swift */,
 				C4A4D30C1FAA04FD00EC9D50 /* ValidationErrors.swift */,
 				C4258F051FC46184009FCBC8 /* Browser.swift */,
+				C4B057161FC701DF00699B6F /* Event.swift */,
+				C4B057181FC7025D00699B6F /* Image.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -294,6 +302,7 @@
 			isa = PBXGroup;
 			children = (
 				C46DFB2F1FC48C6F00A62D69 /* Overview */,
+				C4B057141FC6FF9400699B6F /* EventCell.swift */,
 				C4A4D3031FA87AE800EC9D50 /* OptAccountCell.swift */,
 				C4CECEE51F94CDA9009C85DE /* FAQCell.swift */,
 			);
@@ -494,12 +503,15 @@
 				C4CECEDE1F94C877009C85DE /* FAQVC.swift in Sources */,
 				C461A2CA1F8E534900B698FA /* OverviewHelpCell.swift in Sources */,
 				C455D5871F8CFE75002846D9 /* AlertVC.swift in Sources */,
+				C4B057171FC701DF00699B6F /* Event.swift in Sources */,
 				C41B6F0C1FA2486B00B40F93 /* UIViewController+hideKeyboard.swift in Sources */,
 				C4EBF5321FA61BE900753D0C /* HideKeyboard.swift in Sources */,
 				C4A4D3081FA8C8AC00EC9D50 /* AccountVC.swift in Sources */,
 				C4B057131FC6E35C00699B6F /* OnlineVC.swift in Sources */,
 				C4258F041FC4522B009FCBC8 /* DonateVC.swift in Sources */,
 				C4CA865F1F94FDCA00A8772D /* FAQ.swift in Sources */,
+				C4B057191FC7025D00699B6F /* Image.swift in Sources */,
+				C4B057151FC6FF9400699B6F /* EventCell.swift in Sources */,
 				C4B057111FC6E32300699B6F /* EventsListVC.swift in Sources */,
 				C4A4D3041FA87AE800EC9D50 /* OptAccountCell.swift in Sources */,
 				C4D4583E1F8021D100565A3F /* AppDelegate.swift in Sources */,

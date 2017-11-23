@@ -53,26 +53,56 @@
                                 <rect key="frame" x="0.0" y="71" width="414" height="552"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="400" id="Gi4-Ae-am0">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EventInListCell" rowHeight="400" id="Gi4-Ae-am0" customClass="EventCell" customModule="QuitSmokingTogether" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="400"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gi4-Ae-am0" id="GAT-37-9xE">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="399.66666666666669"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qoH-er-dbW">
-                                                    <rect key="frame" x="15" y="11" width="384" height="378"/>
+                                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qoH-er-dbW" customClass="CLabsImageSlider" customModule="CLabsImageSlider">
+                                                    <rect key="frame" x="15" y="11" width="384" height="200"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="200" id="FX8-51-UH8"/>
+                                                        <constraint firstAttribute="width" constant="384" id="mKO-aK-TMI"/>
+                                                    </constraints>
                                                 </view>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BBe-N9-ga9">
+                                                    <rect key="frame" x="20" y="219" width="374" height="165"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UbW-ye-CQd">
+                                                            <rect key="frame" x="0.0" y="0.0" width="374" height="23.333333333333332"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Description With 3 lines" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJD-kE-JJS">
+                                                            <rect key="frame" x="0.0" y="23.333333333333343" width="374" height="141.66666666666666"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="trailing" secondItem="qoH-er-dbW" secondAttribute="trailing" constant="15" id="17C-BQ-766"/>
                                                 <constraint firstItem="qoH-er-dbW" firstAttribute="top" secondItem="GAT-37-9xE" secondAttribute="top" constant="11" id="80q-eS-AFi"/>
-                                                <constraint firstAttribute="bottom" secondItem="qoH-er-dbW" secondAttribute="bottom" constant="10.67" id="Fju-vC-ZX7"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="BBe-N9-ga9" secondAttribute="trailing" constant="5" id="CHx-uX-YGY"/>
                                                 <constraint firstItem="qoH-er-dbW" firstAttribute="leading" secondItem="GAT-37-9xE" secondAttribute="leading" constant="15" id="HBg-iv-3fb"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="BBe-N9-ga9" secondAttribute="bottom" constant="5" id="cOE-Or-PeU"/>
+                                                <constraint firstItem="BBe-N9-ga9" firstAttribute="leading" secondItem="GAT-37-9xE" secondAttribute="leadingMargin" constant="5" id="dSP-xH-Bfe"/>
+                                                <constraint firstItem="qoH-er-dbW" firstAttribute="centerX" secondItem="GAT-37-9xE" secondAttribute="centerX" id="nJi-UG-cCp"/>
+                                                <constraint firstItem="BBe-N9-ga9" firstAttribute="top" secondItem="qoH-er-dbW" secondAttribute="bottom" constant="8" id="ocN-oB-Wy9"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.92148083448410034" green="0.92163199186325073" blue="0.92144864797592163" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="eventDescription" destination="dJD-kE-JJS" id="dHB-5a-4g9"/>
+                                            <outlet property="eventTitle" destination="UbW-ye-CQd" id="nwr-3c-30k"/>
+                                            <outlet property="imageSlider" destination="qoH-er-dbW" id="KS6-WL-sAu"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -91,6 +121,9 @@
                         <viewLayoutGuide key="safeArea" id="Gkr-Hj-RoZ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Events" id="4vB-sX-ETE"/>
+                    <connections>
+                        <outlet property="tableView" destination="umf-fv-U11" id="wyl-gq-pRM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cQO-mx-3yC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

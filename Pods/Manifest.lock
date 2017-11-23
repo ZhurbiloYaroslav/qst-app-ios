@@ -6,6 +6,7 @@ PODS:
   - Bolts/AppLinks (1.8.4):
     - Bolts/Tasks
   - Bolts/Tasks (1.8.4)
+  - CLabsImageSlider (0.1.2)
   - CSV.swift (2.1.0)
   - FacebookCore (0.3.0):
     - Bolts (~> 1.8)
@@ -79,10 +80,10 @@ PODS:
   - RealmSwift (2.10.2):
     - Realm (= 2.10.2)
   - SSZipArchive (1.8.1)
-  - Validator (3.0)
   - ZFDragableModalTransition (0.6)
 
 DEPENDENCIES:
+  - CLabsImageSlider (~> 0.1.2)
   - CSV.swift (~> 2.1.0)
   - FacebookCore
   - FacebookLogin
@@ -91,11 +92,11 @@ DEPENDENCIES:
   - Firebase/Core
   - FolioReaderKit
   - KeychainSwift (~> 9.0)
-  - Validator
 
 SPEC CHECKSUMS:
   AEXML: 6fc6433aa35bdc15dd8eb8d54eb7aa4520a010eb
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  CLabsImageSlider: 49c296c17e2fb15f1abe8b5dd6157927912abb7c
   CSV.swift: a24fb11c17875523783fe963592762ff163ef8ea
   FacebookCore: 3ffa190a3f1f96cec0e44d3fc221bc322c595ffa
   FacebookLogin: 0af839ea858faef99550d16596b87b4a8e8906e6
@@ -119,9 +120,8 @@ SPEC CHECKSUMS:
   Realm: 0ef72b837fb67e9f4b098bac771ddd72c7fdbb69
   RealmSwift: 07a9ae0505091eda6b2ee7c190c3786d6e90a7b0
   SSZipArchive: 04547dfa448be5ed7ecbaf7eaf8a6e9eb9b42997
-  Validator: 7d9828daffabc757604603052e407f208fa9b6d5
   ZFDragableModalTransition: 0d294eaaba6edfcb9839595de765f9ca06a4b524
 
-PODFILE CHECKSUM: 7f41f0276f3c3c21b2150034c36626bea35068ab
+PODFILE CHECKSUM: 67851d2c0d03261a1d96d099063507bf1e067270
 
 COCOAPODS: 1.2.1

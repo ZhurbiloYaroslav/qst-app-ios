@@ -13,7 +13,6 @@ import UIKit
 import FacebookLogin
 import FacebookCore
 import FirebaseAuth
-import Validator
 
 class LoginVC: UIViewController {
     
