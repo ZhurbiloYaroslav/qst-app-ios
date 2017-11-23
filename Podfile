@@ -4,7 +4,6 @@ use_frameworks!
 
 target 'QuitSmokingTogether' do
 
-	pod 'Validator'
 	pod 'FolioReaderKit'
   pod 'CSV.swift', '~> 2.1.0'
 	pod 'FacebookCore'
@@ -13,11 +12,12 @@ target 'QuitSmokingTogether' do
 	pod 'Firebase/Core'
 	pod 'Firebase/Auth'
 	pod 'KeychainSwift', '~> 9.0' # https://github.com/evgenyneu/keychain-swift
+	pod "CLabsImageSlider", '~> 0.1.2'
 
 end
 
 post_install do |installer|
-        myTargets = ['FolioReaderKit', 'FontBlaster', 'MenuItemKit']
+        myTargets = ['FolioReaderKit', 'FontBlaster', 'MenuItemKit', "CLabsImageSlider"]
 
         installer.pods_project.targets.each do |target|
                 if myTargets.include? target.name
