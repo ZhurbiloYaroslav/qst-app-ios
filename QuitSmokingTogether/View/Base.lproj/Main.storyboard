@@ -25,14 +25,76 @@
                     <view key="view" contentMode="scaleToFill" id="fzw-Bj-dSf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="lXV-pe-xaT">
+                                <rect key="frame" x="5" y="5" width="404" height="61"/>
+                                <subviews>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="03V-hc-u8b">
+                                        <rect key="frame" x="0.0" y="0.0" width="404" height="29"/>
+                                        <segments>
+                                            <segment title="All"/>
+                                            <segment title="Unread"/>
+                                            <segment title="Starred"/>
+                                        </segments>
+                                        <color key="tintColor" red="0.36862745099999999" green="0.73725490199999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </segmentedControl>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="aYi-Cq-qRU">
+                                        <rect key="frame" x="0.0" y="33" width="404" height="29"/>
+                                        <segments>
+                                            <segment title="All"/>
+                                            <segment title="News"/>
+                                            <segment title="Competitions"/>
+                                        </segments>
+                                        <color key="tintColor" red="0.36862745099999999" green="0.73725490199999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </segmentedControl>
+                                </subviews>
+                            </stackView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="umf-fv-U11">
+                                <rect key="frame" x="0.0" y="71" width="414" height="552"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="400" id="Gi4-Ae-am0">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="400"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gi4-Ae-am0" id="GAT-37-9xE">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="399.66666666666669"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qoH-er-dbW">
+                                                    <rect key="frame" x="15" y="11" width="384" height="378"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="qoH-er-dbW" secondAttribute="trailing" constant="15" id="17C-BQ-766"/>
+                                                <constraint firstItem="qoH-er-dbW" firstAttribute="top" secondItem="GAT-37-9xE" secondAttribute="top" constant="11" id="80q-eS-AFi"/>
+                                                <constraint firstAttribute="bottom" secondItem="qoH-er-dbW" secondAttribute="bottom" constant="10.67" id="Fju-vC-ZX7"/>
+                                                <constraint firstItem="qoH-er-dbW" firstAttribute="leading" secondItem="GAT-37-9xE" secondAttribute="leading" constant="15" id="HBg-iv-3fb"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.92148083448410034" green="0.92163199186325073" blue="0.92144864797592163" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="lXV-pe-xaT" firstAttribute="leading" secondItem="Gkr-Hj-RoZ" secondAttribute="leading" constant="5" id="4Hv-5g-Z0U"/>
+                            <constraint firstItem="umf-fv-U11" firstAttribute="top" secondItem="lXV-pe-xaT" secondAttribute="bottom" constant="5" id="6vm-f2-khE"/>
+                            <constraint firstItem="Gkr-Hj-RoZ" firstAttribute="trailing" secondItem="lXV-pe-xaT" secondAttribute="trailing" constant="5" id="SQz-Gd-I4J"/>
+                            <constraint firstItem="lXV-pe-xaT" firstAttribute="top" secondItem="Gkr-Hj-RoZ" secondAttribute="top" constant="5" id="XRw-NV-rC8"/>
+                            <constraint firstItem="umf-fv-U11" firstAttribute="bottom" secondItem="Gkr-Hj-RoZ" secondAttribute="bottom" id="abc-Wn-NAO"/>
+                            <constraint firstItem="umf-fv-U11" firstAttribute="trailing" secondItem="Gkr-Hj-RoZ" secondAttribute="trailing" id="bDF-oa-qaG"/>
+                            <constraint firstItem="umf-fv-U11" firstAttribute="top" secondItem="lXV-pe-xaT" secondAttribute="bottom" constant="5" id="k57-Lo-g4C"/>
+                            <constraint firstItem="umf-fv-U11" firstAttribute="leading" secondItem="Gkr-Hj-RoZ" secondAttribute="leading" id="yDx-0V-5Na"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Gkr-Hj-RoZ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Events" id="4vB-sX-ETE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cQO-mx-3yC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-580" y="1660"/>
+            <point key="canvasLocation" x="-581.15942028985512" y="1659.7826086956522"/>
         </scene>
         <!--Online-->
         <scene sceneID="jDw-8h-uka">
