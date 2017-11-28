@@ -136,6 +136,15 @@ extension CurrentUser {
         }
     }
     
+    static var phone: String {
+        get {
+            return self.keychainManager.get("currentUserPhone") ?? "Set the Phone number"
+        }
+        set {
+            keychainManager.set(newValue, forKey: "currentUserPhone")
+        }
+    }
+    
     static var authToken: String {
         get {
             return self.keychainManager.get("currentUserAuthenticationToken") ?? ""

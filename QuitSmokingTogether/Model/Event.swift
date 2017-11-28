@@ -10,18 +10,22 @@ import Foundation
 
 class Event {
     
+    var type: EventType!
     var title: String!
     var text: String!
-    var images: [String]!
+    var arrayWithImagesURL: [String]!
     
-    init(title: String, text: String, images: [String]) {
+    init(type: EventType, title: String, text: String, arrayWithImagesURL: [String]) {
+        self.type = type
         self.title = title
         self.text = text
-        self.images = images
+        self.arrayWithImagesURL = arrayWithImagesURL
     }
     
     enum EventType: String {
+        case All = "All"
         case News = "News"
         case Competiton = "Competition"
+        case Undefined = "Undefined"
     }
 }

@@ -7,11 +7,10 @@
 //
 
 import UIKit
-import CLabsImageSlider
 
-class EventCell: UITableViewCell, imageSliderDelegate {
+class EventCell: UITableViewCell {
     
-    @IBOutlet weak var imageSlider: CLabsImageSlider!
+    @IBOutlet weak var eventImage: UIImageView!
     @IBOutlet weak var eventTitle: UILabel!
     @IBOutlet weak var eventDescription: UILabel!
         
@@ -20,25 +19,12 @@ class EventCell: UITableViewCell, imageSliderDelegate {
         
     }
     
-    override func layoutSubviews() {
-        super.layoutSubviews()
-        
-        
-    }
-    
     func update(event: Event) {
         
+        eventImage.downloadedFrom(link: event.arrayWithImagesURL[0], contentMode: .scaleAspectFill)
         eventTitle.text = event.title
         eventDescription.text = event.text
         
-        imageSlider.sliderDelegate = self
-        imageSlider.setUpView(imageSource: .Url(imageArray: event.images, placeHolderImage: UIImage(named:"Man")), slideType:.ManualSwipe, isArrowBtnEnabled: true)
-        
-        // imageSlider.setUpView(.Local(imageArray: localImages),slideType: .ManualSwipe,isArrowBtnEnabled: true)
-    }
-    
-    func didMovedToIndex(index:Int) {
-        print("did moved at Index : ",index)
     }
     
 }

@@ -11,7 +11,7 @@ import Foundation
 
 class Browser {
     
-    static func openURLWith(_ urlAddress: UrlAdresses) {
+    static func openURLWith(_ urlAddress: UrlAdress) {
 
         if let url = URL(string: urlAddress.rawValue), UIApplication.shared.canOpenURL(url){
             
@@ -25,8 +25,24 @@ class Browser {
             print("can't open")
         }
     }
-    enum UrlAdresses: String {
+    
+    func getDataFrom(_ urlAddress: UrlAdress, completion: @escaping (Data?, URLResponse?, Error?) -> ()) {
+        if let url = URL(string: urlAddress.rawValue), UIApplication.shared.canOpenURL(url){
+            URLSession.shared.dataTask(with: url) { data, response, error in
+                completion(data, response, error)
+                }.resume()
+        }
+    }
+    
+    enum UrlAdress: String {
         //TODO: Change address to the App
+        case Call_Phone = "tel://+380502022302"
+        case Call_Skype = "skype:alexeykovalua"
+        case Call_Viber = "viber://add?number=380502022302"
+        case Call_WhatsApp = "https://api.whatsapp.com/send?phone=380502022302&text=Hello Alex, I need your help in quit smoking!"
+        
+        case Mail_Alexeykovalua = "mailto:quitsmokingtogether@gmail.com"
+        
         case AppInItunes = "https://diglabstudio.com/"
         case DigLabStudio = "https://diglabstudio.com"
     }

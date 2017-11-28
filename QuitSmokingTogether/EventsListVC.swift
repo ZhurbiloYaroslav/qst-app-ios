@@ -11,32 +11,55 @@ import UIKit
 class EventsListVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var filterStack: UIStackView!
+    @IBOutlet weak var constraintHeightForFilterStack: NSLayoutConstraint!
     
-    let eventsList: [Event] = [
-        Event(title: "\"Quit Smoking Together\" action was held in Kyiv",
-              text: "The activists dressed as branded cigarettes handed out CDs with Alexey Koval's book \"Quit Smoking Together\". The photos show how it all went :) ",
-              images: [
-                "http://quitsmokingtogether.org/foto/2017/09/kyiv27/IMG_8571.JPG",
-                "http://quitsmokingtogether.org/foto/2017/09/kyiv27/IMG_8562.JPG",
-                "http://quitsmokingtogether.org/foto/2017/09/kyiv27/IMG_8560.JPG",
-                "http://quitsmokingtogether.org/foto/2017/09/kyiv27/IMG_8546.JPG",
-                "http://quitsmokingtogether.org/foto/2017/09/kyiv27/IMG_8543.JPG"
-                ]
-        )
-    ]
+    let eventsList: [Event] = EventsList.getArrayWithEvents()
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setDelegates()
-        
-        tableView.estimatedRowHeight = 80
-        tableView.rowHeight = UITableViewAutomaticDimension
+        filterVisibility()
+        updateUI()
     }
     
     func setDelegates() {
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    func updateUI() {
+        tableView.estimatedRowHeight = 80
+        tableView.rowHeight = UITableViewAutomaticDimension
+    }
+    
+    @IBAction func filterButtonPressed(_ sender: UIBarButtonItem) {
+        filterVisibility()
+    }
+    
+    func filterVisibility() {
+        if constraintHeightForFilterStack.constant == 0 {
+            constraintHeightForFilterStack.constant = 71
+            filterStack.isHidden = !filterStack.isHidden
+        } else {
+            constraintHeightForFilterStack.constant = 0
+            filterStack.isHidden = !filterStack.isHidden
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let segueID = segue.identifier else { return }
+        guard let destination = segue.destination as? EventVC else { return }
+        guard let currentEvent = sender as? Event else { return }
+        
+        switch segueID {
+        case "ShowEventFromEventsList":
+            destination.currentEvent = currentEvent
+        default:
+            print("undefined segue")
+            return
+        }
     }
 }
 
@@ -50,5 +73,9 @@ extension EventsListVC: UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EventInListCell", for: indexPath) as! EventCell
         cell.update(event: eventsList[indexPath.row])
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: "ShowEventFromEventsList", sender: eventsList[indexPath.row])
     }
 }

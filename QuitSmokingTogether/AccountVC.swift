@@ -7,9 +7,6 @@
 //
 
 import UIKit
-import FacebookLogin
-import FacebookCore
-import FirebaseAuth
 
 class AccountVC: UIViewController {
 
@@ -20,22 +17,10 @@ class AccountVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        fillLabelsWithValues()
-    }
-    
-    func fillLabelsWithValues() {
-        accountNameLabel.text = CurrentUser.name
-        accountEmailLabel.text = CurrentUser.email
-        print("---authToken", CurrentUser.authToken)
-        print("---id", CurrentUser.id)
-        print("---provider", CurrentUser.provider.rawValue)
-        logOutButton.setTitle("Log Out from \(CurrentUser.provider.rawValue)", for: .normal)
     }
     
     @IBAction func logOutButtonPressed(_ sender: UIButton) {
-        CurrentUser.logOut() {
-            self.fillLabelsWithValues()
-        }
+
     }
     
 }

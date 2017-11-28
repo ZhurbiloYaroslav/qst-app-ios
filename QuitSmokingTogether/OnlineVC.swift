@@ -12,8 +12,28 @@ class OnlineVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        
     }
-
+    
+    @IBAction func callPhoneButtonPressed(_ sender: UIButton) {
+        Browser.openURLWith(.Call_Phone)
+    }
+    
+    @IBAction func callViberButtonPressed(_ sender: UIButton) {
+        Browser.openURLWith(.Call_Viber)
+    }
+    
+    @IBAction func callWhatsAppButtonPressed(_ sender: UIButton) {
+        Browser.openURLWith(.Call_WhatsApp)
+    }
+    
+    @IBAction func callSkypeButtonPressed(_ sender: UIButton) {
+        Browser.openURLWith(.Call_Skype)
+    }
+    
+    @IBAction func makeEmailButtonPressed(_ sender: UIButton) {
+        Browser.openURLWith(.Mail_Alexeykovalua)
+    }
+    
 }
