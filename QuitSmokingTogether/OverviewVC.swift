@@ -47,6 +47,19 @@ class OverviewVC: UIViewController {
         performSegue(withIdentifier: "showAdviceFromOverview", sender: nil)
     }
     
+    func showEventDescriptionWith(type: Event.EventType) {
+        if let navController = self.tabBarController?.viewControllers?[1] as? UINavigationController {
+            if let newsViewController = navController.childViewControllers.first as? EventVC {
+                newsViewController.eventToSwitch = Event()
+                self.tabBarController?.selectedIndex = 1
+            }
+        }
+    }
+    
+    func showOnlineView() {
+        tabBarController?.selectedIndex = 3
+    }
+    
 }
 
 extension OverviewVC: UITableViewDataSource, UITableViewDelegate {
@@ -68,11 +81,13 @@ extension OverviewVC: UITableViewDataSource, UITableViewDelegate {
             return cell
             
         case [0,2]:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "OverviewNewsCell", for: indexPath) as! OverviewNewsCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "OverviewEventCell", for: indexPath) as! OverviewEventCell
+            cell.updateCellFor(eventType: .News)
             return cell
             
         case [0,3]:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "OverviewCompCell", for: indexPath) as! OverviewCompCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "OverviewEventCell", for: indexPath) as! OverviewEventCell
+            cell.updateCellFor(eventType: .Competiton)
             return cell
             
         case [0,4]:
@@ -91,6 +106,12 @@ extension OverviewVC: UITableViewDataSource, UITableViewDelegate {
             showReader()
         case [0,1]:
             showAdviceView()
+        case [0,2]:
+            showEventDescriptionWith(type: .News)
+        case [0,3]:
+            showEventDescriptionWith(type: .Competiton)
+        case [0,4]:
+            showOnlineView()
         default:
             return
         }

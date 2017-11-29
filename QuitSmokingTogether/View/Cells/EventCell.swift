@@ -17,6 +17,7 @@ class EventCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        eventImage.image = UIImage(named: "placeHolder.png")
     }
     
     func update(event: Event) {

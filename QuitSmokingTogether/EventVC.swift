@@ -17,12 +17,22 @@ class EventVC: UIViewController, imageSliderDelegate {
     
     var currentEvent: Event!
     
+    var eventToSwitch: Event?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setDelegates()
         
         updateLabels()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if let event = eventToSwitch {
+            print(event.title)
+        }
     }
     
     func setDelegates() {

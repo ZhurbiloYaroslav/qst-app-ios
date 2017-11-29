@@ -11,6 +11,7 @@ target 'QuitSmokingTogether' do
 	pod 'FacebookShare'
 	pod 'Firebase/Core'
 	pod 'Firebase/Auth'
+	pod 'Firebase/Database'
 	pod 'KeychainSwift', '~> 9.0' # https://github.com/evgenyneu/keychain-swift
 	pod "CLabsImageSlider", '~> 0.1.2'
 

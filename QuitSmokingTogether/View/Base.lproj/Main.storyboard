@@ -94,7 +94,7 @@
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJD-kE-JJS">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJD-kE-JJS">
                                                                     <rect key="frame" x="0.0" y="23.5" width="0.0" height="34.5"/>
                                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
                                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -165,7 +165,7 @@
         <!--Online-->
         <scene sceneID="jDw-8h-uka">
             <objects>
-                <viewController id="i3O-i1-HIB" customClass="OnlineVC" customModule="QuitSmokingTogether" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="OnlineVC" id="i3O-i1-HIB" customClass="OnlineVC" customModule="QuitSmokingTogether" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g6f-9b-bgf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -311,7 +311,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="8Jn-gl-uzQ">
-                                    <rect key="frame" x="0.0" y="608" width="320" height="44"/>
+                                    <rect key="frame" x="0.0" y="698" width="320" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </view>
@@ -452,40 +452,45 @@
                                             <outlet property="adviceTitleLabel" destination="UmS-sF-LM6" id="Kv2-mY-Yvp"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OverviewNewsCell" rowHeight="120" id="dr9-a5-rfI" customClass="OverviewNewsCell" customModule="QuitSmokingTogether" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="268" width="320" height="120"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OverviewEventCell" rowHeight="330" id="dr9-a5-rfI" customClass="OverviewEventCell" customModule="QuitSmokingTogether" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="268" width="320" height="330"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dr9-a5-rfI" id="clh-LV-rh9">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="119.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="329.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="opV-Rn-7ce">
-                                                    <rect key="frame" x="8" y="8" width="304" height="103.5"/>
+                                                    <rect key="frame" x="8" y="8" width="304" height="313.5"/>
                                                     <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" image="news-171019-1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="NUT-AV-wfN">
-                                                            <rect key="frame" x="0.0" y="0.0" width="64" height="103.5"/>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="news.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="NUT-AV-wfN">
+                                                            <rect key="frame" x="0.0" y="0.0" width="64" height="313.5"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="64" id="dTn-sr-9h1"/>
-                                                                <constraint firstAttribute="height" constant="103.5" id="eho-So-dbe"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="eB1-Eo-dQn">
-                                                            <rect key="frame" x="72" y="0.0" width="232" height="103.5"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="eB1-Eo-dQn">
+                                                            <rect key="frame" x="72" y="0.0" width="232" height="313.5"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Last News title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSe-N7-HI1">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="232" height="20.5"/>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WMw-j2-PLy">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="232" height="200"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="200" id="jlg-PH-O5c"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last News title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSe-N7-HI1">
+                                                                    <rect key="frame" x="0.0" y="205" width="232" height="20.5"/>
                                                                     <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
                                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="News article text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hXk-uj-nMJ">
-                                                                    <rect key="frame" x="0.0" y="25.5" width="232" height="48"/>
+                                                                    <rect key="frame" x="0.0" y="230.5" width="232" height="53"/>
                                                                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JNo-ma-JYE">
-                                                                    <rect key="frame" x="0.0" y="78.5" width="232" height="25"/>
+                                                                    <rect key="frame" x="0.0" y="288.5" width="232" height="25"/>
                                                                     <color key="backgroundColor" red="0.36862745099999999" green="0.73725490199999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="25" id="Rw8-Mz-ftH"/>
@@ -514,78 +519,14 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="newsTextLabel" destination="hXk-uj-nMJ" id="XLE-ZF-UKD"/>
-                                            <outlet property="newsTitleLabel" destination="eSe-N7-HI1" id="vxm-v4-EdR"/>
-                                        </connections>
-                                    </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OverviewCompCell" rowHeight="120" id="cac-ep-0F0" customClass="OverviewCompCell" customModule="QuitSmokingTogether" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="388" width="320" height="120"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="cac-ep-0F0" id="cFC-8x-rr1">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="119.5"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Ufq-O4-xgZ">
-                                                    <rect key="frame" x="8" y="8" width="304" height="103.5"/>
-                                                    <subviews>
-                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="252" image="comp-170531-1.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="b1P-jl-Zby">
-                                                            <rect key="frame" x="0.0" y="0.0" width="64" height="103.5"/>
-                                                            <constraints>
-                                                                <constraint firstAttribute="width" constant="64" id="Fft-oo-ohw"/>
-                                                                <constraint firstAttribute="height" constant="103.5" id="Tlu-3e-Z9u"/>
-                                                            </constraints>
-                                                        </imageView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="uLU-NU-b6P">
-                                                            <rect key="frame" x="72" y="0.0" width="232" height="103.5"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Last Competition title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cuU-iY-c8h">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="232" height="20.5"/>
-                                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
-                                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Competition article text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VMv-u3-Bi7">
-                                                                    <rect key="frame" x="0.0" y="25.5" width="232" height="48"/>
-                                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
-                                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8VW-n6-D6m">
-                                                                    <rect key="frame" x="0.0" y="78.5" width="232" height="25"/>
-                                                                    <color key="backgroundColor" red="0.36862745099999999" green="0.73725490199999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="height" constant="25" id="usP-u8-DjS"/>
-                                                                    </constraints>
-                                                                    <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                    <inset key="contentEdgeInsets" minX="10" minY="5" maxX="10" maxY="5"/>
-                                                                    <state key="normal" title="read more">
-                                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                                    </state>
-                                                                    <userDefinedRuntimeAttributes>
-                                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                                            <real key="value" value="10"/>
-                                                                        </userDefinedRuntimeAttribute>
-                                                                    </userDefinedRuntimeAttributes>
-                                                                </button>
-                                                            </subviews>
-                                                        </stackView>
-                                                    </subviews>
-                                                </stackView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="Ufq-O4-xgZ" secondAttribute="bottom" constant="8" id="8OB-yt-Ubq"/>
-                                                <constraint firstItem="Ufq-O4-xgZ" firstAttribute="top" secondItem="cFC-8x-rr1" secondAttribute="top" constant="8" id="KV0-Qy-Odk"/>
-                                                <constraint firstItem="Ufq-O4-xgZ" firstAttribute="leading" secondItem="cFC-8x-rr1" secondAttribute="leading" constant="8" id="iXc-AX-k2y"/>
-                                                <constraint firstAttribute="trailing" secondItem="Ufq-O4-xgZ" secondAttribute="trailing" constant="8" id="kOh-9p-Ihb"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="competitionTextLabel" destination="VMv-u3-Bi7" id="5tO-tF-UHZ"/>
-                                            <outlet property="competitionTitleLabel" destination="cuU-iY-c8h" id="Vms-Lp-uwn"/>
+                                            <outlet property="eventImageView" destination="WMw-j2-PLy" id="tRO-dT-4CA"/>
+                                            <outlet property="eventTextLabel" destination="hXk-uj-nMJ" id="245-QU-V2Q"/>
+                                            <outlet property="eventTitleLabel" destination="eSe-N7-HI1" id="k9B-8k-v5D"/>
+                                            <outlet property="eventTypeImage" destination="NUT-AV-wfN" id="W7r-RP-nER"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OverviewHelpCell" rowHeight="100" id="7hy-gx-MP4" customClass="OverviewHelpCell" customModule="QuitSmokingTogether" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="508" width="320" height="100"/>
+                                        <rect key="frame" x="0.0" y="598" width="320" height="100"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7hy-gx-MP4" id="u1I-5N-JWy">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="99.5"/>
@@ -2765,7 +2706,6 @@ Correspondent bank: The Bank of New York Mellon, New York, USA </string>
         <image name="background-girl" width="3456" height="5184"/>
         <image name="background-road" width="3744" height="5616"/>
         <image name="bookCover" width="75" height="68"/>
-        <image name="comp-170531-1.jpg" width="1024" height="1024"/>
         <image name="icon-advert" width="25" height="25"/>
         <image name="icon-email" width="25" height="19"/>
         <image name="icon-events" width="31" height="31"/>
@@ -2786,7 +2726,7 @@ Correspondent bank: The Bank of New York Mellon, New York, USA </string>
         <image name="icon_settings" width="31" height="31"/>
         <image name="icon_share" width="25" height="25"/>
         <image name="logo-white" width="236" height="83"/>
-        <image name="news-171019-1.jpg" width="1920" height="1011"/>
+        <image name="news.jpg" width="417" height="288"/>
         <image name="overviewCellAdviceImage" width="75" height="69"/>
         <image name="overviewCellHelpImage" width="75" height="74"/>
         <image name="placeHolder.png" width="560" height="380"/>
