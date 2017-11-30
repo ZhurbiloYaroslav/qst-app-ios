@@ -22,7 +22,7 @@ class EventCell: UITableViewCell {
     
     func update(event: Event) {
         
-        eventImage.downloadedFrom(link: event.arrayWithImagesURL[0], contentMode: .scaleAspectFill)
+        eventImage.downloadedFrom(link: event.imagesHttpAddr[0], contentMode: .scaleAspectFill)
         eventTitle.text = event.title
         eventDescription.text = event.text
         

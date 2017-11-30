@@ -47,7 +47,7 @@ class EventVC: UIViewController, imageSliderDelegate {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        imageSlider.setUpView(imageSource: .Url(imageArray: currentEvent.arrayWithImagesURL, placeHolderImage: UIImage(named:"placeHolder")), slideType:.ManualSwipe, isArrowBtnEnabled: true)
+        imageSlider.setUpView(imageSource: .Url(imageArray: currentEvent.imagesHttpAddr, placeHolderImage: UIImage(named:"placeHolder")), slideType:.ManualSwipe, isArrowBtnEnabled: true)
     }
     
     func didMovedToIndex(index:Int) {

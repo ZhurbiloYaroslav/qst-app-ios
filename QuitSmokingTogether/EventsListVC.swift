@@ -15,12 +15,14 @@ class EventsListVC: UIViewController {
     @IBOutlet weak var constraintHeightForFilterStack: NSLayoutConstraint!
     
     let eventsList: [Event] = EventsList.getArrayWithEvents()
+    var eventToPresentFromOverview: Event?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setDelegates()
-        filterVisibility()
+        presentEventFromOverview()
+        switchFilterVisibility()
         updateUI()
     }
     
@@ -29,16 +31,22 @@ class EventsListVC: UIViewController {
         tableView.dataSource = self
     }
     
+    func presentEventFromOverview() {
+        if let event = eventToPresentFromOverview {
+            performSegue(withIdentifier: "ShowEventFromEventsList", sender: event)
+        }
+    }
+    
     func updateUI() {
         tableView.estimatedRowHeight = 80
         tableView.rowHeight = UITableViewAutomaticDimension
     }
     
     @IBAction func filterButtonPressed(_ sender: UIBarButtonItem) {
-        filterVisibility()
+        switchFilterVisibility()
     }
     
-    func filterVisibility() {
+    func switchFilterVisibility() {
         if constraintHeightForFilterStack.constant == 0 {
             constraintHeightForFilterStack.constant = 71
             filterStack.isHidden = !filterStack.isHidden

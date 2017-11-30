@@ -13,6 +13,9 @@ class OverviewVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    var eventToPresent: Event?
+    var doWePresentEventPressedOnEventCell = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,6 +33,8 @@ class OverviewVC: UIViewController {
     func setDelegates() {
         tableView.delegate = self
         tableView.dataSource = self
+        
+        tabBarController?.delegate = self
     }
     
     @IBAction func continueReadingButtonPressed(_ sender: UIButton) {
@@ -48,18 +53,27 @@ class OverviewVC: UIViewController {
     }
     
     func showEventDescriptionWith(type: Event.EventType) {
-        if let navController = self.tabBarController?.viewControllers?[1] as? UINavigationController {
-            if let newsViewController = navController.childViewControllers.first as? EventVC {
-                newsViewController.eventToSwitch = Event()
-                self.tabBarController?.selectedIndex = 1
-            }
-        }
+        eventToPresent = EventsList.getFirstEventWithType(type, andStatus: .Unread)
+        doWePresentEventPressedOnEventCell = true
+        self.tabBarController?.selectedIndex = 1
+
     }
     
     func showOnlineView() {
         tabBarController?.selectedIndex = 3
     }
     
+}
+
+extension OverviewVC: UITabBarControllerDelegate {
+    func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {
+        if doWePresentEventPressedOnEventCell {
+            let viewController  = tabBarController.viewControllers?[1] as! EventsListVC
+            viewController.eventToPresentFromOverview = eventToPresent
+        }
+        
+        return true
+    }
 }
 
 extension OverviewVC: UITableViewDataSource, UITableViewDelegate {

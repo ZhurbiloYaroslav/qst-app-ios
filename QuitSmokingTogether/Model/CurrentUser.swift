@@ -19,9 +19,9 @@ class CurrentUser {
     private static let keychainManager = KeychainSwift()
     
     static func getAccountName() -> String {
-        if let name = self.name, name != "" {
+        if name != "" {
             return name
-        } else if let email = self.email, email != "" {
+        } else if email != "" {
             return email
         } else {
             return "Anonymous"
@@ -47,9 +47,9 @@ class CurrentUser {
     
     static func removeUserDataWhenLogOut() {
         isLoggedIn = false
-        id = nil
-        name = nil
-        email = nil
+        id = ""
+        name = ""
+        email = ""
         authToken = ""
         provider = .authCustom
     }
@@ -61,8 +61,17 @@ extension CurrentUser {
         guard let userID = user?.uid else { return }
 
         saveUserID(userID, andProvider: provider)
-        self.email = user?.email
-        self.name = username ?? user?.displayName
+        if let email = user?.email {
+            self.email = email
+        }
+        if let username = username {
+            self.name = username
+        } else if let displayName = user?.displayName {
+            self.name = displayName
+        } else {
+            self.name = "Anonymous"
+        }
+        
         self.isLoggedIn = true
     }
     
@@ -95,17 +104,16 @@ extension CurrentUser {
         }
     }
     
-    static var id: String? {
+    static var id: String {
         get {
             return self.keychainManager.get("currentUserID") ?? ""
         }
         set {
-            guard let currentUserID = newValue else { return }
-            self.keychainManager.set(currentUserID, forKey: "currentUserID")
+            self.keychainManager.set(newValue, forKey: "currentUserID")
         }
     }
     
-    static var name: String? {
+    static var name: String {
         get {
             return defaults.object(forKey: "currentUserName") as? String ?? ""
         }
@@ -115,7 +123,7 @@ extension CurrentUser {
         }
     }
     
-    static var email: String? {
+    static var email: String {
         get {
             if let currentUserEmail = defaults.object(forKey: "currentUserEmail") as? String, currentUserEmail != "" {
                 return currentUserEmail
@@ -128,11 +136,7 @@ extension CurrentUser {
         set {
             defaults.set(newValue, forKey: "currentUserEmail")
             defaults.synchronize()
-            if let currentUserEmail = newValue {
-                keychainManager.set(currentUserEmail, forKey: "currentUserEmail")
-            } else {
-                keychainManager.set("", forKey: "currentUserEmail")
-            }
+            keychainManager.set(newValue, forKey: "currentUserEmail")
         }
     }
     

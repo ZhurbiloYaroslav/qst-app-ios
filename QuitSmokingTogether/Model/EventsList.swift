@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import CoreData
 
 class EventsList {
     
@@ -32,8 +33,12 @@ class EventsList {
     }
     
     static func getArrayWithEvents() -> [Event] {
+        return saveSampleEventsToTheDatabase()
+    }
+    
+    static func saveSampleEventsToTheDatabase() -> [Event] {
         return [
-            Event(type: .Competiton, status: .Unread,
+            Event(needSave: true, type: .Competiton, status: .Unread,
                   title: "Финал конкурса \"Бросим курить вместе\" 31 мая 2017 года!",
                   text: """
                 Победители конкурса "Бросим курить вместе"!\n
@@ -56,7 +61,8 @@ class EventsList {
                     "https://quitsmokingtogether.ru/foto/fotoconkurs/fotokonkyrs6/56ofhX0x7Ls.jpg",
                     ]
             ),
-            Event(type: .News, status: .Unread, title: "\"Quit Smoking Together\" action was held in Kyiv",
+            Event(needSave: true, type: .News, status: .Unread,
+                  title: "\"Quit Smoking Together\" action was held in Kyiv",
                   text: "The activists dressed as branded cigarettes handed out CDs with Alexey Koval's book \"Quit Smoking Together\". The photos show how it all went :) ",
                   arrayWithImagesURL: [
                     "http://quitsmokingtogether.org/foto/2017/09/kyiv27/IMG_8571.JPG",
@@ -66,7 +72,8 @@ class EventsList {
                     "http://quitsmokingtogether.org/foto/2017/09/kyiv27/IMG_8543.JPG"
                 ]
             ),
-            Event(type: .News, status: .Unread, title: "\"Quit Smoking Together\" action was held in Kyiv",
+            Event(needSave: true, type: .News, status: .Unread,
+                  title: "\"Quit Smoking Together\" action was held in Kyiv",
                   text: "The activists dressed as branded cigarettes handed out CDs with Alexey Koval's book \"Quit Smoking Together\". The photos show how it all went :) ",
                   arrayWithImagesURL: [
                     "http://quitsmokingtogether.org/foto/2017/09/kyiv27/IMG_8571.JPG",
@@ -76,7 +83,8 @@ class EventsList {
                     "http://quitsmokingtogether.org/foto/2017/09/kyiv27/IMG_8543.JPG"
                 ]
             ),
-            Event(type: .News, status: .Unread, title: "\"Quit Smoking Together\" action was held in Kyiv",
+            Event(needSave: true, type: .News, status: .Unread,
+                  title: "\"Quit Smoking Together\" action was held in Kyiv",
                   text: "The activists dressed as branded cigarettes handed out CDs with Alexey Koval's book \"Quit Smoking Together\". The photos show how it all went :) ",
                   arrayWithImagesURL: [
                     "http://quitsmokingtogether.org/foto/2017/09/kyiv27/IMG_8571.JPG",
@@ -86,7 +94,8 @@ class EventsList {
                     "http://quitsmokingtogether.org/foto/2017/09/kyiv27/IMG_8543.JPG"
                 ]
             ),
-            Event(type: .News, status: .Unread, title: "\"Quit Smoking Together\" action was held in Kyiv",
+            Event(needSave: true, type: .News, status: .Unread,
+                  title: "\"Quit Smoking Together\" action was held in Kyiv",
                   text: "The activists dressed as branded cigarettes handed out CDs with Alexey Koval's book \"Quit Smoking Together\". The photos show how it all went :) ",
                   arrayWithImagesURL: [
                     "http://quitsmokingtogether.org/foto/2017/09/kyiv27/IMG_8571.JPG",

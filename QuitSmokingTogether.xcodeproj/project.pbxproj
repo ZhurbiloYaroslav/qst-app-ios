@@ -45,7 +45,6 @@
 		C4B057111FC6E32300699B6F /* EventsListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B057101FC6E32300699B6F /* EventsListVC.swift */; };
 		C4B057131FC6E35C00699B6F /* OnlineVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B057121FC6E35C00699B6F /* OnlineVC.swift */; };
 		C4B057151FC6FF9400699B6F /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B057141FC6FF9400699B6F /* EventCell.swift */; };
-		C4B057171FC701DF00699B6F /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B057161FC701DF00699B6F /* Event.swift */; };
 		C4B0571C1FC81F1200699B6F /* placeHolder.png in Resources */ = {isa = PBXBuildFile; fileRef = C4B0571B1FC81F1200699B6F /* placeHolder.png */; };
 		C4B057211FC86E4100699B6F /* EventVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B057201FC86E4100699B6F /* EventVC.swift */; };
 		C4B057231FC8852D00699B6F /* EventsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B057221FC8852D00699B6F /* EventsList.swift */; };
@@ -58,6 +57,9 @@
 		C4C0EEC11FCEEB1200CA258B /* competitions.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4C0EEC01FCEEB1100CA258B /* competitions.jpg */; };
 		C4C0EEC31FCEEB5100CA258B /* news.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4C0EEC21FCEEB3300CA258B /* news.jpg */; };
 		C4C0EEC51FCEF07C00CA258B /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C0EEC41FCEF07C00CA258B /* FirebaseManager.swift */; };
+		C4C0EED41FD008F400CA258B /* Event+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C0EED01FD008F400CA258B /* Event+CoreDataClass.swift */; };
+		C4C0EED91FD00A9100CA258B /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C0EED81FD00A9100CA258B /* CoreDataManager.swift */; };
+		C4C0EEDD1FD0239B00CA258B /* Event+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C0EEDC1FD0239B00CA258B /* Event+CoreDataProperties.swift */; };
 		C4CA865F1F94FDCA00A8772D /* FAQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CA865E1F94FDCA00A8772D /* FAQ.swift */; };
 		C4CA86611F9608EC00A8772D /* CSV.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CA86601F9608EC00A8772D /* CSV.swift */; };
 		C4CA86681F9641C800A8772D /* FAQAnswerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CA86671F9641C800A8772D /* FAQAnswerVC.swift */; };
@@ -117,7 +119,6 @@
 		C4B057101FC6E32300699B6F /* EventsListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsListVC.swift; sourceTree = "<group>"; };
 		C4B057121FC6E35C00699B6F /* OnlineVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnlineVC.swift; sourceTree = "<group>"; };
 		C4B057141FC6FF9400699B6F /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
-		C4B057161FC701DF00699B6F /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		C4B0571B1FC81F1200699B6F /* placeHolder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeHolder.png; sourceTree = "<group>"; };
 		C4B057201FC86E4100699B6F /* EventVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventVC.swift; sourceTree = "<group>"; };
 		C4B057221FC8852D00699B6F /* EventsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsList.swift; sourceTree = "<group>"; };
@@ -131,6 +132,9 @@
 		C4C0EEC01FCEEB1100CA258B /* competitions.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = competitions.jpg; sourceTree = "<group>"; };
 		C4C0EEC21FCEEB3300CA258B /* news.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = news.jpg; sourceTree = "<group>"; };
 		C4C0EEC41FCEF07C00CA258B /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
+		C4C0EED01FD008F400CA258B /* Event+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataClass.swift"; sourceTree = "<group>"; };
+		C4C0EED81FD00A9100CA258B /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		C4C0EEDC1FD0239B00CA258B /* Event+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Event+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		C4CA865E1F94FDCA00A8772D /* FAQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQ.swift; sourceTree = "<group>"; };
 		C4CA86601F9608EC00A8772D /* CSV.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSV.swift; sourceTree = "<group>"; };
 		C4CA86671F9641C800A8772D /* FAQAnswerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQAnswerVC.swift; sourceTree = "<group>"; };
@@ -219,6 +223,7 @@
 		C455D5821F8CFDEE002846D9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C4C0EEC61FD007C800CA258B /* Core Data */,
 				C461A2CD1F8F957C00B698FA /* Constants.swift */,
 				C410E7D31F97C67E00EEFB7B /* Advices.swift */,
 				C4CA865E1F94FDCA00A8772D /* FAQ.swift */,
@@ -231,9 +236,9 @@
 				C4A4D3091FA8D93400EC9D50 /* Typealiases.swift */,
 				C4A4D30C1FAA04FD00EC9D50 /* ValidationErrors.swift */,
 				C4258F051FC46184009FCBC8 /* Browser.swift */,
-				C4B057161FC701DF00699B6F /* Event.swift */,
 				C4B057221FC8852D00699B6F /* EventsList.swift */,
 				C4C0EEC41FCEF07C00CA258B /* FirebaseManager.swift */,
+				C4C0EED81FD00A9100CA258B /* CoreDataManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -297,6 +302,23 @@
 				C4B057201FC86E4100699B6F /* EventVC.swift */,
 			);
 			name = Events;
+			sourceTree = "<group>";
+		};
+		C4C0EEC61FD007C800CA258B /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				C4C0EED01FD008F400CA258B /* Event+CoreDataClass.swift */,
+				C4C0EEC71FD007ED00CA258B /* Properties */,
+			);
+			path = "Core Data";
+			sourceTree = "<group>";
+		};
+		C4C0EEC71FD007ED00CA258B /* Properties */ = {
+			isa = PBXGroup;
+			children = (
+				C4C0EEDC1FD0239B00CA258B /* Event+CoreDataProperties.swift */,
+			);
+			path = Properties;
 			sourceTree = "<group>";
 		};
 		C4CECEDF1F94C886009C85DE /* Settings */ = {
@@ -534,11 +556,11 @@
 				C461A2CA1F8E534900B698FA /* OverviewHelpCell.swift in Sources */,
 				C4C0EEC51FCEF07C00CA258B /* FirebaseManager.swift in Sources */,
 				C455D5871F8CFE75002846D9 /* AlertVC.swift in Sources */,
-				C4B057171FC701DF00699B6F /* Event.swift in Sources */,
 				C41B6F0C1FA2486B00B40F93 /* UIViewController+hideKeyboard.swift in Sources */,
 				C4EBF5321FA61BE900753D0C /* HideKeyboard.swift in Sources */,
 				C4A4D3081FA8C8AC00EC9D50 /* AccountVC.swift in Sources */,
 				C4B057131FC6E35C00699B6F /* OnlineVC.swift in Sources */,
+				C4C0EEDD1FD0239B00CA258B /* Event+CoreDataProperties.swift in Sources */,
 				C4258F041FC4522B009FCBC8 /* DonateVC.swift in Sources */,
 				C4CA865F1F94FDCA00A8772D /* FAQ.swift in Sources */,
 				C4B057231FC8852D00699B6F /* EventsList.swift in Sources */,
@@ -556,6 +578,7 @@
 				C4CECEE21F94C924009C85DE /* ShareVC.swift in Sources */,
 				C410E7D01F97BEB200EEFB7B /* UIButton+IBInspectable.swift in Sources */,
 				C4B057251FC9806100699B6F /* AccountTVC.swift in Sources */,
+				C4C0EED41FD008F400CA258B /* Event+CoreDataClass.swift in Sources */,
 				C47317901F8D0C1700A6AE43 /* OverviewReadCell.swift in Sources */,
 				C461A2D21F8F9EF400B698FA /* NavBarVC.swift in Sources */,
 				C4CA86681F9641C800A8772D /* FAQAnswerVC.swift in Sources */,
@@ -563,6 +586,7 @@
 				C4D458461F8021D100565A3F /* QuitSmokingTogether.xcdatamodeld in Sources */,
 				C429370C1FB9E9010016A02F /* UIScrollView+scrollToView.swift in Sources */,
 				C4B8088E1F9F2CCF0099DA49 /* LoginVC.swift in Sources */,
+				C4C0EED91FD00A9100CA258B /* CoreDataManager.swift in Sources */,
 				C461A2C81F8E533400B698FA /* OverviewAdviceCell.swift in Sources */,
 				C4EBF52F1FA5E74A00753D0C /* RegisterVC.swift in Sources */,
 				C410E7D41F97C67E00EEFB7B /* Advices.swift in Sources */,

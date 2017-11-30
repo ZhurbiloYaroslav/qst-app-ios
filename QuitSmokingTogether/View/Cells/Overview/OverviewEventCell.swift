@@ -35,7 +35,7 @@ class OverviewEventCell: UITableViewCell {
         let event = EventsList.getFirstEventWithType(eventType, andStatus: .Unread)
         self.currentEvent = event
         
-        eventImageView.downloadedFrom(link: event.arrayWithImagesURL[0], contentMode: .scaleAspectFill)
+        eventImageView.downloadedFrom(link: event.imagesHttpAddr[0], contentMode: .scaleAspectFill)
         eventTitleLabel.text = event.title
         eventTextLabel.text = event.text
     }
