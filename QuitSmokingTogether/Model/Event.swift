@@ -15,30 +15,46 @@ public class Event {
     var status: EventStatus!
     var title: String!
     var text: String!
+    var date: Date!
     var imagesHttpAddr: [String]!
     
-    init(type: EventType, status: EventStatus, title: String, text: String, arrayWithImagesURL: [String]) {
+    init(type: EventType, status: EventStatus, title: String, text: String,
+         date: Date, arrayWithImagesURL: [String]) {
     
         self.type = type
         self.status = status
         self.title = title
         self.text = text
+        self.date = date
         self.imagesHttpAddr = arrayWithImagesURL
             
     }
     
     convenience init() {
         self.init(type: .Undefined, status: .Unread, title: "Empty event", text: "Empty event",
-                  arrayWithImagesURL: ["https://quitsmokingtogether.ru/images/97.jpg"])
+                  date: Date(), arrayWithImagesURL: ["https://quitsmokingtogether.ru/images/97.jpg"])
+    }
+    
+    func getFormattedDateFrom(stringWithDate: String, andTimezone timezone: String) -> Date {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd-mm-yyyy"
+        dateFormatter.timeZone = TimeZone(abbreviation: timezone)
+        if let formattedDate = dateFormatter.date(from: stringWithDate) {
+            return formattedDate
+        } else {
+            return Date()
+        }
     }
     
     enum EventType: String {
+        case All = "All"
         case News = "News"
-        case Competiton = "Competition"
+        case Competition = "Competition"
         case Undefined = "Undefined"
     }
     
     enum EventStatus: String {
+        case All = "All"
         case Read = "Read"
         case Unread = "Unread"
         case Starred = "Starred"

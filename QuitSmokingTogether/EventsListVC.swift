@@ -14,14 +14,46 @@ class EventsListVC: UIViewController {
     @IBOutlet weak var filterStack: UIStackView!
     @IBOutlet weak var constraintHeightForFilterStack: NSLayoutConstraint!
     
-    let eventsList: [Event] = EventsList.getArrayWithEvents()
+    var eventsList: [Event]!
     
     var eventToPresentFromOverview: Event?
     var doWePresentEventFromOverview = false
     
+    var eventsFilter = EventsFilter()
+    
+    @IBAction func eventStatusControlValueChanged(_ sender: UISegmentedControl, forEvent event: UIEvent) {
+        switch sender.selectedSegmentIndex {
+        case 1:
+            eventsFilter.eventStatus = .Unread
+        case 2:
+            eventsFilter.eventStatus = .Starred
+        default:
+            eventsFilter.eventStatus = .All
+        }
+        reloadTable()
+    }
+    
+    @IBAction func eventTypeControlValueChanged(_ sender: UISegmentedControl, forEvent event: UIEvent) {
+        switch sender.selectedSegmentIndex {
+        case 1:
+            eventsFilter.eventType = .News
+        case 2:
+            eventsFilter.eventType = .Competition
+        default:
+            eventsFilter.eventType = .All
+        }
+        reloadTable()
+    }
+    
+    func reloadTable() {
+        eventsList = EventsList.getAllEventsWithType(eventsFilter.eventType, andStatus: eventsFilter.eventStatus)
+        tableView.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        eventsList = EventsList.getAllEventsWithType(eventsFilter.eventType, andStatus: eventsFilter.eventStatus)
         setDelegates()
         switchFilterVisibility()
         updateUI()
@@ -66,7 +98,7 @@ class EventsListVC: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        print("Start prepare for segue")
+
         guard let segueID = segue.identifier else { return }
         guard let destination = segue.destination as? EventVC else { return }
         guard let currentEvent = sender as? Event else { return }

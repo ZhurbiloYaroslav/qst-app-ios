@@ -13,7 +13,10 @@ class EventCell: UITableViewCell {
     @IBOutlet weak var eventImage: UIImageView!
     @IBOutlet weak var eventTitle: UILabel!
     @IBOutlet weak var eventDescription: UILabel!
-        
+    @IBOutlet weak var eventStarredButton: UIButton!
+    
+    var currentEvent: Event!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -21,11 +24,26 @@ class EventCell: UITableViewCell {
     
     func update(event: Event) {
         
+        currentEvent = event
         eventImage.image = UIImage(named: "placeHolder.png")
         eventImage.downloadedFrom(link: event.imagesHttpAddr[0], contentMode: .scaleAspectFill)
         eventTitle.text = event.title
         eventDescription.text = event.text
         
+        if event.status == .Starred {
+            eventStarredButton.backgroundColor = UIColor.yellow
+        }
+        
+    }
+    
+    @IBAction func starredButtonPressed(_ sender: UIButton) {
+        if currentEvent.status == .Starred {
+            currentEvent.status = .Read
+            eventStarredButton.backgroundColor = UIColor.clear
+        } else {
+            currentEvent.status = .Starred
+            eventStarredButton.backgroundColor = UIColor.yellow
+        }
     }
     
 }

@@ -42,7 +42,7 @@ class OverviewVC: UIViewController {
     }
     
     func showReader() {
-        tabBarController?.selectedIndex = 1
+        tabBarController?.selectedIndex = 2
     }
     
     func showAdviceView() {
@@ -94,7 +94,7 @@ extension OverviewVC: UITableViewDataSource, UITableViewDelegate {
             
         case [0,3]:
             let cell = tableView.dequeueReusableCell(withIdentifier: "OverviewEventCell", for: indexPath) as! OverviewEventCell
-            cell.updateCellFor(eventType: .Competiton)
+            cell.updateCellFor(eventType: .Competition)
             return cell
             
         case [0,4]:
@@ -116,7 +116,7 @@ extension OverviewVC: UITableViewDataSource, UITableViewDelegate {
         case [0,2]:
             showEventDescriptionWith(type: .News)
         case [0,3]:
-            showEventDescriptionWith(type: .Competiton)
+            showEventDescriptionWith(type: .Competition)
         case [0,4]:
             showOnlineView()
         default:

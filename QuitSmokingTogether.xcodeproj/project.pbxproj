@@ -59,7 +59,9 @@
 		C4C0EEC51FCEF07C00CA258B /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C0EEC41FCEF07C00CA258B /* FirebaseManager.swift */; };
 		C4C0EEDF1FD040BD00CA258B /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C0EEDE1FD040BD00CA258B /* Event.swift */; };
 		C4C0EEE11FD0515400CA258B /* FAQ.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4C0EEE01FD0515400CA258B /* FAQ.plist */; };
-		C4C0EEE31FD0574100CA258B /* EventsList.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4C0EEE21FD0574100CA258B /* EventsList.plist */; };
+		C4C0EEE51FD061F100CA258B /* EventsFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C0EEE41FD061F100CA258B /* EventsFilter.swift */; };
+		C4C0EEE91FD0A46200CA258B /* icon-star.png in Resources */ = {isa = PBXBuildFile; fileRef = C4C0EEE81FD0A3F600CA258B /* icon-star.png */; };
+		C4C0EEEB1FD0AA3800CA258B /* EventsList.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4C0EEEA1FD0AA3800CA258B /* EventsList.plist */; };
 		C4CA865F1F94FDCA00A8772D /* FAQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CA865E1F94FDCA00A8772D /* FAQ.swift */; };
 		C4CA86681F9641C800A8772D /* FAQAnswerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CA86671F9641C800A8772D /* FAQAnswerVC.swift */; };
 		C4CA866A1F964BA900A8772D /* DLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CA86691F964BA900A8772D /* DLog.swift */; };
@@ -132,7 +134,9 @@
 		C4C0EEC41FCEF07C00CA258B /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		C4C0EEDE1FD040BD00CA258B /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
 		C4C0EEE01FD0515400CA258B /* FAQ.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = FAQ.plist; sourceTree = "<group>"; };
-		C4C0EEE21FD0574100CA258B /* EventsList.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = EventsList.plist; sourceTree = "<group>"; };
+		C4C0EEE41FD061F100CA258B /* EventsFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsFilter.swift; sourceTree = "<group>"; };
+		C4C0EEE81FD0A3F600CA258B /* icon-star.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon-star.png"; sourceTree = "<group>"; };
+		C4C0EEEA1FD0AA3800CA258B /* EventsList.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = EventsList.plist; sourceTree = "<group>"; };
 		C4CA865E1F94FDCA00A8772D /* FAQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQ.swift; sourceTree = "<group>"; };
 		C4CA86671F9641C800A8772D /* FAQAnswerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQAnswerVC.swift; sourceTree = "<group>"; };
 		C4CA86691F964BA900A8772D /* DLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLog.swift; sourceTree = "<group>"; };
@@ -198,6 +202,7 @@
 				C4C0EEC21FCEEB3300CA258B /* news.jpg */,
 				C4C0EEC01FCEEB1100CA258B /* competitions.jpg */,
 				C4B0571B1FC81F1200699B6F /* placeHolder.png */,
+				C4C0EEE81FD0A3F600CA258B /* icon-star.png */,
 				C46DFB271FC489B000A62D69 /* comp-170531-1.jpg */,
 				C46DFB281FC489B000A62D69 /* news-171019-1.jpg */,
 				C4258F011FC31D17009FCBC8 /* author-big.jpg */,
@@ -233,6 +238,7 @@
 				C4C0EEDE1FD040BD00CA258B /* Event.swift */,
 				C4B057221FC8852D00699B6F /* EventsList.swift */,
 				C4C0EEC41FCEF07C00CA258B /* FirebaseManager.swift */,
+				C4C0EEE41FD061F100CA258B /* EventsFilter.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -271,7 +277,7 @@
 				C46DFB251FC4888F00A62D69 /* Advices.plist */,
 				C42937091FB9D3B70016A02F /* Advices-ru.plist */,
 				C4C0EEE01FD0515400CA258B /* FAQ.plist */,
-				C4C0EEE21FD0574100CA258B /* EventsList.plist */,
+				C4C0EEEA1FD0AA3800CA258B /* EventsList.plist */,
 				C4D458441F8021D100565A3F /* QuitSmokingTogether.xcdatamodeld */,
 				C47317911F8D1C1600A6AE43 /* Notes and links.rtf */,
 				C4B808911F9F36F60099DA49 /* GoogleService-Info.plist */,
@@ -452,13 +458,14 @@
 				C4C0EEC11FCEEB1200CA258B /* competitions.jpg in Resources */,
 				C4D4584B1F8021D100565A3F /* LaunchScreen.storyboard in Resources */,
 				C4C0EEE11FD0515400CA258B /* FAQ.plist in Resources */,
+				C4C0EEE91FD0A46200CA258B /* icon-star.png in Resources */,
 				C4B0571C1FC81F1200699B6F /* placeHolder.png in Resources */,
 				C4D458481F8021D100565A3F /* Assets.xcassets in Resources */,
+				C4C0EEEB1FD0AA3800CA258B /* EventsList.plist in Resources */,
 				C4258EFC1FC2D2AA009FCBC8 /* alex.jpg in Resources */,
 				C46DFB261FC4888F00A62D69 /* Advices.plist in Resources */,
 				C47317921F8D1C1600A6AE43 /* Notes and links.rtf in Resources */,
 				C429370A1FB9D3B70016A02F /* Advices-ru.plist in Resources */,
-				C4C0EEE31FD0574100CA258B /* EventsList.plist in Resources */,
 				C4D458431F8021D100565A3F /* Main.storyboard in Resources */,
 				C46DFB291FC489B000A62D69 /* comp-170531-1.jpg in Resources */,
 				C4258EFE1FC2D2D9009FCBC8 /* qstBook.jpg in Resources */,
@@ -561,6 +568,7 @@
 				C461A2D21F8F9EF400B698FA /* NavBarVC.swift in Sources */,
 				C4CA86681F9641C800A8772D /* FAQAnswerVC.swift in Sources */,
 				C4D458461F8021D100565A3F /* QuitSmokingTogether.xcdatamodeld in Sources */,
+				C4C0EEE51FD061F100CA258B /* EventsFilter.swift in Sources */,
 				C429370C1FB9E9010016A02F /* UIScrollView+scrollToView.swift in Sources */,
 				C4B8088E1F9F2CCF0099DA49 /* LoginVC.swift in Sources */,
 				C461A2C81F8E533400B698FA /* OverviewAdviceCell.swift in Sources */,

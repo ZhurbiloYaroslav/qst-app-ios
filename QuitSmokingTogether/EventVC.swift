@@ -30,9 +30,6 @@ class EventVC: UIViewController, imageSliderDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        if let event = eventToSwitch {
-            print(event.title)
-        }
     }
     
     func setDelegates() {

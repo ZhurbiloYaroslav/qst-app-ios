@@ -26,7 +26,7 @@ class OverviewEventCell: UITableViewCell {
         switch eventType {
         case .News:
             eventTypeImage.image = UIImage(named: "news.jpg")
-        case .Competiton:
+        case .Competition:
             eventTypeImage.image = UIImage(named: "competitions.jpg")
         default:
             eventTypeImage.image = UIImage(named: "placeHolder.png")
