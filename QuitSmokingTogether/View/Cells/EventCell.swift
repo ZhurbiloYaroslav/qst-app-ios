@@ -17,11 +17,11 @@ class EventCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
-        eventImage.image = UIImage(named: "placeHolder.png")
     }
     
     func update(event: Event) {
         
+        eventImage.image = UIImage(named: "placeHolder.png")
         eventImage.downloadedFrom(link: event.imagesHttpAddr[0], contentMode: .scaleAspectFill)
         eventTitle.text = event.title
         eventDescription.text = event.text

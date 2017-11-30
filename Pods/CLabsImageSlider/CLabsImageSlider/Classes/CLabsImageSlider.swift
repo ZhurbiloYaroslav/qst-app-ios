@@ -149,14 +149,14 @@ public class CLabsImageSlider:UIView,updateUI
         imageView1.frame   =   leftFrame
         imageView1.tag  =   1
         imageView1.isUserInteractionEnabled   =  true
-        imageView1.contentMode  =   .scaleToFill
+        imageView1.contentMode  =   .scaleAspectFill
         self.addSubview(imageView1)
         
         
         
         imageView2.frame   =   midFrame
         imageView2.tag  =   2
-        imageView2.contentMode  =   .scaleToFill
+        imageView2.contentMode  =   .scaleAspectFill
         imageView2.isUserInteractionEnabled   =  true
         visibleImageView    =   imageView2
         
@@ -169,7 +169,7 @@ public class CLabsImageSlider:UIView,updateUI
         
         imageView3.frame    =   rightFrame
         imageView3.tag  =   3
-        imageView3.contentMode  =   .scaleToFill
+        imageView3.contentMode  =   .scaleAspectFill
         imageView3.isUserInteractionEnabled   =  true
         self.addSubview(imageView3)
         

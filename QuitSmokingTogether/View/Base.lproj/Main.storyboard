@@ -2070,9 +2070,9 @@ Correspondent bank: The Bank of New York Mellon, New York, USA </string>
         <!--EventVC-->
         <scene sceneID="yvC-Lp-gD8">
             <objects>
-                <viewController id="20b-xW-Usg" customClass="EventVC" customModule="QuitSmokingTogether" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="20b-xW-Usg" customClass="EventVC" customModule="QuitSmokingTogether" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gEP-nB-EME">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="idV-zM-cZF" customClass="CLabsImageSlider" customModule="CLabsImageSlider">
@@ -2083,10 +2083,10 @@ Correspondent bank: The Bank of New York Mellon, New York, USA </string>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sh3-P7-Oar">
-                                <rect key="frame" x="15" y="210" width="290" height="235"/>
+                                <rect key="frame" x="15" y="210" width="290" height="284"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7T-W9-988">
-                                        <rect key="frame" x="0.0" y="0.0" width="290" height="235"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="284"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News title with 2 lines" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KzJ-Bg-jnx">
                                                 <rect key="frame" x="15" y="10" width="260" height="41"/>
@@ -2141,6 +2141,7 @@ Correspondent bank: The Bank of New York Mellon, New York, USA </string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XX1-Ql-aqz"/>
                     </view>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="imageSlider" destination="idV-zM-cZF" id="JAB-Zg-BiM"/>
                         <outlet property="newsTextLabel" destination="cU1-kL-ArZ" id="Vou-jQ-0Xx"/>

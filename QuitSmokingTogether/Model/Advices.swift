@@ -38,7 +38,6 @@ class Advices {
     
     init() {
         parseAdvicesPlist()
-        //        parseAdvicesCsv()
     }
     
     var numberOfAdvices: Int {

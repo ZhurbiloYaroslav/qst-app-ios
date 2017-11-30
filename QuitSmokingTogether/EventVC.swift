@@ -47,11 +47,11 @@ class EventVC: UIViewController, imageSliderDelegate {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         
-        imageSlider.setUpView(imageSource: .Url(imageArray: currentEvent.imagesHttpAddr, placeHolderImage: UIImage(named:"placeHolder")), slideType:.ManualSwipe, isArrowBtnEnabled: true)
+        imageSlider.setUpView(imageSource: .Url(imageArray: currentEvent.imagesHttpAddr, placeHolderImage: UIImage(named:"placeHolder")), slideType:.Automatic(timeIntervalinSeconds: 5), isArrowBtnEnabled: true)
     }
     
     func didMovedToIndex(index:Int) {
-        print("did moved at Index : ",index)
+
     }
 
 }

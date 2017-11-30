@@ -15,15 +15,22 @@ class EventsListVC: UIViewController {
     @IBOutlet weak var constraintHeightForFilterStack: NSLayoutConstraint!
     
     let eventsList: [Event] = EventsList.getArrayWithEvents()
+    
     var eventToPresentFromOverview: Event?
+    var doWePresentEventFromOverview = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         setDelegates()
-        presentEventFromOverview()
         switchFilterVisibility()
         updateUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        presentEventFromOverview()
     }
     
     func setDelegates() {
@@ -32,7 +39,9 @@ class EventsListVC: UIViewController {
     }
     
     func presentEventFromOverview() {
-        if let event = eventToPresentFromOverview {
+
+        if let event = eventToPresentFromOverview, doWePresentEventFromOverview {
+            doWePresentEventFromOverview = false
             performSegue(withIdentifier: "ShowEventFromEventsList", sender: event)
         }
     }
@@ -57,6 +66,7 @@ class EventsListVC: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        print("Start prepare for segue")
         guard let segueID = segue.identifier else { return }
         guard let destination = segue.destination as? EventVC else { return }
         guard let currentEvent = sender as? Event else { return }

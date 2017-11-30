@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import CSV
 
 class FAQ {
     
@@ -15,7 +14,7 @@ class FAQ {
     var items: [[Item]] = []
     
     init() {
-        parseFAQcsv()
+        parseFAQPlist()
     }
     
     var numberOfSections: Int {
@@ -34,25 +33,24 @@ class FAQ {
         return sections[index]
     }
     
-    func parseFAQcsv() {
-        if let path = Bundle.main.path(forResource: "FAQ", ofType: "csv") {
-            do {
-                let stream = InputStream(fileAtPath: path)!
-                let csv = try! CSVReader(stream: stream, hasHeaderRow: true)
-                while csv.next() != nil {
-                    createItemAndCategoryFromParsedRow(csv)
-                }
-            } catch {
-                print(error.localizedDescription)
-            }
+    func parseFAQPlist() {
+
+        guard let path = Bundle.main.path(forResource: "FAQ", ofType: "plist"),
+            let arrayWithFAQDictionaries = NSArray(contentsOfFile: path) as? [[String: Any]] else {
+                return
         }
+        
+        for faqDict in arrayWithFAQDictionaries {
+            createItemAndCategoryFromParsedRow(faqDict)
+        }
+        
     }
     
-    func createItemAndCategoryFromParsedRow(_ csv: CSVReader) {
+    func createItemAndCategoryFromParsedRow(_ faqDict: [String: Any]) {
         
-        guard let sectionName = csv["Section"] else { return }
-        guard let question = csv["Question"] else { return }
-        guard let answer = csv["Answer"] else { return }
+        guard let sectionName = faqDict["Section"] as? String else { return }
+        guard let question = faqDict["Question"] as? String else { return }
+        guard let answer = faqDict["Answer"] as? String else { return }
         
         var section = Section(name: sectionName)
         if let sectionIndex = sections.index(where: {$0.name == sectionName}) {
