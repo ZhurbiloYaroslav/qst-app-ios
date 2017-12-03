@@ -1613,16 +1613,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uFG-Tq-37v">
-                                                    <rect key="frame" x="0.0" y="5" width="0.0" height="489.5"/>
+                                                    <rect key="frame" x="8" y="5" width="304" height="489.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Settlement account of our organization (USD): " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="HBm-fV-rAt">
-                                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="489.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="304" height="19.5"/>
                                                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jUs-Iy-ha5">
-                                                            <rect key="frame" x="0.0" y="489.5" width="0.0" height="0.0"/>
+                                                            <rect key="frame" x="0.0" y="19.5" width="304" height="470"/>
                                                             <string key="text">Company Name: "QUIT SMOKING TOGETHER"
 The bank account of the company: 26007052657883
 Name of the bank: PJSC CB "PRIVATBANK", 1D HRUSHEVSKOHO STR., KYIV, 01001, UKRAINE

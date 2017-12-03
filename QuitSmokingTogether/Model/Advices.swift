@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import CSV
 
 class Advices {
     
