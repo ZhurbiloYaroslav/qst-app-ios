@@ -18,16 +18,6 @@ class CurrentUser {
     private static let defaults = UserDefaults.standard
     private static let keychainManager = KeychainSwift()
     
-    static func getAccountName() -> String {
-        if name != "" {
-            return name
-        } else if email != "" {
-            return email
-        } else {
-            return "Anonymous"
-        }
-    }
-    
     static func logOut(completionHandler: @escaping SuccessBehaviour) {
         switch provider {
         case .authFacebook:
@@ -36,22 +26,27 @@ class CurrentUser {
         case .authEmail:
             FirebaseAuthManager().signOut()
             removeUserDataWhenLogOut()
+        case .authGoogle:
+            FirebaseAuthManager().signOut()
+            removeUserDataWhenLogOut()
         default:
             removeUserDataWhenLogOut()
         }
-        
-        FirebaseAuthManager().signInAnonymously {
-            completionHandler()
-        }
+        completionHandler()
     }
     
     static func removeUserDataWhenLogOut() {
+        
         isLoggedIn = false
+        
         id = ""
         name = ""
+        firstName = ""
+        lastName = ""
         email = ""
+        phone = ""
         authToken = ""
-        provider = .authCustom
+        provider = .noProvider
     }
 }
 
@@ -73,6 +68,8 @@ extension CurrentUser {
         }
         
         self.isLoggedIn = true
+        
+        FirebaseManager().updateUserInfoInFirebase()
     }
     
     static func saveInfoWith(_ token: AccessToken, andProvider provider: Provider) {
@@ -92,6 +89,16 @@ extension CurrentUser {
 }
 
 extension CurrentUser {
+    
+    static var accountName: String {
+        if fullName != "" {
+            return fullName
+        } else if email != "" {
+            return email
+        } else {
+            return Constants.DefaultText.ifFullNameIsEmpty
+        }
+    }
     
     static var isLoggedIn: Bool {
         
@@ -123,6 +130,40 @@ extension CurrentUser {
         }
     }
     
+    static var fullName: String {
+        var fullName = ""
+        if firstName != "" {
+            fullName = firstName
+        }
+        if firstName != "" && lastName != "" {
+            fullName = fullName + " "
+        }
+        if lastName != "" {
+            fullName = fullName + lastName
+        }
+        return fullName
+    }
+    
+    static var firstName: String {
+        get {
+            return defaults.object(forKey: "currentUserFirstName") as? String ?? Constants.DefaultValue.forEmptyFirstName
+        }
+        set {
+            defaults.set(newValue, forKey: "currentUserFirstName")
+            defaults.synchronize()
+        }
+    }
+    
+    static var lastName: String {
+        get {
+            return defaults.object(forKey: "currentUserLastName") as? String ?? Constants.DefaultValue.forEmptyLastName
+        }
+        set {
+            defaults.set(newValue, forKey: "currentUserLastName")
+            defaults.synchronize()
+        }
+    }
+    
     static var email: String {
         get {
             if let currentUserEmail = defaults.object(forKey: "currentUserEmail") as? String, currentUserEmail != "" {
@@ -130,7 +171,7 @@ extension CurrentUser {
             } else if let currentUserEmail = keychainManager.get("currentUserEmail"), currentUserEmail != "" {
                 return currentUserEmail
             } else {
-                return ""
+                return Constants.DefaultValue.forEmptyEmail
             }
         }
         set {
@@ -142,7 +183,7 @@ extension CurrentUser {
     
     static var phone: String {
         get {
-            return self.keychainManager.get("currentUserPhone") ?? "Set the Phone number"
+            return self.keychainManager.get("currentUserPhone") ?? Constants.DefaultValue.forEmptyPhone
         }
         set {
             keychainManager.set(newValue, forKey: "currentUserPhone")
@@ -164,7 +205,7 @@ extension CurrentUser {
                 let provider = Provider(rawValue: providerRawValue) {
                 return provider
             } else {
-                return .authCustom
+                return .noProvider
             }
         }
         set {
@@ -172,16 +213,20 @@ extension CurrentUser {
         }
     }
     
+    static var eventsInfo: [String: Event] {
+        return ["1": Event()]
+    }
+    
     public enum Provider: String {
         case authEmail = "authEmail"
         case authAnonymous = "authAnonymous"
         case authFacebook = "authFacebook"
         case authGoogle = "authGoogle"
-        case authCustom = "authCustom"
+        case noProvider = "noProvider"
         
         static func build(rawValue:String?) -> Provider {
             guard let rawValue = rawValue, let provider = Provider(rawValue: rawValue) else {
-                return .authCustom
+                return .noProvider
             }
             return  provider
         }

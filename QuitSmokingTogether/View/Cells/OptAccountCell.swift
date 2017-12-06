@@ -14,6 +14,6 @@ class OptAccountCell: UITableViewCell {
     @IBOutlet weak var accountName: UILabel!
     
     func update() {
-        accountName.text = CurrentUser.getAccountName()
+        accountName.text = CurrentUser.accountName
     }
 }

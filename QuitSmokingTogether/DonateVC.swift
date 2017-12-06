@@ -22,14 +22,28 @@ class DonateVC: UITableViewController {
         Browser.openURLWith(.AppInItunes)
     }
     
-//    override func numberOfSections(in tableView: UITableView) -> Int {
-//        // #warning Incomplete implementation, return the number of sections
-//        return 0
-//    }
-
-//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        // #warning Incomplete implementation, return the number of rows
-//        return 0
-//    }
-
+    @IBAction func buttonWithVisa6985Pressed(_ sender: UIButton) {
+        shareWithOtherApps()
+    }
+    
+    func shareWithOtherApps() {
+        let activityVC = UIActivityViewController(activityItems: ["4627 0551 2505 6985"], applicationActivities: nil)
+        activityVC.popoverPresentationController?.sourceView = self.view
+        activityVC.completionWithItemsHandler = activityCompletionHandler
+        
+        self.present(activityVC, animated: true, completion: nil)
+    }
+    
+    func activityCompletionHandler(activityType: UIActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?) {
+        if !completed {
+            Alert().presentAlertWith(title: "Donation", andMessages: ["Thanks for interest!"]) { (alertController) in
+                self.present(alertController, animated: true, completion: nil)
+            }
+            return
+        }
+        Alert().presentAlertWith(title: "Donation", andMessages: ["Thanks for donation!"]) { (alertController) in
+            self.present(alertController, animated: true, completion: nil)
+        }
+    }
+    
 }

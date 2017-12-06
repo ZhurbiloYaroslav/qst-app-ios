@@ -37,8 +37,13 @@ class OverviewVC: UIViewController {
     @IBAction func continueReadingButtonPressed(_ sender: UIButton) {
         showReader()
     }
+    
     @IBAction func readMoreButtonPressed(_ sender: UIButton) {
         showAdviceView()
+    }
+    
+    @IBAction func readMoreEventButtonPressed(_ sender: UIButton) {
+        print("okkkk")
     }
     
     func showReader() {
@@ -99,7 +104,7 @@ extension OverviewVC: UITableViewDataSource, UITableViewDelegate {
             
         case [0,4]:
             let cell = tableView.dequeueReusableCell(withIdentifier: "OverviewHelpCell", for: indexPath) as! OverviewHelpCell
-            cell.helpTextLabel?.text = "Here will be the text of help cell"
+            cell.helpTextLabel?.text = "Dear friend, you can contact with me and I will help you to quit smoking!"
             return cell
             
         default:

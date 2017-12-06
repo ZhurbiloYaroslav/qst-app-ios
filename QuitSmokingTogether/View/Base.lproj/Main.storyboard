@@ -83,38 +83,23 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="68s-LV-GYN">
-                                                    <rect key="frame" x="0.0" y="16" width="0.0" height="268"/>
+                                                    <rect key="frame" x="35" y="16" width="250" height="268"/>
                                                     <subviews>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeHolder.png" translatesAutoresizingMaskIntoConstraints="NO" id="kfX-kL-3tP">
-                                                            <rect key="frame" x="0.0" y="0.0" width="0.0" height="200"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="250" height="200"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="200" id="Jw3-BC-EEF"/>
+                                                                <constraint firstAttribute="width" secondItem="kfX-kL-3tP" secondAttribute="height" multiplier="5:4" id="0Di-oJ-5Lx"/>
+                                                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="Jw3-BC-EEF"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BBe-N9-ga9">
-                                                            <rect key="frame" x="0.0" y="205" width="0.0" height="58"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UbW-ye-CQd">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="23.5"/>
-                                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJD-kE-JJS">
-                                                                    <rect key="frame" x="0.0" y="23.5" width="0.0" height="34.5"/>
-                                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
-                                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                        </stackView>
-                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbk-BW-uSW">
-                                                            <rect key="frame" x="0.0" y="160" width="25" height="25"/>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbk-BW-uSW" customClass="StarButton" customModule="QuitSmokingTogether" customModuleProvider="target">
+                                                            <rect key="frame" x="15" y="160" width="25" height="25"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="25" id="dbK-Rl-j13"/>
                                                                 <constraint firstAttribute="height" constant="25" id="nXm-gd-exL"/>
                                                             </constraints>
-                                                            <state key="normal" image="icon-star.png"/>
+                                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <state key="normal" image="icon-star"/>
                                                             <userDefinedRuntimeAttributes>
                                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                                     <real key="value" value="12"/>
@@ -124,16 +109,33 @@
                                                                 <action selector="starredButtonPressed:" destination="Gi4-Ae-am0" eventType="touchUpInside" id="U01-Ro-LsW"/>
                                                             </connections>
                                                         </button>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BBe-N9-ga9">
+                                                            <rect key="frame" x="5" y="205" width="240" height="58"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UbW-ye-CQd">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="240" height="23.5"/>
+                                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJD-kE-JJS">
+                                                                    <rect key="frame" x="0.0" y="23.5" width="240" height="34.5"/>
+                                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
                                                     </subviews>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="trailing" secondItem="BBe-N9-ga9" secondAttribute="trailing" constant="5" id="KVE-q4-SiG"/>
+                                                        <constraint firstItem="BBe-N9-ga9" firstAttribute="top" secondItem="dbk-BW-uSW" secondAttribute="bottom" constant="20" id="Kr3-bC-bA0"/>
                                                         <constraint firstItem="kfX-kL-3tP" firstAttribute="top" secondItem="68s-LV-GYN" secondAttribute="top" id="VPG-Ys-lBK"/>
                                                         <constraint firstAttribute="bottom" secondItem="BBe-N9-ga9" secondAttribute="bottom" constant="5" id="a0E-tu-aqt"/>
                                                         <constraint firstItem="kfX-kL-3tP" firstAttribute="leading" secondItem="68s-LV-GYN" secondAttribute="leading" id="h5q-z6-s3F"/>
                                                         <constraint firstAttribute="trailing" secondItem="kfX-kL-3tP" secondAttribute="trailing" id="i7b-ad-MBZ"/>
                                                         <constraint firstItem="dbk-BW-uSW" firstAttribute="leading" secondItem="68s-LV-GYN" secondAttribute="leading" constant="15" id="nd0-7Q-dCP"/>
-                                                        <constraint firstItem="dbk-BW-uSW" firstAttribute="top" secondItem="68s-LV-GYN" secondAttribute="top" constant="160" id="p2q-qI-lzj"/>
                                                         <constraint firstItem="BBe-N9-ga9" firstAttribute="leading" secondItem="68s-LV-GYN" secondAttribute="leading" constant="5" id="scn-iL-muY"/>
                                                         <constraint firstItem="BBe-N9-ga9" firstAttribute="top" secondItem="kfX-kL-3tP" secondAttribute="bottom" constant="5" id="xeL-1W-PK6"/>
                                                     </constraints>
@@ -198,7 +200,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="88q-Y3-eBp">
                                 <rect key="frame" x="15" y="15" width="290" height="425"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some motivational text, that inspires people to make call" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXn-Eo-ahr">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dear friend, you can contact with me and I will help you to quit smoking!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OXn-Eo-ahr">
                                         <rect key="frame" x="0.0" y="0.0" width="290" height="41"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
@@ -329,11 +331,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="OverviewVC" customModule="QuitSmokingTogether" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="737"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="foH-XM-GZf">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="455"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="737"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="8Jn-gl-uzQ">
                                     <rect key="frame" x="0.0" y="698" width="320" height="44"/>
@@ -530,6 +532,10 @@
                                                                             <real key="value" value="10"/>
                                                                         </userDefinedRuntimeAttribute>
                                                                     </userDefinedRuntimeAttributes>
+                                                                    <connections>
+                                                                        <action selector="readMoreButtonPressed:" destination="dr9-a5-rfI" eventType="touchUpInside" id="Bhp-ci-kIQ"/>
+                                                                        <action selector="readMoreEventButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zgb-r8-yFG"/>
+                                                                    </connections>
                                                                 </button>
                                                             </subviews>
                                                         </stackView>
@@ -566,7 +572,7 @@
                                                                 <constraint firstAttribute="width" constant="64" id="GcP-K4-HcR"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9Y-GC-Oy9">
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dear friend, you can contact with me and I will help you to quit smoking!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9Y-GC-Oy9">
                                                             <rect key="frame" x="72" y="0.0" width="232" height="83.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <nil key="textColor"/>
@@ -600,6 +606,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Overview" id="GVQ-4U-1c2"/>
+                    <size key="freeformSize" width="320" height="850"/>
                     <connections>
                         <outlet property="tableView" destination="foH-XM-GZf" id="XED-HY-Hty"/>
                         <segue destination="dJB-ZA-j4H" kind="show" identifier="showAdviceFromOverview" id="Occ-yg-L6e"/>
@@ -636,7 +643,7 @@
         <!--Profile-->
         <scene sceneID="c0i-ao-PXL">
             <objects>
-                <tableViewController title="Profile" id="iLj-lO-ozH" customClass="AccountTVC" customModule="QuitSmokingTogether" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Profile" id="iLj-lO-ozH" customClass="ProfileVC" customModule="QuitSmokingTogether" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="1" id="qwj-QY-eJx">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -923,6 +930,7 @@
                         <outlet property="logOutLabel" destination="pM1-Jq-LS7" id="Xli-Vw-Kjz"/>
                         <outlet property="userEmailLabel" destination="i5s-1K-J7M" id="vkc-hf-Uxr"/>
                         <outlet property="userPhoneLabel" destination="zpi-wP-aaS" id="dm2-aH-6Tr"/>
+                        <segue destination="DGd-ih-8xL" kind="presentation" identifier="LoggedOutFromProfile" id="oeg-ft-Qfi"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="F2C-cn-luz" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1217,19 +1225,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="WnQ-VO-cVn"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Options" id="NKf-fG-iWm">
-                        <barButtonItem key="leftBarButtonItem" title="Login Page" id="H1u-v2-Z30">
-                            <connections>
-                                <segue destination="C1X-Ni-62v" kind="unwind" unwindAction="unwindToLoginWithSegue:" id="Yw9-jL-tl6"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Options" id="NKf-fG-iWm"/>
                     <connections>
                         <outlet property="tableView" destination="h8W-zg-vad" id="xjB-sE-edN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hwQ-8B-5Yr" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="C1X-Ni-62v" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2090.625" y="1660.5633802816901"/>
         </scene>
@@ -1402,8 +1403,8 @@
         <scene sceneID="7YW-h9-wiu">
             <objects>
                 <tableViewController title="Donate" hidesBottomBarWhenPushed="YES" id="goa-Ku-j9c" customClass="DonateVC" customModule="QuitSmokingTogether" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="AiT-vG-fhq">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="AiT-vG-fhq">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1186"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="0.93333333330000001" green="0.93333333330000001" blue="0.93333333330000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <sections>
@@ -1413,21 +1414,20 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="144"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Dd2-e0-4EK" id="vDp-xS-KqI">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="143.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="144"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="40S-RE-fBr">
                                                     <rect key="frame" x="8" y="5" width="304" height="133.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Прекрасные новости" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKI-yr-TXn">
-                                                            <rect key="frame" x="0.0" y="0.0" width="304" height="24"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Great news" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKI-yr-TXn">
+                                                            <rect key="frame" x="0.0" y="0.0" width="304" height="46"/>
                                                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Sg-9M-hqm">
-                                                            <rect key="frame" x="0.0" y="24" width="304" height="109.5"/>
-                                                            <string key="text">Нам нравиться помогать Вам. Пожалуйста, поддержите наш труд и помогите нам помочь еще множеству людей. Любое пожертвование разблокирует PRO функции</string>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="We like to help you. Please support our work and help us to help many more people. Any donation will unlock PRO function" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Sg-9M-hqm">
+                                                            <rect key="frame" x="0.0" y="46" width="304" height="87.5"/>
                                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -1447,7 +1447,7 @@
                                         <rect key="frame" x="0.0" y="144" width="320" height="183"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0BO-O2-Xxw" id="wqw-oV-HOy">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="182.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="183"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="KaI-Cz-FlH">
@@ -1503,7 +1503,7 @@
                                         <rect key="frame" x="0.0" y="327" width="320" height="89"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dlU-TV-I0t" id="jof-ui-a5b">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="88.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="89"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ffh-Cd-wJq">
@@ -1537,7 +1537,7 @@
                                         <rect key="frame" x="0.0" y="416" width="320" height="94"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Htp-WI-gZo" id="MQP-0Z-J4j">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="93.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="94"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rPA-Z3-qzi">
@@ -1571,26 +1571,28 @@
                                         <rect key="frame" x="0.0" y="510" width="320" height="108"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sCv-Md-qiR" id="lvP-qO-auj">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="107.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="108"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="trB-Nw-HTz">
-                                                    <rect key="frame" x="16" y="16" width="288" height="70.5"/>
+                                                    <rect key="frame" x="24" y="16" width="272" height="81"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NGO &quot;Quit Smoking Together&quot;" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMY-IW-NZP">
-                                                            <rect key="frame" x="0.0" y="0.0" width="288" height="23.5"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="272" height="23.5"/>
                                                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Visa № 4627-0551-2505-6985 (USD)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="GFy-0o-f6d">
-                                                            <rect key="frame" x="0.0" y="23.5" width="288" height="23.5"/>
-                                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
-                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ubv-Ex-0Iq">
+                                                            <rect key="frame" x="0.0" y="23.5" width="272" height="34"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                                            <state key="normal" title="Visa № 4627-0551-2505-6985 (USD)"/>
+                                                            <connections>
+                                                                <action selector="buttonWithVisa6985Pressed:" destination="goa-Ku-j9c" eventType="touchUpInside" id="PIF-9J-h9p"/>
+                                                            </connections>
+                                                        </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Alexey Koval" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3w7-ms-zHc">
-                                                            <rect key="frame" x="0.0" y="47" width="288" height="23.5"/>
+                                                            <rect key="frame" x="0.0" y="57.5" width="272" height="23.5"/>
                                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -1609,20 +1611,20 @@
                                         <rect key="frame" x="0.0" y="618" width="320" height="500"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="82o-Ml-1GH" id="CUq-ui-Tml">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="499.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uFG-Tq-37v">
                                                     <rect key="frame" x="8" y="5" width="304" height="489.5"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Settlement account of our organization (USD): " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="HBm-fV-rAt">
-                                                            <rect key="frame" x="0.0" y="0.0" width="304" height="19.5"/>
-                                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Settlement account  of our organization (USD): " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="HBm-fV-rAt">
+                                                            <rect key="frame" x="0.0" y="0.0" width="304" height="49.5"/>
+                                                            <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jUs-Iy-ha5">
-                                                            <rect key="frame" x="0.0" y="19.5" width="304" height="470"/>
+                                                            <rect key="frame" x="0.0" y="49.5" width="304" height="440"/>
                                                             <string key="text">Company Name: "QUIT SMOKING TOGETHER"
 The bank account of the company: 26007052657883
 Name of the bank: PJSC CB "PRIVATBANK", 1D HRUSHEVSKOHO STR., KYIV, 01001, UKRAINE
@@ -1660,10 +1662,11 @@ Correspondent bank: The Bank of New York Mellon, New York, USA </string>
                         </connections>
                     </tableView>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <size key="freeformSize" width="320" height="1250"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IRu-Um-Vb1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2089.8550724637685" y="2459.5108695652175"/>
+            <point key="canvasLocation" x="2091" y="2824"/>
         </scene>
         <!--Share-->
         <scene sceneID="Eog-mP-YQ0">
@@ -1673,28 +1676,34 @@ Correspondent bank: The Bank of New York Mellon, New York, USA </string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ubu-cf-Gia">
-                                <rect key="frame" x="10" y="10" width="300" height="484"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ubu-cf-Gia">
+                                <rect key="frame" x="10" y="20" width="300" height="474"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6Rx-q9-ol5">
-                                        <rect key="frame" x="0.0" y="0.0" width="300" height="126.5"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="300" height="93"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Some title" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7XU-vp-b6A">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="23.5"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Share this App with your friends and help them to quit smoking! Also, you can share my paper book and website" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eb4-6v-AKi">
-                                                <rect key="frame" x="0.0" y="33.5" width="300" height="93"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="93"/>
                                                 <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
                                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
+                                        <variation key="default">
+                                            <mask key="subviews">
+                                                <exclude reference="7XU-vp-b6A"/>
+                                            </mask>
+                                        </variation>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IYE-Rr-WBl">
-                                        <rect key="frame" x="0.0" y="136.5" width="300" height="110"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="IYE-Rr-WBl">
+                                        <rect key="frame" x="0.0" y="113" width="300" height="120"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BnY-UP-Agc">
                                                 <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
@@ -1721,7 +1730,7 @@ Correspondent bank: The Bank of New York Mellon, New York, USA </string>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NSn-os-zDP">
-                                                <rect key="frame" x="0.0" y="60" width="300" height="50"/>
+                                                <rect key="frame" x="0.0" y="70" width="300" height="50"/>
                                                 <color key="backgroundColor" red="0.86274509799999999" green="0.50196078430000002" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="IjT-ip-Rrc"/>
@@ -1747,10 +1756,10 @@ Correspondent bank: The Bank of New York Mellon, New York, USA </string>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="248" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vzI-lj-IaK">
-                                        <rect key="frame" x="0.0" y="256.5" width="300" height="227.5"/>
+                                        <rect key="frame" x="0.0" y="253" width="300" height="221"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IyE-bT-VYZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="300" height="227.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="300" height="221"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
@@ -1763,7 +1772,7 @@ Correspondent bank: The Bank of New York Mellon, New York, USA </string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="AyG-JY-ok5" firstAttribute="trailing" secondItem="ubu-cf-Gia" secondAttribute="trailing" constant="10" id="Vbz-dd-d84"/>
-                            <constraint firstItem="ubu-cf-Gia" firstAttribute="top" secondItem="8Bv-gW-5En" secondAttribute="top" constant="10" id="b7j-Be-i6s"/>
+                            <constraint firstItem="ubu-cf-Gia" firstAttribute="top" secondItem="8Bv-gW-5En" secondAttribute="top" constant="20" id="b7j-Be-i6s"/>
                             <constraint firstAttribute="bottom" secondItem="ubu-cf-Gia" secondAttribute="bottom" constant="10" id="tLj-VJ-ed6"/>
                             <constraint firstItem="ubu-cf-Gia" firstAttribute="leading" secondItem="AyG-JY-ok5" secondAttribute="leading" constant="10" id="xRu-iV-S4Z"/>
                         </constraints>
@@ -1800,8 +1809,8 @@ Correspondent bank: The Bank of New York Mellon, New York, USA </string>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Version number" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jue-Hp-l6s">
-                                                    <rect key="frame" x="183.5" y="12" width="120.5" height="20.5"/>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Number" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="jue-Hp-l6s">
+                                                    <rect key="frame" x="242" y="12" width="62" height="20.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -2090,7 +2099,7 @@ Correspondent bank: The Bank of New York Mellon, New York, USA </string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D2s-yD-7Vu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1536" y="2515"/>
+            <point key="canvasLocation" x="-1538" y="2690"/>
         </scene>
         <!--EventVC-->
         <scene sceneID="yvC-Lp-gD8">
@@ -2101,34 +2110,46 @@ Correspondent bank: The Bank of New York Mellon, New York, USA </string>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="idV-zM-cZF" customClass="CLabsImageSlider" customModule="CLabsImageSlider">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="200"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
                                 <color key="backgroundColor" red="0.92148083449999996" green="0.9216319919" blue="0.92144864800000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="tAr-pj-Qh5"/>
+                                    <constraint firstAttribute="height" constant="250" id="5aR-eP-YEt"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHN-yh-0Zc" customClass="StarButton" customModule="QuitSmokingTogether" customModuleProvider="target">
+                                <rect key="frame" x="25" y="200" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="25" id="BwY-op-o7e"/>
+                                    <constraint firstAttribute="width" constant="25" id="gcg-tn-o3j"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="icon-star"/>
+                                <connections>
+                                    <action selector="starredButtonPressed:" destination="20b-xW-Usg" eventType="touchUpInside" id="kK9-Bb-APR"/>
+                                </connections>
+                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sh3-P7-Oar">
-                                <rect key="frame" x="15" y="210" width="290" height="284"/>
+                                <rect key="frame" x="15" y="260" width="290" height="234"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7T-W9-988">
-                                        <rect key="frame" x="0.0" y="0.0" width="290" height="284"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="234"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News title with 2 lines" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KzJ-Bg-jnx">
-                                                <rect key="frame" x="15" y="10" width="260" height="41"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News title with 2 lines" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KzJ-Bg-jnx">
+                                                <rect key="frame" x="15" y="10" width="260" height="49.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="mzz-0F-0AP"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cU1-kL-ArZ">
-                                                <rect key="frame" x="15" y="61" width="260" height="21"/>
+                                                <rect key="frame" x="15" y="69.5" width="260" height="22"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="ZzI-eE-JQ7"/>
                                                 </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -2161,6 +2182,8 @@ Correspondent bank: The Bank of New York Mellon, New York, USA </string>
                             <constraint firstItem="XX1-Ql-aqz" firstAttribute="trailing" secondItem="sh3-P7-Oar" secondAttribute="trailing" constant="15" id="REW-Jo-zgo"/>
                             <constraint firstItem="sh3-P7-Oar" firstAttribute="top" secondItem="idV-zM-cZF" secondAttribute="bottom" constant="10" id="UZd-RA-hv8"/>
                             <constraint firstItem="idV-zM-cZF" firstAttribute="leading" secondItem="XX1-Ql-aqz" secondAttribute="leading" id="a7w-X0-6y9"/>
+                            <constraint firstItem="sh3-P7-Oar" firstAttribute="top" secondItem="EHN-yh-0Zc" secondAttribute="bottom" constant="35" id="oab-lr-tvW"/>
+                            <constraint firstItem="EHN-yh-0Zc" firstAttribute="leading" secondItem="XX1-Ql-aqz" secondAttribute="leading" constant="25" id="qct-FB-5QZ"/>
                             <constraint firstItem="XX1-Ql-aqz" firstAttribute="bottom" secondItem="sh3-P7-Oar" secondAttribute="bottom" constant="10" id="rS2-2P-iCb"/>
                             <constraint firstItem="idV-zM-cZF" firstAttribute="top" secondItem="XX1-Ql-aqz" secondAttribute="top" id="xg9-Eo-vg2"/>
                         </constraints>
@@ -2171,6 +2194,7 @@ Correspondent bank: The Bank of New York Mellon, New York, USA </string>
                         <outlet property="imageSlider" destination="idV-zM-cZF" id="JAB-Zg-BiM"/>
                         <outlet property="newsTextLabel" destination="cU1-kL-ArZ" id="Vou-jQ-0Xx"/>
                         <outlet property="newsTitleLabel" destination="KzJ-Bg-jnx" id="Hed-dz-tNm"/>
+                        <outlet property="starredButton" destination="EHN-yh-0Zc" id="m0m-hJ-cgp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="P4z-4Q-a4D" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2180,7 +2204,7 @@ Correspondent bank: The Bank of New York Mellon, New York, USA </string>
         <!--LoginVC-->
         <scene sceneID="ybH-hr-ngQ">
             <objects>
-                <viewController id="DGd-ih-8xL" customClass="LoginVC" customModule="QuitSmokingTogether" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" id="DGd-ih-8xL" customClass="LoginVC" customModule="QuitSmokingTogether" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yKE-zi-FgJ">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -2204,7 +2228,7 @@ Correspondent bank: The Bank of New York Mellon, New York, USA </string>
                                                         <rect key="frame" x="35" y="10" width="245" height="20"/>
                                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" textContentType="email"/>
                                                     </textField>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-gmail" translatesAutoresizingMaskIntoConstraints="NO" id="9Ai-Q2-HNL">
                                                         <rect key="frame" x="10" y="12" width="15" height="15"/>
@@ -2247,6 +2271,9 @@ Correspondent bank: The Bank of New York Mellon, New York, USA </string>
                                                             <constraint firstAttribute="width" constant="25" id="PyZ-cf-Ct6"/>
                                                         </constraints>
                                                         <state key="normal" image="icon-help"/>
+                                                        <connections>
+                                                            <action selector="restorePasswordButtonPressed:" destination="DGd-ih-8xL" eventType="touchUpInside" id="Aht-C8-pV6"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -2305,7 +2332,7 @@ Correspondent bank: The Bank of New York Mellon, New York, USA </string>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="WKE-Dw-cTg">
-                                        <rect key="frame" x="120" y="220.5" width="50" height="50"/>
+                                        <rect key="frame" x="85" y="220.5" width="120" height="50"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zIM-RO-2fi" userLabel="Button-Facebook">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
@@ -2325,6 +2352,9 @@ Correspondent bank: The Bank of New York Mellon, New York, USA </string>
                                                     <constraint firstAttribute="width" constant="50" id="FWs-LC-J2I"/>
                                                 </constraints>
                                                 <state key="normal" image="Button-Google"/>
+                                                <connections>
+                                                    <action selector="googleLoginButtonPressed:" destination="DGd-ih-8xL" eventType="touchUpInside" id="kFn-A6-ttt"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nap-Fl-6VE" userLabel="Button-VK">
                                                 <rect key="frame" x="70" y="0.0" width="50" height="50"/>
@@ -2337,7 +2367,6 @@ Correspondent bank: The Bank of New York Mellon, New York, USA </string>
                                         </subviews>
                                         <variation key="default">
                                             <mask key="subviews">
-                                                <exclude reference="0Xi-bZ-GsF"/>
                                                 <exclude reference="Nap-Fl-6VE"/>
                                             </mask>
                                         </variation>
@@ -2381,8 +2410,8 @@ Correspondent bank: The Bank of New York Mellon, New York, USA </string>
                         <outlet property="loginFormStackView" destination="Dvo-Yu-A0F" id="Kvp-3j-g8P"/>
                         <outlet property="passwordField" destination="on9-y3-kTw" id="7Jr-cw-ldq"/>
                         <segue destination="ccH-28-OSF" kind="show" identifier="SkipButtonPressedInLogin" id="VYT-KF-rA1"/>
-                        <segue destination="ccH-28-OSF" kind="show" identifier="LoggedInFromLogin" id="ajc-YB-pDh"/>
                         <segue destination="Uki-nl-Dff" kind="show" identifier="SignUpFromLogin" id="Le8-fP-zMT"/>
+                        <segue destination="ccH-28-OSF" kind="show" identifier="LoggedInFromLogin" id="JcQ-no-cWh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3B9-41-nxj" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2419,7 +2448,7 @@ Correspondent bank: The Bank of New York Mellon, New York, USA </string>
                                                         <rect key="frame" x="35" y="10" width="245" height="20"/>
                                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                        <textInputTraits key="textInputTraits" textContentType="name"/>
+                                                        <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" textContentType="name"/>
                                                     </textField>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-name" translatesAutoresizingMaskIntoConstraints="NO" id="Bra-Vi-dh3">
                                                         <rect key="frame" x="10" y="12.5" width="15" height="15"/>
@@ -2446,7 +2475,7 @@ Correspondent bank: The Bank of New York Mellon, New York, USA </string>
                                                         <rect key="frame" x="35" y="10" width="245" height="20"/>
                                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="emailAddress" textContentType="email"/>
+                                                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="emailAddress" textContentType="email"/>
                                                     </textField>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-gmail" translatesAutoresizingMaskIntoConstraints="NO" id="nb6-tE-wSK">
                                                         <rect key="frame" x="10" y="12.5" width="15" height="15"/>
@@ -2581,7 +2610,7 @@ Correspondent bank: The Bank of New York Mellon, New York, USA </string>
         <!--Tab BarVC-->
         <scene sceneID="Zno-uz-2fX">
             <objects>
-                <tabBarController storyboardIdentifier="OverviewVC" automaticallyAdjustsScrollViewInsets="NO" id="ccH-28-OSF" customClass="TabBarVC" customModule="QuitSmokingTogether" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController storyboardIdentifier="TabBarVC" automaticallyAdjustsScrollViewInsets="NO" id="ccH-28-OSF" customClass="TabBarVC" customModule="QuitSmokingTogether" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="D9a-pa-2dT">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
@@ -2744,7 +2773,7 @@ Correspondent bank: The Bank of New York Mellon, New York, USA </string>
         <image name="icon-online" width="28" height="29"/>
         <image name="icon-password" width="21" height="25"/>
         <image name="icon-phone" width="23" height="23"/>
-        <image name="icon-star.png" width="25" height="25"/>
+        <image name="icon-star" width="25" height="25"/>
         <image name="icon_account" width="22" height="22"/>
         <image name="icon_book" width="29" height="28"/>
         <image name="icon_donate" width="22" height="25"/>
@@ -2759,6 +2788,6 @@ Correspondent bank: The Bank of New York Mellon, New York, USA </string>
         <image name="placeHolder.png" width="560" height="380"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="2zo-RI-LWN"/>
+        <segue reference="JcQ-no-cWh"/>
     </inferredMetricsTieBreakers>
 </document>

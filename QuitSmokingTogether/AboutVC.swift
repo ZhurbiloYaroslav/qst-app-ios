@@ -11,15 +11,15 @@ import UIKit
 class AboutVC: UITableViewController {
 
     @IBOutlet weak var appVersionCell: UITableViewCell!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
+        updateLabelsText()
     }
     
     func updateLabelsText() {
-        //TODO: Make App writes its own version
-        appVersionCell.detailTextLabel?.text = "1.00"
+        appVersionCell.detailTextLabel?.text = Constants.AppInfo.versionAndBuild
     }
     
     @IBAction func websiteButtonPressed(_ sender: UIButton) {

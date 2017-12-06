@@ -12,6 +12,7 @@ import CLabsImageSlider
 class EventVC: UIViewController, imageSliderDelegate {
     
     @IBOutlet weak var imageSlider: CLabsImageSlider!
+    @IBOutlet weak var starredButton: StarButton!
     @IBOutlet weak var newsTitleLabel: UILabel!
     @IBOutlet weak var newsTextLabel: UILabel!
     
@@ -22,9 +23,23 @@ class EventVC: UIViewController, imageSliderDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        updateNavigationTitle()
         setDelegates()
-        
         updateLabels()
+    }
+    
+    func updateNavigationTitle() {
+        if let event = currentEvent {
+            switch event.type {
+            case .News:
+                navigationItem.title = "News info"
+            case .Competition:
+                navigationItem.title = "Competition info"
+            default:
+                break
+            }
+            
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,6 +54,8 @@ class EventVC: UIViewController, imageSliderDelegate {
     func updateLabels() {
         newsTitleLabel.text = currentEvent.title
         newsTextLabel.text = currentEvent.text
+        
+        starredButton.makeButtonActiveIfActive(currentEvent)
     }
     
     override func viewDidLayoutSubviews() {
@@ -51,4 +68,12 @@ class EventVC: UIViewController, imageSliderDelegate {
 
     }
 
+}
+
+extension EventVC {
+    
+    @IBAction func starredButtonPressed(_ sender: UIButton) {
+        starredButton.starredButtonPressedFor(currentEvent)
+    }
+    
 }

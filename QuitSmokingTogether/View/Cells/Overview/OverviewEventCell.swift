@@ -39,5 +39,9 @@ class OverviewEventCell: UITableViewCell {
         eventTitleLabel.text = event.title
         eventTextLabel.text = event.text
     }
-
+    
+    @IBAction func readMoreButtonPressed(_ sender: UIButton) {
+        
+    }
+    
 }

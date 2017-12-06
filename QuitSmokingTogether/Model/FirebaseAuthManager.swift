@@ -37,21 +37,19 @@ class FirebaseAuthManager {
         }
     }
     
-    public func signIn(withEmail email: String, password: String, completionHandler: @escaping SuccessBehaviour) {
-        print("signIn")
+    public func signIn(withEmail email: String, password: String, completionHandler: @escaping (_ error: Error?)->()) {
         Auth.auth().signIn(withEmail: email, password: password) { (user, error) in
             if error == nil {
                 CurrentUser.saveInfoFor(user, andProvider: .authEmail)
-                print("error == nil")
-
                 Auth.auth().currentUser?.getIDToken() { token, error in
                     if error == nil, let token = token {
                         CurrentUser.authToken = token
-                        completionHandler()
+                        completionHandler(nil)
                     }
                 }
                 
             } else {
+                completionHandler(error)
                 print(error?.localizedDescription)
             }
         }
@@ -72,6 +70,12 @@ class FirebaseAuthManager {
             } else {
                 //
             }
+        }
+    }
+    
+    public func restorePasswordFor(email: String, completionHandler: @escaping SuccessBehaviour) {
+        Auth.auth().sendPasswordReset(withEmail: email) { error in
+            completionHandler()
         }
     }
     

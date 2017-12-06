@@ -18,11 +18,32 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        chooseViewControllerToPresent()
         initializeAndConfigureFirebase()
 
         return true
     }
     
+    func chooseViewControllerToPresent() {
+        
+        let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        
+        if CurrentUser.isLoggedIn {
+            let overviewVC = mainStoryBoard.instantiateViewController(withIdentifier: "TabBarVC") as! TabBarVC
+            self.window?.rootViewController = overviewVC
+        } else {
+            let loginVC = mainStoryBoard.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
+            self.window?.rootViewController = loginVC
+        }
+        self.window?.makeKeyAndVisible()
+        
+    }
+    
+    func loadLoginOrOverviewViewController() {
+        
+    }
     func initializeAndConfigureFirebase() {
         FirebaseApp.configure()
     }

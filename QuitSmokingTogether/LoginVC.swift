@@ -42,10 +42,6 @@ class LoginVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         performSegueIfLoggedInFacebook()
-        moveToMainViewIfLoggedIn()
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
     }
     
     func performSegueIfLoggedInFacebook() {
@@ -55,18 +51,19 @@ class LoginVC: UIViewController {
         }
     }
     
-    func moveToMainViewIfLoggedIn() {
-        if CurrentUser.isLoggedIn {
-            self.performSegue(withIdentifier: "LoggedInFromLogin", sender: nil)
-        }
-    }
-    
     @IBAction func loginButtonPressed(_ sender: UIButton) {
         if fieldsAreValidated() {
             print("fieldsAreValidated")
-            FirebaseAuthManager().signIn(withEmail: emailField.text!, password: passwordField.text!) {
-                print("LoggedInFromLogin")
-                self.performSegue(withIdentifier: "LoggedInFromLogin", sender: nil)
+            FirebaseAuthManager().signIn(withEmail: emailField.text!, password: passwordField.text!) { error in
+                if let errorMessage = error?.localizedDescription {
+                    
+                    Alert().presentLoginAlertWith(messages: [errorMessage]) { alertController in
+                        self.present(alertController, animated: true, completion: nil)
+                    }
+                } else {
+                    self.performSegue(withIdentifier: "LoggedInFromLogin", sender: nil)
+                }
+                
             }
         }
     }
@@ -88,6 +85,33 @@ class LoginVC: UIViewController {
                 self.getFBUserInfo()
             }
         }
+    }
+    
+    @IBAction func googleLoginButtonPressed(_ sender: UIButton) {
+        
+    }
+    
+    @IBAction func restorePasswordButtonPressed(_ sender: UIButton) {
+        
+        guard let email = emailField.text else { return }
+        
+        if Validator.isEmailValid(email) {
+            FirebaseAuthManager().restorePasswordFor(email: email, completionHandler: {
+                let alertMessages = ["Check your Email to restore password"]
+                Alert().presentLoginAlertWith(messages: alertMessages, completionHandler: { alertController in
+                    self.present(alertController, animated: true, completion: nil)
+                })
+            })
+        } else {
+            let alertMessages = [
+                "Your Email is invalid",
+                "Please write correct Email"
+            ]
+            Alert().presentLoginAlertWith(messages: alertMessages, completionHandler: { alertController in
+                self.present(alertController, animated: true, completion: nil)
+            })
+        }
+        
     }
     
     func getFBUserInfo() {
@@ -136,22 +160,21 @@ extension LoginVC {
         
         var validationErrors: [String] = [String]()
         
-        if isEmailValid(emailField.text) == false || isEmpty(emailField.text) == true {
+        if Validator.isEmailValid(emailField.text) == false || Validator.isEmpty(emailField.text) == true {
             validationErrors.append(ValidationErrors.emailInvalid.message)
         }
-        if isPasswordValid(passwordField.text) == false || isEmpty(passwordField.text) == true {
+        if Validator.isPasswordValid(passwordField.text) == false || Validator.isEmpty(passwordField.text) == true {
             validationErrors.append(ValidationErrors.passwordInvalid.message)
             validationErrors.append(ValidationErrors.passwordMustBe.message)
         }
         if validationErrors.count > 0 {
-            presentAlert(validationErrors)
+            presentAlertWith(messages: validationErrors)
             return false
         }
-        print("fieldsAreValidated == true")
         return true
     }
     
-    func presentAlert(_ arrayWithMessages: [String]) {
+    func presentAlertWith(messages arrayWithMessages: [String]) {
         let title = "User login"
         var message = ""
         for index in 0...(arrayWithMessages.count - 1) {
@@ -161,29 +184,6 @@ extension LoginVC {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
-    }
-    
-    func isEmpty(_ value : String?) -> Bool {
-        guard let result = value else {
-            return true
-        }
-        return result.trimmingCharacters(in: CharacterSet.whitespaces).isEmpty
-    }
-    
-    func isEmailValid(_ email : String?) -> Bool {
-//        let fullEmailRegEx = "(?:[a-z0-9!#$%\\&'*+/=?\\^_`{|}~-]+(?:\\.[a-z0-9!#$%\\&'*+/=?\\^_`{|}"+"~-]+)*|\"(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21\\x23-\\x5b\\x5d-\\"+"x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])*\")@(?:(?:[a-z0-9](?:[a-"+"z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\\[(?:(?:25[0-5"+"]|2[0-4][0-9]|[01]?[0-9][0-9]?)\\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-"+"9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\\x01-\\x08\\x0b\\x0c\\x0e-\\x1f\\x21"+"-\\x5a\\x53-\\x7f]|\\\\[\\x01-\\x09\\x0b\\x0c\\x0e-\\x7f])+)\\])"
-        let simpleEmailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
-        
-        let emailTest = NSPredicate(format:"SELF MATCHES %@", simpleEmailRegEx)
-        return emailTest.evaluate(with: email)
-    }
-    
-    func isPasswordValid(_ password : String?) -> Bool {
-//        let passwordRegEx = "(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{8,}"
-        let simplePasswordRegEx = "(?=.*[A-Za-z0-9]).{6,}"
-
-        let simplePassword = NSPredicate(format: "SELF MATCHES %@", simplePasswordRegEx)
-        return simplePassword.evaluate(with: password)
     }
 }
 

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -15,11 +15,15 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-road" translatesAutoresizingMaskIntoConstraints="NO" id="r3h-Lz-cCQ">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-white" translatesAutoresizingMaskIntoConstraints="NO" id="wfy-Mr-rs5">
+                                <rect key="frame" x="25" y="20" width="270" height="83"/>
+                                <color key="tintColor" red="0.36862745099999999" green="0.73725490199999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -27,7 +31,11 @@
                             <constraint firstItem="r3h-Lz-cCQ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Ilh-yj-DAb"/>
                             <constraint firstItem="r3h-Lz-cCQ" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="NHL-vZ-aKh"/>
                             <constraint firstItem="r3h-Lz-cCQ" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="WwR-Nz-Frf"/>
+                            <constraint firstItem="wfy-Mr-rs5" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="atI-hh-sSg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wfy-Mr-rs5" secondAttribute="trailing" constant="25" id="dpB-Mr-1Ne"/>
                             <constraint firstItem="r3h-Lz-cCQ" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="eWu-Dm-ZDf"/>
+                            <constraint firstItem="wfy-Mr-rs5" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="ewK-UU-JlO"/>
+                            <constraint firstItem="wfy-Mr-rs5" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="k5N-FB-x2E"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -39,5 +47,6 @@
     </scenes>
     <resources>
         <image name="background-road" width="3744" height="5616"/>
+        <image name="logo-white" width="236" height="83"/>
     </resources>
 </document>

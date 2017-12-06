@@ -13,7 +13,7 @@ class EventCell: UITableViewCell {
     @IBOutlet weak var eventImage: UIImageView!
     @IBOutlet weak var eventTitle: UILabel!
     @IBOutlet weak var eventDescription: UILabel!
-    @IBOutlet weak var eventStarredButton: UIButton!
+    @IBOutlet weak var eventStarredButton: StarButton!
     
     var currentEvent: Event!
     
@@ -30,20 +30,12 @@ class EventCell: UITableViewCell {
         eventTitle.text = event.title
         eventDescription.text = event.text
         
-        if event.status == .Starred {
-            eventStarredButton.backgroundColor = UIColor.yellow
-        }
+        eventStarredButton.makeButtonActiveIfActive(currentEvent)
         
     }
     
     @IBAction func starredButtonPressed(_ sender: UIButton) {
-        if currentEvent.status == .Starred {
-            currentEvent.status = .Read
-            eventStarredButton.backgroundColor = UIColor.clear
-        } else {
-            currentEvent.status = .Starred
-            eventStarredButton.backgroundColor = UIColor.yellow
-        }
+        eventStarredButton.starredButtonPressedFor(currentEvent)
     }
     
 }

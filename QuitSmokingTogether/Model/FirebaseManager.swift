@@ -21,7 +21,20 @@ class FirebaseManager {
         ref = Database.database().reference()
     }
     
-    func addCurrentUserToFirebaseDatabase() {
-        self.ref.child("users").child(CurrentUser.id).setValue(["username": CurrentUser.name])
+    func updateUserInfoInFirebase() {
+        let userValues: [String: String] = [
+            FirebaseValue.FirstName.rawValue: CurrentUser.firstName,
+            FirebaseValue.LastName.rawValue: CurrentUser.lastName,
+            FirebaseValue.Phone.rawValue: CurrentUser.phone,
+            FirebaseValue.Email.rawValue: CurrentUser.email
+        ]
+        self.ref.child("users").child(CurrentUser.id).setValue(userValues)
+    }
+    
+    enum FirebaseValue: String {
+        case FirstName = "FirstName"
+        case LastName = "LastName"
+        case Phone = "Phone"
+        case Email = "Email"
     }
 }
