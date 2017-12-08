@@ -19,7 +19,8 @@ class ProfileVC: UITableViewController {
     @IBOutlet weak var userPhoneLabel: UILabel!
     @IBOutlet weak var logOutLabel: UILabel!
     
-    
+    var currentAlertVC: UIAlertController!
+    var textFieldTypeInCurrentAlertVC: ProfileField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,7 +33,7 @@ class ProfileVC: UITableViewController {
         lastNameLabel.text = CurrentUser.lastName
         userEmailLabel.text = CurrentUser.email
         userPhoneLabel.text = CurrentUser.phone
-        logOutLabel.text = "Log Out from \(CurrentUser.provider.rawValue)"
+        logOutLabel.text = "Log Out"
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -152,6 +153,10 @@ class ProfileVC: UITableViewController {
     }
     
     func makeFirstTextFieldForAlertController(alertVC: UIAlertController, field: ProfileField) {
+        
+        currentAlertVC = alertVC
+        textFieldTypeInCurrentAlertVC = field
+        
         alertVC.addTextField { (textField) in
             switch field {
             case .FirstName:
@@ -166,16 +171,63 @@ class ProfileVC: UITableViewController {
                 textField.text = CurrentUser.email
                 textField.placeholder = "Email"
                 textField.keyboardType = UIKeyboardType.emailAddress
+                textField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
             case .Password:
                 textField.text = ""
                 textField.placeholder = "Password"
+                textField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
             case .Phone:
                 textField.placeholder = "Phone"
                 textField.text = CurrentUser.phone
+                textField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
             case .LogOut:
                 return
             }
         }
+    }
+    
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        
+        guard let fieldText = textField.text else { return }
+        var newMessage = ""
+        var attributes = [ NSAttributedStringKey.foregroundColor : UIColor.black ]
+        
+        switch textFieldTypeInCurrentAlertVC {
+            
+        case .Email:
+            if Validator.isEmailValid(fieldText) {
+                newMessage = "Your email is okay"
+                attributes = [ NSAttributedStringKey.foregroundColor : UIColor.green ]
+            } else {
+                newMessage = "Your email is invalid"
+                attributes = [ NSAttributedStringKey.foregroundColor : UIColor.red ]
+            }
+            
+        case .Password:
+            if Validator.isPasswordValid(fieldText) {
+                newMessage = "Your password is okay"
+                attributes = [ NSAttributedStringKey.foregroundColor : UIColor.green ]
+            } else {
+                newMessage = "Your password is invalid"
+                attributes = [ NSAttributedStringKey.foregroundColor : UIColor.red ]
+            }
+            
+        case .Phone:
+            if Validator.isPhoneValid(fieldText) {
+                newMessage = "Your phone is okay"
+                attributes = [ NSAttributedStringKey.foregroundColor : UIColor.green ]
+            } else {
+                newMessage = "Your phone is invalid"
+                attributes = [ NSAttributedStringKey.foregroundColor : UIColor.red ]
+            }
+            
+        default:
+            break
+        }
+        
+        let attributedString = NSAttributedString(string: newMessage, attributes: attributes)
+        currentAlertVC.setValue(attributedString, forKey: "attributedMessage")
+        
     }
     
     enum ProfileField {
