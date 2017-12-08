@@ -37,6 +37,8 @@
 		C46DFB2C1FC48B2A00A62D69 /* OverviewEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46DFB2B1FC48B2A00A62D69 /* OverviewEventCell.swift */; };
 		C47317901F8D0C1700A6AE43 /* OverviewReadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C473178F1F8D0C1700A6AE43 /* OverviewReadCell.swift */; };
 		C47317921F8D1C1600A6AE43 /* Notes and links.rtf in Resources */ = {isa = PBXBuildFile; fileRef = C47317911F8D1C1600A6AE43 /* Notes and links.rtf */; };
+		C47FE0BD1FDB35EE008232CA /* BuyProVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47FE0BC1FDB35EE008232CA /* BuyProVC.swift */; };
+		C47FE0BF1FDB36B2008232CA /* AdMobManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47FE0BE1FDB36B2008232CA /* AdMobManager.swift */; };
 		C4A4D3041FA87AE800EC9D50 /* OptAccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A4D3031FA87AE800EC9D50 /* OptAccountCell.swift */; };
 		C4A4D3061FA87B3F00EC9D50 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A4D3051FA87B3F00EC9D50 /* CurrentUser.swift */; };
 		C4A4D30A1FA8D93400EC9D50 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A4D3091FA8D93400EC9D50 /* Typealiases.swift */; };
@@ -112,6 +114,8 @@
 		C46DFB2B1FC48B2A00A62D69 /* OverviewEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewEventCell.swift; sourceTree = "<group>"; };
 		C473178F1F8D0C1700A6AE43 /* OverviewReadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewReadCell.swift; sourceTree = "<group>"; };
 		C47317911F8D1C1600A6AE43 /* Notes and links.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Notes and links.rtf"; sourceTree = "<group>"; };
+		C47FE0BC1FDB35EE008232CA /* BuyProVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyProVC.swift; sourceTree = "<group>"; };
+		C47FE0BE1FDB36B2008232CA /* AdMobManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobManager.swift; sourceTree = "<group>"; };
 		C4A4D3031FA87AE800EC9D50 /* OptAccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptAccountCell.swift; sourceTree = "<group>"; };
 		C4A4D3051FA87B3F00EC9D50 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		C4A4D3091FA8D93400EC9D50 /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
@@ -242,6 +246,7 @@
 				C4C0EEE41FD061F100CA258B /* EventsFilter.swift */,
 				C4E5F0DC1FD7FFBB00AE1D93 /* Validator.swift */,
 				C4E5F0DE1FD8026400AE1D93 /* Alert.swift */,
+				C47FE0BE1FDB36B2008232CA /* AdMobManager.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -318,6 +323,7 @@
 				C4CECEE11F94C924009C85DE /* ShareVC.swift */,
 				C4258F031FC4522B009FCBC8 /* DonateVC.swift */,
 				C4CA86671F9641C800A8772D /* FAQAnswerVC.swift */,
+				C47FE0BC1FDB35EE008232CA /* BuyProVC.swift */,
 				C4258F071FC463B4009FCBC8 /* AboutVC.swift */,
 			);
 			name = Settings;
@@ -541,6 +547,7 @@
 				C4A4D30D1FAA04FD00EC9D50 /* ValidationErrors.swift in Sources */,
 				C4258F061FC46184009FCBC8 /* Browser.swift in Sources */,
 				C4CECEDE1F94C877009C85DE /* FAQVC.swift in Sources */,
+				C47FE0BF1FDB36B2008232CA /* AdMobManager.swift in Sources */,
 				C461A2CA1F8E534900B698FA /* OverviewHelpCell.swift in Sources */,
 				C4C0EEC51FCEF07C00CA258B /* FirebaseManager.swift in Sources */,
 				C4CE20D01FD6E8FA00537893 /* StarButton.swift in Sources */,
@@ -556,6 +563,7 @@
 				C4A4D3041FA87AE800EC9D50 /* OptAccountCell.swift in Sources */,
 				C4D4583E1F8021D100565A3F /* AppDelegate.swift in Sources */,
 				C4E5F0DD1FD7FFBB00AE1D93 /* Validator.swift in Sources */,
+				C47FE0BD1FDB35EE008232CA /* BuyProVC.swift in Sources */,
 				C4A4D3061FA87B3F00EC9D50 /* CurrentUser.swift in Sources */,
 				C4A4D30A1FA8D93400EC9D50 /* Typealiases.swift in Sources */,
 				C4E5F0DF1FD8026400AE1D93 /* Alert.swift in Sources */,

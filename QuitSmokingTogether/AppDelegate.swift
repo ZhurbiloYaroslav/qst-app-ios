@@ -10,6 +10,7 @@ import UIKit
 import CoreData
 import FolioReaderKit
 import Firebase
+import GoogleMobileAds
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -20,8 +21,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         chooseViewControllerToPresent()
         initializeAndConfigureFirebase()
+        initializeGoogleMobileAds()
 
         return true
+    }
+    
+    func initializeGoogleMobileAds() {
+        let googleAdMobAppID = AdMobManager.AppID.ThisAppID.rawValue
+        GADMobileAds.configure(withApplicationID: googleAdMobAppID)
     }
     
     func chooseViewControllerToPresent() {
