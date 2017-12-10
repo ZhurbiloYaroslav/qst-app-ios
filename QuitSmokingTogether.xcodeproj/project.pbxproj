@@ -22,6 +22,8 @@
 		C4258F081FC463B4009FCBC8 /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4258F071FC463B4009FCBC8 /* AboutVC.swift */; };
 		C429370A1FB9D3B70016A02F /* Advices-ru.plist in Resources */ = {isa = PBXBuildFile; fileRef = C42937091FB9D3B70016A02F /* Advices-ru.plist */; };
 		C429370C1FB9E9010016A02F /* UIScrollView+scrollToView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429370B1FB9E9000016A02F /* UIScrollView+scrollToView.swift */; };
+		C42F0B711FDDC71100C3D619 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42F0B701FDDC71100C3D619 /* IAPHelper.swift */; };
+		C42F0B731FDDC75200C3D619 /* AppProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42F0B721FDDC75200C3D619 /* AppProducts.swift */; };
 		C455D5871F8CFE75002846D9 /* AlertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C455D5861F8CFE75002846D9 /* AlertVC.swift */; };
 		C455D58B1F8D0024002846D9 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C455D58A1F8D0024002846D9 /* SettingsVC.swift */; };
 		C45FE1891FB860350080E172 /* QST-iBook.epub in Resources */ = {isa = PBXBuildFile; fileRef = C45FE1881FB860330080E172 /* QST-iBook.epub */; };
@@ -37,7 +39,7 @@
 		C46DFB2C1FC48B2A00A62D69 /* OverviewEventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C46DFB2B1FC48B2A00A62D69 /* OverviewEventCell.swift */; };
 		C47317901F8D0C1700A6AE43 /* OverviewReadCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C473178F1F8D0C1700A6AE43 /* OverviewReadCell.swift */; };
 		C47317921F8D1C1600A6AE43 /* Notes and links.rtf in Resources */ = {isa = PBXBuildFile; fileRef = C47317911F8D1C1600A6AE43 /* Notes and links.rtf */; };
-		C47FE0BD1FDB35EE008232CA /* BuyProVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47FE0BC1FDB35EE008232CA /* BuyProVC.swift */; };
+		C47FE0BD1FDB35EE008232CA /* RemoveAdvertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47FE0BC1FDB35EE008232CA /* RemoveAdvertVC.swift */; };
 		C47FE0BF1FDB36B2008232CA /* AdMobManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47FE0BE1FDB36B2008232CA /* AdMobManager.swift */; };
 		C4A4D3041FA87AE800EC9D50 /* OptAccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A4D3031FA87AE800EC9D50 /* OptAccountCell.swift */; };
 		C4A4D3061FA87B3F00EC9D50 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A4D3051FA87B3F00EC9D50 /* CurrentUser.swift */; };
@@ -99,6 +101,8 @@
 		C4258F071FC463B4009FCBC8 /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
 		C42937091FB9D3B70016A02F /* Advices-ru.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = "Advices-ru.plist"; sourceTree = "<group>"; };
 		C429370B1FB9E9000016A02F /* UIScrollView+scrollToView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+scrollToView.swift"; sourceTree = "<group>"; };
+		C42F0B701FDDC71100C3D619 /* IAPHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
+		C42F0B721FDDC75200C3D619 /* AppProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppProducts.swift; sourceTree = "<group>"; };
 		C455D5861F8CFE75002846D9 /* AlertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertVC.swift; sourceTree = "<group>"; };
 		C455D58A1F8D0024002846D9 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		C45FE1881FB860330080E172 /* QST-iBook.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "QST-iBook.epub"; sourceTree = "<group>"; };
@@ -114,7 +118,7 @@
 		C46DFB2B1FC48B2A00A62D69 /* OverviewEventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewEventCell.swift; sourceTree = "<group>"; };
 		C473178F1F8D0C1700A6AE43 /* OverviewReadCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewReadCell.swift; sourceTree = "<group>"; };
 		C47317911F8D1C1600A6AE43 /* Notes and links.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Notes and links.rtf"; sourceTree = "<group>"; };
-		C47FE0BC1FDB35EE008232CA /* BuyProVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyProVC.swift; sourceTree = "<group>"; };
+		C47FE0BC1FDB35EE008232CA /* RemoveAdvertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveAdvertVC.swift; sourceTree = "<group>"; };
 		C47FE0BE1FDB36B2008232CA /* AdMobManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobManager.swift; sourceTree = "<group>"; };
 		C4A4D3031FA87AE800EC9D50 /* OptAccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptAccountCell.swift; sourceTree = "<group>"; };
 		C4A4D3051FA87B3F00EC9D50 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
@@ -218,6 +222,15 @@
 			path = Images;
 			sourceTree = "<group>";
 		};
+		C42F0B6F1FDDC70100C3D619 /* In-App purchase */ = {
+			isa = PBXGroup;
+			children = (
+				C42F0B701FDDC71100C3D619 /* IAPHelper.swift */,
+				C42F0B721FDDC75200C3D619 /* AppProducts.swift */,
+			);
+			path = "In-App purchase";
+			sourceTree = "<group>";
+		};
 		C43624151F98DD3700ECD14A /* Books */ = {
 			isa = PBXGroup;
 			children = (
@@ -229,6 +242,7 @@
 		C455D5821F8CFDEE002846D9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				C42F0B6F1FDDC70100C3D619 /* In-App purchase */,
 				C461A2CD1F8F957C00B698FA /* Constants.swift */,
 				C410E7D31F97C67E00EEFB7B /* Advices.swift */,
 				C4CA865E1F94FDCA00A8772D /* FAQ.swift */,
@@ -323,7 +337,7 @@
 				C4CECEE11F94C924009C85DE /* ShareVC.swift */,
 				C4258F031FC4522B009FCBC8 /* DonateVC.swift */,
 				C4CA86671F9641C800A8772D /* FAQAnswerVC.swift */,
-				C47FE0BC1FDB35EE008232CA /* BuyProVC.swift */,
+				C47FE0BC1FDB35EE008232CA /* RemoveAdvertVC.swift */,
 				C4258F071FC463B4009FCBC8 /* AboutVC.swift */,
 			);
 			name = Settings;
@@ -559,11 +573,12 @@
 				C4CA865F1F94FDCA00A8772D /* FAQ.swift in Sources */,
 				C4B057231FC8852D00699B6F /* EventsList.swift in Sources */,
 				C4B057151FC6FF9400699B6F /* EventCell.swift in Sources */,
+				C42F0B731FDDC75200C3D619 /* AppProducts.swift in Sources */,
 				C4B057111FC6E32300699B6F /* EventsListVC.swift in Sources */,
 				C4A4D3041FA87AE800EC9D50 /* OptAccountCell.swift in Sources */,
 				C4D4583E1F8021D100565A3F /* AppDelegate.swift in Sources */,
 				C4E5F0DD1FD7FFBB00AE1D93 /* Validator.swift in Sources */,
-				C47FE0BD1FDB35EE008232CA /* BuyProVC.swift in Sources */,
+				C47FE0BD1FDB35EE008232CA /* RemoveAdvertVC.swift in Sources */,
 				C4A4D3061FA87B3F00EC9D50 /* CurrentUser.swift in Sources */,
 				C4A4D30A1FA8D93400EC9D50 /* Typealiases.swift in Sources */,
 				C4E5F0DF1FD8026400AE1D93 /* Alert.swift in Sources */,
@@ -588,6 +603,7 @@
 				C410E7D41F97C67E00EEFB7B /* Advices.swift in Sources */,
 				C455D58B1F8D0024002846D9 /* SettingsVC.swift in Sources */,
 				C4B057211FC86E4100699B6F /* EventVC.swift in Sources */,
+				C42F0B711FDDC71100C3D619 /* IAPHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

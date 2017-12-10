@@ -18,7 +18,7 @@ class AdMobManager {
     
     enum BannerID: String {
         case Real_FullScreenBannerID = "ca-app-pub-6005011458131199/9625119569"
-        case Test_InterstitialBannerID = "ca-app-pub-3940256099942544/4411468910"
+        case Test_InterstitialID = "ca-app-pub-3940256099942544/4411468910"
     }
     
     //TODO: appcoda.com/google-admob-ios-swift/
@@ -29,7 +29,7 @@ class AdMobManager {
         request.testDevices = [kGADSimulatorID, "e9ebcd52a35476ac486fdfb4a9c6567a57c1b88c"]
         
         bannerView.adSize = kGADAdSizeFluid
-        bannerView.adUnitID = BannerID.Test_InterstitialBannerID.rawValue
+        bannerView.adUnitID = BannerID.Test_InterstitialID.rawValue
         bannerView.delegate = viewController as? GADBannerViewDelegate
         bannerView.rootViewController = viewController
         bannerView.load(request)

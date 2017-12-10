@@ -26,6 +26,15 @@ class UserDefaultsManager {
             defaults.synchronize()
         }
     }
+    
+    var isProVersion: Bool {
+        get {
+            return (self.options["isProVersion"] == "true") ? true : false
+        }
+        set {
+            self.options["isProVersion"] = String(newValue)
+        }
+    }
 }
 
 extension UserDefaultsManager {
