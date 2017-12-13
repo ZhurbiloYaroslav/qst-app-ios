@@ -51,6 +51,10 @@
 		C47317921F8D1C1600A6AE43 /* Notes and links.rtf in Resources */ = {isa = PBXBuildFile; fileRef = C47317911F8D1C1600A6AE43 /* Notes and links.rtf */; };
 		C47FE0BD1FDB35EE008232CA /* RemoveAdvertVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47FE0BC1FDB35EE008232CA /* RemoveAdvertVC.swift */; };
 		C47FE0BF1FDB36B2008232CA /* AdMobManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47FE0BE1FDB36B2008232CA /* AdMobManager.swift */; };
+		C4A12E701FE1B45800E843F8 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4A12E6E1FE1B45800E843F8 /* Profile.storyboard */; };
+		C4A12E731FE1B56400E843F8 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4A12E711FE1B56400E843F8 /* Settings.storyboard */; };
+		C4A12E761FE1B61B00E843F8 /* RegisterVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4A12E741FE1B61B00E843F8 /* RegisterVC.storyboard */; };
+		C4A12E791FE1B76200E843F8 /* EventVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4A12E771FE1B76200E843F8 /* EventVC.storyboard */; };
 		C4A4D3041FA87AE800EC9D50 /* OptAccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A4D3031FA87AE800EC9D50 /* OptAccountCell.swift */; };
 		C4A4D3061FA87B3F00EC9D50 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A4D3051FA87B3F00EC9D50 /* CurrentUser.swift */; };
 		C4A4D30A1FA8D93400EC9D50 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A4D3091FA8D93400EC9D50 /* Typealiases.swift */; };
@@ -143,6 +147,10 @@
 		C47317911F8D1C1600A6AE43 /* Notes and links.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "Notes and links.rtf"; sourceTree = "<group>"; };
 		C47FE0BC1FDB35EE008232CA /* RemoveAdvertVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoveAdvertVC.swift; sourceTree = "<group>"; };
 		C47FE0BE1FDB36B2008232CA /* AdMobManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdMobManager.swift; sourceTree = "<group>"; };
+		C4A12E6F1FE1B45800E843F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
+		C4A12E721FE1B56400E843F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Settings.storyboard; sourceTree = "<group>"; };
+		C4A12E751FE1B61B00E843F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/RegisterVC.storyboard; sourceTree = "<group>"; };
+		C4A12E781FE1B76200E843F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/EventVC.storyboard; sourceTree = "<group>"; };
 		C4A4D3031FA87AE800EC9D50 /* OptAccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptAccountCell.swift; sourceTree = "<group>"; };
 		C4A4D3051FA87B3F00EC9D50 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		C4A4D3091FA8D93400EC9D50 /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
@@ -293,6 +301,10 @@
 		C455D5831F8CFDF7002846D9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C4A12E771FE1B76200E843F8 /* EventVC.storyboard */,
+				C4A12E741FE1B61B00E843F8 /* RegisterVC.storyboard */,
+				C4A12E711FE1B56400E843F8 /* Settings.storyboard */,
+				C4A12E6E1FE1B45800E843F8 /* Profile.storyboard */,
 				C415AA9D1FE16FCE00BC5365 /* EventsList.storyboard */,
 				C415AA9B1FE16F6500BC5365 /* Reader.storyboard */,
 				C415AA991FE16EF500BC5365 /* RemoveAdvert.storyboard */,
@@ -512,9 +524,12 @@
 				C4B808921F9F36FA0099DA49 /* GoogleService-Info.plist in Resources */,
 				C4258F001FC2D338009FCBC8 /* qstBook-bigger.jpg in Resources */,
 				C4C0EEC31FCEEB5100CA258B /* news.jpg in Resources */,
+				C4A12E761FE1B61B00E843F8 /* RegisterVC.storyboard in Resources */,
+				C4A12E701FE1B45800E843F8 /* Profile.storyboard in Resources */,
 				C415AA9C1FE16F6500BC5365 /* Reader.storyboard in Resources */,
 				C415AA9A1FE16EF500BC5365 /* RemoveAdvert.storyboard in Resources */,
 				C415AA901FE16CA900BC5365 /* FaqAnswer.storyboard in Resources */,
+				C4A12E791FE1B76200E843F8 /* EventVC.storyboard in Resources */,
 				C45FE1891FB860350080E172 /* QST-iBook.epub in Resources */,
 				C46DFB2A1FC489B000A62D69 /* news-171019-1.jpg in Resources */,
 				C415AA8E1FE16C3600BC5365 /* Share.storyboard in Resources */,
@@ -535,6 +550,7 @@
 				C47317921F8D1C1600A6AE43 /* Notes and links.rtf in Resources */,
 				C429370A1FB9D3B70016A02F /* Advices-ru.plist in Resources */,
 				C4D458431F8021D100565A3F /* Main.storyboard in Resources */,
+				C4A12E731FE1B56400E843F8 /* Settings.storyboard in Resources */,
 				C4C236491FE190B3005219A0 /* About.storyboard in Resources */,
 				C46DFB291FC489B000A62D69 /* comp-170531-1.jpg in Resources */,
 				C4258EFE1FC2D2D9009FCBC8 /* qstBook.jpg in Resources */,
@@ -658,6 +674,38 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		C4A12E6E1FE1B45800E843F8 /* Profile.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4A12E6F1FE1B45800E843F8 /* Base */,
+			);
+			name = Profile.storyboard;
+			sourceTree = "<group>";
+		};
+		C4A12E711FE1B56400E843F8 /* Settings.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4A12E721FE1B56400E843F8 /* Base */,
+			);
+			name = Settings.storyboard;
+			sourceTree = "<group>";
+		};
+		C4A12E741FE1B61B00E843F8 /* RegisterVC.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4A12E751FE1B61B00E843F8 /* Base */,
+			);
+			name = RegisterVC.storyboard;
+			sourceTree = "<group>";
+		};
+		C4A12E771FE1B76200E843F8 /* EventVC.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4A12E781FE1B76200E843F8 /* Base */,
+			);
+			name = EventVC.storyboard;
+			sourceTree = "<group>";
+		};
 		C4D458411F8021D100565A3F /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

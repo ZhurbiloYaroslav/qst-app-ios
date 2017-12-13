@@ -187,13 +187,13 @@
             </objects>
             <point key="canvasLocation" x="-581.25" y="1659.5070422535211"/>
         </scene>
-        <!--UIViewController-20b-xW-Usg-->
+        <!--EventVC-->
         <scene sceneID="wBJ-SS-ACV">
             <objects>
-                <viewControllerPlaceholder storyboardName="Main" referencedIdentifier="UIViewController-20b-xW-Usg" id="BPH-af-OXy" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="EventVC" referencedIdentifier="EventVC" id="BPH-af-OXy" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9rW-xh-c1H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-581.15942028985512" y="2514.9456521739135"/>
+            <point key="canvasLocation" x="221" y="1451"/>
         </scene>
     </scenes>
     <resources>
