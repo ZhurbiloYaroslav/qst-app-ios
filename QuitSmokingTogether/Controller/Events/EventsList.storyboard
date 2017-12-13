@@ -180,7 +180,7 @@
                         <outlet property="constraintHeightForFilterStack" destination="oA0-AN-jhw" id="T1l-Qh-7fH"/>
                         <outlet property="filterStack" destination="lXV-pe-xaT" id="ps0-Tf-DFn"/>
                         <outlet property="tableView" destination="umf-fv-U11" id="wyl-gq-pRM"/>
-                        <segue destination="BPH-af-OXy" kind="show" identifier="ShowEventFromEventsList" id="2ct-2o-gxX"/>
+                        <segue destination="t5q-AN-v4d" kind="show" identifier="ShowEventFromEventsList" id="3D8-gq-L4R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cQO-mx-3yC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -188,12 +188,104 @@
             <point key="canvasLocation" x="-581.25" y="1659.5070422535211"/>
         </scene>
         <!--EventVC-->
-        <scene sceneID="wBJ-SS-ACV">
+        <scene sceneID="HWG-j4-rUG">
             <objects>
-                <viewControllerPlaceholder storyboardName="EventVC" referencedIdentifier="EventVC" id="BPH-af-OXy" sceneMemberID="viewController"/>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9rW-xh-c1H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <viewController storyboardIdentifier="EventVC" hidesBottomBarWhenPushed="YES" id="t5q-AN-v4d" customClass="EventVC" customModule="QuitSmokingTogether" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lCM-HF-LP3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aJp-mF-G7E" customClass="CLabsImageSlider" customModule="CLabsImageSlider">
+                                <rect key="frame" x="0.0" y="20" width="320" height="250"/>
+                                <color key="backgroundColor" red="0.92148083449999996" green="0.9216319919" blue="0.92144864800000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="Rjg-7Q-ytz"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C1P-Xg-0rl" customClass="StarButton" customModule="QuitSmokingTogether" customModuleProvider="target">
+                                <rect key="frame" x="25" y="220" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="VFN-hz-cQH"/>
+                                    <constraint firstAttribute="height" constant="25" id="mcp-gc-0pQ"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <state key="normal" image="icon-star"/>
+                                <connections>
+                                    <action selector="starredButtonPressed:" destination="t5q-AN-v4d" eventType="touchUpInside" id="XsX-CT-xtV"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gJy-3y-lJF">
+                                <rect key="frame" x="15" y="280" width="290" height="377"/>
+                                <subviews>
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="147-Ui-EOp">
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="377"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News title with 2 lines" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dFy-vM-6v8">
+                                                <rect key="frame" x="15" y="10" width="260" height="49.5"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="dqe-uX-hR4"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="18"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="da2-S3-BNM">
+                                                <rect key="frame" x="15" y="69.5" width="260" height="22"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="fWr-be-hgk"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="dFy-vM-6v8" firstAttribute="leading" secondItem="147-Ui-EOp" secondAttribute="leading" constant="15" id="6ev-Vf-LgO"/>
+                                            <constraint firstItem="dFy-vM-6v8" firstAttribute="top" secondItem="147-Ui-EOp" secondAttribute="top" constant="10" id="H8p-mV-M2M"/>
+                                            <constraint firstAttribute="trailing" secondItem="da2-S3-BNM" secondAttribute="trailing" constant="15" id="K45-vl-RQ3"/>
+                                            <constraint firstItem="da2-S3-BNM" firstAttribute="leading" secondItem="147-Ui-EOp" secondAttribute="leading" constant="15" id="USo-GD-bFn"/>
+                                            <constraint firstItem="da2-S3-BNM" firstAttribute="top" secondItem="dFy-vM-6v8" secondAttribute="bottom" constant="10" id="c19-dk-NnW"/>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="230" id="flI-UT-aq6"/>
+                                            <constraint firstAttribute="bottom" secondItem="da2-S3-BNM" secondAttribute="bottom" constant="15" id="r89-Dz-v56"/>
+                                            <constraint firstAttribute="trailing" secondItem="dFy-vM-6v8" secondAttribute="trailing" constant="15" id="yRE-7z-Vf6"/>
+                                        </constraints>
+                                    </scrollView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="da2-S3-BNM" firstAttribute="width" secondItem="gJy-3y-lJF" secondAttribute="width" constant="-30" id="2rk-Os-btr"/>
+                                    <constraint firstItem="147-Ui-EOp" firstAttribute="width" secondItem="gJy-3y-lJF" secondAttribute="width" id="Cjf-do-jiP"/>
+                                    <constraint firstItem="147-Ui-EOp" firstAttribute="top" secondItem="gJy-3y-lJF" secondAttribute="top" id="OrQ-I3-NWv"/>
+                                    <constraint firstItem="147-Ui-EOp" firstAttribute="leading" secondItem="gJy-3y-lJF" secondAttribute="leading" id="eAZ-4I-nYf"/>
+                                    <constraint firstAttribute="width" constant="290" id="qwm-uD-HFp"/>
+                                    <constraint firstAttribute="trailing" secondItem="147-Ui-EOp" secondAttribute="trailing" id="yCi-Fs-m6j"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="GgR-bt-LZD" firstAttribute="bottom" secondItem="gJy-3y-lJF" secondAttribute="bottom" constant="10" id="HR2-vQ-kKg"/>
+                            <constraint firstItem="GgR-bt-LZD" firstAttribute="trailing" secondItem="gJy-3y-lJF" secondAttribute="trailing" constant="15" id="Mzk-mj-tUv"/>
+                            <constraint firstItem="C1P-Xg-0rl" firstAttribute="leading" secondItem="GgR-bt-LZD" secondAttribute="leading" constant="25" id="aOg-iA-3mB"/>
+                            <constraint firstItem="aJp-mF-G7E" firstAttribute="leading" secondItem="GgR-bt-LZD" secondAttribute="leading" id="cdC-vz-ytJ"/>
+                            <constraint firstItem="aJp-mF-G7E" firstAttribute="trailing" secondItem="GgR-bt-LZD" secondAttribute="trailing" id="emw-Oy-irQ"/>
+                            <constraint firstItem="gJy-3y-lJF" firstAttribute="top" secondItem="aJp-mF-G7E" secondAttribute="bottom" constant="10" id="taU-H2-1s6"/>
+                            <constraint firstItem="gJy-3y-lJF" firstAttribute="top" secondItem="C1P-Xg-0rl" secondAttribute="bottom" constant="35" id="uA1-fU-aM4"/>
+                            <constraint firstItem="gJy-3y-lJF" firstAttribute="leading" secondItem="GgR-bt-LZD" secondAttribute="leading" constant="15" id="yoK-kJ-jl3"/>
+                            <constraint firstItem="aJp-mF-G7E" firstAttribute="top" secondItem="GgR-bt-LZD" secondAttribute="top" id="zK3-T8-0ok"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="GgR-bt-LZD"/>
+                    </view>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="imageSlider" destination="aJp-mF-G7E" id="ngF-lM-PWM"/>
+                        <outlet property="newsTextLabel" destination="da2-S3-BNM" id="M6O-oO-NCZ"/>
+                        <outlet property="newsTitleLabel" destination="dFy-vM-6v8" id="5Ud-Q1-gaG"/>
+                        <outlet property="starredButton" destination="C1P-Xg-0rl" id="jL0-yo-zgs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U7j-nW-scB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="221" y="1451"/>
+            <point key="canvasLocation" x="826" y="1659"/>
         </scene>
     </scenes>
     <resources>

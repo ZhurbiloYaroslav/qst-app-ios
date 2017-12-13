@@ -55,7 +55,7 @@
 		C4A12E731FE1B56400E843F8 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4A12E711FE1B56400E843F8 /* Settings.storyboard */; };
 		C4A12E761FE1B61B00E843F8 /* RegisterVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4A12E741FE1B61B00E843F8 /* RegisterVC.storyboard */; };
 		C4A12E791FE1B76200E843F8 /* EventVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4A12E771FE1B76200E843F8 /* EventVC.storyboard */; };
-		C4A12E7C1FE1B87B00E843F8 /* LoginVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4A12E7A1FE1B87B00E843F8 /* LoginVC.storyboard */; };
+		C4A12E7C1FE1B87B00E843F8 /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4A12E7A1FE1B87B00E843F8 /* Auth.storyboard */; };
 		C4A4D3041FA87AE800EC9D50 /* OptAccountCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A4D3031FA87AE800EC9D50 /* OptAccountCell.swift */; };
 		C4A4D3061FA87B3F00EC9D50 /* CurrentUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A4D3051FA87B3F00EC9D50 /* CurrentUser.swift */; };
 		C4A4D30A1FA8D93400EC9D50 /* Typealiases.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4A4D3091FA8D93400EC9D50 /* Typealiases.swift */; };
@@ -90,7 +90,7 @@
 		C4CECEE61F94CDA9009C85DE /* FAQCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CECEE51F94CDA9009C85DE /* FAQCell.swift */; };
 		C4D4583E1F8021D100565A3F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D4583D1F8021D100565A3F /* AppDelegate.swift */; };
 		C4D458401F8021D100565A3F /* OverviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D4583F1F8021D100565A3F /* OverviewVC.swift */; };
-		C4D458431F8021D100565A3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4D458411F8021D100565A3F /* Main.storyboard */; };
+		C4D458431F8021D100565A3F /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4D458411F8021D100565A3F /* TabBar.storyboard */; };
 		C4D458461F8021D100565A3F /* QuitSmokingTogether.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C4D458441F8021D100565A3F /* QuitSmokingTogether.xcdatamodeld */; };
 		C4D458481F8021D100565A3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4D458471F8021D100565A3F /* Assets.xcassets */; };
 		C4D4584B1F8021D100565A3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4D458491F8021D100565A3F /* LaunchScreen.storyboard */; };
@@ -152,7 +152,7 @@
 		C4A12E721FE1B56400E843F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Settings.storyboard; sourceTree = "<group>"; };
 		C4A12E751FE1B61B00E843F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/RegisterVC.storyboard; sourceTree = "<group>"; };
 		C4A12E781FE1B76200E843F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/EventVC.storyboard; sourceTree = "<group>"; };
-		C4A12E7B1FE1B87B00E843F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LoginVC.storyboard; sourceTree = "<group>"; };
+		C4A12E7B1FE1B87B00E843F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Auth.storyboard; sourceTree = "<group>"; };
 		C4A4D3031FA87AE800EC9D50 /* OptAccountCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptAccountCell.swift; sourceTree = "<group>"; };
 		C4A4D3051FA87B3F00EC9D50 /* CurrentUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentUser.swift; sourceTree = "<group>"; };
 		C4A4D3091FA8D93400EC9D50 /* Typealiases.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Typealiases.swift; sourceTree = "<group>"; };
@@ -188,7 +188,7 @@
 		C4D4583A1F8021D100565A3F /* QuitSmokingTogether.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuitSmokingTogether.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4D4583D1F8021D100565A3F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4D4583F1F8021D100565A3F /* OverviewVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewVC.swift; sourceTree = "<group>"; };
-		C4D458421F8021D100565A3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		C4D458421F8021D100565A3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/TabBar.storyboard; sourceTree = "<group>"; };
 		C4D458451F8021D100565A3F /* QuitSmokingTogether.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = QuitSmokingTogether.xcdatamodel; sourceTree = "<group>"; };
 		C4D458471F8021D100565A3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4D4584A1F8021D100565A3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -297,7 +297,6 @@
 		C455D5831F8CFDF7002846D9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C4D458411F8021D100565A3F /* Main.storyboard */,
 				C4D458491F8021D100565A3F /* LaunchScreen.storyboard */,
 				C4CE20CF1FD6E8FA00537893 /* StarButton.swift */,
 			);
@@ -361,7 +360,7 @@
 			isa = PBXGroup;
 			children = (
 				C4A12E741FE1B61B00E843F8 /* RegisterVC.storyboard */,
-				C4A12E7A1FE1B87B00E843F8 /* LoginVC.storyboard */,
+				C4A12E7A1FE1B87B00E843F8 /* Auth.storyboard */,
 				C4B8088D1F9F2CCF0099DA49 /* LoginVC.swift */,
 				C4EBF52E1FA5E74A00753D0C /* RegisterVC.swift */,
 			);
@@ -371,18 +370,11 @@
 		C4A12E801FE1BB1A00E843F8 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				C4D458411F8021D100565A3F /* TabBar.storyboard */,
+				C461A2CB1F8F8F5300B698FA /* TabBarVC.swift */,
 				C461A2D11F8F9EF400B698FA /* NavBarVC.swift */,
-				C4A12E821FE1BB1A00E843F8 /* TabBar */,
 			);
 			path = Common;
-			sourceTree = "<group>";
-		};
-		C4A12E821FE1BB1A00E843F8 /* TabBar */ = {
-			isa = PBXGroup;
-			children = (
-				C461A2CB1F8F8F5300B698FA /* TabBarVC.swift */,
-			);
-			path = TabBar;
 			sourceTree = "<group>";
 		};
 		C4A12E831FE1BB1A00E843F8 /* Events */ = {
@@ -638,7 +630,7 @@
 				C415AA921FE16CFB00BC5365 /* FaqList.storyboard in Resources */,
 				C415AA981FE16E6900BC5365 /* Overview.storyboard in Resources */,
 				C4C0EEE11FD0515400CA258B /* FAQ.plist in Resources */,
-				C4A12E7C1FE1B87B00E843F8 /* LoginVC.storyboard in Resources */,
+				C4A12E7C1FE1B87B00E843F8 /* Auth.storyboard in Resources */,
 				C4B0571C1FC81F1200699B6F /* placeHolder.png in Resources */,
 				C415AA941FE16D7C00BC5365 /* Online.storyboard in Resources */,
 				C4D458481F8021D100565A3F /* Assets.xcassets in Resources */,
@@ -649,7 +641,7 @@
 				C415AA9E1FE16FCE00BC5365 /* EventsList.storyboard in Resources */,
 				C47317921F8D1C1600A6AE43 /* Notes and links.rtf in Resources */,
 				C429370A1FB9D3B70016A02F /* Advices-ru.plist in Resources */,
-				C4D458431F8021D100565A3F /* Main.storyboard in Resources */,
+				C4D458431F8021D100565A3F /* TabBar.storyboard in Resources */,
 				C4A12E731FE1B56400E843F8 /* Settings.storyboard in Resources */,
 				C4C236491FE190B3005219A0 /* About.storyboard in Resources */,
 				C46DFB291FC489B000A62D69 /* comp-170531-1.jpg in Resources */,
@@ -806,20 +798,20 @@
 			name = EventVC.storyboard;
 			sourceTree = "<group>";
 		};
-		C4A12E7A1FE1B87B00E843F8 /* LoginVC.storyboard */ = {
+		C4A12E7A1FE1B87B00E843F8 /* Auth.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				C4A12E7B1FE1B87B00E843F8 /* Base */,
 			);
-			name = LoginVC.storyboard;
+			name = Auth.storyboard;
 			sourceTree = "<group>";
 		};
-		C4D458411F8021D100565A3F /* Main.storyboard */ = {
+		C4D458411F8021D100565A3F /* TabBar.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				C4D458421F8021D100565A3F /* Base */,
 			);
-			name = Main.storyboard;
+			name = TabBar.storyboard;
 			sourceTree = "<group>";
 		};
 		C4D458491F8021D100565A3F /* LaunchScreen.storyboard */ = {

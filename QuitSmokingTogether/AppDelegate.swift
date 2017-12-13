@@ -36,15 +36,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func chooseViewControllerToPresent() {
         
-        let mainStoryBoard = UIStoryboard(name: "Main", bundle: nil)
-        
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
         if CurrentUser.isLoggedIn {
-            let overviewVC = mainStoryBoard.instantiateViewController(withIdentifier: "TabBarVC") as! TabBarVC
+            let overviewVC = UIStoryboard(name: "TabBar", bundle: nil).instantiateViewController(withIdentifier: "TabBarVC") as! TabBarVC
             self.window?.rootViewController = overviewVC
         } else {
-            let loginVC = mainStoryBoard.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
+            let loginVC = UIStoryboard(name: "Auth", bundle: nil).instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
             self.window?.rootViewController = loginVC
         }
         self.window?.makeKeyAndVisible()
