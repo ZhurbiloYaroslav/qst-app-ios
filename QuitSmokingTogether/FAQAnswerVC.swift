@@ -21,6 +21,7 @@ class FAQAnswerVC: UIViewController {
         
         updateViewWithAnswer()
         
+        AdMobManager().getFullScreenInterstitialForVC(self)
     }
     
     func updateViewWithAnswer() {

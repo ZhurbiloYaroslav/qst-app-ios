@@ -19,6 +19,8 @@ class FAQVC: UIViewController {
         
         setDelegates()
         addContentInsets()
+        
+        AdMobManager().getFullScreenInterstitialForVC(self)
     }
     
     func setDelegates() {

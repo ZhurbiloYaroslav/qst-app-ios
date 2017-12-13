@@ -64,6 +64,7 @@
 		C4C0EEE11FD0515400CA258B /* FAQ.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4C0EEE01FD0515400CA258B /* FAQ.plist */; };
 		C4C0EEE51FD061F100CA258B /* EventsFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C0EEE41FD061F100CA258B /* EventsFilter.swift */; };
 		C4C0EEEB1FD0AA3800CA258B /* EventsList.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4C0EEEA1FD0AA3800CA258B /* EventsList.plist */; };
+		C4C127661FE11B3B00630E22 /* AppPurchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C127651FE11B3B00630E22 /* AppPurchase.swift */; };
 		C4CA865F1F94FDCA00A8772D /* FAQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CA865E1F94FDCA00A8772D /* FAQ.swift */; };
 		C4CA86681F9641C800A8772D /* FAQAnswerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CA86671F9641C800A8772D /* FAQAnswerVC.swift */; };
 		C4CA866A1F964BA900A8772D /* DLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CA86691F964BA900A8772D /* DLog.swift */; };
@@ -144,6 +145,7 @@
 		C4C0EEE01FD0515400CA258B /* FAQ.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = FAQ.plist; sourceTree = "<group>"; };
 		C4C0EEE41FD061F100CA258B /* EventsFilter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsFilter.swift; sourceTree = "<group>"; };
 		C4C0EEEA1FD0AA3800CA258B /* EventsList.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = EventsList.plist; sourceTree = "<group>"; };
+		C4C127651FE11B3B00630E22 /* AppPurchase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPurchase.swift; sourceTree = "<group>"; };
 		C4CA865E1F94FDCA00A8772D /* FAQ.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQ.swift; sourceTree = "<group>"; };
 		C4CA86671F9641C800A8772D /* FAQAnswerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQAnswerVC.swift; sourceTree = "<group>"; };
 		C4CA86691F964BA900A8772D /* DLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DLog.swift; sourceTree = "<group>"; };
@@ -227,6 +229,7 @@
 			children = (
 				C42F0B701FDDC71100C3D619 /* IAPHelper.swift */,
 				C42F0B721FDDC75200C3D619 /* AppProducts.swift */,
+				C4C127651FE11B3B00630E22 /* AppPurchase.swift */,
 			);
 			path = "In-App purchase";
 			sourceTree = "<group>";
@@ -334,9 +337,9 @@
 				C455D58A1F8D0024002846D9 /* SettingsVC.swift */,
 				C4B057241FC9806100699B6F /* ProfileVC.swift */,
 				C4CECEDD1F94C877009C85DE /* FAQVC.swift */,
+				C4CA86671F9641C800A8772D /* FAQAnswerVC.swift */,
 				C4CECEE11F94C924009C85DE /* ShareVC.swift */,
 				C4258F031FC4522B009FCBC8 /* DonateVC.swift */,
-				C4CA86671F9641C800A8772D /* FAQAnswerVC.swift */,
 				C47FE0BC1FDB35EE008232CA /* RemoveAdvertVC.swift */,
 				C4258F071FC463B4009FCBC8 /* AboutVC.swift */,
 			);
@@ -581,6 +584,7 @@
 				C47FE0BD1FDB35EE008232CA /* RemoveAdvertVC.swift in Sources */,
 				C4A4D3061FA87B3F00EC9D50 /* CurrentUser.swift in Sources */,
 				C4A4D30A1FA8D93400EC9D50 /* Typealiases.swift in Sources */,
+				C4C127661FE11B3B00630E22 /* AppPurchase.swift in Sources */,
 				C4E5F0DF1FD8026400AE1D93 /* Alert.swift in Sources */,
 				C46DFB2C1FC48B2A00A62D69 /* OverviewEventCell.swift in Sources */,
 				C461A2CC1F8F8F5300B698FA /* TabBarVC.swift in Sources */,

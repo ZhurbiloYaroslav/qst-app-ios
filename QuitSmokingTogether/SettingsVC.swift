@@ -23,12 +23,12 @@ class SettingsVC: UIViewController {
         
         setDelegates()
         setupFacebookLikeButton()
-        
+
     }
     
     func setupFacebookLikeButton() {
         let likeButton:FBSDKLikeControl = FBSDKLikeControl()
-        likeButton.objectID = "https://www.facebook.com/cestunmac/"
+        likeButton.objectID = "http://quitsmokingtogether.org"
         likeButton.likeControlStyle = .boxCount
         facebookLikeButton = likeButton
     }
@@ -72,25 +72,25 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "AccountName", for: indexPath) as! OptAccountCell
             cell.update()
             return cell
-        case [1,0]: // FAQ
-            let cell = tableView.dequeueReusableCell(withIdentifier: "FAQ", for: indexPath) as UITableViewCell
-            return cell
-        case [1,1]: // Share
+        case [1,0]: // Share
             let cell = tableView.dequeueReusableCell(withIdentifier: "Share", for: indexPath) as UITableViewCell
             return cell
-        case [1,2]: // Donate
-            let cell = tableView.dequeueReusableCell(withIdentifier: "Donate", for: indexPath) as UITableViewCell
-            return cell
-        case [2,0]: // Like on App Store
+        case [1,1]: // Like on App Store
             let cell = tableView.dequeueReusableCell(withIdentifier: "LikeOnAppStore", for: indexPath) as UITableViewCell
             return cell
-        case [2,1]: // Like on Facebook
+        case [1,2]: // Like on Facebook
             let cell = tableView.dequeueReusableCell(withIdentifier: "LikeOnFacebook", for: indexPath) as UITableViewCell
-            facebookLikeButton.frame = CGRect(x: 68, y: 12, width: 50, height: 30)
+            facebookLikeButton.frame = CGRect(x: 68, y: 12, width: cell.frame.width, height: cell.frame.height)
             cell.insertSubview(facebookLikeButton, at: 2)
             return cell
-        case [3,0]: // Remove advert
+        case [2,0]: // Remove advert
             let cell = tableView.dequeueReusableCell(withIdentifier: "Advert", for: indexPath) as UITableViewCell
+            return cell
+        case [2,1]: // Donate
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Donate", for: indexPath) as UITableViewCell
+            return cell
+        case [3,0]: // FAQ
+            let cell = tableView.dequeueReusableCell(withIdentifier: "FAQ", for: indexPath) as UITableViewCell
             return cell
         case [3,1]: // About
             let cell = tableView.dequeueReusableCell(withIdentifier: "About", for: indexPath) as UITableViewCell
@@ -105,28 +105,24 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
         switch indexPath {
         case [0,0]: // Account
             performSegue(withIdentifier: "ShowProfileFromSettings", sender: nil)
-        case [1,0]: // FAQ
-            performSegue(withIdentifier: "ShowFAQFromSettings", sender: nil)
-        case [1,1]: // Share
+        case [1,0]: // Share
             performSegue(withIdentifier: "ShowShareFromSettings", sender: nil)
-        case [1,2]: // Donate
-            performSegue(withIdentifier: "ShowDonateFromSettings", sender: nil)
-        case [2,0]: // Like on App Store
+        case [1,1]: // Like on App Store
             Browser.openURLWith(.AppInItunes)
-        case [2,1]: // Like on Facebook
+        case [1,2]: // Like on Facebook
             break
-        case [3,0]: // Remove advert
+        case [2,0]: // Remove advert
             performSegue(withIdentifier: "ShowRemoveAdvertFromSettings", sender: nil)
+        case [2,1]: // Donate
+            performSegue(withIdentifier: "ShowDonateFromSettings", sender: nil)
+        case [3,0]: // FAQ
+            performSegue(withIdentifier: "ShowFAQFromSettings", sender: nil)
         case [3,1]: // About
             performSegue(withIdentifier: "ShowAboutFromSettings", sender: nil)
         default:
             print("was selected undefined cell")
             break
         }
-    }
-    
-    func likeOnFacebook() {
-        
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
