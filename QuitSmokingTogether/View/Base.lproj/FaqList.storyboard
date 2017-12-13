@@ -13,7 +13,7 @@
         <!--FAQ-->
         <scene sceneID="4Fk-Le-S83">
             <objects>
-                <viewController title="FAQ" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="Ttt-9i-bV8" customClass="FAQVC" customModule="QuitSmokingTogether" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FAQVC" title="FAQ" automaticallyAdjustsScrollViewInsets="NO" hidesBottomBarWhenPushed="YES" id="Ttt-9i-bV8" customClass="FAQVC" customModule="QuitSmokingTogether" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YsL-V7-JVH">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

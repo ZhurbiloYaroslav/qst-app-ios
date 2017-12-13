@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="goa-Ku-j9c">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -14,7 +18,7 @@
         <!--Donate-->
         <scene sceneID="7YW-h9-wiu">
             <objects>
-                <tableViewController title="Donate" hidesBottomBarWhenPushed="YES" id="goa-Ku-j9c" customClass="DonateVC" customModule="QuitSmokingTogether" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="DonateVC" title="Donate" hidesBottomBarWhenPushed="YES" id="goa-Ku-j9c" customClass="DonateVC" customModule="QuitSmokingTogether" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="AiT-vG-fhq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -30,7 +34,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="40S-RE-fBr">
-                                                    <rect key="frame" x="8" y="5" width="304" height="133.66666666666666"/>
+                                                    <rect key="frame" x="8" y="5" width="304" height="133.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Great news" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vKI-yr-TXn">
                                                             <rect key="frame" x="0.0" y="0.0" width="304" height="46"/>
@@ -39,7 +43,7 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="We like to help you. Please support our work and help us to help many more people. Any donation will unlock PRO function" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Sg-9M-hqm">
-                                                            <rect key="frame" x="0.0" y="46.000000000000007" width="304" height="87.666666666666686"/>
+                                                            <rect key="frame" x="0.0" y="46" width="304" height="87.5"/>
                                                             <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
@@ -119,16 +123,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uFG-Tq-37v">
-                                                    <rect key="frame" x="8" y="5" width="304" height="489.66666666666669"/>
+                                                    <rect key="frame" x="8" y="5" width="304" height="489.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Settlement account  of our organization (USD): " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="HBm-fV-rAt">
-                                                            <rect key="frame" x="0.0" y="0.0" width="304" height="49.666666666666664"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="304" height="49.5"/>
                                                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jUs-Iy-ha5">
-                                                            <rect key="frame" x="0.0" y="49.666666666666686" width="304" height="440"/>
+                                                            <rect key="frame" x="0.0" y="49.5" width="304" height="440"/>
                                                             <string key="text">Company Name: "QUIT SMOKING TOGETHER"
 The bank account of the company: 26007052657883
 Name of the bank: PJSC CB "PRIVATBANK", 1D HRUSHEVSKOHO STR., KYIV, 01001, UKRAINE

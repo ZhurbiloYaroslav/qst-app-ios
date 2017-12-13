@@ -21,7 +21,7 @@
         <!--Events-->
         <scene sceneID="cv8-pR-z1M">
             <objects>
-                <viewController id="Vcw-i0-cMh" customClass="EventsListVC" customModule="QuitSmokingTogether" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EventsListVC" id="Vcw-i0-cMh" customClass="EventsListVC" customModule="QuitSmokingTogether" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fzw-Bj-dSf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
