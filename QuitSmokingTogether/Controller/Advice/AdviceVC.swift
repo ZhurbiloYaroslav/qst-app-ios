@@ -1,5 +1,5 @@
 //
-//  AlertVC.swift
+//  AdviceVC.swift
 //  QuitSmokingTogether
 //
 //  Created by Yaroslav Zhurbilo on 10.10.17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AlertVC: UIViewController {
+class AdviceVC: UIViewController {
     
     @IBOutlet weak var adviceTitleLabel: UILabel!
     @IBOutlet weak var adviceMessageLabel: UILabel!

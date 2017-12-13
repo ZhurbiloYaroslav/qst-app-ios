@@ -19,7 +19,7 @@
         <!--Advice-->
         <scene sceneID="tpM-vn-7Y3">
             <objects>
-                <viewController storyboardIdentifier="AlertVC" title="Advice" hidesBottomBarWhenPushed="YES" id="dJB-ZA-j4H" customClass="AlertVC" customModule="QuitSmokingTogether" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AdviceVC" title="Advice" hidesBottomBarWhenPushed="YES" id="dJB-ZA-j4H" customClass="AdviceVC" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="VfP-9e-rbr">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
