@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -17,6 +18,199 @@
         </array>
     </customFonts>
     <scenes>
+        <!--Events-->
+        <scene sceneID="cv8-pR-z1M">
+            <objects>
+                <viewController id="Vcw-i0-cMh" customClass="EventsListVC" customModule="QuitSmokingTogether" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="fzw-Bj-dSf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="623"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CJn-Or-dgc">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="71"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="lXV-pe-xaT">
+                                        <rect key="frame" x="5" y="5" width="404" height="61"/>
+                                        <subviews>
+                                            <segmentedControl opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="03V-hc-u8b">
+                                                <rect key="frame" x="0.0" y="0.0" width="404" height="29"/>
+                                                <segments>
+                                                    <segment title="All"/>
+                                                    <segment title="Unread"/>
+                                                    <segment title="Starred"/>
+                                                </segments>
+                                                <color key="tintColor" red="0.36862745099999999" green="0.73725490199999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="eventStatusControlValueChanged:forEvent:" destination="Vcw-i0-cMh" eventType="valueChanged" id="1EZ-4o-X4n"/>
+                                                </connections>
+                                            </segmentedControl>
+                                            <segmentedControl opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="aYi-Cq-qRU">
+                                                <rect key="frame" x="0.0" y="33" width="404" height="29"/>
+                                                <segments>
+                                                    <segment title="All"/>
+                                                    <segment title="News"/>
+                                                    <segment title="Competitions"/>
+                                                </segments>
+                                                <color key="tintColor" red="0.36862745099999999" green="0.73725490199999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="eventTypeControlValueChanged:forEvent:" destination="Vcw-i0-cMh" eventType="valueChanged" id="P8f-8a-fC1"/>
+                                                </connections>
+                                            </segmentedControl>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="61" id="Bpb-gP-Bi5"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.92148083449999996" green="0.9216319919" blue="0.92144864800000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="lXV-pe-xaT" firstAttribute="leading" secondItem="CJn-Or-dgc" secondAttribute="leading" constant="5" id="71Y-GS-sDK"/>
+                                    <constraint firstItem="lXV-pe-xaT" firstAttribute="top" secondItem="CJn-Or-dgc" secondAttribute="top" constant="5" id="CKX-QO-JAF"/>
+                                    <constraint firstAttribute="trailing" secondItem="lXV-pe-xaT" secondAttribute="trailing" constant="5" id="kjf-xi-ZSA"/>
+                                    <constraint firstAttribute="bottom" secondItem="lXV-pe-xaT" secondAttribute="bottom" constant="5" id="ndJ-Yr-uaI"/>
+                                    <constraint firstAttribute="height" constant="71" id="vBe-V1-9gg"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="umf-fv-U11">
+                                <rect key="frame" x="0.0" y="71" width="414" height="552"/>
+                                <color key="backgroundColor" red="0.92148083449999996" green="0.9216319919" blue="0.92144864800000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="EventInListCell" rowHeight="300" id="Gi4-Ae-am0" customClass="EventCell" customModule="QuitSmokingTogether" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="300"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gi4-Ae-am0" id="GAT-37-9xE">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="300"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="68s-LV-GYN">
+                                                    <rect key="frame" x="0.0" y="16" width="0.0" height="268"/>
+                                                    <subviews>
+                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeHolder.png" translatesAutoresizingMaskIntoConstraints="NO" id="kfX-kL-3tP">
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" secondItem="kfX-kL-3tP" secondAttribute="height" multiplier="5:4" id="0Di-oJ-5Lx"/>
+                                                                <constraint firstAttribute="height" relation="lessThanOrEqual" constant="200" id="Jw3-BC-EEF"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dbk-BW-uSW" customClass="StarButton" customModule="QuitSmokingTogether" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="-16" width="25" height="25"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="25" id="dbK-Rl-j13"/>
+                                                                <constraint firstAttribute="height" constant="25" id="nXm-gd-exL"/>
+                                                            </constraints>
+                                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <state key="normal" image="icon-star"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="12"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="starredButtonPressed:" destination="Gi4-Ae-am0" eventType="touchUpInside" id="U01-Ro-LsW"/>
+                                                            </connections>
+                                                        </button>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="BBe-N9-ga9">
+                                                            <rect key="frame" x="0.0" y="-16" width="0.0" height="0.0"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UbW-ye-CQd">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="23.333333333333332"/>
+                                                                    <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Description" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dJD-kE-JJS">
+                                                                    <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
+                                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="BBe-N9-ga9" secondAttribute="trailing" constant="5" id="KVE-q4-SiG"/>
+                                                        <constraint firstItem="BBe-N9-ga9" firstAttribute="top" secondItem="dbk-BW-uSW" secondAttribute="bottom" constant="20" id="Kr3-bC-bA0"/>
+                                                        <constraint firstItem="kfX-kL-3tP" firstAttribute="top" secondItem="68s-LV-GYN" secondAttribute="top" id="VPG-Ys-lBK"/>
+                                                        <constraint firstAttribute="bottom" secondItem="BBe-N9-ga9" secondAttribute="bottom" constant="5" id="a0E-tu-aqt"/>
+                                                        <constraint firstItem="kfX-kL-3tP" firstAttribute="leading" secondItem="68s-LV-GYN" secondAttribute="leading" id="h5q-z6-s3F"/>
+                                                        <constraint firstAttribute="trailing" secondItem="kfX-kL-3tP" secondAttribute="trailing" id="i7b-ad-MBZ"/>
+                                                        <constraint firstItem="dbk-BW-uSW" firstAttribute="leading" secondItem="68s-LV-GYN" secondAttribute="leading" constant="15" id="nd0-7Q-dCP"/>
+                                                        <constraint firstItem="BBe-N9-ga9" firstAttribute="leading" secondItem="68s-LV-GYN" secondAttribute="leading" constant="5" id="scn-iL-muY"/>
+                                                        <constraint firstItem="BBe-N9-ga9" firstAttribute="top" secondItem="kfX-kL-3tP" secondAttribute="bottom" constant="5" id="xeL-1W-PK6"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="68s-LV-GYN" secondAttribute="trailing" constant="20" id="7Mn-m8-1OL"/>
+                                                <constraint firstItem="68s-LV-GYN" firstAttribute="top" secondItem="GAT-37-9xE" secondAttribute="topMargin" constant="5" id="bj3-hs-4sf"/>
+                                                <constraint firstItem="68s-LV-GYN" firstAttribute="leading" secondItem="GAT-37-9xE" secondAttribute="leadingMargin" constant="20" id="eSK-gn-ox1"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="68s-LV-GYN" secondAttribute="bottom" constant="5" id="ybS-94-vYB"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.92148083448410034" green="0.92163199186325073" blue="0.92144864797592163" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="eventDescription" destination="dJD-kE-JJS" id="dHB-5a-4g9"/>
+                                            <outlet property="eventImage" destination="kfX-kL-3tP" id="Qz8-7d-RV3"/>
+                                            <outlet property="eventStarredButton" destination="dbk-BW-uSW" id="LUI-Nd-DHg"/>
+                                            <outlet property="eventTitle" destination="UbW-ye-CQd" id="nwr-3c-30k"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.92148083449999996" green="0.9216319919" blue="0.92144864800000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CJn-Or-dgc" firstAttribute="top" secondItem="Gkr-Hj-RoZ" secondAttribute="top" id="Z6g-IH-0Nl"/>
+                            <constraint firstItem="umf-fv-U11" firstAttribute="bottom" secondItem="Gkr-Hj-RoZ" secondAttribute="bottom" id="abc-Wn-NAO"/>
+                            <constraint firstItem="umf-fv-U11" firstAttribute="trailing" secondItem="Gkr-Hj-RoZ" secondAttribute="trailing" id="bDF-oa-qaG"/>
+                            <constraint firstItem="CJn-Or-dgc" firstAttribute="leading" secondItem="Gkr-Hj-RoZ" secondAttribute="leading" id="gD3-SW-Ucy"/>
+                            <constraint firstItem="CJn-Or-dgc" firstAttribute="trailing" secondItem="Gkr-Hj-RoZ" secondAttribute="trailing" id="iH7-19-E5f"/>
+                            <constraint firstItem="umf-fv-U11" firstAttribute="top" secondItem="fzw-Bj-dSf" secondAttribute="top" constant="71" id="oA0-AN-jhw"/>
+                            <constraint firstItem="umf-fv-U11" firstAttribute="leading" secondItem="Gkr-Hj-RoZ" secondAttribute="leading" id="yDx-0V-5Na"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Gkr-Hj-RoZ"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Events" id="4vB-sX-ETE">
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="icon-filter" id="88k-f2-30q">
+                            <connections>
+                                <action selector="filterButtonPressed:" destination="Vcw-i0-cMh" id="tlS-bu-Oy0"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="constraintHeightForFilterStack" destination="oA0-AN-jhw" id="T1l-Qh-7fH"/>
+                        <outlet property="filterStack" destination="lXV-pe-xaT" id="ps0-Tf-DFn"/>
+                        <outlet property="tableView" destination="umf-fv-U11" id="wyl-gq-pRM"/>
+                        <segue destination="20b-xW-Usg" kind="show" identifier="ShowEventFromEventsList" id="2ct-2o-gxX"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cQO-mx-3yC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-581.25" y="1659.5070422535211"/>
+        </scene>
+        <!--ReaderVC-->
+        <scene sceneID="4Q1-NN-kQP">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="6JB-OF-ohU" customClass="ReaderVC" customModule="QuitSmokingTogether" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dRt-pT-7ES">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="V6F-3i-71v"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pbC-eK-fXl">
+                        <barButtonItem key="leftBarButtonItem" image="Back" id="Evs-7Q-n8C">
+                            <connections>
+                                <action selector="goOutFromReader:" destination="6JB-OF-ohU" id="Kde-3a-bKP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZIH-dI-k7V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1228.985507246377" y="1659.7826086956522"/>
+        </scene>
         <!--Profile-->
         <scene sceneID="c0i-ao-PXL">
             <objects>
@@ -674,20 +868,20 @@
         <!--EventVC-->
         <scene sceneID="yvC-Lp-gD8">
             <objects>
-                <viewController storyboardIdentifier="UIViewController-20b-xW-Usg" hidesBottomBarWhenPushed="YES" id="20b-xW-Usg" customClass="EventVC" customModule="QuitSmokingTogether" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController hidesBottomBarWhenPushed="YES" id="20b-xW-Usg" customClass="EventVC" customModule="QuitSmokingTogether" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="gEP-nB-EME">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="idV-zM-cZF" customClass="CLabsImageSlider" customModule="CLabsImageSlider">
-                                <rect key="frame" x="0.0" y="20" width="320" height="250"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="250"/>
                                 <color key="backgroundColor" red="0.92148083449999996" green="0.9216319919" blue="0.92144864800000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="250" id="5aR-eP-YEt"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EHN-yh-0Zc" customClass="StarButton" customModule="QuitSmokingTogether" customModuleProvider="target">
-                                <rect key="frame" x="25" y="220" width="25" height="25"/>
+                                <rect key="frame" x="25" y="200" width="25" height="25"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="25" id="BwY-op-o7e"/>
                                     <constraint firstAttribute="width" constant="25" id="gcg-tn-o3j"/>
@@ -699,10 +893,10 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="sh3-P7-Oar">
-                                <rect key="frame" x="15" y="280" width="290" height="446"/>
+                                <rect key="frame" x="15" y="260" width="290" height="402"/>
                                 <subviews>
                                     <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W7T-W9-988">
-                                        <rect key="frame" x="0.0" y="0.0" width="290" height="446"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="290" height="402"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News title with 2 lines" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KzJ-Bg-jnx">
                                                 <rect key="frame" x="15" y="10.000000000000004" width="260" height="49.333333333333343"/>
@@ -1260,7 +1454,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="Ah8-yd-Zu6" kind="relationship" relationship="rootViewController" id="as0-IF-YjG"/>
+                        <segue destination="6JB-OF-ohU" kind="relationship" relationship="rootViewController" id="as0-IF-YjG"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="egA-Vo-cvn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1284,7 +1478,7 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="L0E-l4-DOm" kind="relationship" relationship="rootViewController" id="7Bg-2a-dR6"/>
+                        <segue destination="Vcw-i0-cMh" kind="relationship" relationship="rootViewController" id="7Bg-2a-dR6"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zuh-aa-TG1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1391,28 +1585,9 @@
             </objects>
             <point key="canvasLocation" x="1228.985507246377" y="2462.771739130435"/>
         </scene>
-        <!--Reader-->
-        <scene sceneID="KVj-xb-a7b">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Reader" id="Ah8-yd-Zu6" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="IuB-PF-ktf"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="DJo-jh-9HT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1228.985507246377" y="1659.7826086956522"/>
-        </scene>
-        <!--EventsList-->
-        <scene sceneID="9uY-IF-Ejv">
-            <objects>
-                <viewControllerPlaceholder storyboardName="EventsList" id="L0E-l4-DOm" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="N9B-E0-ezt"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="zC8-0T-J6F" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-581.25" y="1659.5070422535211"/>
-        </scene>
     </scenes>
     <resources>
+        <image name="Back" width="13" height="22"/>
         <image name="Button-Facebook" width="43" height="43"/>
         <image name="Button-Google" width="43" height="43"/>
         <image name="Button-VK" width="44" height="44"/>
@@ -1423,6 +1598,7 @@
         <image name="icon-email" width="25" height="19"/>
         <image name="icon-events" width="31" height="31"/>
         <image name="icon-facebook" width="21" height="21"/>
+        <image name="icon-filter" width="29" height="29"/>
         <image name="icon-gmail" width="15" height="13"/>
         <image name="icon-help" width="23" height="23"/>
         <image name="icon-info" width="25" height="25"/>
@@ -1440,8 +1616,9 @@
         <image name="icon_settings" width="31" height="31"/>
         <image name="icon_share" width="25" height="25"/>
         <image name="logo-white" width="236" height="83"/>
+        <image name="placeHolder.png" width="560" height="380"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="VYT-KF-rA1"/>
+        <segue reference="2zo-RI-LWN"/>
     </inferredMetricsTieBreakers>
 </document>

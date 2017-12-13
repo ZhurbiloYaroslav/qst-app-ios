@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="6JB-OF-ohU">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ReaderVC-->
+        <scene sceneID="4Q1-NN-kQP">
+            <objects>
+                <viewController hidesBottomBarWhenPushed="YES" id="6JB-OF-ohU" customClass="ReaderVC" customModule="QuitSmokingTogether" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dRt-pT-7ES">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="V6F-3i-71v"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="pbC-eK-fXl">
+                        <barButtonItem key="leftBarButtonItem" image="Back" id="Evs-7Q-n8C">
+                            <connections>
+                                <action selector="goOutFromReader:" destination="6JB-OF-ohU" id="Kde-3a-bKP"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZIH-dI-k7V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1228.985507246377" y="1659.7826086956522"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Back" width="13" height="22"/>
+    </resources>
+</document>

@@ -12,6 +12,16 @@
 		C410E7CE1F97BC5B00EEFB7B /* UIView+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C410E7CD1F97BC5B00EEFB7B /* UIView+IBInspectable.swift */; };
 		C410E7D01F97BEB200EEFB7B /* UIButton+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C410E7CF1F97BEB200EEFB7B /* UIButton+IBInspectable.swift */; };
 		C410E7D41F97C67E00EEFB7B /* Advices.swift in Sources */ = {isa = PBXBuildFile; fileRef = C410E7D31F97C67E00EEFB7B /* Advices.swift */; };
+		C415AA8B1FE16B6500BC5365 /* Donate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C415AA8A1FE16B6500BC5365 /* Donate.storyboard */; };
+		C415AA8E1FE16C3600BC5365 /* Share.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C415AA8D1FE16C3600BC5365 /* Share.storyboard */; };
+		C415AA901FE16CA900BC5365 /* FaqAnswer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C415AA8F1FE16CA900BC5365 /* FaqAnswer.storyboard */; };
+		C415AA921FE16CFB00BC5365 /* FaqList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C415AA911FE16CFB00BC5365 /* FaqList.storyboard */; };
+		C415AA941FE16D7C00BC5365 /* Online.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C415AA931FE16D7C00BC5365 /* Online.storyboard */; };
+		C415AA961FE16E1C00BC5365 /* Advice.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C415AA951FE16E1C00BC5365 /* Advice.storyboard */; };
+		C415AA981FE16E6900BC5365 /* Overview.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C415AA971FE16E6900BC5365 /* Overview.storyboard */; };
+		C415AA9A1FE16EF500BC5365 /* RemoveAdvert.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C415AA991FE16EF500BC5365 /* RemoveAdvert.storyboard */; };
+		C415AA9C1FE16F6500BC5365 /* Reader.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C415AA9B1FE16F6500BC5365 /* Reader.storyboard */; };
+		C415AA9E1FE16FCE00BC5365 /* EventsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C415AA9D1FE16FCE00BC5365 /* EventsList.storyboard */; };
 		C41B6F0C1FA2486B00B40F93 /* UIViewController+hideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41B6F0B1FA2486B00B40F93 /* UIViewController+hideKeyboard.swift */; };
 		C4258EFC1FC2D2AA009FCBC8 /* alex.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4258EFB1FC2D2AA009FCBC8 /* alex.jpg */; };
 		C4258EFE1FC2D2D9009FCBC8 /* qstBook.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4258EFD1FC2D2D9009FCBC8 /* qstBook.jpg */; };
@@ -65,6 +75,7 @@
 		C4C0EEE51FD061F100CA258B /* EventsFilter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C0EEE41FD061F100CA258B /* EventsFilter.swift */; };
 		C4C0EEEB1FD0AA3800CA258B /* EventsList.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4C0EEEA1FD0AA3800CA258B /* EventsList.plist */; };
 		C4C127661FE11B3B00630E22 /* AppPurchase.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C127651FE11B3B00630E22 /* AppPurchase.swift */; };
+		C4C236491FE190B3005219A0 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C415AA9F1FE170C400BC5365 /* About.storyboard */; };
 		C4CA865F1F94FDCA00A8772D /* FAQ.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CA865E1F94FDCA00A8772D /* FAQ.swift */; };
 		C4CA86681F9641C800A8772D /* FAQAnswerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CA86671F9641C800A8772D /* FAQAnswerVC.swift */; };
 		C4CA866A1F964BA900A8772D /* DLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4CA86691F964BA900A8772D /* DLog.swift */; };
@@ -92,6 +103,17 @@
 		C410E7CD1F97BC5B00EEFB7B /* UIView+IBInspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+IBInspectable.swift"; sourceTree = "<group>"; };
 		C410E7CF1F97BEB200EEFB7B /* UIButton+IBInspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+IBInspectable.swift"; sourceTree = "<group>"; };
 		C410E7D31F97C67E00EEFB7B /* Advices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advices.swift; sourceTree = "<group>"; };
+		C415AA8A1FE16B6500BC5365 /* Donate.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Donate.storyboard; path = Base.lproj/Donate.storyboard; sourceTree = "<group>"; };
+		C415AA8D1FE16C3600BC5365 /* Share.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Share.storyboard; path = Base.lproj/Share.storyboard; sourceTree = "<group>"; };
+		C415AA8F1FE16CA900BC5365 /* FaqAnswer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = FaqAnswer.storyboard; path = Base.lproj/FaqAnswer.storyboard; sourceTree = "<group>"; };
+		C415AA911FE16CFB00BC5365 /* FaqList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = FaqList.storyboard; path = Base.lproj/FaqList.storyboard; sourceTree = "<group>"; };
+		C415AA931FE16D7C00BC5365 /* Online.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Online.storyboard; path = Base.lproj/Online.storyboard; sourceTree = "<group>"; };
+		C415AA951FE16E1C00BC5365 /* Advice.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Advice.storyboard; path = Base.lproj/Advice.storyboard; sourceTree = "<group>"; };
+		C415AA971FE16E6900BC5365 /* Overview.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Overview.storyboard; path = Base.lproj/Overview.storyboard; sourceTree = "<group>"; };
+		C415AA991FE16EF500BC5365 /* RemoveAdvert.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RemoveAdvert.storyboard; path = Base.lproj/RemoveAdvert.storyboard; sourceTree = "<group>"; };
+		C415AA9B1FE16F6500BC5365 /* Reader.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Reader.storyboard; path = Base.lproj/Reader.storyboard; sourceTree = "<group>"; };
+		C415AA9D1FE16FCE00BC5365 /* EventsList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = EventsList.storyboard; path = Base.lproj/EventsList.storyboard; sourceTree = "<group>"; };
+		C415AA9F1FE170C400BC5365 /* About.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = About.storyboard; path = /Users/Yaroslav/Coding/Clients_Apps/QuitSmokingTogether/QuitSmokingTogether/View/Base.lproj/About.storyboard; sourceTree = "<absolute>"; };
 		C41B6F0B1FA2486B00B40F93 /* UIViewController+hideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+hideKeyboard.swift"; sourceTree = "<group>"; };
 		C4258EFB1FC2D2AA009FCBC8 /* alex.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = alex.jpg; sourceTree = "<group>"; };
 		C4258EFD1FC2D2D9009FCBC8 /* qstBook.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = qstBook.jpg; sourceTree = "<group>"; };
@@ -271,6 +293,17 @@
 		C455D5831F8CFDF7002846D9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C415AA9D1FE16FCE00BC5365 /* EventsList.storyboard */,
+				C415AA9B1FE16F6500BC5365 /* Reader.storyboard */,
+				C415AA991FE16EF500BC5365 /* RemoveAdvert.storyboard */,
+				C415AA971FE16E6900BC5365 /* Overview.storyboard */,
+				C415AA951FE16E1C00BC5365 /* Advice.storyboard */,
+				C415AA931FE16D7C00BC5365 /* Online.storyboard */,
+				C415AA911FE16CFB00BC5365 /* FaqList.storyboard */,
+				C415AA8F1FE16CA900BC5365 /* FaqAnswer.storyboard */,
+				C415AA8D1FE16C3600BC5365 /* Share.storyboard */,
+				C415AA9F1FE170C400BC5365 /* About.storyboard */,
+				C415AA8A1FE16B6500BC5365 /* Donate.storyboard */,
 				C4D458411F8021D100565A3F /* Main.storyboard */,
 				C4D458491F8021D100565A3F /* LaunchScreen.storyboard */,
 				C4CECEE71F94CDB5009C85DE /* Cells */,
@@ -479,19 +512,30 @@
 				C4B808921F9F36FA0099DA49 /* GoogleService-Info.plist in Resources */,
 				C4258F001FC2D338009FCBC8 /* qstBook-bigger.jpg in Resources */,
 				C4C0EEC31FCEEB5100CA258B /* news.jpg in Resources */,
+				C415AA9C1FE16F6500BC5365 /* Reader.storyboard in Resources */,
+				C415AA9A1FE16EF500BC5365 /* RemoveAdvert.storyboard in Resources */,
+				C415AA901FE16CA900BC5365 /* FaqAnswer.storyboard in Resources */,
 				C45FE1891FB860350080E172 /* QST-iBook.epub in Resources */,
 				C46DFB2A1FC489B000A62D69 /* news-171019-1.jpg in Resources */,
+				C415AA8E1FE16C3600BC5365 /* Share.storyboard in Resources */,
 				C4C0EEC11FCEEB1200CA258B /* competitions.jpg in Resources */,
 				C4D4584B1F8021D100565A3F /* LaunchScreen.storyboard in Resources */,
+				C415AA8B1FE16B6500BC5365 /* Donate.storyboard in Resources */,
+				C415AA921FE16CFB00BC5365 /* FaqList.storyboard in Resources */,
+				C415AA981FE16E6900BC5365 /* Overview.storyboard in Resources */,
 				C4C0EEE11FD0515400CA258B /* FAQ.plist in Resources */,
 				C4B0571C1FC81F1200699B6F /* placeHolder.png in Resources */,
+				C415AA941FE16D7C00BC5365 /* Online.storyboard in Resources */,
 				C4D458481F8021D100565A3F /* Assets.xcassets in Resources */,
+				C415AA961FE16E1C00BC5365 /* Advice.storyboard in Resources */,
 				C4C0EEEB1FD0AA3800CA258B /* EventsList.plist in Resources */,
 				C4258EFC1FC2D2AA009FCBC8 /* alex.jpg in Resources */,
 				C46DFB261FC4888F00A62D69 /* Advices.plist in Resources */,
+				C415AA9E1FE16FCE00BC5365 /* EventsList.storyboard in Resources */,
 				C47317921F8D1C1600A6AE43 /* Notes and links.rtf in Resources */,
 				C429370A1FB9D3B70016A02F /* Advices-ru.plist in Resources */,
 				C4D458431F8021D100565A3F /* Main.storyboard in Resources */,
+				C4C236491FE190B3005219A0 /* About.storyboard in Resources */,
 				C46DFB291FC489B000A62D69 /* comp-170531-1.jpg in Resources */,
 				C4258EFE1FC2D2D9009FCBC8 /* qstBook.jpg in Resources */,
 				C4258F021FC31D18009FCBC8 /* author-big.jpg in Resources */,
