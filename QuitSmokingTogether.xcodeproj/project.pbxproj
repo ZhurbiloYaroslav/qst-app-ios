@@ -108,17 +108,17 @@
 		C410E7CD1F97BC5B00EEFB7B /* UIView+IBInspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+IBInspectable.swift"; sourceTree = "<group>"; };
 		C410E7CF1F97BEB200EEFB7B /* UIButton+IBInspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+IBInspectable.swift"; sourceTree = "<group>"; };
 		C410E7D31F97C67E00EEFB7B /* Advices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Advices.swift; sourceTree = "<group>"; };
-		C415AA8A1FE16B6500BC5365 /* Donate.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Donate.storyboard; path = Base.lproj/Donate.storyboard; sourceTree = "<group>"; };
-		C415AA8D1FE16C3600BC5365 /* Share.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Share.storyboard; path = Base.lproj/Share.storyboard; sourceTree = "<group>"; };
-		C415AA8F1FE16CA900BC5365 /* FaqAnswer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = FaqAnswer.storyboard; path = Base.lproj/FaqAnswer.storyboard; sourceTree = "<group>"; };
-		C415AA911FE16CFB00BC5365 /* FaqList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = FaqList.storyboard; path = Base.lproj/FaqList.storyboard; sourceTree = "<group>"; };
-		C415AA931FE16D7C00BC5365 /* Online.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Online.storyboard; path = Base.lproj/Online.storyboard; sourceTree = "<group>"; };
-		C415AA951FE16E1C00BC5365 /* Advice.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Advice.storyboard; path = Base.lproj/Advice.storyboard; sourceTree = "<group>"; };
-		C415AA971FE16E6900BC5365 /* Overview.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Overview.storyboard; path = Base.lproj/Overview.storyboard; sourceTree = "<group>"; };
-		C415AA991FE16EF500BC5365 /* RemoveAdvert.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = RemoveAdvert.storyboard; path = Base.lproj/RemoveAdvert.storyboard; sourceTree = "<group>"; };
-		C415AA9B1FE16F6500BC5365 /* Reader.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Reader.storyboard; path = Base.lproj/Reader.storyboard; sourceTree = "<group>"; };
-		C415AA9D1FE16FCE00BC5365 /* EventsList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = EventsList.storyboard; path = Base.lproj/EventsList.storyboard; sourceTree = "<group>"; };
-		C415AA9F1FE170C400BC5365 /* About.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = About.storyboard; path = /Users/Yaroslav/Coding/Clients_Apps/QuitSmokingTogether/QuitSmokingTogether/View/Base.lproj/About.storyboard; sourceTree = "<absolute>"; };
+		C415AA8A1FE16B6500BC5365 /* Donate.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Donate.storyboard; sourceTree = "<group>"; };
+		C415AA8D1FE16C3600BC5365 /* Share.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Share.storyboard; sourceTree = "<group>"; };
+		C415AA8F1FE16CA900BC5365 /* FaqAnswer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FaqAnswer.storyboard; sourceTree = "<group>"; };
+		C415AA911FE16CFB00BC5365 /* FaqList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FaqList.storyboard; sourceTree = "<group>"; };
+		C415AA931FE16D7C00BC5365 /* Online.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Online.storyboard; sourceTree = "<group>"; };
+		C415AA951FE16E1C00BC5365 /* Advice.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Advice.storyboard; sourceTree = "<group>"; };
+		C415AA971FE16E6900BC5365 /* Overview.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Overview.storyboard; sourceTree = "<group>"; };
+		C415AA991FE16EF500BC5365 /* RemoveAdvert.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RemoveAdvert.storyboard; sourceTree = "<group>"; };
+		C415AA9B1FE16F6500BC5365 /* Reader.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Reader.storyboard; sourceTree = "<group>"; };
+		C415AA9D1FE16FCE00BC5365 /* EventsList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EventsList.storyboard; sourceTree = "<group>"; };
+		C415AA9F1FE170C400BC5365 /* About.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = About.storyboard; path = /Users/Yaroslav/Coding/Clients_Apps/QuitSmokingTogether/QuitSmokingTogether/Controller/Settings/About/About.storyboard; sourceTree = "<absolute>"; };
 		C41B6F0B1FA2486B00B40F93 /* UIViewController+hideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+hideKeyboard.swift"; sourceTree = "<group>"; };
 		C4258EFB1FC2D2AA009FCBC8 /* alex.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = alex.jpg; sourceTree = "<group>"; };
 		C4258EFD1FC2D2D9009FCBC8 /* qstBook.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = qstBook.jpg; sourceTree = "<group>"; };
@@ -277,20 +277,14 @@
 		C455D5821F8CFDEE002846D9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C42F0B6F1FDDC70100C3D619 /* In-App purchase */,
 				C461A2CD1F8F957C00B698FA /* Constants.swift */,
-				C410E7D31F97C67E00EEFB7B /* Advices.swift */,
-				C4CA865E1F94FDCA00A8772D /* FAQ.swift */,
 				C4CA86691F964BA900A8772D /* DLog.swift */,
-				C40F53421F9CE1C800DE58A1 /* ReaderText.swift */,
 				C4B8088B1F9DE7430099DA49 /* UserDefaultsManager.swift */,
 				C4B808931F9F3C2A0099DA49 /* FirebaseAuthManager.swift */,
 				C4A4D3051FA87B3F00EC9D50 /* CurrentUser.swift */,
 				C4A4D3091FA8D93400EC9D50 /* Typealiases.swift */,
 				C4A4D30C1FAA04FD00EC9D50 /* ValidationErrors.swift */,
 				C4258F051FC46184009FCBC8 /* Browser.swift */,
-				C4C0EEDE1FD040BD00CA258B /* Event.swift */,
-				C4B057221FC8852D00699B6F /* EventsList.swift */,
 				C4C0EEC41FCEF07C00CA258B /* FirebaseManager.swift */,
 				C4C0EEE41FD061F100CA258B /* EventsFilter.swift */,
 				C4E5F0DC1FD7FFBB00AE1D93 /* Validator.swift */,
@@ -303,25 +297,8 @@
 		C455D5831F8CFDF7002846D9 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C4A12E7A1FE1B87B00E843F8 /* LoginVC.storyboard */,
-				C4A12E771FE1B76200E843F8 /* EventVC.storyboard */,
-				C4A12E741FE1B61B00E843F8 /* RegisterVC.storyboard */,
-				C4A12E711FE1B56400E843F8 /* Settings.storyboard */,
-				C4A12E6E1FE1B45800E843F8 /* Profile.storyboard */,
-				C415AA9D1FE16FCE00BC5365 /* EventsList.storyboard */,
-				C415AA9B1FE16F6500BC5365 /* Reader.storyboard */,
-				C415AA991FE16EF500BC5365 /* RemoveAdvert.storyboard */,
-				C415AA971FE16E6900BC5365 /* Overview.storyboard */,
-				C415AA951FE16E1C00BC5365 /* Advice.storyboard */,
-				C415AA931FE16D7C00BC5365 /* Online.storyboard */,
-				C415AA911FE16CFB00BC5365 /* FaqList.storyboard */,
-				C415AA8F1FE16CA900BC5365 /* FaqAnswer.storyboard */,
-				C415AA8D1FE16C3600BC5365 /* Share.storyboard */,
-				C415AA9F1FE170C400BC5365 /* About.storyboard */,
-				C415AA8A1FE16B6500BC5365 /* Donate.storyboard */,
 				C4D458411F8021D100565A3F /* Main.storyboard */,
 				C4D458491F8021D100565A3F /* LaunchScreen.storyboard */,
-				C4CECEE71F94CDB5009C85DE /* Cells */,
 				C4CE20CF1FD6E8FA00537893 /* StarButton.swift */,
 			);
 			path = View;
@@ -344,7 +321,7 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		C46DFB2F1FC48C6F00A62D69 /* Overview */ = {
+		C46DFB2F1FC48C6F00A62D69 /* Overview_Cells */ = {
 			isa = PBXGroup;
 			children = (
 				C473178F1F8D0C1700A6AE43 /* OverviewReadCell.swift */,
@@ -352,7 +329,7 @@
 				C46DFB2B1FC48B2A00A62D69 /* OverviewEventCell.swift */,
 				C461A2C91F8E534900B698FA /* OverviewHelpCell.swift */,
 			);
-			path = Overview;
+			path = Overview_Cells;
 			sourceTree = "<group>";
 		};
 		C4A12E7D1FE1BB1A00E843F8 /* Controller */ = {
@@ -373,7 +350,9 @@
 		C4A12E7E1FE1BB1A00E843F8 /* Advice */ = {
 			isa = PBXGroup;
 			children = (
+				C415AA951FE16E1C00BC5365 /* Advice.storyboard */,
 				C455D5861F8CFE75002846D9 /* AdviceVC.swift */,
+				C410E7D31F97C67E00EEFB7B /* Advices.swift */,
 			);
 			path = Advice;
 			sourceTree = "<group>";
@@ -381,6 +360,8 @@
 		C4A12E7F1FE1BB1A00E843F8 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
+				C4A12E741FE1B61B00E843F8 /* RegisterVC.storyboard */,
+				C4A12E7A1FE1B87B00E843F8 /* LoginVC.storyboard */,
 				C4B8088D1F9F2CCF0099DA49 /* LoginVC.swift */,
 				C4EBF52E1FA5E74A00753D0C /* RegisterVC.swift */,
 			);
@@ -407,8 +388,13 @@
 		C4A12E831FE1BB1A00E843F8 /* Events */ = {
 			isa = PBXGroup;
 			children = (
+				C415AA9D1FE16FCE00BC5365 /* EventsList.storyboard */,
+				C4A12E771FE1B76200E843F8 /* EventVC.storyboard */,
+				C4C0EEDE1FD040BD00CA258B /* Event.swift */,
 				C4B057201FC86E4100699B6F /* EventVC.swift */,
 				C4B057101FC6E32300699B6F /* EventsListVC.swift */,
+				C4B057221FC8852D00699B6F /* EventsList.swift */,
+				C4B057141FC6FF9400699B6F /* EventCell.swift */,
 			);
 			path = Events;
 			sourceTree = "<group>";
@@ -416,6 +402,7 @@
 		C4A12E841FE1BB1A00E843F8 /* Online */ = {
 			isa = PBXGroup;
 			children = (
+				C415AA931FE16D7C00BC5365 /* Online.storyboard */,
 				C4B057121FC6E35C00699B6F /* OnlineVC.swift */,
 			);
 			path = Online;
@@ -424,7 +411,9 @@
 		C4A12E851FE1BB1A00E843F8 /* Overview */ = {
 			isa = PBXGroup;
 			children = (
+				C415AA971FE16E6900BC5365 /* Overview.storyboard */,
 				C4D4583F1F8021D100565A3F /* OverviewVC.swift */,
+				C46DFB2F1FC48C6F00A62D69 /* Overview_Cells */,
 			);
 			path = Overview;
 			sourceTree = "<group>";
@@ -432,7 +421,9 @@
 		C4A12E861FE1BB1A00E843F8 /* Reader */ = {
 			isa = PBXGroup;
 			children = (
+				C415AA9B1FE16F6500BC5365 /* Reader.storyboard */,
 				C461A2D31F8FB81600B698FA /* ReaderVC.swift */,
+				C40F53421F9CE1C800DE58A1 /* ReaderText.swift */,
 			);
 			path = Reader;
 			sourceTree = "<group>";
@@ -440,7 +431,9 @@
 		C4A12E871FE1BB1A00E843F8 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				C4A12E711FE1B56400E843F8 /* Settings.storyboard */,
 				C455D58A1F8D0024002846D9 /* SettingsVC.swift */,
+				C4CECEE71F94CDB5009C85DE /* Settings_Cells */,
 				C4A12E881FE1BB1A00E843F8 /* About */,
 				C4A12E891FE1BB1A00E843F8 /* Advert */,
 				C4A12E8A1FE1BB1A00E843F8 /* Donate */,
@@ -454,6 +447,7 @@
 		C4A12E881FE1BB1A00E843F8 /* About */ = {
 			isa = PBXGroup;
 			children = (
+				C415AA9F1FE170C400BC5365 /* About.storyboard */,
 				C4258F071FC463B4009FCBC8 /* AboutVC.swift */,
 			);
 			path = About;
@@ -462,7 +456,9 @@
 		C4A12E891FE1BB1A00E843F8 /* Advert */ = {
 			isa = PBXGroup;
 			children = (
+				C415AA991FE16EF500BC5365 /* RemoveAdvert.storyboard */,
 				C47FE0BC1FDB35EE008232CA /* RemoveAdvertVC.swift */,
+				C42F0B6F1FDDC70100C3D619 /* In-App purchase */,
 			);
 			path = Advert;
 			sourceTree = "<group>";
@@ -470,6 +466,7 @@
 		C4A12E8A1FE1BB1A00E843F8 /* Donate */ = {
 			isa = PBXGroup;
 			children = (
+				C415AA8A1FE16B6500BC5365 /* Donate.storyboard */,
 				C4258F031FC4522B009FCBC8 /* DonateVC.swift */,
 			);
 			path = Donate;
@@ -478,8 +475,11 @@
 		C4A12E8B1FE1BB1A00E843F8 /* FAQ */ = {
 			isa = PBXGroup;
 			children = (
+				C415AA911FE16CFB00BC5365 /* FaqList.storyboard */,
+				C415AA8F1FE16CA900BC5365 /* FaqAnswer.storyboard */,
 				C4CECEDD1F94C877009C85DE /* FAQVC.swift */,
 				C4CA86671F9641C800A8772D /* FAQAnswerVC.swift */,
+				C4CA865E1F94FDCA00A8772D /* FAQ.swift */,
 			);
 			path = FAQ;
 			sourceTree = "<group>";
@@ -487,6 +487,7 @@
 		C4A12E8C1FE1BB1A00E843F8 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				C4A12E6E1FE1B45800E843F8 /* Profile.storyboard */,
 				C4B057241FC9806100699B6F /* ProfileVC.swift */,
 			);
 			path = Profile;
@@ -495,20 +496,19 @@
 		C4A12E8D1FE1BB1A00E843F8 /* Share */ = {
 			isa = PBXGroup;
 			children = (
+				C415AA8D1FE16C3600BC5365 /* Share.storyboard */,
 				C4CECEE11F94C924009C85DE /* ShareVC.swift */,
 			);
 			path = Share;
 			sourceTree = "<group>";
 		};
-		C4CECEE71F94CDB5009C85DE /* Cells */ = {
+		C4CECEE71F94CDB5009C85DE /* Settings_Cells */ = {
 			isa = PBXGroup;
 			children = (
-				C46DFB2F1FC48C6F00A62D69 /* Overview */,
-				C4B057141FC6FF9400699B6F /* EventCell.swift */,
 				C4A4D3031FA87AE800EC9D50 /* OptAccountCell.swift */,
 				C4CECEE51F94CDA9009C85DE /* FAQCell.swift */,
 			);
-			path = Cells;
+			path = Settings_Cells;
 			sourceTree = "<group>";
 		};
 		C4D458311F8021D100565A3F = {
