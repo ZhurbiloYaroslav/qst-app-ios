@@ -197,7 +197,7 @@ open class FolioReaderCenter: UIViewController, UICollectionViewDelegate, UIColl
         super.viewWillAppear(animated)
 
         configureNavBar()
-
+        
         // Update pages
         pagesForCurrentPage(currentPage)
         pageIndicatorView?.reloadView(updateShadow: true)
@@ -1003,12 +1003,16 @@ open class FolioReaderCenter: UIViewController, UICollectionViewDelegate, UIColl
             currentPage.webView.createMenu(options: true)
             currentPage.webView.setMenuVisible(false)
             
+            //ZHURBILO
             saveTextFromCurrentPage(webView: currentPage.webView)
+            delegate?.pageDidAppear?(currentPage)
+            //ZHURBILO
         }
 
         scrollScrubber?.scrollViewWillBeginDragging(scrollView)
     }
     
+    //ZHURBILO
     func saveTextFromCurrentPage(webView: UIWebView) {
         let indexOfTheChapterInText = 1
         let indexOfTheFirstParagraphInText = 2
@@ -1022,6 +1026,7 @@ open class FolioReaderCenter: UIViewController, UICollectionViewDelegate, UIColl
             UserDefaults.standard.synchronize()
         }
     }
+    //ZHURBILO
 
     open func scrollViewDidScroll(_ scrollView: UIScrollView) {
 
@@ -1260,7 +1265,6 @@ extension FolioReaderCenter: FolioReaderChapterListDelegate {
     
     func chapterList(_ chapterList: FolioReaderChapterList, didSelectRowAtIndexPath indexPath: IndexPath, withTocReference reference: FRTocReference) {
         let item = findPageByResource(reference)
-        
         if item < totalPages {
             let indexPath = IndexPath(row: item, section: 0)
             changePageWith(indexPath: indexPath, animated: false, completion: { () -> Void in

@@ -38,7 +38,6 @@ class EventVC: UIViewController, imageSliderDelegate {
             default:
                 break
             }
-            
         }
     }
     
@@ -60,6 +59,8 @@ class EventVC: UIViewController, imageSliderDelegate {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
+        
+        print(currentEvent.imagesHttpAddr) //ToDelete
         
         imageSlider.setUpView(imageSource: .Url(imageArray: currentEvent.imagesHttpAddr, placeHolderImage: UIImage(named:"placeHolder")), slideType:.Automatic(timeIntervalinSeconds: 5), isArrowBtnEnabled: true)
     }

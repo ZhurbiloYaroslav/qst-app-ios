@@ -57,6 +57,11 @@
                                                 <constraint firstItem="40S-RE-fBr" firstAttribute="leading" secondItem="vDp-xS-KqI" secondAttribute="leading" constant="8" id="Wxa-pD-bya"/>
                                                 <constraint firstAttribute="trailing" secondItem="40S-RE-fBr" secondAttribute="trailing" constant="8" id="zoP-qf-t39"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="40S-RE-fBr"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="183" id="0BO-O2-Xxw">
@@ -113,6 +118,11 @@
                                                 <constraint firstItem="KaI-Cz-FlH" firstAttribute="leading" secondItem="wqw-oV-HOy" secondAttribute="leading" constant="8" id="VfK-cw-p4i"/>
                                                 <constraint firstItem="KaI-Cz-FlH" firstAttribute="top" secondItem="wqw-oV-HOy" secondAttribute="top" constant="5" id="yni-sI-a0v"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="KaI-Cz-FlH"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="500" id="82o-Ml-1GH">
@@ -159,6 +169,11 @@ Correspondent bank: The Bank of New York Mellon, New York, USA </string>
                                                 <constraint firstAttribute="trailing" secondItem="uFG-Tq-37v" secondAttribute="trailing" constant="8" id="sxX-wW-4fn"/>
                                                 <constraint firstAttribute="bottom" secondItem="uFG-Tq-37v" secondAttribute="bottom" constant="5" id="tgc-hN-I11"/>
                                             </constraints>
+                                            <variation key="default">
+                                                <mask key="subviews">
+                                                    <exclude reference="uFG-Tq-37v"/>
+                                                </mask>
+                                            </variation>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>

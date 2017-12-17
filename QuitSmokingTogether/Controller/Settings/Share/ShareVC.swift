@@ -13,6 +13,8 @@ import FacebookShare
 
 class ShareVC: UIViewController {
     
+    var presentThisVcFromReader: Bool?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -41,7 +43,9 @@ class ShareVC: UIViewController {
             self.shareWithProvider(provider, enumWithURL: .Website)
         }
         actionShareWebsite.setValue(UIImage(named: "icon-website"), forKey: "image")
-        let actionCancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        let actionCancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+            self.dismiss(animated: true, completion: nil)
+        }
         
         alertController.addAction(actionShareApp)
         alertController.addAction(actionShareBook)
@@ -74,11 +78,12 @@ class ShareVC: UIViewController {
             shareDialog.completion = { result in
                 switch result {
                 case .success:
-                    print("Share succeeded")
+                    CurrentUser.didUserShareThisApp = true
+                    self.dismiss(animated: true, completion: nil)
                 case .failed:
                     print("Share failed")
                 case .cancelled:
-                    print("Share cancelled")
+                    self.dismiss(animated: true, completion: nil)
                 }
             }
             try shareDialog.show()
@@ -97,9 +102,12 @@ class ShareVC: UIViewController {
     
     func activityCompletionHandler(activityType: UIActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?) {
         if !completed {
+            self.dismiss(animated: true, completion: nil)
             print("canceled share with other apps")
             return
         }
+        CurrentUser.didUserShareThisApp = true
+        self.dismiss(animated: true, completion: nil)
         print("User completed share with other apps")
     }
     

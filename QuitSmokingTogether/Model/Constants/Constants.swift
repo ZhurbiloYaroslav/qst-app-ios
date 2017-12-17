@@ -12,6 +12,7 @@ import Foundation
 struct Constants {
     
     struct Color {
+        //static let col = ColorLiteral (type it)
         static let red = UIColor(red: 208.0/255.0, green: 2.0/255.0, blue: 27.0/255.0, alpha: 1.0)
         static let green = UIColor(red: 94.0/255.0, green: 188.0/255.0, blue: 54.0/255.0, alpha: 1.0)
         static let starActive = UIColor.yellow

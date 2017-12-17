@@ -190,6 +190,17 @@ extension CurrentUser {
         }
     }
     
+    static var didUserShareThisApp: Bool {
+        
+        get {
+            return defaults.object(forKey: "didUserShareThisApp") as? Bool ?? false
+        }
+        set {
+            defaults.set(newValue, forKey: "didUserShareThisApp")
+            defaults.synchronize()
+        }
+    }
+    
     static var authToken: String {
         get {
             return self.keychainManager.get("currentUserAuthenticationToken") ?? ""
