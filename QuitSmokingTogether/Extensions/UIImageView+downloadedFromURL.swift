@@ -14,17 +14,13 @@ import UIKit
 extension UIImageView {
     
     func downloadedFrom(link: String, contentMode mode: UIViewContentMode = .scaleAspectFit) {
-        let newlink = link.addingPercentEncoding(withAllowedCharacters: .urlPathAllowed)
-        guard let url = URL(string: newlink!) else { return }
+        guard let url = URL(string: link) else { return }
         downloadedFrom(url: url, contentMode: mode)
     }
     
     func downloadedFrom(url: URL, contentMode mode: UIViewContentMode = .scaleAspectFit) {
         contentMode = mode
         URLSession.shared.dataTask(with: url) { data, response, error in
-            print("data", data)
-            print("response", data)
-            print("error", data)
             guard
                 let httpURLResponse = response as? HTTPURLResponse, httpURLResponse.statusCode == 200,
                 let mimeType = response?.mimeType, mimeType.hasPrefix("image"),

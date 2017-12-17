@@ -33,6 +33,8 @@ class ReaderVC: UIViewController {
         let config = FolioReaderConfig()
         config.shouldHideNavigationOnTap = true
         config.enableTTS = false
+        config.allowSharing = false
+        config.useReaderMenuController = true
         let bookPath = Bundle.main.path(forResource: "QST-iBook", ofType: "epub")
         
         folioReader.currentFontSize = FolioReaderFontSize.xs

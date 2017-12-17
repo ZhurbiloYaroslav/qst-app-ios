@@ -244,6 +244,7 @@
                                             <outlet property="eventTextLabel" destination="hXk-uj-nMJ" id="245-QU-V2Q"/>
                                             <outlet property="eventTitleLabel" destination="eSe-N7-HI1" id="k9B-8k-v5D"/>
                                             <outlet property="eventTypeImage" destination="NUT-AV-wfN" id="W7r-RP-nER"/>
+                                            <outlet property="readMoreButton" destination="JNo-ma-JYE" id="Knj-EK-cq7"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="OverviewHelpCell" rowHeight="100" id="7hy-gx-MP4" customClass="OverviewHelpCell" customModule="QuitSmokingTogether" customModuleProvider="target">

@@ -43,7 +43,17 @@ class OverviewVC: UIViewController {
     }
     
     @IBAction func readMoreEventButtonPressed(_ sender: UIButton) {
-        print("okkkk")
+        let newsTag = OverviewEventCell.ReadMoreButtonTag.News.rawValue
+        let compTag = OverviewEventCell.ReadMoreButtonTag.Competitions.rawValue
+        
+        switch sender.tag {
+        case newsTag:
+            showEventDescriptionWith(type: .News)
+        case compTag:
+            showEventDescriptionWith(type: .Competition)
+        default:
+            print("was pressed undefined button")
+        }
     }
     
     func showReader() {
