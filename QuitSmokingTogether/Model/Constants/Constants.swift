@@ -11,6 +11,13 @@ import Foundation
 
 struct Constants {
     
+    struct Time {
+        static var didNotOpenApp: Double {
+            return 60 * 60 * 24 * 2
+        }
+        static let quickTesting: Double = 20
+    }
+    
     struct Color {
         //static let col = ColorLiteral (type it)
         static let red = UIColor(red: 208.0/255.0, green: 2.0/255.0, blue: 27.0/255.0, alpha: 1.0)
