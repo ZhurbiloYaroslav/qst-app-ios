@@ -11,6 +11,7 @@ import CoreData
 import FolioReaderKit
 import Firebase
 import GoogleMobileAds
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,8 +24,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         chooseViewControllerToPresent()
+        
         initializeAndConfigureFirebase()
         initializeGoogleMobileAds()
+        
+        authForNotifications()
+        checkForAllowedNotifications()
+        UIApplication.shared.applicationIconBadgeNumber = 0
         
         return true
     }
@@ -71,7 +77,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func applicationDidBecomeActive(_ application: UIApplication) {
-        // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+        
+        UIApplication.shared.applicationIconBadgeNumber = 0
+        scheduleNotification()
+
     }
     
     func applicationWillTerminate(_ application: UIApplication) {
@@ -125,6 +134,70 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
     
+}
+
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    
+    func scheduleNotification() {
+        // timeInterval is in seconds, so 60*60*12*3 = 3 days, set repeats to true if you want to repeat the trigger
+        let requestTrigger = UNTimeIntervalNotificationTrigger(timeInterval: (20), repeats: false)
+        
+        let requestContent = UNMutableNotificationContent()
+        requestContent.title = "Continue quit smoking"
+        requestContent.subtitle = "You haven't open the App within 2 days"
+        requestContent.body = "Open the App and continue reading!"
+        requestContent.badge = 1
+        requestContent.sound = UNNotificationSound.default()
+        
+        let notifID = NotificationID.RemindUserOpenApp.rawValue
+        let request = UNNotificationRequest(identifier: notifID, content: requestContent, trigger: requestTrigger)
+        
+        UNUserNotificationCenter.current().add(request) { error in
+            if let error = error {
+                print(error.localizedDescription)
+            } else {
+                
+            }
+        }
+    }
+    
+    enum NotificationID: String {
+        case RemindUserOpenApp = "RemindUserAboutOpenApp"
+    }
+    
+    func authForNotifications() {
+        let notifCenter = UNUserNotificationCenter.current()
+        let options: UNAuthorizationOptions = [.alert, .badge, .sound]
+        notifCenter.requestAuthorization(options: options) { (boolValue, error) in
+            if error == nil {
+
+            } else {
+                print(error?.localizedDescription ?? "")
+            }
+        }
+//        /// In case you want to register for the remote notifications
+//        let application = UIApplication.shared
+//        application.registerForRemoteNotifications()
+    }
+
+    func checkForAllowedNotifications() {
+        let notifCenter = UNUserNotificationCenter.current()
+        notifCenter.getNotificationSettings { (settings) in
+            if settings.authorizationStatus != .authorized {
+                // Notifications not allowed
+            }
+        }
+    }
+
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        let deviceTokenString = deviceToken.reduce("", {$0 + String(format: "%02X", $1)})
+        print(deviceTokenString)
+        // Send to your server here...
+    }
+
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print("i am not available in simulator \(error)")
+    }
 }
 
 extension AppDelegate: GADInterstitialDelegate {
