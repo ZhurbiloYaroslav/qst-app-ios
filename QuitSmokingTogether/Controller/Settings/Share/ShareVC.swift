@@ -128,7 +128,7 @@ extension ShareVC {
     }
     
     enum URLForSharing: String {
-        case ThisApp = "https://quitsmokingtogether.ru/ratingmovies.php"
+        case ThisApp = "https://quitsmokingtogether.org/ratingmovies.php"
         case Website = "http://quitsmokingtogether.org"
         case Book = "http://quitsmokingtogether.org/buy.php"
     }

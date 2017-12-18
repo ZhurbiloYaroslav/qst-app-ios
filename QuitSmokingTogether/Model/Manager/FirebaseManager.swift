@@ -23,15 +23,25 @@ class FirebaseManager {
     
     func updateUserInfoInFirebase() {
         let userValues: [String: String] = [
-            FirebaseValue.FirstName.rawValue: CurrentUser.firstName,
-            FirebaseValue.LastName.rawValue: CurrentUser.lastName,
-            FirebaseValue.Phone.rawValue: CurrentUser.phone,
-            FirebaseValue.Email.rawValue: CurrentUser.email
+            Path.FirstName.rawValue: CurrentUser.firstName,
+            Path.LastName.rawValue: CurrentUser.lastName,
+            Path.Phone.rawValue: CurrentUser.phone,
+            Path.Email.rawValue: CurrentUser.email
         ]
-        self.ref.child("users").child(CurrentUser.id).setValue(userValues)
+        self.ref.child(Path.Users.rawValue).child(CurrentUser.id).setValue(userValues)
     }
     
-    enum FirebaseValue: String {
+    func updateInFirebaseUserValue(_ value: String, withKey key: Path) {
+        self.ref.child(Path.Users.rawValue).child(CurrentUser.id).child(key.rawValue).setValue(value)
+    }
+    
+    func getFromFirebaseUserValueForKey(_ key: Path) -> String? {
+        //return self.ref.child(Path.Users.rawValue).child(CurrentUser.id).value(forKey: key.rawValue) as? String ?? nil
+        return nil
+    }
+    
+    enum Path: String {
+        case Users = "Users"
         case FirstName = "FirstName"
         case LastName = "LastName"
         case Phone = "Phone"

@@ -53,7 +53,7 @@ class LoginVC: UIViewController {
     
     @IBAction func loginButtonPressed(_ sender: UIButton) {
         if fieldsAreValidated() {
-            print("fieldsAreValidated")
+
             FirebaseAuthManager().signIn(withEmail: emailField.text!, password: passwordField.text!) { error in
                 if let errorMessage = error?.localizedDescription {
                     

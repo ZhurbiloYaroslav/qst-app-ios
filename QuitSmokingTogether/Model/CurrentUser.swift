@@ -29,6 +29,9 @@ class CurrentUser {
         case .authGoogle:
             FirebaseAuthManager().signOut()
             removeUserDataWhenLogOut()
+        case .authAnonymous:
+            FirebaseAuthManager().signOut()
+            removeUserDataWhenLogOut()
         default:
             removeUserDataWhenLogOut()
         }
@@ -39,13 +42,13 @@ class CurrentUser {
         
         isLoggedIn = false
         
-        id = ""
         name = ""
         firstName = ""
         lastName = ""
         email = ""
         phone = ""
         authToken = ""
+        id = ""
         provider = .noProvider
     }
 }
@@ -146,9 +149,14 @@ extension CurrentUser {
     
     static var firstName: String {
         get {
-            return defaults.object(forKey: "currentUserFirstName") as? String ?? Constants.DefaultValue.forEmptyFirstName
+            if let firstName = defaults.object(forKey: "currentUserFirstName") as? String, firstName != "" {
+                return firstName
+            } else {
+                return Constants.DefaultValue.forEmptyFirstName
+            }
         }
         set {
+            FirebaseManager().updateInFirebaseUserValue(newValue, withKey: .FirstName)
             defaults.set(newValue, forKey: "currentUserFirstName")
             defaults.synchronize()
         }
@@ -156,9 +164,14 @@ extension CurrentUser {
     
     static var lastName: String {
         get {
-            return defaults.object(forKey: "currentUserLastName") as? String ?? Constants.DefaultValue.forEmptyLastName
+            if let lastName = defaults.object(forKey: "currentUserLastName") as? String, lastName != "" {
+                return lastName
+            } else {
+                return Constants.DefaultValue.forEmptyLastName
+            }
         }
         set {
+            FirebaseManager().updateInFirebaseUserValue(newValue, withKey: .LastName)
             defaults.set(newValue, forKey: "currentUserLastName")
             defaults.synchronize()
         }
@@ -166,26 +179,28 @@ extension CurrentUser {
     
     static var email: String {
         get {
-            if let currentUserEmail = defaults.object(forKey: "currentUserEmail") as? String, currentUserEmail != "" {
-                return currentUserEmail
-            } else if let currentUserEmail = keychainManager.get("currentUserEmail"), currentUserEmail != "" {
+            if let currentUserEmail = keychainManager.get("currentUserEmail"), currentUserEmail != "" {
                 return currentUserEmail
             } else {
                 return Constants.DefaultValue.forEmptyEmail
             }
         }
         set {
-            defaults.set(newValue, forKey: "currentUserEmail")
-            defaults.synchronize()
+            FirebaseManager().updateInFirebaseUserValue(newValue, withKey: .Email)
             keychainManager.set(newValue, forKey: "currentUserEmail")
         }
     }
     
     static var phone: String {
         get {
-            return self.keychainManager.get("currentUserPhone") ?? Constants.DefaultValue.forEmptyPhone
+            if let currentUserPhone = keychainManager.get("currentUserPhone"), currentUserPhone != "" {
+                return currentUserPhone
+            } else {
+                return Constants.DefaultValue.forEmptyPhone
+            }
         }
         set {
+            FirebaseManager().updateInFirebaseUserValue(newValue, withKey: .Phone)
             keychainManager.set(newValue, forKey: "currentUserPhone")
         }
     }
