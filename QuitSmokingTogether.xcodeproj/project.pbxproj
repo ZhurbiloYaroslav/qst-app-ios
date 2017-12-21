@@ -334,6 +334,14 @@
 			path = Overview_Cells;
 			sourceTree = "<group>";
 		};
+		C47754121FEBD37E00D0946A /* DeleteIt */ = {
+			isa = PBXGroup;
+			children = (
+				C4A12E741FE1B61B00E843F8 /* RegisterVC.storyboard */,
+			);
+			path = DeleteIt;
+			sourceTree = "<group>";
+		};
 		C4A12E7D1FE1BB1A00E843F8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -362,10 +370,10 @@
 		C4A12E7F1FE1BB1A00E843F8 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
-				C4A12E741FE1B61B00E843F8 /* RegisterVC.storyboard */,
 				C4A12E7A1FE1B87B00E843F8 /* Auth.storyboard */,
 				C4B8088D1F9F2CCF0099DA49 /* LoginVC.swift */,
 				C4EBF52E1FA5E74A00753D0C /* RegisterVC.swift */,
+				C47754121FEBD37E00D0946A /* DeleteIt */,
 			);
 			path = Auth;
 			sourceTree = "<group>";

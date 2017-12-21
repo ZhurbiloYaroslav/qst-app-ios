@@ -141,7 +141,7 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     func scheduleNotification() {
         // timeInterval is in seconds, so 60*60*12*3 = 3 days, set repeats to true if you want to repeat the trigger
         //let time = Constants.Time.didNotOpenApp
-        let time = Constants.Time.quickTesting
+        let time = Constants.Time.didNotOpenApp
         let requestTrigger = UNTimeIntervalNotificationTrigger(timeInterval: time, repeats: false)
         
         let requestContent = UNMutableNotificationContent()
