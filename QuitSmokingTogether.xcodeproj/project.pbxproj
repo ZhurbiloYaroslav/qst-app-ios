@@ -342,6 +342,14 @@
 			path = DeleteIt;
 			sourceTree = "<group>";
 		};
+		C47754131FEBE70200D0946A /* DeleteIt */ = {
+			isa = PBXGroup;
+			children = (
+				C4A12E771FE1B76200E843F8 /* EventVC.storyboard */,
+			);
+			path = DeleteIt;
+			sourceTree = "<group>";
+		};
 		C4A12E7D1FE1BB1A00E843F8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
@@ -392,12 +400,12 @@
 			isa = PBXGroup;
 			children = (
 				C415AA9D1FE16FCE00BC5365 /* EventsList.storyboard */,
-				C4A12E771FE1B76200E843F8 /* EventVC.storyboard */,
 				C4C0EEDE1FD040BD00CA258B /* Event.swift */,
 				C4B057201FC86E4100699B6F /* EventVC.swift */,
 				C4B057101FC6E32300699B6F /* EventsListVC.swift */,
 				C4B057221FC8852D00699B6F /* EventsList.swift */,
 				C4B057141FC6FF9400699B6F /* EventCell.swift */,
+				C47754131FEBE70200D0946A /* DeleteIt */,
 			);
 			path = Events;
 			sourceTree = "<group>";

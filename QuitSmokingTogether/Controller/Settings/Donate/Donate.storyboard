@@ -59,37 +59,8 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="183" id="4dw-NA-8u5">
-                                        <rect key="frame" x="0.0" y="144" width="320" height="183"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4dw-NA-8u5" id="Efj-We-KQ8">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="183"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jHF-GU-ecu">
-                                                    <rect key="frame" x="8" y="15" width="304" height="153"/>
-                                                    <subviews>
-                                                        <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mzo-VL-zSg">
-                                                            <rect key="frame" x="0.0" y="0.0" width="304" height="153"/>
-                                                        </pickerView>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstItem="mzo-VL-zSg" firstAttribute="leading" secondItem="jHF-GU-ecu" secondAttribute="leading" id="4JB-Bs-dIe"/>
-                                                        <constraint firstAttribute="trailing" secondItem="mzo-VL-zSg" secondAttribute="trailing" id="xIj-vP-eVb"/>
-                                                        <constraint firstItem="mzo-VL-zSg" firstAttribute="top" secondItem="jHF-GU-ecu" secondAttribute="top" id="yRM-UT-TH8"/>
-                                                    </constraints>
-                                                </stackView>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="jHF-GU-ecu" secondAttribute="bottom" constant="15" id="ZqU-Aq-NGt"/>
-                                                <constraint firstItem="jHF-GU-ecu" firstAttribute="leading" secondItem="Efj-We-KQ8" secondAttribute="leading" constant="8" id="efS-va-q6F"/>
-                                                <constraint firstAttribute="trailing" secondItem="jHF-GU-ecu" secondAttribute="trailing" constant="8" id="i6n-KF-6e7"/>
-                                                <constraint firstItem="jHF-GU-ecu" firstAttribute="top" secondItem="Efj-We-KQ8" secondAttribute="top" constant="15" id="uKe-Mc-qQM"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="183" id="0BO-O2-Xxw">
-                                        <rect key="frame" x="0.0" y="327" width="320" height="183"/>
+                                        <rect key="frame" x="0.0" y="144" width="320" height="183"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="0BO-O2-Xxw" id="wqw-oV-HOy">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="183"/>
@@ -106,7 +77,7 @@
                                                             </constraints>
                                                             <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="16"/>
                                                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <state key="normal" title="I want to donate 100 UAH">
+                                                            <state key="normal" title="I want to make a donation!">
                                                                 <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                             </state>
                                                             <connections>
@@ -154,7 +125,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="500" id="82o-Ml-1GH">
-                                        <rect key="frame" x="0.0" y="510" width="320" height="500"/>
+                                        <rect key="frame" x="0.0" y="327" width="320" height="500"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="82o-Ml-1GH" id="CUq-ui-Tml">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="500"/>
@@ -219,6 +190,35 @@ Correspondent bank: The Bank of New York Mellon, New York, USA </string>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IRu-Um-Vb1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="183" id="4dw-NA-8u5">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="183"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                    <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="4dw-NA-8u5" id="Efj-We-KQ8">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="182.5"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="jHF-GU-ecu">
+                                <rect key="frame" x="8" y="15" width="304" height="153"/>
+                                <subviews>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mzo-VL-zSg">
+                                        <rect key="frame" x="0.0" y="0.0" width="304" height="153"/>
+                                    </pickerView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="mzo-VL-zSg" firstAttribute="leading" secondItem="jHF-GU-ecu" secondAttribute="leading" id="4JB-Bs-dIe"/>
+                                    <constraint firstAttribute="trailing" secondItem="mzo-VL-zSg" secondAttribute="trailing" id="xIj-vP-eVb"/>
+                                    <constraint firstItem="mzo-VL-zSg" firstAttribute="top" secondItem="jHF-GU-ecu" secondAttribute="top" id="yRM-UT-TH8"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="jHF-GU-ecu" secondAttribute="bottom" constant="15" id="ZqU-Aq-NGt"/>
+                            <constraint firstItem="jHF-GU-ecu" firstAttribute="leading" secondItem="Efj-We-KQ8" secondAttribute="leading" constant="8" id="efS-va-q6F"/>
+                            <constraint firstAttribute="trailing" secondItem="jHF-GU-ecu" secondAttribute="trailing" constant="8" id="i6n-KF-6e7"/>
+                            <constraint firstItem="jHF-GU-ecu" firstAttribute="top" secondItem="Efj-We-KQ8" secondAttribute="top" constant="15" id="uKe-Mc-qQM"/>
+                        </constraints>
+                    </tableViewCellContentView>
+                </tableViewCell>
             </objects>
             <point key="canvasLocation" x="2091" y="2824"/>
         </scene>

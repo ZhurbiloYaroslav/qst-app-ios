@@ -59,7 +59,7 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
         case 2:
             return 2
         case 3:
-            return 2
+            return 1
         default:
             return 0
         }
@@ -89,10 +89,10 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
         case [2,1]: // Donate
             let cell = tableView.dequeueReusableCell(withIdentifier: "Donate", for: indexPath) as UITableViewCell
             return cell
-        case [3,0]: // FAQ
-            let cell = tableView.dequeueReusableCell(withIdentifier: "FAQ", for: indexPath) as UITableViewCell
-            return cell
-        case [3,1]: // About
+//        case [3,0]: // FAQ
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "FAQ", for: indexPath) as UITableViewCell
+//            return cell
+        case [3,0]: // About
             let cell = tableView.dequeueReusableCell(withIdentifier: "About", for: indexPath) as UITableViewCell
             return cell
             
@@ -115,9 +115,9 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
             performSegue(withIdentifier: "ShowRemoveAdvertFromSettings", sender: nil)
         case [2,1]: // Donate
             performSegue(withIdentifier: "ShowDonateFromSettings", sender: nil)
-        case [3,0]: // FAQ
-            performSegue(withIdentifier: "ShowFAQFromSettings", sender: nil)
-        case [3,1]: // About
+//        case [3,0]: // FAQ
+//            performSegue(withIdentifier: "ShowFAQFromSettings", sender: nil)
+        case [3,0]: // About
             performSegue(withIdentifier: "ShowAboutFromSettings", sender: nil)
         default:
             print("was selected undefined cell")

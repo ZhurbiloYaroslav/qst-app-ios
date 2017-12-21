@@ -31,13 +31,11 @@ class OverviewEventCell: UITableViewCell {
     func updateCellFor(eventType: Event.EventType) {
         switch eventType {
         case .News:
-            eventTypeImage.image = UIImage(named: "news.jpg")
             readMoreButton.tag = ReadMoreButtonTag.News.rawValue
         case .Competition:
-            eventTypeImage.image = UIImage(named: "competitions.jpg")
             readMoreButton.tag = ReadMoreButtonTag.Competitions.rawValue
         default:
-            eventTypeImage.image = UIImage(named: "placeHolder.png")
+            break
         }
         
         let event = EventsList.getFirstEventWithType(eventType, andStatus: .Unread)

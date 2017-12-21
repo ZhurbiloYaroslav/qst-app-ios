@@ -13,7 +13,6 @@ class DonateVC: UITableViewController {
     
     @IBOutlet weak var paymentPicker: UIPickerView!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

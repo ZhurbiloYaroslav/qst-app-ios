@@ -8,6 +8,7 @@
 
 import UIKit
 import FolioReaderKit
+import GoogleMobileAds
 
 class ReaderVC: UIViewController {
     
@@ -26,7 +27,7 @@ class ReaderVC: UIViewController {
     }
     
     @IBAction func goOutFromReader(_ sender: UIBarButtonItem) {
-        tabBarController?.selectedIndex = 0
+        AdMobManager().getFullScreenInterstitialForVC(self)
     }
     
     func openFolioReader() {
@@ -46,6 +47,7 @@ class ReaderVC: UIViewController {
 extension ReaderVC: FolioReaderDelegate, FolioReaderPageDelegate, FolioReaderCenterDelegate {
     
     func pageDidAppear(_ page: FolioReaderPage) {
+        
         presentShareAlertIfDidNotSharedThisApp(page)
     }
     
@@ -71,5 +73,12 @@ extension ReaderVC: FolioReaderDelegate, FolioReaderPageDelegate, FolioReaderCen
     
     func folioReaderDidClose(_ folioReader: FolioReader) {
         tabBarController?.selectedIndex = 0
+    }
+}
+
+extension ReaderVC: GADInterstitialDelegate {
+    
+    func interstitialWillDismissScreen(_ ad: GADInterstitial) {
+//        tabBarController?.selectedIndex = 0
     }
 }

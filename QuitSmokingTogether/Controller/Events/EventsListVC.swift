@@ -45,14 +45,11 @@ class EventsListVC: UIViewController {
         reloadTable()
     }
     
-    func reloadTable() {
-        eventsList = EventsList.getAllEventsWithType(eventsFilter.eventType, andStatus: eventsFilter.eventStatus)
-        tableView.reloadData()
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        AdMobManager().getFullScreenInterstitialForVC(self)
+        
         eventsList = EventsList.getAllEventsWithType(eventsFilter.eventType, andStatus: eventsFilter.eventStatus)
         setDelegates()
         switchFilterVisibility()
@@ -64,6 +61,11 @@ class EventsListVC: UIViewController {
         
         tableView.reloadData()
         presentEventFromOverview()
+    }
+    
+    func reloadTable() {
+        eventsList = EventsList.getAllEventsWithType(eventsFilter.eventType, andStatus: eventsFilter.eventStatus)
+        tableView.reloadData()
     }
     
     func setDelegates() {
