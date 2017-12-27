@@ -1,5 +1,5 @@
 //
-//  EventVC.swift
+//  EventDescVC.swift
 //  QuitSmokingTogether
 //
 //  Created by Yaroslav Zhurbilo on 24.11.17.
@@ -9,7 +9,7 @@
 import UIKit
 import CLabsImageSlider
 
-class EventVC: UIViewController, imageSliderDelegate {
+class EventDescVC: UIViewController, imageSliderDelegate {
     
     @IBOutlet weak var imageSlider: CLabsImageSlider!
     @IBOutlet weak var starredButton: StarButton!
@@ -69,7 +69,7 @@ class EventVC: UIViewController, imageSliderDelegate {
 
 }
 
-extension EventVC {
+extension EventDescVC {
     
     @IBAction func starredButtonPressed(_ sender: UIButton) {
         starredButton.starredButtonPressedFor(currentEvent)

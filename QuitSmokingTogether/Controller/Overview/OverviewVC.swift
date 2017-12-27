@@ -20,9 +20,15 @@ class OverviewVC: UIViewController {
         
         setDelegates()
         
+        setupTableView()
+
+    }
+    
+    func setupTableView() {
         tableView.estimatedRowHeight = 80
         tableView.rowHeight = UITableViewAutomaticDimension
-
+        
+        tableView.register(UINib(nibName: "OverviewEventCell", bundle: nil), forCellReuseIdentifier: "OverviewEventCell")
     }
     
     override func viewDidAppear(_ animated: Bool) {

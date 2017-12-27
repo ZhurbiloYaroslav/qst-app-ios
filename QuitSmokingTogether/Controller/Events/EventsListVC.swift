@@ -14,7 +14,7 @@ class EventsListVC: UIViewController {
     @IBOutlet weak var filterStack: UIStackView!
     @IBOutlet weak var constraintHeightForFilterStack: NSLayoutConstraint!
     
-    var eventsList: [Event]!
+    var arrayWithEvents: [Event]!
     
     var eventToPresentFromOverview: Event?
     var doWePresentEventFromOverview = false
@@ -50,10 +50,18 @@ class EventsListVC: UIViewController {
         
         AdMobManager().getFullScreenInterstitialForVC(self)
         
-        eventsList = EventsList.getAllEventsWithType(eventsFilter.eventType, andStatus: eventsFilter.eventStatus)
+        arrayWithEvents = EventsList.getAllEventsWithType(eventsFilter.eventType, andStatus: eventsFilter.eventStatus)
         setDelegates()
         switchFilterVisibility()
+        setupTableView()
         updateUI()
+    }
+    
+    func setupTableView() {
+        tableView.estimatedRowHeight = 200
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
+        tableView.register(UINib(nibName: "EventCell", bundle: nil), forCellReuseIdentifier: "EventCell")
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -64,7 +72,7 @@ class EventsListVC: UIViewController {
     }
     
     func reloadTable() {
-        eventsList = EventsList.getAllEventsWithType(eventsFilter.eventType, andStatus: eventsFilter.eventStatus)
+        arrayWithEvents = EventsList.getAllEventsWithType(eventsFilter.eventType, andStatus: eventsFilter.eventStatus)
         tableView.reloadData()
     }
     
@@ -103,7 +111,7 @@ class EventsListVC: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
         guard let segueID = segue.identifier else { return }
-        guard let destination = segue.destination as? EventVC else { return }
+        guard let destination = segue.destination as? EventDescVC else { return }
         guard let currentEvent = sender as? Event else { return }
         
         switch segueID {
@@ -119,16 +127,16 @@ class EventsListVC: UIViewController {
 extension EventsListVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return eventsList.count
+        return arrayWithEvents.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "EventInListCell", for: indexPath) as! EventCell
-        cell.update(event: eventsList[indexPath.row])
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EventCell", for: indexPath) as! EventCell
+        cell.update(event: arrayWithEvents[indexPath.row])
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "ShowEventFromEventsList", sender: eventsList[indexPath.row])
+        self.performSegue(withIdentifier: "ShowEventFromEventsList", sender: arrayWithEvents[indexPath.row])
     }
 }

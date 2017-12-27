@@ -13,7 +13,8 @@ target 'QuitSmokingTogether' do
 	pod 'Firebase/Database'
     pod 'Google-Mobile-Ads-SDK'
 	pod 'KeychainSwift', '~> 9.0' # https://github.com/evgenyneu/keychain-swift
-	pod "CLabsImageSlider", '~> 0.1.2'
+	pod 'CLabsImageSlider', '~> 0.1.2'
+    pod 'SDWebImage', '~> 4.0'
 
 end
 
