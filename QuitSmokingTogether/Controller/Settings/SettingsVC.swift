@@ -18,6 +18,8 @@ class SettingsVC: UIViewController {
     
     private let userDefaultsManager = UserDefaultsManager()
     
+    var totalNumberOfCellsAndHeaders = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -80,8 +82,11 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
             return cell
         case [1,2]: // Like on Facebook
             let cell = tableView.dequeueReusableCell(withIdentifier: "LikeOnFacebook", for: indexPath) as UITableViewCell
-            facebookLikeButton.frame = CGRect(x: 68, y: 12, width: cell.frame.width, height: cell.frame.height)
-            cell.insertSubview(facebookLikeButton, at: 2)
+            if let fbSome = cell.viewWithTag(8) {
+                let bounds = fbSome.bounds
+                facebookLikeButton.frame = CGRect(x: 30, y: (bounds.midY - ((bounds.height + 4 ) / 2)), width: bounds.width, height: bounds.height)
+                fbSome.insertSubview(facebookLikeButton, aboveSubview: cell.viewWithTag(9)!)
+            }
             return cell
         case [2,0]: // Remove advert
             let cell = tableView.dequeueReusableCell(withIdentifier: "Advert", for: indexPath) as UITableViewCell

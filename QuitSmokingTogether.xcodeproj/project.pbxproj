@@ -45,6 +45,8 @@
 		C461A2D41F8FB81600B698FA /* ReaderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C461A2D31F8FB81600B698FA /* ReaderVC.swift */; };
 		C463F8681FF3DE6D001FBBC1 /* EventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C463F8671FF3DE6D001FBBC1 /* EventCell.xib */; };
 		C463F86A1FF4270B001FBBC1 /* OverviewEventCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C463F8691FF4270B001FBBC1 /* OverviewEventCell.xib */; };
+		C463F86E1FF4317F001FBBC1 /* ContactCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C463F86D1FF4317F001FBBC1 /* ContactCell.xib */; };
+		C463F8701FF43932001FBBC1 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C463F86F1FF43932001FBBC1 /* ContactCell.swift */; };
 		C46BDB361FE7D9FF00D35F5B /* LiqPay.plist in Resources */ = {isa = PBXBuildFile; fileRef = C46BDB351FE7D9FF00D35F5B /* LiqPay.plist */; };
 		C46DFB261FC4888F00A62D69 /* Advices.plist in Resources */ = {isa = PBXBuildFile; fileRef = C46DFB251FC4888F00A62D69 /* Advices.plist */; };
 		C46DFB291FC489B000A62D69 /* comp-170531-1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C46DFB271FC489B000A62D69 /* comp-170531-1.jpg */; };
@@ -143,6 +145,8 @@
 		C461A2D31F8FB81600B698FA /* ReaderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderVC.swift; sourceTree = "<group>"; };
 		C463F8671FF3DE6D001FBBC1 /* EventCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EventCell.xib; sourceTree = "<group>"; };
 		C463F8691FF4270B001FBBC1 /* OverviewEventCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverviewEventCell.xib; sourceTree = "<group>"; };
+		C463F86D1FF4317F001FBBC1 /* ContactCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactCell.xib; sourceTree = "<group>"; };
+		C463F86F1FF43932001FBBC1 /* ContactCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
 		C46BDB351FE7D9FF00D35F5B /* LiqPay.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = LiqPay.plist; sourceTree = "<group>"; };
 		C46DFB251FC4888F00A62D69 /* Advices.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Advices.plist; sourceTree = "<group>"; };
 		C46DFB271FC489B000A62D69 /* comp-170531-1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "comp-170531-1.jpg"; sourceTree = "<group>"; };
@@ -344,6 +348,15 @@
 			path = OverviewEventCell;
 			sourceTree = "<group>";
 		};
+		C463F86C1FF43157001FBBC1 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C463F86D1FF4317F001FBBC1 /* ContactCell.xib */,
+				C463F86F1FF43932001FBBC1 /* ContactCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		C46BDB341FE7D9CB00D35F5B /* LiqPay */ = {
 			isa = PBXGroup;
 			children = (
@@ -434,6 +447,7 @@
 			children = (
 				C415AA931FE16D7C00BC5365 /* Online.storyboard */,
 				C4B057121FC6E35C00699B6F /* OnlineVC.swift */,
+				C463F86C1FF43157001FBBC1 /* View */,
 			);
 			path = Online;
 			sourceTree = "<group>";
@@ -696,6 +710,7 @@
 				C4A12E7C1FE1B87B00E843F8 /* Auth.storyboard in Resources */,
 				C4B0571C1FC81F1200699B6F /* placeHolder.png in Resources */,
 				C415AA941FE16D7C00BC5365 /* Online.storyboard in Resources */,
+				C463F86E1FF4317F001FBBC1 /* ContactCell.xib in Resources */,
 				C463F86A1FF4270B001FBBC1 /* OverviewEventCell.xib in Resources */,
 				C4D458481F8021D100565A3F /* Assets.xcassets in Resources */,
 				C415AA961FE16E1C00BC5365 /* Advice.storyboard in Resources */,
@@ -819,6 +834,7 @@
 				C4B8088E1F9F2CCF0099DA49 /* LoginVC.swift in Sources */,
 				C461A2C81F8E533400B698FA /* OverviewAdviceCell.swift in Sources */,
 				C4EBF52F1FA5E74A00753D0C /* RegisterVC.swift in Sources */,
+				C463F8701FF43932001FBBC1 /* ContactCell.swift in Sources */,
 				C410E7D41F97C67E00EEFB7B /* Advices.swift in Sources */,
 				C455D58B1F8D0024002846D9 /* SettingsVC.swift in Sources */,
 				C4B057211FC86E4100699B6F /* EventDescVC.swift in Sources */,

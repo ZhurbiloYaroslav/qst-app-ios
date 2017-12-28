@@ -157,17 +157,17 @@
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JrL-9I-5VJ">
+                                                <stackView opaque="NO" tag="8" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JrL-9I-5VJ">
                                                     <rect key="frame" x="30" y="16" width="296" height="28"/>
                                                     <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="icon-facebook" translatesAutoresizingMaskIntoConstraints="NO" id="fgp-ER-tJ4">
+                                                        <imageView userInteractionEnabled="NO" tag="9" contentMode="scaleAspectFit" image="icon-facebook" translatesAutoresizingMaskIntoConstraints="NO" id="fgp-ER-tJ4">
                                                             <rect key="frame" x="0.0" y="1.5" width="25" height="25"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="25" id="1Ka-qy-x6L"/>
                                                                 <constraint firstAttribute="height" constant="25" id="vZE-VA-pBp"/>
                                                             </constraints>
                                                         </imageView>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RtU-IO-Smh">
+                                                        <stackView opaque="NO" tag="10" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RtU-IO-Smh">
                                                             <rect key="frame" x="35" y="0.0" width="261" height="28"/>
                                                         </stackView>
                                                     </subviews>

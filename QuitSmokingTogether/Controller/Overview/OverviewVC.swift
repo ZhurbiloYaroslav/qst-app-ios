@@ -48,7 +48,7 @@ class OverviewVC: UIViewController {
         showAdviceView()
     }
     
-    @IBAction func readMoreEventButtonPressed(_ sender: UIButton) {
+    @objc func readMoreEventButtonPressed(_ sender: UIButton) {
         let newsTag = OverviewEventCell.ReadMoreButtonTag.News.rawValue
         let compTag = OverviewEventCell.ReadMoreButtonTag.Competitions.rawValue
         
@@ -111,11 +111,13 @@ extension OverviewVC: UITableViewDataSource, UITableViewDelegate {
         case [0,2]:
             let cell = tableView.dequeueReusableCell(withIdentifier: "OverviewEventCell", for: indexPath) as! OverviewEventCell
             cell.updateCellFor(eventType: .News)
+            cell.readMoreButton.addTarget(self, action: #selector(readMoreEventButtonPressed(_:)), for: .touchUpInside)
             return cell
             
         case [0,3]:
             let cell = tableView.dequeueReusableCell(withIdentifier: "OverviewEventCell", for: indexPath) as! OverviewEventCell
             cell.updateCellFor(eventType: .Competition)
+            cell.readMoreButton.addTarget(self, action: #selector(readMoreEventButtonPressed(_:)), for: .touchUpInside)
             return cell
             
         case [0,4]:
