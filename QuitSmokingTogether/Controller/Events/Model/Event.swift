@@ -35,6 +35,41 @@ public class Event {
                   date: Date(), arrayWithImagesURL: ["https://quitsmokingtogether.ru/images/97.jpg"])
     }
     
+    
+    
+    
+    
+//    init(id: Int, title: String, textContent: String, htmlContent: String, date: String) {
+//        self.date = date
+//
+//        super.init(id: id, title: title, textContent: textContent, htmlContent: htmlContent)
+//    }
+//
+//    convenience init() {
+//        self.init(id: 0, title: "", textContent: "", htmlContent: "", date: "")
+//    }
+//
+//    convenience init(withResult resultDictionary: [String: Any]) {
+//
+//        let renderedIitle = resultDictionary["title"] as? [String: Any] ?? [String: Any]()
+//        let title = renderedIitle["rendered"] as? String  ?? ""
+//        let renderedContent = resultDictionary["content"] as? [String: Any] ?? [String: Any]()
+//        let htmlContent = renderedContent["rendered"] as? String  ?? ""
+//
+//        let id = resultDictionary["id"] as? Int ?? 0
+//
+//        let textContent = htmlContent
+//        let newsDateString = resultDictionary["date"] as? String ?? ""
+//
+//        self.init(id: id, title: title, textContent: textContent, htmlContent: htmlContent, date: newsDateString)
+//    }
+    
+    
+    
+    
+    
+    
+    
     func getFormattedDateFrom(stringWithDate: String, andTimezone timezone: String) -> Date {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd-mm-yyyy"
