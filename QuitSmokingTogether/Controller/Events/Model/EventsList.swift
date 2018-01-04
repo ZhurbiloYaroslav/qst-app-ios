@@ -72,30 +72,30 @@ class EventsList {
     
     static func createEventsFromParsedRow(_ eventDict: [String: Any]) {
         
-        guard let typeRaw = eventDict["Type"] as? String else { return }
-        guard let statusRaw = eventDict["Status"] as? String else { return }
-        guard let title = eventDict["Title"] as? String else { return }
-        guard let text = eventDict["Text"] as? String else { return }
-        guard let date = eventDict["Date"] as? Date else { return }
-        
-        guard let type = Event.EventType(rawValue: typeRaw) else { return }
-        guard let status = Event.EventStatus(rawValue: statusRaw) else { return }
-        guard let imagesText = eventDict["Images"] as? String else { return }
-        
-        let arrayWithImagesURL = imagesText.components(separatedBy: ",")
-        
-        var arrayWithTrimmedImagesURL = [String]()
-        
-        for image in arrayWithImagesURL {
-            let trimmedImage = image.trimmingCharacters(in: .whitespacesAndNewlines)
-            arrayWithTrimmedImagesURL.append(trimmedImage)
-        }
-        
-        let newEvent = Event(type: type, status: status,
-                             title: title, text: text,
-                             date: date, arrayWithImagesURL: arrayWithTrimmedImagesURL)
-        
-        arrayWithEvents.append(newEvent)
+//        guard let typeRaw = eventDict["Type"] as? String else { return }
+//        guard let statusRaw = eventDict["Status"] as? String else { return }
+//        guard let title = eventDict["Title"] as? String else { return }
+//        guard let text = eventDict["Text"] as? String else { return }
+//        guard let date = eventDict["Date"] as? Date else { return }
+//        
+//        guard let type = Event.EventType(rawValue: typeRaw) else { return }
+//        guard let status = Event.EventStatus(rawValue: statusRaw) else { return }
+//        guard let imagesText = eventDict["Images"] as? String else { return }
+//        
+//        let arrayWithImagesURL = imagesText.components(separatedBy: ",")
+//        
+//        var arrayWithTrimmedImagesURL = [String]()
+//        
+//        for image in arrayWithImagesURL {
+//            let trimmedImage = image.trimmingCharacters(in: .whitespacesAndNewlines)
+//            arrayWithTrimmedImagesURL.append(trimmedImage)
+//        }
+//        
+////        let newEvent = Event(type: type, status: status,
+////                             title: title, text: text,
+////                             date: date, arrayWithImagesURL: arrayWithTrimmedImagesURL)
+////
+////        arrayWithEvents.append(newEvent)
         
     }
 }

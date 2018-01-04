@@ -41,9 +41,10 @@ class OverviewEventCell: UITableViewCell {
         let event = EventsList.getFirstEventWithType(eventType, andStatus: .Unread)
         self.currentEvent = event
         
-        eventImageView.downloadedFrom(link: event.imagesHttpAddr[0], contentMode: .scaleAspectFill)
+        eventImageView.downloadedFrom(link: "", contentMode: .scaleAspectFill)
+//        eventImageView.downloadedFrom(link: event.arrayWithImageLinks[0], contentMode: .scaleAspectFill)
         eventTitleLabel.text = event.title
-        eventTextLabel.text = event.text
+        eventTextLabel.text = event.textContent
     }
     
     @IBAction func readMoreButtonPressed(_ sender: UIButton) {

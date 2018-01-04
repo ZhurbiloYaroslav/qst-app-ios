@@ -8,18 +8,42 @@
 
 import UIKit
 
+extension EventsListVC: EventsManagerDelegate {
+    func didLoad(arrayWithEvents: [Event]) {
+        self.arrayWithEvents = arrayWithEvents
+        tableView.reloadData()
+    }
+}
+
 class EventsListVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var filterStack: UIStackView!
     @IBOutlet weak var constraintHeightForFilterStack: NSLayoutConstraint!
     
-    var arrayWithEvents: [Event]!
+    var arrayWithEvents: [Event] = [Event]()
+    let eventManager = EventsManager()
     
     var eventToPresentFromOverview: Event?
     var doWePresentEventFromOverview = false
     
     var eventsFilter = EventsFilter()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        AdMobManager().getFullScreenInterstitialForVC(self)
+        
+        eventManager.delegate = self
+        eventManager.retrieveInfoForPath(.events_all) { arrayWithErrors in
+            print(arrayWithErrors ?? "")
+        }
+//        arrayWithEvents = EventsList.getAllEventsWithType(eventsFilter.eventType, andStatus: eventsFilter.eventStatus)
+        setDelegates()
+        switchFilterVisibility()
+        setupTableView()
+        updateUI()
+    }
     
     @IBAction func eventStatusControlValueChanged(_ sender: UISegmentedControl, forEvent event: UIEvent) {
         switch sender.selectedSegmentIndex {
@@ -43,18 +67,6 @@ class EventsListVC: UIViewController {
             eventsFilter.eventType = .All
         }
         reloadTable()
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        AdMobManager().getFullScreenInterstitialForVC(self)
-        
-        arrayWithEvents = EventsList.getAllEventsWithType(eventsFilter.eventType, andStatus: eventsFilter.eventStatus)
-        setDelegates()
-        switchFilterVisibility()
-        setupTableView()
-        updateUI()
     }
     
     func setupTableView() {

@@ -52,7 +52,7 @@ class EventDescVC: UIViewController, imageSliderDelegate {
     
     func updateLabels() {
         newsTitleLabel.text = currentEvent.title
-        newsTextLabel.text = currentEvent.text
+        newsTextLabel.text = currentEvent.textContent
         
         starredButton.makeButtonActiveIfActive(currentEvent)
     }
@@ -60,7 +60,7 @@ class EventDescVC: UIViewController, imageSliderDelegate {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
                 
-        imageSlider.setUpView(imageSource: .Url(imageArray: currentEvent.imagesHttpAddr, placeHolderImage: UIImage(named:"placeHolder")), slideType:.Automatic(timeIntervalinSeconds: 5), isArrowBtnEnabled: true)
+        imageSlider.setUpView(imageSource: .Url(imageArray: currentEvent.arrayWithImageLinks, placeHolderImage: UIImage(named:"placeHolder")), slideType:.Automatic(timeIntervalinSeconds: 5), isArrowBtnEnabled: true)
     }
     
     func didMovedToIndex(index:Int) {

@@ -50,7 +50,7 @@ class FirebaseAuthManager {
                 
             } else {
                 completionHandler(error)
-                print(error?.localizedDescription)
+                print(error?.localizedDescription ?? "Undefined error during signIn")
             }
         }
     }

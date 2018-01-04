@@ -15,11 +15,13 @@ target 'QuitSmokingTogether' do
 	pod 'KeychainSwift', '~> 9.0' # https://github.com/evgenyneu/keychain-swift
 	pod 'CLabsImageSlider', '~> 0.1.2'
     pod 'SDWebImage', '~> 4.0'
+    pod 'Alamofire', '~> 4.5'
+    pod 'SwiftSoup'
 
 end
 
 post_install do |installer|
-        myTargets = ['FolioReaderKit', 'FontBlaster', 'MenuItemKit', "CLabsImageSlider"]
+        myTargets = ['Alamofire', 'FolioReaderKit', 'FontBlaster', 'MenuItemKit', "CLabsImageSlider"]
 
         installer.pods_project.targets.each do |target|
                 if myTargets.include? target.name

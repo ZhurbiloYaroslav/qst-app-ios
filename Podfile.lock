@@ -1,5 +1,6 @@
 PODS:
   - AEXML (4.0.0)
+  - Alamofire (4.5.1)
   - Bolts (1.8.4):
     - Bolts/AppLinks (= 1.8.4)
     - Bolts/Tasks (= 1.8.4)
@@ -87,10 +88,15 @@ PODS:
   - Realm/Headers (2.10.2)
   - RealmSwift (2.10.2):
     - Realm (= 2.10.2)
+  - SDWebImage (4.1.2):
+    - SDWebImage/Core (= 4.1.2)
+  - SDWebImage/Core (4.1.2)
   - SSZipArchive (1.8.1)
+  - SwiftSoup (1.5.5)
   - ZFDragableModalTransition (0.6)
 
 DEPENDENCIES:
+  - Alamofire (~> 4.5)
   - CLabsImageSlider (~> 0.1.2)
   - FacebookCore
   - FacebookLogin
@@ -101,9 +107,12 @@ DEPENDENCIES:
   - FolioReaderKit
   - Google-Mobile-Ads-SDK
   - KeychainSwift (~> 9.0)
+  - SDWebImage (~> 4.0)
+  - SwiftSoup
 
 SPEC CHECKSUMS:
   AEXML: 6fc6433aa35bdc15dd8eb8d54eb7aa4520a010eb
+  Alamofire: 2d95912bf4c34f164fdfc335872e8c312acaea4a
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
   CLabsImageSlider: 49c296c17e2fb15f1abe8b5dd6157927912abb7c
   FacebookCore: 3ffa190a3f1f96cec0e44d3fc221bc322c595ffa
@@ -130,9 +139,11 @@ SPEC CHECKSUMS:
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Realm: 0ef72b837fb67e9f4b098bac771ddd72c7fdbb69
   RealmSwift: 07a9ae0505091eda6b2ee7c190c3786d6e90a7b0
+  SDWebImage: cb6f9f266a9977741efcbc21e618e8be3734c774
   SSZipArchive: 04547dfa448be5ed7ecbaf7eaf8a6e9eb9b42997
+  SwiftSoup: 6a31eb02551c9c523eea14aef9d9e70f1466ff99
   ZFDragableModalTransition: 0d294eaaba6edfcb9839595de765f9ca06a4b524
 
-PODFILE CHECKSUM: 479a1c32f8e325bad1b0741f5ace818822ce8556
+PODFILE CHECKSUM: 1d3a29d173ce32218b36d5bd3a25ba1427f13dc3
 
 COCOAPODS: 1.2.1

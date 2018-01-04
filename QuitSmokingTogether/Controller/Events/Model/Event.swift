@@ -7,67 +7,81 @@
 //
 //
 
+import UIKit
 import Foundation
+import SwiftSoup
 
-public class Event {
-
-    var type: EventType!
-    var status: EventStatus!
-    var title: String!
-    var text: String!
-    var date: Date!
-    var imagesHttpAddr: [String]!
+public class Event: NSObject {
     
-    init(type: EventType, status: EventStatus, title: String, text: String,
-         date: Date, arrayWithImagesURL: [String]) {
+    var id: Int
+    var date: Date
+    var type: EventType = .Undefined
+    var status: EventStatus = .Unread
+    var title: String
+    var htmlContent: String
+    var textContent: String
+    let defaultImage: [UIImage] = [UIImage()]
+    var arrayWithImageLinks: [String] {
+        return parseImagesAndContentFromHTML()
+    }
     
+    init(id: Int, date: Date, title: String, htmlContent: String, textContent: String,
+         type: EventType, status: EventStatus) {
+        
+        self.id = id
+        self.date = date
         self.type = type
         self.status = status
         self.title = title
-        self.text = text
-        self.date = date
-        self.imagesHttpAddr = arrayWithImagesURL
+        self.htmlContent = htmlContent
+        self.textContent = textContent
+    }
+    
+    convenience override init() {
+        self.init(id: 0, date: Date(), title: "Template", htmlContent: "", textContent: "",
+                  type: .Undefined, status: .Unread)
+    }
+    
+    func parseImagesAndContentFromHTML() -> [String] {
+        do {
+            var arrayWithImageLinks = [String]()
             
+            let doc: Document = try! SwiftSoup.parse(htmlContent)
+            textContent = try doc.body()?.text() ?? ""
+            
+            let els: Elements = try SwiftSoup.parse(htmlContent).select("img")
+            for link: Element in els.array(){
+                let linkSrc: String = try link.attr("src")
+                arrayWithImageLinks.append(linkSrc)
+            }
+            
+            arrayWithImageLinks.uniqInPlace()
+            
+            return arrayWithImageLinks
+        } catch {
+            return [String]()
+        }
     }
     
-    convenience init() {
-        self.init(type: .Undefined, status: .Unread, title: "Empty event", text: "Empty event",
-                  date: Date(), arrayWithImagesURL: ["https://quitsmokingtogether.ru/images/97.jpg"])
+    convenience init(withResult resultDictionary: [String: Any]) {
+        
+        let renderedIitle = resultDictionary["title"] as? [String: Any] ?? [String: Any]()
+        let title = renderedIitle["rendered"] as? String  ?? ""
+        let renderedContent = resultDictionary["content"] as? [String: Any] ?? [String: Any]()
+        let htmlContent = renderedContent["rendered"] as? String  ?? ""
+        
+        let id = resultDictionary["id"] as? Int ?? 0
+        
+        let textContent = htmlContent
+        let dateString = resultDictionary["date"] as? String ?? ""
+        let date = Date()
+        let status = EventStatus.Unread
+        let type = EventType.News
+        
+        self.init(id: id, date: date, title: title,
+                  htmlContent: htmlContent, textContent: textContent,
+                  type: type, status: status)
     }
-    
-    
-    
-    
-    
-//    init(id: Int, title: String, textContent: String, htmlContent: String, date: String) {
-//        self.date = date
-//
-//        super.init(id: id, title: title, textContent: textContent, htmlContent: htmlContent)
-//    }
-//
-//    convenience init() {
-//        self.init(id: 0, title: "", textContent: "", htmlContent: "", date: "")
-//    }
-//
-//    convenience init(withResult resultDictionary: [String: Any]) {
-//
-//        let renderedIitle = resultDictionary["title"] as? [String: Any] ?? [String: Any]()
-//        let title = renderedIitle["rendered"] as? String  ?? ""
-//        let renderedContent = resultDictionary["content"] as? [String: Any] ?? [String: Any]()
-//        let htmlContent = renderedContent["rendered"] as? String  ?? ""
-//
-//        let id = resultDictionary["id"] as? Int ?? 0
-//
-//        let textContent = htmlContent
-//        let newsDateString = resultDictionary["date"] as? String ?? ""
-//
-//        self.init(id: id, title: title, textContent: textContent, htmlContent: htmlContent, date: newsDateString)
-//    }
-    
-    
-    
-    
-    
     
     
     func getFormattedDateFrom(stringWithDate: String, andTimezone timezone: String) -> Date {

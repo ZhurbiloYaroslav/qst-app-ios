@@ -26,9 +26,9 @@ class EventCell: UITableViewCell {
         
         currentEvent = event
         eventImage.image = UIImage(named: "placeHolder.png")
-        eventImage.downloadedFrom(link: event.imagesHttpAddr[0], contentMode: .scaleAspectFill)
+        eventImage.downloadedFrom(link: event.arrayWithImageLinks[0], contentMode: .scaleAspectFill)
         eventTitle.text = event.title
-        eventDescription.text = event.text
+        eventDescription.text = event.textContent
         
         eventStarredButton.makeButtonActiveIfActive(currentEvent)
         
