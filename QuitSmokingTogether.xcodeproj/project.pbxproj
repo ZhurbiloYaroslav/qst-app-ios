@@ -74,6 +74,18 @@
 		C4B057211FC86E4100699B6F /* EventDescVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B057201FC86E4100699B6F /* EventDescVC.swift */; };
 		C4B057231FC8852D00699B6F /* EventsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B057221FC8852D00699B6F /* EventsList.swift */; };
 		C4B057251FC9806100699B6F /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B057241FC9806100699B6F /* ProfileVC.swift */; };
+		C4B53FF82021F51C000D7C73 /* ic_cross_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4B53FE92021F51C000D7C73 /* ic_cross_white@2x.png */; };
+		C4B53FF92021F51C000D7C73 /* ic_cross_white@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4B53FEA2021F51C000D7C73 /* ic_cross_white@3x.png */; };
+		C4B53FFA2021F51C000D7C73 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B53FED2021F51C000D7C73 /* ActivityIndicator.swift */; };
+		C4B53FFB2021F51C000D7C73 /* FullScreenSlideshowViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B53FEE2021F51C000D7C73 /* FullScreenSlideshowViewController.swift */; };
+		C4B53FFC2021F51C000D7C73 /* ImageSlideshow.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B53FEF2021F51C000D7C73 /* ImageSlideshow.swift */; };
+		C4B53FFD2021F51C000D7C73 /* ImageSlideshowItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B53FF02021F51C000D7C73 /* ImageSlideshowItem.swift */; };
+		C4B53FFE2021F51C000D7C73 /* InputSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B53FF12021F51C000D7C73 /* InputSource.swift */; };
+		C4B53FFF2021F51C000D7C73 /* UIImage+AspectFit.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B53FF22021F51C000D7C73 /* UIImage+AspectFit.swift */; };
+		C4B540002021F51C000D7C73 /* UIImageView+Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B53FF32021F51C000D7C73 /* UIImageView+Tools.swift */; };
+		C4B540012021F51C000D7C73 /* ZoomAnimatedTransitioning.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B53FF42021F51C000D7C73 /* ZoomAnimatedTransitioning.swift */; };
+		C4B540022021F51C000D7C73 /* SDWebImageSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B53FF62021F51C000D7C73 /* SDWebImageSource.swift */; };
+		C4B540032021F51C000D7C73 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = C4B53FF72021F51C000D7C73 /* README.md */; };
 		C4B8088C1F9DE7430099DA49 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8088B1F9DE7430099DA49 /* UserDefaultsManager.swift */; };
 		C4B8088E1F9F2CCF0099DA49 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8088D1F9F2CCF0099DA49 /* LoginVC.swift */; };
 		C4B808921F9F36FA0099DA49 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4B808911F9F36F60099DA49 /* GoogleService-Info.plist */; };
@@ -177,6 +189,18 @@
 		C4B057201FC86E4100699B6F /* EventDescVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventDescVC.swift; sourceTree = "<group>"; };
 		C4B057221FC8852D00699B6F /* EventsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsList.swift; sourceTree = "<group>"; };
 		C4B057241FC9806100699B6F /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		C4B53FE92021F51C000D7C73 /* ic_cross_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_cross_white@2x.png"; sourceTree = "<group>"; };
+		C4B53FEA2021F51C000D7C73 /* ic_cross_white@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_cross_white@3x.png"; sourceTree = "<group>"; };
+		C4B53FED2021F51C000D7C73 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
+		C4B53FEE2021F51C000D7C73 /* FullScreenSlideshowViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullScreenSlideshowViewController.swift; sourceTree = "<group>"; };
+		C4B53FEF2021F51C000D7C73 /* ImageSlideshow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSlideshow.swift; sourceTree = "<group>"; };
+		C4B53FF02021F51C000D7C73 /* ImageSlideshowItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageSlideshowItem.swift; sourceTree = "<group>"; };
+		C4B53FF12021F51C000D7C73 /* InputSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputSource.swift; sourceTree = "<group>"; };
+		C4B53FF22021F51C000D7C73 /* UIImage+AspectFit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImage+AspectFit.swift"; sourceTree = "<group>"; };
+		C4B53FF32021F51C000D7C73 /* UIImageView+Tools.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIImageView+Tools.swift"; sourceTree = "<group>"; };
+		C4B53FF42021F51C000D7C73 /* ZoomAnimatedTransitioning.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZoomAnimatedTransitioning.swift; sourceTree = "<group>"; };
+		C4B53FF62021F51C000D7C73 /* SDWebImageSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SDWebImageSource.swift; sourceTree = "<group>"; };
+		C4B53FF72021F51C000D7C73 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		C4B8088B1F9DE7430099DA49 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		C4B8088D1F9F2CCF0099DA49 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		C4B808911F9F36F60099DA49 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -563,6 +587,65 @@
 			path = Share;
 			sourceTree = "<group>";
 		};
+		C4B53FE62021F4D8000D7C73 /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				C4B53FE72021F51C000D7C73 /* ImageSlideshow */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		C4B53FE72021F51C000D7C73 /* ImageSlideshow */ = {
+			isa = PBXGroup;
+			children = (
+				C4B53FE82021F51C000D7C73 /* Assets */,
+				C4B53FEB2021F51C000D7C73 /* Classes */,
+				C4B53FF72021F51C000D7C73 /* README.md */,
+			);
+			path = ImageSlideshow;
+			sourceTree = "<group>";
+		};
+		C4B53FE82021F51C000D7C73 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				C4B53FE92021F51C000D7C73 /* ic_cross_white@2x.png */,
+				C4B53FEA2021F51C000D7C73 /* ic_cross_white@3x.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		C4B53FEB2021F51C000D7C73 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				C4B53FEC2021F51C000D7C73 /* Core */,
+				C4B53FF52021F51C000D7C73 /* InputSources */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		C4B53FEC2021F51C000D7C73 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				C4B53FED2021F51C000D7C73 /* ActivityIndicator.swift */,
+				C4B53FEE2021F51C000D7C73 /* FullScreenSlideshowViewController.swift */,
+				C4B53FEF2021F51C000D7C73 /* ImageSlideshow.swift */,
+				C4B53FF02021F51C000D7C73 /* ImageSlideshowItem.swift */,
+				C4B53FF12021F51C000D7C73 /* InputSource.swift */,
+				C4B53FF22021F51C000D7C73 /* UIImage+AspectFit.swift */,
+				C4B53FF32021F51C000D7C73 /* UIImageView+Tools.swift */,
+				C4B53FF42021F51C000D7C73 /* ZoomAnimatedTransitioning.swift */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		C4B53FF52021F51C000D7C73 /* InputSources */ = {
+			isa = PBXGroup;
+			children = (
+				C4B53FF62021F51C000D7C73 /* SDWebImageSource.swift */,
+			);
+			path = InputSources;
+			sourceTree = "<group>";
+		};
 		C4CECEE71F94CDB5009C85DE /* Settings_Cells */ = {
 			isa = PBXGroup;
 			children = (
@@ -596,6 +679,7 @@
 				C4B808971F9F8AB80099DA49 /* QuitSmokingTogether.entitlements */,
 				C4D4584C1F8021D100565A3F /* Info.plist */,
 				C410E7CC1F97BB7300EEFB7B /* Extensions */,
+				C4B53FE62021F4D8000D7C73 /* Libraries */,
 				C4EBF5301FA61B8D00753D0C /* Protocols */,
 				C455D5851F8CFE1C002846D9 /* Resources */,
 				C455D5821F8CFDEE002846D9 /* Model */,
@@ -729,9 +813,11 @@
 				C415AA941FE16D7C00BC5365 /* Online.storyboard in Resources */,
 				C463F86E1FF4317F001FBBC1 /* ContactCell.xib in Resources */,
 				C463F86A1FF4270B001FBBC1 /* OverviewEventCell.xib in Resources */,
+				C4B53FF92021F51C000D7C73 /* ic_cross_white@3x.png in Resources */,
 				C4D458481F8021D100565A3F /* Assets.xcassets in Resources */,
 				C415AA961FE16E1C00BC5365 /* Advice.storyboard in Resources */,
 				C4C0EEEB1FD0AA3800CA258B /* EventsList.plist in Resources */,
+				C4B53FF82021F51C000D7C73 /* ic_cross_white@2x.png in Resources */,
 				C4258EFC1FC2D2AA009FCBC8 /* alex.jpg in Resources */,
 				C46DFB261FC4888F00A62D69 /* Advices.plist in Resources */,
 				C415AA9E1FE16FCE00BC5365 /* EventsList.storyboard in Resources */,
@@ -742,6 +828,7 @@
 				C4C236491FE190B3005219A0 /* About.storyboard in Resources */,
 				C46DFB291FC489B000A62D69 /* comp-170531-1.jpg in Resources */,
 				C4258EFE1FC2D2D9009FCBC8 /* qstBook.jpg in Resources */,
+				C4B540032021F51C000D7C73 /* README.md in Resources */,
 				C4258F021FC31D18009FCBC8 /* author-big.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -816,6 +903,7 @@
 				C4C0EEC51FCEF07C00CA258B /* FirebaseManager.swift in Sources */,
 				C4CE20D01FD6E8FA00537893 /* StarButton.swift in Sources */,
 				C455D5871F8CFE75002846D9 /* AdviceVC.swift in Sources */,
+				C4B53FFD2021F51C000D7C73 /* ImageSlideshowItem.swift in Sources */,
 				C41B6F0C1FA2486B00B40F93 /* UIViewController+hideKeyboard.swift in Sources */,
 				C4EBF5321FA61BE900753D0C /* HideKeyboard.swift in Sources */,
 				C4B057131FC6E35C00699B6F /* OnlineVC.swift in Sources */,
@@ -829,11 +917,15 @@
 				C42F0B731FDDC75200C3D619 /* AppProducts.swift in Sources */,
 				C4B057111FC6E32300699B6F /* EventsListVC.swift in Sources */,
 				C4A4D3041FA87AE800EC9D50 /* OptAccountCell.swift in Sources */,
+				C4B53FFA2021F51C000D7C73 /* ActivityIndicator.swift in Sources */,
 				C4D4583E1F8021D100565A3F /* AppDelegate.swift in Sources */,
 				C4E5F0DD1FD7FFBB00AE1D93 /* Validator.swift in Sources */,
 				C47FE0BD1FDB35EE008232CA /* RemoveAdvertVC.swift in Sources */,
+				C4B53FFF2021F51C000D7C73 /* UIImage+AspectFit.swift in Sources */,
 				C4A4D3061FA87B3F00EC9D50 /* CurrentUser.swift in Sources */,
+				C4B53FFE2021F51C000D7C73 /* InputSource.swift in Sources */,
 				C4A4D30A1FA8D93400EC9D50 /* Typealiases.swift in Sources */,
+				C4B540022021F51C000D7C73 /* SDWebImageSource.swift in Sources */,
 				C4C127661FE11B3B00630E22 /* AppPurchase.swift in Sources */,
 				C4E5F0DF1FD8026400AE1D93 /* Alert.swift in Sources */,
 				C46DFB2C1FC48B2A00A62D69 /* OverviewEventCell.swift in Sources */,
@@ -847,8 +939,10 @@
 				C4B057251FC9806100699B6F /* ProfileVC.swift in Sources */,
 				C47317901F8D0C1700A6AE43 /* OverviewReadCell.swift in Sources */,
 				C461A2D21F8F9EF400B698FA /* NavBarVC.swift in Sources */,
+				C4B53FFC2021F51C000D7C73 /* ImageSlideshow.swift in Sources */,
 				C4CA86681F9641C800A8772D /* FAQAnswerVC.swift in Sources */,
 				C4D458461F8021D100565A3F /* QuitSmokingTogether.xcdatamodeld in Sources */,
+				C4B540012021F51C000D7C73 /* ZoomAnimatedTransitioning.swift in Sources */,
 				C4C0EEE51FD061F100CA258B /* EventsFilter.swift in Sources */,
 				C429370C1FB9E9010016A02F /* UIScrollView+scrollToView.swift in Sources */,
 				C4B8088E1F9F2CCF0099DA49 /* LoginVC.swift in Sources */,
@@ -858,6 +952,8 @@
 				C410E7D41F97C67E00EEFB7B /* Advices.swift in Sources */,
 				C455D58B1F8D0024002846D9 /* SettingsVC.swift in Sources */,
 				C4B057211FC86E4100699B6F /* EventDescVC.swift in Sources */,
+				C4B540002021F51C000D7C73 /* UIImageView+Tools.swift in Sources */,
+				C4B53FFB2021F51C000D7C73 /* FullScreenSlideshowViewController.swift in Sources */,
 				C42F0B711FDDC71100C3D619 /* IAPHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
