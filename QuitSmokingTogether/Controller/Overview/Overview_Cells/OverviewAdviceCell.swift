@@ -19,7 +19,7 @@ class OverviewAdviceCell: UITableViewCell {
     }
     
     func updateCell() {
-        let advices = Advices()
+        let advices = AdvicesManager()
         adviceTextLabel.text = advices.getRandomAdvice()
         adviceTitleLabel.text = advices.currentAdviceTitle
     }

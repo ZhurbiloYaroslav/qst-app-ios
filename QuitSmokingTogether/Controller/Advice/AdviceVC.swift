@@ -8,12 +8,17 @@
 
 import UIKit
 
+extension AdviceVC: StoryboardInitialized {}
+
 class AdviceVC: UIViewController {
+    
+    @IBOutlet weak var characterImage: UIImageView!
     
     @IBOutlet weak var adviceTitleLabel: UILabel!
     @IBOutlet weak var adviceMessageLabel: UILabel!
     @IBOutlet weak var scrollView: UIScrollView!
-    var advices: Advices!
+    
+    var advices: AdvicesManager!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +27,8 @@ class AdviceVC: UIViewController {
     }
     
     func initializeVariables() {
-        self.advices = Advices()
+        self.advices = AdvicesManager()
+        characterImage.image = advices.currentCharacterImage
         adviceTitleLabel.text = advices.currentAdviceTitle
         adviceMessageLabel.text = advices.currentAdviceMessage
     }
@@ -30,12 +36,14 @@ class AdviceVC: UIViewController {
     @IBAction func backAdviceButtonPressed(_ sender: UIButton) {
         adviceMessageLabel.text = advices.getPreviousAdvice()
         adviceTitleLabel.text = advices.currentAdviceTitle
+        characterImage.image = advices.currentCharacterImage
         scrollView.scrollToTop(animated: false)
     }
     
     @IBAction func nextAdviceButtonPressed(_ sender: UIButton) {
         adviceMessageLabel.text = advices.getNextAdvice()
         adviceTitleLabel.text = advices.currentAdviceTitle
+        characterImage.image = advices.currentCharacterImage
         scrollView.scrollToTop(animated: false)
     }
     

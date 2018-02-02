@@ -6,13 +6,14 @@
 //  Copyright © 2017 Yaroslav Zhurbilo. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-class Advices {
+class AdvicesManager {
     
     private let defaults = UserDefaults.standard
     
-    var items: [[String: Any]] = []
+    var arrayWithAdvices: [Advice] = [Advice]()
+    
     var currentAdviceIndex: Int {
         get {
             return defaults.object(forKey: "currentAdviceIndex") as? Int ?? 0
@@ -22,17 +23,17 @@ class Advices {
             defaults.synchronize()
         }
     }
+    
     var currentAdviceTitle: String {
-        guard let adviceTitle = items[currentAdviceIndex]["Title"] as? String else {
-            return ""
-        }
-        return adviceTitle
+        return arrayWithAdvices[currentAdviceIndex].title
     }
+    
     var currentAdviceMessage: String {
-        guard let adviceMessage = items[currentAdviceIndex]["Advice"] as? String else {
-            return ""
-        }
-        return adviceMessage
+        return arrayWithAdvices[currentAdviceIndex].message
+    }
+    
+    var currentCharacterImage: UIImage {
+        return arrayWithAdvices[currentAdviceIndex].image
     }
     
     init() {
@@ -40,7 +41,7 @@ class Advices {
     }
     
     var numberOfAdvices: Int {
-        return items.count
+        return arrayWithAdvices.count
     }
     
     func getRandomAdvice() -> String {
@@ -82,27 +83,9 @@ class Advices {
         }
         
         for adviceDict in arrayWithAdvicesDictionaries {
-            items.append(adviceDict)
+            let advice = Advice(withDict: adviceDict)
+            arrayWithAdvices.append(advice)
         }
         
     }
-    
-    //    func parseAdvicesCsv() {
-    //        if let path = Bundle.main.path(forResource: "Advices", ofType: "csv") {
-    //            do {
-    //                let stream = InputStream(fileAtPath: path)!
-    //                let csv = try! CSVReader(stream: stream, hasHeaderRow: true)
-    //                while csv.next() != nil {
-    //                    createItemAndCategoryFromParsedRow(csv)
-    //                }
-    //            } catch {
-    //                print(error.localizedDescription)
-    //            }
-    //        }
-    //    }
-    
-    //    func createItemAndCategoryFromParsedRow(_ csv: CSVReader) {
-    //        guard let advice = csv["Advice"] else { return }
-    //        items.append(advice)
-    //    }
 }

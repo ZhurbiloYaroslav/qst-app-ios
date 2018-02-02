@@ -67,9 +67,11 @@ class OverviewVC: UIViewController {
     }
     
     func showAdviceView() {
-        performSegue(withIdentifier: "showAdviceFromOverview", sender: nil)
+        if let adviceVC = AdviceVC.storyboardInstance() {
+            navigationController?.pushViewController(adviceVC, animated: true)
+        }
     }
-    
+
     func showEventDescriptionWith(type: Event.EventType) {
         if let navController = self.tabBarController?.viewControllers?[1] as? UINavigationController{
             if let eventsListController = navController.childViewControllers.first as? EventsListVC {
