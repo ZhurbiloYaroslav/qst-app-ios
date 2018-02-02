@@ -10,6 +10,7 @@ import UIKit
 
 class OverviewAdviceCell: UITableViewCell {
 
+    @IBOutlet weak var characterImage: UIImageView!
     @IBOutlet weak var adviceTitleLabel: UILabel!
     @IBOutlet weak var adviceTextLabel: UILabel!
     
@@ -22,6 +23,7 @@ class OverviewAdviceCell: UITableViewCell {
         let advices = AdvicesManager()
         adviceTextLabel.text = advices.getRandomAdvice()
         adviceTitleLabel.text = advices.currentAdviceTitle
+        characterImage.image = advices.currentCharacterImage
     }
 
 }

@@ -108,6 +108,7 @@ extension OverviewVC: UITableViewDataSource, UITableViewDelegate {
             
         case [0,1]:
             let cell = tableView.dequeueReusableCell(withIdentifier: "OverviewAdviceCell", for: indexPath) as! OverviewAdviceCell
+            cell.updateCell()
             return cell
             
         case [0,2]:
