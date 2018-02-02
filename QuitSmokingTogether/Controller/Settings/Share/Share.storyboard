@@ -1,47 +1,60 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gzz-8J-ZAm">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gzz-8J-ZAm">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="AvenirNext.ttc">
-            <string>AvenirNext-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Share-->
         <scene sceneID="Eog-mP-YQ0">
             <objects>
                 <viewController storyboardIdentifier="ShareVC" title="Share" hidesBottomBarWhenPushed="YES" id="gzz-8J-ZAm" customClass="ShareVC" customModule="QuitSmokingTogether" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8Bv-gW-5En">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="850"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ubu-cf-Gia">
-                                <rect key="frame" x="20" y="30" width="335" height="627"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="d8P-Xq-Dh7">
+                                <rect key="frame" x="0.0" y="20" width="320" height="830"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6Rx-q9-ol5">
-                                        <rect key="frame" x="0.0" y="0.0" width="335" height="93"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ysK-Ra-GrT" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="827"/>
                                         <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Share this App with your friends and help them to quit smoking! Also, you can share my paper book and website" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eb4-6v-AKi">
-                                                <rect key="frame" x="0.0" y="0.0" width="335" height="93"/>
-                                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
-                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="character-thumbs-up" translatesAutoresizingMaskIntoConstraints="NO" id="QZr-6o-q7j">
+                                                <rect key="frame" x="16" y="20" width="288" height="192"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="QZr-6o-q7j" secondAttribute="height" multiplier="3:2" id="ZhD-Sf-zFq"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eb4-6v-AKi">
+                                                <rect key="frame" x="16" y="227" width="288" height="410"/>
+                                                <attributedString key="attributedText">
+                                                    <fragment>
+                                                        <string key="content">Спаси жизнь!
+
+Помоги своим друзьям и знакомым избавиться от никотиновой зависимости и ты подаришь им десять-двадцать лет жизни. Они увидят своих детей, внуков, сделают  доброе дело, посадят дерево, построят дом,  помогут нуждающимся. 
+
+Спасти жизнь просто!
+
+Поделитесь этим приложением, книгой «Бросим курить вместе», нашим сайтом www.quitsmokingtogether.org с вашими друзьям, знакомыми  и  возможно вы спасете им жизнь! 
+Так просто и так много, все в ваших руках!!!
+</string>
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <font key="NSFont" size="15" name="AvenirNext-Regular"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                        </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="IYE-Rr-WBl">
-                                        <rect key="frame" x="0.0" y="113" width="335" height="120"/>
-                                        <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BnY-UP-Agc">
-                                                <rect key="frame" x="0.0" y="0.0" width="335" height="50"/>
+                                                <rect key="frame" x="16" y="657" width="288" height="50"/>
                                                 <color key="backgroundColor" red="0.31764705879999999" green="0.59607843140000005" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="6D8-gk-XjS"/>
@@ -65,7 +78,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NSn-os-zDP">
-                                                <rect key="frame" x="0.0" y="70" width="335" height="50"/>
+                                                <rect key="frame" x="16" y="727" width="288" height="50"/>
                                                 <color key="backgroundColor" red="0.86274509799999999" green="0.50196078430000002" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="IjT-ip-Rrc"/>
@@ -89,35 +102,55 @@
                                                 </connections>
                                             </button>
                                         </subviews>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="248" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="vzI-lj-IaK">
-                                        <rect key="frame" x="0.0" y="253" width="335" height="374"/>
-                                        <subviews>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IyE-bT-VYZ">
-                                                <rect key="frame" x="0.0" y="0.0" width="335" height="374"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                        </subviews>
-                                    </stackView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="Eb4-6v-AKi" firstAttribute="top" secondItem="QZr-6o-q7j" secondAttribute="bottom" constant="15" id="Kpt-n6-7Zk"/>
+                                            <constraint firstAttribute="trailing" secondItem="BnY-UP-Agc" secondAttribute="trailing" constant="16" id="OI6-mf-28p"/>
+                                            <constraint firstAttribute="trailing" secondItem="QZr-6o-q7j" secondAttribute="trailing" constant="16" id="YC4-a3-qNL"/>
+                                            <constraint firstItem="QZr-6o-q7j" firstAttribute="leading" secondItem="ysK-Ra-GrT" secondAttribute="leading" constant="16" id="aHE-hN-CCS"/>
+                                            <constraint firstItem="BnY-UP-Agc" firstAttribute="leading" secondItem="ysK-Ra-GrT" secondAttribute="leading" constant="16" id="bqT-qc-2qQ"/>
+                                            <constraint firstAttribute="trailing" secondItem="Eb4-6v-AKi" secondAttribute="trailing" constant="16" id="c4N-pL-n8y"/>
+                                            <constraint firstItem="Eb4-6v-AKi" firstAttribute="leading" secondItem="ysK-Ra-GrT" secondAttribute="leading" constant="16" id="d2s-KW-5a4"/>
+                                            <constraint firstAttribute="bottom" secondItem="NSn-os-zDP" secondAttribute="bottom" constant="50" id="ksB-Mt-dQV"/>
+                                            <constraint firstItem="NSn-os-zDP" firstAttribute="top" secondItem="BnY-UP-Agc" secondAttribute="bottom" constant="20" id="mXh-aJ-P7d"/>
+                                            <constraint firstItem="NSn-os-zDP" firstAttribute="leading" secondItem="ysK-Ra-GrT" secondAttribute="leading" constant="16" id="qcb-lw-HEp"/>
+                                            <constraint firstItem="BnY-UP-Agc" firstAttribute="top" secondItem="Eb4-6v-AKi" secondAttribute="bottom" constant="20" id="rF6-Ml-vuc"/>
+                                            <constraint firstAttribute="trailing" secondItem="NSn-os-zDP" secondAttribute="trailing" constant="16" id="xkP-VJ-o9f"/>
+                                            <constraint firstItem="QZr-6o-q7j" firstAttribute="top" secondItem="ysK-Ra-GrT" secondAttribute="top" constant="20" id="yJ4-JB-J10"/>
+                                        </constraints>
+                                    </view>
                                 </subviews>
-                            </stackView>
+                                <constraints>
+                                    <constraint firstItem="ysK-Ra-GrT" firstAttribute="leading" secondItem="d8P-Xq-Dh7" secondAttribute="leading" id="A0q-yQ-B5a"/>
+                                    <constraint firstAttribute="trailing" secondItem="ysK-Ra-GrT" secondAttribute="trailing" id="O4A-oh-a2l"/>
+                                    <constraint firstItem="ysK-Ra-GrT" firstAttribute="top" secondItem="d8P-Xq-Dh7" secondAttribute="top" id="P1b-jZ-FOf"/>
+                                    <constraint firstAttribute="bottom" secondItem="ysK-Ra-GrT" secondAttribute="bottom" id="UhN-hD-IAE"/>
+                                </constraints>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="AyG-JY-ok5" firstAttribute="trailing" secondItem="ubu-cf-Gia" secondAttribute="trailing" constant="20" id="Vbz-dd-d84"/>
-                            <constraint firstItem="ubu-cf-Gia" firstAttribute="top" secondItem="8Bv-gW-5En" secondAttribute="top" constant="30" id="b7j-Be-i6s"/>
-                            <constraint firstAttribute="bottom" secondItem="ubu-cf-Gia" secondAttribute="bottom" constant="10" id="tLj-VJ-ed6"/>
-                            <constraint firstItem="ubu-cf-Gia" firstAttribute="leading" secondItem="AyG-JY-ok5" secondAttribute="leading" constant="20" id="xRu-iV-S4Z"/>
+                            <constraint firstItem="d8P-Xq-Dh7" firstAttribute="top" secondItem="AyG-JY-ok5" secondAttribute="top" id="36q-s5-DA9"/>
+                            <constraint firstItem="ysK-Ra-GrT" firstAttribute="height" secondItem="8Bv-gW-5En" secondAttribute="height" priority="250" id="7Tl-zr-CzS"/>
+                            <constraint firstItem="ysK-Ra-GrT" firstAttribute="width" secondItem="8Bv-gW-5En" secondAttribute="width" id="7Yd-BA-e3a"/>
+                            <constraint firstItem="AyG-JY-ok5" firstAttribute="bottom" secondItem="d8P-Xq-Dh7" secondAttribute="bottom" id="GGn-3H-53e"/>
+                            <constraint firstItem="d8P-Xq-Dh7" firstAttribute="leading" secondItem="AyG-JY-ok5" secondAttribute="leading" id="IqR-o4-pPR"/>
+                            <constraint firstItem="AyG-JY-ok5" firstAttribute="trailing" secondItem="d8P-Xq-Dh7" secondAttribute="trailing" id="UDl-ln-zY8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="AyG-JY-ok5"/>
                     </view>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <size key="freeformSize" width="320" height="850"/>
+                    <connections>
+                        <outlet property="shareTextMessage" destination="Eb4-6v-AKi" id="BKN-I1-2Va"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kfj-Nj-luF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2858" y="2639"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="character-thumbs-up" width="1100" height="777"/>
+    </resources>
 </document>

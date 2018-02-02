@@ -25,7 +25,7 @@ class EventsManager: NSObject {
         guard let url = path.getURL() else { return errorMessages.append(.badURL) }
         
         Alamofire.request(url).responseJSON { response in
-            print(response)
+
             if let errorMessages = self.parseResultDataWith(response, andPath: path) {
                 completionHandler(errorMessages)
             } else {

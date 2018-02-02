@@ -13,11 +13,19 @@ import FacebookShare
 
 class ShareVC: UIViewController {
     
+    @IBOutlet weak var shareTextMessage: UILabel!
+    
     var presentThisVcFromReader: Bool?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        updateUIWithLocalizedText()
+        
+    }
+    
+    func updateUIWithLocalizedText() {
+        shareTextMessage.text = "share_text_message".localized()
     }
     
     @IBAction func shareWithFacebookButtonPressed(_ sender: UIButton) {
