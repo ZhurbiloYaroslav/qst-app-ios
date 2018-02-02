@@ -9,11 +9,15 @@
 import UIKit
 import StoreKit
 
+extension RemoveAdvertVC: StoryboardInitialized {}
+
 class RemoveAdvertVC: UIViewController {
     
     var products = [SKProduct]()
     
     var userDefaultsManager: UserDefaultsManager!
+    
+    @IBOutlet var slideshow: ImageSlideshow!
     
     @IBOutlet weak var messageTextLabel: UILabel!
     
@@ -26,7 +30,14 @@ class RemoveAdvertVC: UIViewController {
         initializeVariables()
         
         setNObserverToHandlePurchaseNotification()
+        updateUIWithLocalizedText()
+        setupImageSlider()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
         
+        reload()
     }
     
     func initializeVariables() {
@@ -38,10 +49,8 @@ class RemoveAdvertVC: UIViewController {
         
     }
     
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        reload()
+    func updateUIWithLocalizedText() {
+        messageTextLabel.text = "advert_remove_text_message".localized()
     }
     
     func reload() {
@@ -98,6 +107,48 @@ class RemoveAdvertVC: UIViewController {
                                                object: nil)
     }
     
+}
+
+// Slider
+extension RemoveAdvertVC {
+    
+    func setupImageSlider() {
+        slideshow.backgroundColor = UIColor.clear
+        slideshow.slideshowInterval = 5.0
+        slideshow.pageControlPosition = PageControlPosition.underScrollView
+        slideshow.pageControl.currentPageIndicatorTintColor = UIColor.lightGray
+        slideshow.pageControl.pageIndicatorTintColor = UIColor.black
+        slideshow.contentScaleMode = UIViewContentMode.scaleAspectFill
+        slideshow.activityIndicator = DefaultActivityIndicator()
+        slideshow.currentPageChanged = { page in }
+        
+        let recognizer = UITapGestureRecognizer(target: self, action: #selector(RemoveAdvertVC.didTap))
+        slideshow.addGestureRecognizer(recognizer)
+        
+        setupSlideShow()
+    }
+    
+    func setupSlideShow() {
+        
+        var arrayWithImageSource = [ImageSource]()
+        let arrayWithLocalImages = [
+            ImageSource(imageString: "dsc06256"),
+            ImageSource(imageString: "dsc06257")
+        ]
+        for imageSource in arrayWithLocalImages {
+            if let imageSource = imageSource {
+                arrayWithImageSource.append(imageSource)
+            }
+        }
+        
+        slideshow.setImageInputs(arrayWithImageSource)
+    }
+    
+    @objc func didTap() {
+        let fullScreenController = slideshow.presentFullScreenController(from: self)
+        fullScreenController.slideshow.activityIndicator = DefaultActivityIndicator(style: .white, color: nil)
+        fullScreenController.closeButton.setImage(UIImage(named: "icon-close"), for: .normal)
+    }
 }
 
 extension RemoveAdvertVC {
