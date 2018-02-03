@@ -86,7 +86,7 @@ class OverviewVC: UIViewController {
 
     }
     
-    func showOnlineView() {
+    func showContactsView() {
         tabBarController?.selectedIndex = 3
     }
     
@@ -150,7 +150,7 @@ extension OverviewVC: UITableViewDataSource, UITableViewDelegate {
         case [0,3]:
             showEventDescriptionWith(type: .Competition)
         case [0,4]:
-            showOnlineView()
+            showContactsView()
         default:
             return
         }
