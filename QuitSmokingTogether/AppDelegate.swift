@@ -145,6 +145,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 extension AppDelegate: UNUserNotificationCenterDelegate {
     
+    /// Local and Push Notifications in IOS 9 and 10 using swift3
+    /// https://stackoverflow.com/questions/42688760/local-and-push-notifications-in-ios-9-and-10-using-swift3
+    
     func scheduleNotification() {
         // timeInterval is in seconds, so 60*60*12*3 = 3 days, set repeats to true if you want to repeat the trigger
         //let time = Constants.Time.didNotOpenApp

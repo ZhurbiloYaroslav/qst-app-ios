@@ -23,7 +23,7 @@ class AboutVC: UITableViewController {
     }
     
     @IBAction func websiteButtonPressed(_ sender: UIButton) {
-        Browser.openURLWith(.DigLabStudio)
+        Browser.openURLWith(.Soft4Status)
     }
 
 }

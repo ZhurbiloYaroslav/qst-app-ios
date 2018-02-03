@@ -9,8 +9,6 @@
 import UIKit
 import StoreKit
 
-extension RemoveAdvertVC: StoryboardInitialized {}
-
 class RemoveAdvertVC: UIViewController {
     
     var products = [SKProduct]()

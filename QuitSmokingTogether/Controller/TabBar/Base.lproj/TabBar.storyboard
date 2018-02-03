@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ccH-28-OSF">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -33,11 +33,11 @@
             </objects>
             <point key="canvasLocation" x="380" y="-4"/>
         </scene>
-        <!--Overview-->
+        <!--Main-->
         <scene sceneID="z8j-x2-3iy">
             <objects>
                 <navigationController storyboardIdentifier="NavBarVcOverview" automaticallyAdjustsScrollViewInsets="NO" id="k8t-bX-4uA" customClass="NavBarVC" customModule="QuitSmokingTogether" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Overview" image="icon_menu" id="Jvh-iJ-4na"/>
+                    <tabBarItem key="tabBarItem" title="Main" image="icon_menu" id="Jvh-iJ-4na"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Ayv-Zd-2zN">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
@@ -129,11 +129,11 @@
             </objects>
             <point key="canvasLocation" x="-580" y="920"/>
         </scene>
-        <!--Online-->
+        <!--Donate-->
         <scene sceneID="1uZ-z3-NtX">
             <objects>
                 <navigationController storyboardIdentifier="NavBarVcOnline" automaticallyAdjustsScrollViewInsets="NO" id="hJg-6k-kgZ" customClass="NavBarVC" customModule="QuitSmokingTogether" customModuleProvider="target" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Online" image="icon-online" id="DbT-0X-LSx"/>
+                    <tabBarItem key="tabBarItem" title="Donate" image="icon-donate" id="DbT-0X-LSx"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Yzd-T2-o9U">
                         <rect key="frame" x="0.0" y="20" width="414" height="44"/>
@@ -153,10 +153,10 @@
             </objects>
             <point key="canvasLocation" x="381" y="920"/>
         </scene>
-        <!--OnlineVC-->
+        <!--DonateVC-->
         <scene sceneID="I6a-il-FfZ">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="OnlineVC" storyboardName="Online" referencedIdentifier="OnlineVC" id="USb-eW-g4J" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="OnlineVC" storyboardName="Donate" referencedIdentifier="DonateVC" id="USb-eW-g4J" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="HcG-Um-St4"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fiR-Ew-3mi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -205,8 +205,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="icon-donate" width="27" height="31"/>
         <image name="icon-events" width="31" height="31"/>
-        <image name="icon-online" width="28" height="29"/>
         <image name="icon_book" width="29" height="28"/>
         <image name="icon_menu" width="29" height="29"/>
         <image name="icon_settings" width="31" height="31"/>

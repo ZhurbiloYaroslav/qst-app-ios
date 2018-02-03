@@ -19,8 +19,8 @@ class OverviewVC: UIViewController {
         super.viewDidLoad()
         
         setDelegates()
-        
         setupTableView()
+        updateUIWithLocalizedText()
 
     }
     
@@ -67,7 +67,7 @@ class OverviewVC: UIViewController {
     }
     
     func showAdviceView() {
-        if let adviceVC = AdviceVC.storyboardInstance() {
+        if let adviceVC = AdviceVC.getInstance() {
             navigationController?.pushViewController(adviceVC, animated: true)
         }
     }
@@ -90,6 +90,12 @@ class OverviewVC: UIViewController {
         tabBarController?.selectedIndex = 3
     }
     
+}
+
+extension OverviewVC {
+    func updateUIWithLocalizedText() {
+        navigationItem.title = "overview_screen_title".localized()
+    }
 }
 
 extension OverviewVC: UITableViewDataSource, UITableViewDelegate {

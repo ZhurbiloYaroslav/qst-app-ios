@@ -8,7 +8,7 @@
 
 import UIKit
 
-class OnlineVC: UIViewController {
+class ContactsVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -33,7 +33,7 @@ class OnlineVC: UIViewController {
     
 }
 
-extension OnlineVC: UITableViewDelegate, UITableViewDataSource {
+extension ContactsVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return ContactCell().arrayWithCells.count

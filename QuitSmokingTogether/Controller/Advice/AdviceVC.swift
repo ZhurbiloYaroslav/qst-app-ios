@@ -8,8 +8,6 @@
 
 import UIKit
 
-extension AdviceVC: StoryboardInitialized {}
-
 class AdviceVC: UIViewController {
     
     @IBOutlet weak var characterImage: UIImageView!
