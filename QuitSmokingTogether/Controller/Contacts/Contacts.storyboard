@@ -32,7 +32,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mbm-5L-f6K"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Online" id="v4f-8K-cUb"/>
+                    <navigationItem key="navigationItem" title="Contacts" id="v4f-8K-cUb"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="tableView" destination="ZjR-WI-Nd6" id="izG-Aa-ing"/>

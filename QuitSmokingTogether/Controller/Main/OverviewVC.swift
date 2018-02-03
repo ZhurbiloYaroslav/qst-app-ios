@@ -87,7 +87,9 @@ class OverviewVC: UIViewController {
     }
     
     func showContactsView() {
-        tabBarController?.selectedIndex = 3
+        if let contactsVC = ContactsVC.getInstance() {
+            navigationController?.pushViewController(contactsVC, animated: true)
+        }
     }
     
 }
