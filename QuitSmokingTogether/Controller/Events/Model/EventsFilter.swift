@@ -9,6 +9,9 @@
 import Foundation
 
 class EventsFilter {
+    
+    static var shared = EventsFilter()
+    
     var eventType: Event.EventType!
     var eventStatus: Event.EventStatus!
     

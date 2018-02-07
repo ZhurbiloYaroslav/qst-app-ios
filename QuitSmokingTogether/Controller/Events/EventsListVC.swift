@@ -8,13 +8,6 @@
 
 import UIKit
 
-extension EventsListVC: EventsManagerDelegate {
-    func didLoad(arrayWithEvents: [Event]) {
-        self.arrayWithEvents = arrayWithEvents
-        tableView.reloadData()
-    }
-}
-
 class EventsListVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
@@ -23,22 +16,17 @@ class EventsListVC: UIViewController {
     
     var arrayWithEvents: [Event] = [Event]()
     let eventManager = EventsManager()
+    var eventsFilter = EventsFilter()
     
     var eventToPresentFromOverview: Event?
     var doWePresentEventFromOverview = false
-    
-    var eventsFilter = EventsFilter()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         AdMobManager().getFullScreenInterstitialForVC(self)
         
-        eventManager.delegate = self
-        eventManager.retrieveInfoForPath(.events_all) { arrayWithErrors in
-            print(arrayWithErrors ?? "")
-        }
-//        arrayWithEvents = EventsList.getAllEventsWithType(eventsFilter.eventType, andStatus: eventsFilter.eventStatus)
+        eventManager.getEventsFromServer()
         setDelegates()
         switchFilterVisibility()
         setupTableView()

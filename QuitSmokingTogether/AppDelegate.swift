@@ -23,7 +23,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
-        test()
         chooseViewControllerToPresent()
         
         initializeAndConfigureFirebase()
@@ -34,12 +33,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.shared.applicationIconBadgeNumber = 0
         
         return true
-    }
-    
-    func test() {
-        EventsManager().retrieveInfoForPath(.events_all) { (arrayWithErrors) in
-            print(arrayWithErrors)
-        }
     }
     
     func initializeGoogleMobileAds() {
