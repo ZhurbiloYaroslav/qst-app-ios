@@ -14,8 +14,8 @@ import SwiftSoup
 public class Event: NSObject {
     
     var id: Int
-    var date: Date
-    var type: EventType = .Undefined
+    var date: String
+    var type: [EventType]
     var status: EventStatus = .Unread
     var title: String
     var htmlContent: String
@@ -25,8 +25,8 @@ public class Event: NSObject {
         return parseImagesAndContentFromHTML()
     }
     
-    init(id: Int, date: Date, title: String, htmlContent: String, textContent: String,
-         type: EventType, status: EventStatus) {
+    init(id: Int, date: String, title: String, htmlContent: String, textContent: String,
+         type: [EventType], status: EventStatus) {
         
         self.id = id
         self.date = date
@@ -37,9 +37,13 @@ public class Event: NSObject {
         self.textContent = textContent
     }
     
+    func getStringWithDate() -> String {
+        return date
+    }
+    
     convenience override init() {
-        self.init(id: 0, date: Date(), title: "Template", htmlContent: "", textContent: "",
-                  type: .Undefined, status: .Unread)
+        self.init(id: 0, date: "", title: "Template", htmlContent: "", textContent: "",
+                  type: [.Undefined], status: .Unread)
     }
     
     func parseImagesAndContentFromHTML() -> [String] {
@@ -65,22 +69,36 @@ public class Event: NSObject {
     
     convenience init(withResult resultDictionary: [String: Any]) {
         
-        let renderedIitle = resultDictionary["title"] as? [String: Any] ?? [String: Any]()
-        let title = renderedIitle["rendered"] as? String  ?? ""
-        let renderedContent = resultDictionary["content"] as? [String: Any] ?? [String: Any]()
-        let htmlContent = renderedContent["rendered"] as? String  ?? ""
-        
         let id = resultDictionary["id"] as? Int ?? 0
-        
+        let date = resultDictionary["date"] as? String ?? ""
+        let title = resultDictionary["title"] as? String  ?? ""
+        let htmlContent = resultDictionary["content"] as? String  ?? ""
         let textContent = htmlContent
-        let dateString = resultDictionary["date"] as? String ?? ""
-        let date = Date()
+        let dictWithTypes = resultDictionary["categories"] as? [[String: Any]] ?? [[String: Any]]()
+        
+        var eventTypes = [EventType]()
+        for dictionary in dictWithTypes {
+            let newType = EventType.getTypeFrom(withResult: dictionary)
+            eventTypes.append(newType)
+        }
+        
+        /////////
+        
         let status = EventStatus.Unread
-        let type = EventType.News
         
         self.init(id: id, date: date, title: title,
                   htmlContent: htmlContent, textContent: textContent,
-                  type: type, status: status)
+                  type: eventTypes, status: status)
+    }
+    
+    func getHTMLContent() -> String {
+        
+        guard let path = Bundle.main.path(forResource: "ArticleStyles", ofType: "css") else { return "" }
+        let cssString = try! String(contentsOfFile: path).trimmingCharacters(in: .whitespacesAndNewlines)
+        let doc: Document = try! SwiftSoup.parse(htmlContent)
+        try! doc.head()?.append("<style>\(cssString)</style>")
+        
+        return try! doc.html()
     }
     
     
@@ -100,6 +118,18 @@ public class Event: NSObject {
         case News = "News"
         case Competition = "Competition"
         case Undefined = "Undefined"
+        
+        static func getTypeFrom(withResult resultDictionary: [String: Any]) -> EventType {
+            
+            guard let name = resultDictionary["name"] as? String
+                else { return .Undefined }
+            
+            switch name {
+            case "News": return .News
+            case "Competitions": return .Competition
+            default: return .Undefined
+            }
+        }
     }
     
     enum EventStatus: String {

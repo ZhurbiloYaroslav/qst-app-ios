@@ -38,13 +38,15 @@ class OverviewEventCell: UITableViewCell {
             break
         }
         
-        let event = EventsList.getFirstEventWithType(eventType, andStatus: .Unread)
+        let event = EventsData.shared.getFirstEventWithType(eventType, andStatus: .Unread)
         self.currentEvent = event
         
-        eventImageView.downloadedFrom(link: "", contentMode: .scaleAspectFill)
-//        eventImageView.downloadedFrom(link: event.arrayWithImageLinks[0], contentMode: .scaleAspectFill)
         eventTitleLabel.text = event.title
         eventTextLabel.text = event.textContent
+        
+        if event.arrayWithImageLinks.count > 0 {
+            eventImageView.sd_setImage(with: URL(string: event.arrayWithImageLinks[0]), placeholderImage: #imageLiteral(resourceName: "bookCover"))
+        }
     }
     
     @IBAction func readMoreButtonPressed(_ sender: UIButton) {

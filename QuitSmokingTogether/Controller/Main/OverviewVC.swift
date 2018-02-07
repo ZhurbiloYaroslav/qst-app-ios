@@ -14,14 +14,22 @@ class OverviewVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var eventToPresent: Event?
+    var eventsManager = EventsManager.shared
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        eventsManager.eventsData.getEventsFromServer {
+            self.tableView.reloadData()
+        }
         setDelegates()
         setupTableView()
         updateUIWithLocalizedText()
 
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        //tableView.reloadData()
     }
     
     func setupTableView() {
@@ -29,10 +37,6 @@ class OverviewVC: UIViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         
         tableView.register(UINib(nibName: "OverviewEventCell", bundle: nil), forCellReuseIdentifier: "OverviewEventCell")
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        tableView.reloadData()
     }
     
     func setDelegates() {
@@ -73,16 +77,16 @@ class OverviewVC: UIViewController {
     }
 
     func showEventDescriptionWith(type: Event.EventType) {
+        
         if let navController = self.tabBarController?.viewControllers?[1] as? UINavigationController{
             if let eventsListController = navController.childViewControllers.first as? EventsListVC {
                 
-                eventsListController.eventToPresentFromOverview = EventsList.getFirstEventWithType(type, andStatus: .Unread)
+                let event = EventsData.shared.getFirstEventWithType(type, andStatus: .Unread)
+                eventsListController.eventToPresentFromOverview = event
                 eventsListController.doWePresentEventFromOverview = true
                 self.tabBarController?.selectedIndex = 1
             }
         }
-//        eventToPresent = EventsList.getFirstEventWithType(type, andStatus: .Unread)
-//        self.tabBarController?.selectedIndex = 1
 
     }
     

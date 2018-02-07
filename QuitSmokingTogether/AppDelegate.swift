@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        loadDataFromServer()
         chooseViewControllerToPresent()
         
         initializeAndConfigureFirebase()
@@ -33,6 +34,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UIApplication.shared.applicationIconBadgeNumber = 0
         
         return true
+    }
+    
+    func loadDataFromServer() {
+        EventsData.shared.getEventsFromServer {}
     }
     
     func initializeGoogleMobileAds() {
@@ -58,6 +63,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func loadLoginOrOverviewViewController() {
         
     }
+    
     func initializeAndConfigureFirebase() {
         FirebaseApp.configure()
     }

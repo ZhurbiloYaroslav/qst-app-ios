@@ -11,13 +11,19 @@ import Alamofire
 
 class EventsManager: NSObject {
     
-    private var eventsData = EventsData.shared
-    public var eventsFilter = EventsFilter.shared
+    public static let shared = EventsManager()
     
-    func getEventsFromServer() {
-        eventsData.getEventsFromServer { (arrayWithMessages) in
-            print(self.eventsData.arrayWithEvents)
-        }
+    public let eventsFilter = EventsFilter.shared
+    
+    public let eventsData = EventsData.shared
+    
+    func getNumberOfEvents() -> Int {
+        return eventsData.arrayWithEvents.count
+    }
+    
+    
+    func getEventFor(_ indexPath: IndexPath) -> Event {
+        return eventsData.arrayWithEvents[indexPath.row]
     }
     
     //        arrayWithEvents = EventsList.getAllEventsWithType(eventsFilter.eventType, andStatus: eventsFilter.eventStatus)

@@ -64,10 +64,14 @@ extension NetworkManager {
     
     func getArrayWithEventsFrom(_ response: DataResponse<Any>) -> ResultData {
         
-        guard let arrayWithEventsResult = response.result.value as? [(Dictionary<String, Any>)]  else {
+        guard let responseValue = response.result.value as? Dictionary<String, Any>  else {
             return ResultData.withErrors([NetworkError.undefined])
         }
         
+        guard let arrayWithEventsResult = responseValue["data"] as? [Dictionary<String, Any>]  else {
+            return ResultData.withErrors([NetworkError.undefined])
+        }
+                
         var arrayWithEvents = [Event]()
         for dictWithResult in arrayWithEventsResult {
             let event = Event(withResult: dictWithResult)
@@ -87,7 +91,7 @@ extension NetworkManager {
         var address: String {
             switch self {
             case .events:
-                return "wp-json/wp/v2/posts?_embed"
+                return "wp-json/s4s_rest/v1/news"
             }
         }
         
