@@ -14,6 +14,7 @@ class OverviewEventCell: UITableViewCell {
     @IBOutlet weak var eventImageView: UIImageView!
     @IBOutlet weak var eventTitleLabel: UILabel!
     @IBOutlet weak var eventTextLabel: UILabel!
+    @IBOutlet weak var readMoreLabel: UILabel!
     @IBOutlet weak var readMoreButton: UIButton!
     
     var currentEvent: Event!
@@ -21,6 +22,7 @@ class OverviewEventCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        readMoreLabel.setRadius(10, withWidth: 1, andColor: UIColor.clear)
     }
     
     enum ReadMoreButtonTag: Int {

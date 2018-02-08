@@ -53,69 +53,71 @@
                                                 </attributedString>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BnY-UP-Agc">
-                                                <rect key="frame" x="16" y="657" width="288" height="50"/>
-                                                <color key="backgroundColor" red="0.31764705879999999" green="0.59607843140000005" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="6D8-gk-XjS"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
-                                                <state key="normal" title="Share with Facebook">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="0.0"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="0.0"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="shareWithFacebookButtonPressed:" destination="gzz-8J-ZAm" eventType="touchUpInside" id="oKf-y6-QfD"/>
-                                                </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NSn-os-zDP">
-                                                <rect key="frame" x="16" y="727" width="288" height="50"/>
-                                                <color key="backgroundColor" red="0.86274509799999999" green="0.50196078430000002" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="50" id="IjT-ip-Rrc"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
-                                                <state key="normal" title="Share with other apps">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <userDefinedRuntimeAttributes>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                                        <real key="value" value="0.0"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                        <real key="value" value="0.0"/>
-                                                    </userDefinedRuntimeAttribute>
-                                                </userDefinedRuntimeAttributes>
-                                                <connections>
-                                                    <action selector="shareWithOtherAppsButtonPressed:" destination="gzz-8J-ZAm" eventType="touchUpInside" id="7Y3-pS-vwn"/>
-                                                </connections>
-                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="v58-yf-YcW" userLabel="ShareButtonsStack">
+                                                <rect key="frame" x="16" y="657" width="288" height="120"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BnY-UP-Agc">
+                                                        <rect key="frame" x="0.0" y="0.0" width="288" height="50"/>
+                                                        <color key="backgroundColor" red="0.31764705879999999" green="0.59607843140000005" blue="0.94509803920000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="6D8-gk-XjS"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                                        <state key="normal" title="Share with Facebook">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="shareWithFacebookButtonPressed:" destination="gzz-8J-ZAm" eventType="touchUpInside" id="oKf-y6-QfD"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NSn-os-zDP">
+                                                        <rect key="frame" x="0.0" y="70" width="288" height="50"/>
+                                                        <color key="backgroundColor" red="0.86274509799999999" green="0.50196078430000002" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="50" id="IjT-ip-Rrc"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                                        <state key="normal" title="Share with other apps">
+                                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        </state>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                <real key="value" value="0.0"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="shareWithOtherAppsButtonPressed:" destination="gzz-8J-ZAm" eventType="touchUpInside" id="7Y3-pS-vwn"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
                                             <constraint firstItem="Eb4-6v-AKi" firstAttribute="top" secondItem="QZr-6o-q7j" secondAttribute="bottom" constant="15" id="Kpt-n6-7Zk"/>
-                                            <constraint firstAttribute="trailing" secondItem="BnY-UP-Agc" secondAttribute="trailing" constant="16" id="OI6-mf-28p"/>
+                                            <constraint firstAttribute="trailing" secondItem="v58-yf-YcW" secondAttribute="trailing" constant="16" id="R1u-ui-7SW"/>
                                             <constraint firstAttribute="trailing" secondItem="QZr-6o-q7j" secondAttribute="trailing" constant="16" id="YC4-a3-qNL"/>
                                             <constraint firstItem="QZr-6o-q7j" firstAttribute="leading" secondItem="ysK-Ra-GrT" secondAttribute="leading" constant="16" id="aHE-hN-CCS"/>
-                                            <constraint firstItem="BnY-UP-Agc" firstAttribute="leading" secondItem="ysK-Ra-GrT" secondAttribute="leading" constant="16" id="bqT-qc-2qQ"/>
                                             <constraint firstAttribute="trailing" secondItem="Eb4-6v-AKi" secondAttribute="trailing" constant="16" id="c4N-pL-n8y"/>
                                             <constraint firstItem="Eb4-6v-AKi" firstAttribute="leading" secondItem="ysK-Ra-GrT" secondAttribute="leading" constant="16" id="d2s-KW-5a4"/>
-                                            <constraint firstAttribute="bottom" secondItem="NSn-os-zDP" secondAttribute="bottom" constant="50" id="ksB-Mt-dQV"/>
-                                            <constraint firstItem="NSn-os-zDP" firstAttribute="top" secondItem="BnY-UP-Agc" secondAttribute="bottom" constant="20" id="mXh-aJ-P7d"/>
-                                            <constraint firstItem="NSn-os-zDP" firstAttribute="leading" secondItem="ysK-Ra-GrT" secondAttribute="leading" constant="16" id="qcb-lw-HEp"/>
-                                            <constraint firstItem="BnY-UP-Agc" firstAttribute="top" secondItem="Eb4-6v-AKi" secondAttribute="bottom" constant="20" id="rF6-Ml-vuc"/>
-                                            <constraint firstAttribute="trailing" secondItem="NSn-os-zDP" secondAttribute="trailing" constant="16" id="xkP-VJ-o9f"/>
+                                            <constraint firstItem="v58-yf-YcW" firstAttribute="leading" secondItem="ysK-Ra-GrT" secondAttribute="leading" constant="16" id="nPF-DC-XMG"/>
+                                            <constraint firstItem="v58-yf-YcW" firstAttribute="top" secondItem="Eb4-6v-AKi" secondAttribute="bottom" constant="20" id="r6X-Lk-gu6"/>
+                                            <constraint firstAttribute="bottom" secondItem="v58-yf-YcW" secondAttribute="bottom" constant="50" id="rml-SO-r2d"/>
                                             <constraint firstItem="QZr-6o-q7j" firstAttribute="top" secondItem="ysK-Ra-GrT" secondAttribute="top" constant="20" id="yJ4-JB-J10"/>
                                         </constraints>
                                     </view>
@@ -142,6 +144,7 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <size key="freeformSize" width="320" height="850"/>
                     <connections>
+                        <outlet property="shareButtonsStack" destination="v58-yf-YcW" id="jGL-wO-vvS"/>
                         <outlet property="shareTextMessage" destination="Eb4-6v-AKi" id="BKN-I1-2Va"/>
                     </connections>
                 </viewController>
@@ -151,6 +154,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="character-thumbs-up" width="1100" height="777"/>
+        <image name="character-thumbs-up" width="1100" height="1100"/>
     </resources>
 </document>

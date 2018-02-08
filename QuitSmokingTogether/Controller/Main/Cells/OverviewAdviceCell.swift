@@ -13,6 +13,7 @@ class OverviewAdviceCell: UITableViewCell {
     @IBOutlet weak var characterImage: UIImageView!
     @IBOutlet weak var adviceTitleLabel: UILabel!
     @IBOutlet weak var adviceTextLabel: UILabel!
+    @IBOutlet weak var readMoreView: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,6 +25,7 @@ class OverviewAdviceCell: UITableViewCell {
         adviceTextLabel.text = advices.getRandomAdvice()
         adviceTitleLabel.text = advices.currentAdviceTitle
         characterImage.image = advices.currentCharacterImage
+        readMoreView.setRadius(10, withWidth: 1, andColor: UIColor.clear)
     }
 
 }

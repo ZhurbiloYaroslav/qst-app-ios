@@ -1,5 +1,5 @@
 //
-//  OverviewHelpCell.swift
+//  OverviewContactsCell.swift
 //  QuitSmokingTogether
 //
 //  Created by Yaroslav Zhurbilo on 11.10.17.
@@ -8,13 +8,15 @@
 
 import UIKit
 
-class OverviewHelpCell: UITableViewCell {
+class OverviewContactsCell: UITableViewCell {
 
     @IBOutlet weak var helpTextLabel: UILabel!
+    @IBOutlet weak var readMoreView: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        readMoreView.setRadius(10, withWidth: 1, andColor: UIColor.clear)
     }
 
 }

@@ -14,6 +14,7 @@ import FacebookShare
 class ShareVC: UIViewController {
     
     @IBOutlet weak var shareTextMessage: UILabel!
+    @IBOutlet weak var shareButtonsStack: UIStackView!
     
     var presentThisVcFromReader: Bool?
     
@@ -36,31 +37,52 @@ class ShareVC: UIViewController {
         chooseContentForSharingWith(.ActivityVC)
     }
     
+}
+
+// Sharing related Methods and Entities
+extension ShareVC {
+    
     func chooseContentForSharingWith(_ provider: ContentSharingProvider) {
+        
         let alertController = UIAlertController(title: "Share", message: "Choose content for sharing", preferredStyle: .actionSheet)
         
-        let actionShareApp = UIAlertAction(title: "Share this Application", style: .default) { (action) in
+        if let popoverController = alertController.popoverPresentationController {
+            popoverController.sourceView = shareButtonsStack
+            popoverController.sourceRect = CGRect(x: shareButtonsStack.bounds.midX, y: shareButtonsStack.bounds.origin.y, width: 0, height: 0)
+            popoverController.permittedArrowDirections = [.down]
+        }
+        
+        addActionsTo(alertController, withProvider: provider)
+        
+        self.present(alertController, animated: true, completion: nil)
+    }
+    
+    func addActionsTo(_ alertController: UIAlertController, withProvider provider: ContentSharingProvider) {
+        
+        let shareAppAction = UIAlertAction(title: "Share this Application", style: .default) { (action) in
             self.shareWithProvider(provider, enumWithURL: .ThisApp)
         }
-        actionShareApp.setValue(UIImage(named: "icon-app"), forKey: "image")
-        let actionShareBook = UIAlertAction(title: "Share author's book", style: .default) { (action) in
+        shareAppAction.setValue(UIImage(named: "icon-app"), forKey: "image")
+        
+        let shareBookAction = UIAlertAction(title: "Share author's book", style: .default) { (action) in
             self.shareWithProvider(provider, enumWithURL: .Book)
         }
-        actionShareBook.setValue(UIImage(named: "icon_book"), forKey: "image")
-        let actionShareWebsite = UIAlertAction(title: "Share author's website", style: .default) { (action) in
+        shareBookAction.setValue(UIImage(named: "icon_book"), forKey: "image")
+        
+        let shareWebsiteAction = UIAlertAction(title: "Share author's website", style: .default) { (action) in
             self.shareWithProvider(provider, enumWithURL: .Website)
         }
-        actionShareWebsite.setValue(UIImage(named: "icon-website"), forKey: "image")
+        shareWebsiteAction.setValue(UIImage(named: "icon-website"), forKey: "image")
+        
         let actionCancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
             self.dismiss(animated: true, completion: nil)
         }
         
-        alertController.addAction(actionShareApp)
-        alertController.addAction(actionShareBook)
-        alertController.addAction(actionShareWebsite)
+        alertController.addAction(shareAppAction)
+        alertController.addAction(shareBookAction)
+        alertController.addAction(shareWebsiteAction)
         alertController.addAction(actionCancel)
         
-        self.present(alertController, animated: true, completion: nil)
     }
     
     func shareWithProvider(_ provider: ContentSharingProvider, enumWithURL: URLForSharing) {
@@ -125,10 +147,6 @@ class ShareVC: UIViewController {
         alert.addAction(dismissAction)
         self.present(alert, animated: true, completion: nil)
     }
-    
-}
-
-extension ShareVC {
     
     enum ContentSharingProvider: String {
         case Facebook = "Facebook"

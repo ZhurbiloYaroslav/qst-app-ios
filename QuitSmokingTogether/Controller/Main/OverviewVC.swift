@@ -44,14 +44,6 @@ class OverviewVC: UIViewController {
         tableView.dataSource = self
     }
     
-    @IBAction func continueReadingButtonPressed(_ sender: UIButton) {
-        showReader()
-    }
-    
-    @IBAction func readMoreButtonPressed(_ sender: UIButton) {
-        showAdviceView()
-    }
-    
     @objc func readMoreEventButtonPressed(_ sender: UIButton) {
         let newsTag = OverviewEventCell.ReadMoreButtonTag.News.rawValue
         let compTag = OverviewEventCell.ReadMoreButtonTag.Competitions.rawValue
@@ -136,7 +128,7 @@ extension OverviewVC: UITableViewDataSource, UITableViewDelegate {
             return cell
             
         case [0,4]:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "OverviewHelpCell", for: indexPath) as! OverviewHelpCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "OverviewContactsCell", for: indexPath) as! OverviewContactsCell
             cell.helpTextLabel?.text = "Dear friend, you can contact with me and I will help you to quit smoking!"
             return cell
             
