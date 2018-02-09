@@ -21,10 +21,11 @@ class OverviewAdviceCell: UITableViewCell {
     }
     
     func updateCell() {
-        let advices = AdvicesManager()
-        adviceTextLabel.text = advices.getRandomAdvice()
-        adviceTitleLabel.text = advices.currentAdviceTitle
-        characterImage.image = advices.currentCharacterImage
+        let advices = MessagesManager(messageType: .advice)
+        let randomMessage = advices.getRandomMessage()
+        adviceTextLabel.text = randomMessage.text
+        adviceTitleLabel.text = randomMessage.title
+        characterImage.image = randomMessage.image
         readMoreView.setRadius(10, withWidth: 1, andColor: UIColor.clear)
     }
 

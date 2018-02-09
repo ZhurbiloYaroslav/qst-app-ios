@@ -36,38 +36,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         return true
     }
     
-    func loadDataFromServer() {
-        EventsData.shared.getEventsFromServer {}
-    }
-    
-    func initializeGoogleMobileAds() {
-        let googleAdMobAppID = AdMobManager.AppID.ThisAppID.rawValue
-        GADMobileAds.configure(withApplicationID: googleAdMobAppID)
-    }
-    
-    func chooseViewControllerToPresent() {
-        
-        self.window = UIWindow(frame: UIScreen.main.bounds)
-        
-        if CurrentUser.isLoggedIn {
-            let overviewVC = UIStoryboard(name: "TabBar", bundle: nil).instantiateViewController(withIdentifier: "TabBarVC") as! TabBarVC
-            self.window?.rootViewController = overviewVC
-        } else {
-            let loginVC = UIStoryboard(name: "Auth", bundle: nil).instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-            self.window?.rootViewController = loginVC
-        }
-        self.window?.makeKeyAndVisible()
-        
-    }
-    
-    func loadLoginOrOverviewViewController() {
-        
-    }
-    
-    func initializeAndConfigureFirebase() {
-        FirebaseApp.configure()
-    }
-    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
@@ -142,6 +110,49 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
 }
 
+// MARK: Other
+extension AppDelegate {
+    
+    
+    func loadDataFromServer() {
+        EventsData.shared.getEventsFromServer {}
+    }
+    
+    func initializeGoogleMobileAds() {
+        let googleAdMobAppID = AdMobManager.AppID.ThisAppID.rawValue
+        GADMobileAds.configure(withApplicationID: googleAdMobAppID)
+    }
+    
+    func initializeAndConfigureFirebase() {
+        FirebaseApp.configure()
+    }
+    
+    func chooseViewControllerToPresent() {
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        chooseScreenToLoad()
+    }
+    
+    func chooseScreenToLoad() {
+        loadLoginOrOverviewViewController()
+    }
+    
+    func loadLoginOrOverviewViewController() {
+        if CurrentUser.isLoggedIn {
+            let overviewVC = UIStoryboard(name: "TabBar", bundle: nil).instantiateViewController(withIdentifier: "TabBarVC") as! TabBarVC
+            self.window?.rootViewController = overviewVC
+        } else {
+            if let messageVC = AdviceVC.getInstance() {
+                messageVC.messagesManager = MessagesManager(messageType: .greeting)
+                self.window?.rootViewController = messageVC
+            }
+            // let loginVC = UIStoryboard(name: "Auth", bundle: nil).instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
+            // self.window?.rootViewController = loginVC
+        }
+        self.window?.makeKeyAndVisible()
+    }
+}
+
+// MARK: Methods related with Notifications
 extension AppDelegate: UNUserNotificationCenterDelegate {
     
     /// Local and Push Notifications in IOS 9 and 10 using swift3

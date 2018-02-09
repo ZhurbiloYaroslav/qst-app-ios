@@ -63,8 +63,9 @@ class OverviewVC: UIViewController {
     }
     
     func showAdviceView() {
-        if let adviceVC = AdviceVC.getInstance() {
-            navigationController?.pushViewController(adviceVC, animated: true)
+        if let messagesVC = AdviceVC.getInstance() {
+            messagesVC.messagesManager = MessagesManager(messageType: .advice)
+            navigationController?.pushViewController(messagesVC, animated: true)
         }
     }
 
@@ -85,6 +86,13 @@ class OverviewVC: UIViewController {
     func showContactsView() {
         if let contactsVC = ContactsVC.getInstance() {
             navigationController?.pushViewController(contactsVC, animated: true)
+        }
+    }
+    
+    @IBAction func showGreetingsScreen(_ sender: UIBarButtonItem) {
+        if let messagesVC = AdviceVC.getInstance() {
+            messagesVC.messagesManager = MessagesManager(messageType: .greeting)
+            navigationController?.pushViewController(messagesVC, animated: true)
         }
     }
     
