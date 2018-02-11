@@ -81,7 +81,7 @@
                         <viewLayoutGuide key="safeArea" id="Gkr-Hj-RoZ"/>
                     </view>
                     <navigationItem key="navigationItem" title="Events" id="4vB-sX-ETE">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="icon-filter" id="88k-f2-30q">
+                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Item" image="icon-filter" id="88k-f2-30q">
                             <connections>
                                 <action selector="filterButtonPressed:" destination="Vcw-i0-cMh" id="tlS-bu-Oy0"/>
                             </connections>

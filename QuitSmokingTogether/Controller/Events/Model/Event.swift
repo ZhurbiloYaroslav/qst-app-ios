@@ -82,7 +82,6 @@ public class Event: NSObject {
             eventTypes.append(newType)
         }
         
-        print("---test types: ", eventTypes)
         let status = EventStatus.Unread
         
         self.init(id: id, date: date, title: title,

@@ -109,6 +109,7 @@ extension EventsListVC: UITableViewDataSource, UITableViewDelegate {
         tableView.rowHeight = UITableViewAutomaticDimension
         
         tableView.register(UINib(nibName: "EventCell", bundle: nil), forCellReuseIdentifier: "EventCell")
+        
     }
     
     func reloadTable() {

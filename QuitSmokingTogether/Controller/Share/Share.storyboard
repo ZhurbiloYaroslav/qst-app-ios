@@ -23,7 +23,7 @@
                                 <rect key="frame" x="0.0" y="20" width="320" height="830"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ysK-Ra-GrT" userLabel="Content View">
-                                        <rect key="frame" x="0.0" y="0.0" width="320" height="827"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="775.5"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="character-thumbs-up" translatesAutoresizingMaskIntoConstraints="NO" id="QZr-6o-q7j">
                                                 <rect key="frame" x="16" y="20" width="288" height="192"/>
@@ -31,11 +31,9 @@
                                                     <constraint firstAttribute="width" secondItem="QZr-6o-q7j" secondAttribute="height" multiplier="3:2" id="ZhD-Sf-zFq"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eb4-6v-AKi">
-                                                <rect key="frame" x="16" y="227" width="288" height="410"/>
-                                                <attributedString key="attributedText">
-                                                    <fragment>
-                                                        <string key="content">Спаси жизнь!
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eb4-6v-AKi">
+                                                <rect key="frame" x="16" y="227" width="288" height="358.5"/>
+                                                <string key="text">Спаси жизнь!
 
 Помоги своим друзьям и знакомым избавиться от никотиновой зависимости и ты подаришь им десять-двадцать лет жизни. Они увидят своих детей, внуков, сделают  доброе дело, посадят дерево, построят дом,  помогут нуждающимся. 
 
@@ -44,17 +42,14 @@
 Поделитесь этим приложением, книгой «Бросим курить вместе», нашим сайтом www.quitsmokingtogether.org с вашими друзьям, знакомыми  и  возможно вы спасете им жизнь! 
 Так просто и так много, все в ваших руках!!!
 </string>
-                                                        <attributes>
-                                                            <color key="NSColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                                            <font key="NSFont" size="15" name="AvenirNext-Regular"/>
-                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                        </attributes>
-                                                    </fragment>
-                                                </attributedString>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                 <nil key="highlightedColor"/>
+                                                <variation key="widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                </variation>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="v58-yf-YcW" userLabel="ShareButtonsStack">
-                                                <rect key="frame" x="16" y="657" width="288" height="120"/>
+                                                <rect key="frame" x="16" y="605.5" width="288" height="120"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BnY-UP-Agc">
                                                         <rect key="frame" x="0.0" y="0.0" width="288" height="50"/>
