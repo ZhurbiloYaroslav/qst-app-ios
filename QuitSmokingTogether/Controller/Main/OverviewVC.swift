@@ -89,13 +89,6 @@ class OverviewVC: UIViewController {
         }
     }
     
-    @IBAction func showGreetingsScreen(_ sender: UIBarButtonItem) {
-        if let messagesVC = AdviceVC.getInstance() {
-            messagesVC.messagesManager = MessagesManager(messageType: .greeting)
-            navigationController?.pushViewController(messagesVC, animated: true)
-        }
-    }
-    
 }
 
 extension OverviewVC {

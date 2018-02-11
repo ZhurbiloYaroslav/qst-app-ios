@@ -82,8 +82,7 @@ public class Event: NSObject {
             eventTypes.append(newType)
         }
         
-        /////////
-        
+        print("---test types: ", eventTypes)
         let status = EventStatus.Unread
         
         self.init(id: id, date: date, title: title,
@@ -116,7 +115,7 @@ public class Event: NSObject {
     enum EventType: String {
         case All = "All"
         case News = "News"
-        case Competition = "Competition"
+        case Competition = "Competitions"
         case Undefined = "Undefined"
         
         static func getTypeFrom(withResult resultDictionary: [String: Any]) -> EventType {
