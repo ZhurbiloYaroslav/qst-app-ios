@@ -22,7 +22,7 @@ p {
 
 img {
     height: auto;
-    width: inherit;
+    width: 100%;
     max-width: 100%;
     margin-top: 15pt;
 }

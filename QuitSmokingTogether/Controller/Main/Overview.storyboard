@@ -27,7 +27,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="348"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6Nn-tI-QkD" id="YLK-XI-hmv">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="347"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="347.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book-cover" translatesAutoresizingMaskIntoConstraints="NO" id="I2d-BJ-NQ5">
@@ -91,17 +91,17 @@
                                         <rect key="frame" x="0.0" y="376" width="320" height="393"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="n2d-eb-1GV" id="WkL-73-pBc">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="392"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="392.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="character-thumbs-up" translatesAutoresizingMaskIntoConstraints="NO" id="HSh-jD-JS6">
-                                                    <rect key="frame" x="16" y="8" width="288" height="192"/>
+                                                    <rect key="frame" x="16" y="8" width="288" height="161.5"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" secondItem="HSh-jD-JS6" secondAttribute="height" multiplier="3:2" id="JXY-ih-C3u"/>
+                                                        <constraint firstAttribute="width" secondItem="HSh-jD-JS6" secondAttribute="height" multiplier="25:14" id="JXY-ih-C3u"/>
                                                     </constraints>
                                                 </imageView>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="w3g-Q7-H95">
-                                                    <rect key="frame" x="16" y="208" width="288" height="179.5"/>
+                                                    <rect key="frame" x="16" y="177.5" width="288" height="210"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="253" text="Twenty tips from Alexey Koval" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SRD-MA-1I0" userLabel="20 Advices">
                                                             <rect key="frame" x="0.0" y="0.0" width="288" height="20.5"/>
@@ -121,7 +121,7 @@
                                                             </variation>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Advice text" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="im4-KJ-jxD">
-                                                            <rect key="frame" x="0.0" y="47.5" width="288" height="87"/>
+                                                            <rect key="frame" x="0.0" y="47.5" width="288" height="117.5"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <nil key="highlightedColor"/>
                                                             <variation key="widthClass=regular">
@@ -129,7 +129,7 @@
                                                             </variation>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="read more" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A9z-lh-6BF">
-                                                            <rect key="frame" x="0.0" y="139.5" width="288" height="40"/>
+                                                            <rect key="frame" x="0.0" y="170" width="288" height="40"/>
                                                             <color key="backgroundColor" red="0.36862745099999999" green="0.73725490199999999" blue="0.21176470589999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="40" id="t8H-8Z-1a7"/>
@@ -165,7 +165,7 @@
                                         <rect key="frame" x="0.0" y="769" width="320" height="375"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7hy-gx-MP4" id="u1I-5N-JWy">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="374"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="374.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image-contacts" translatesAutoresizingMaskIntoConstraints="NO" id="YtV-nN-HtY">
@@ -252,7 +252,7 @@
     </scenes>
     <resources>
         <image name="book-cover" width="556" height="453"/>
-        <image name="character-thumbs-up" width="1100" height="1100"/>
+        <image name="character-thumbs-up" width="1100" height="616"/>
         <image name="image-contacts" width="589" height="393"/>
     </resources>
 </document>

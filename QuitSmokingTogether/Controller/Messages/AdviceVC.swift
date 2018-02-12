@@ -14,6 +14,8 @@ class AdviceVC: UIViewController {
     @IBOutlet weak var messageContainerView: UIView!
     
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var backMessageView: UIView!
+    @IBOutlet weak var contentView: UIView!
     @IBOutlet weak var adviceTitleLabel: UILabel!
     @IBOutlet weak var adviceMessageLabel: UILabel!
     
@@ -31,6 +33,8 @@ class AdviceVC: UIViewController {
     
     func setUIStyles() {
         messageContainerView.setRadius(20, withWidth: 1, andColor: UIColor.clear)
+        backMessageView.setRadius(20, withWidth: 1, andColor: UIColor.clear)
+        contentView.setRadius(20, withWidth: 1, andColor: UIColor.clear)
     }
     
     func initializeVariables() {
