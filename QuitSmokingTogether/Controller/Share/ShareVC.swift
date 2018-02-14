@@ -8,8 +8,9 @@
 
 import UIKit
 import Social
+import FBSDKCoreKit
 import FBSDKShareKit
-import FacebookShare
+//import FacebookShare
 
 class ShareVC: UIViewController {
     
@@ -75,7 +76,9 @@ extension ShareVC {
         shareWebsiteAction.setValue(UIImage(named: "icon-website"), forKey: "image")
         
         let actionCancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
-            self.dismiss(animated: true, completion: nil)
+            if let presentFromReader = self.presentThisVcFromReader, presentFromReader == true {
+                self.dismiss(animated: true, completion: nil)
+            }
         }
         
         alertController.addAction(shareAppAction)
@@ -98,33 +101,30 @@ extension ShareVC {
     }
     
     func shareWithFacebook(_ url: URL) {
-        do {
-            let shareContent = LinkShareContent(url: url)
-            
-            let shareDialog = ShareDialog(content: shareContent)
-            shareDialog.mode = .shareSheet
-            shareDialog.presentingViewController = self
-            shareDialog.failsOnInvalidData = true
-            shareDialog.completion = { result in
-                switch result {
-                case .success:
-                    CurrentUser.didUserShareThisApp = true
-                    self.dismiss(animated: true, completion: nil)
-                case .failed:
-                    print("Share failed")
-                case .cancelled:
-                    self.dismiss(animated: true, completion: nil)
-                }
-            }
-            try shareDialog.show()
-        } catch {
-            print("Error: \(error)")
+        let shareContent = FBSDKShareLinkContent()
+        shareContent.contentURL = url
+        
+        let shareDialog = FBSDKShareDialog()
+        shareDialog.fromViewController = self
+        shareDialog.shareContent = shareContent
+        shareDialog.delegate = self
+        shareDialog.mode = FBSDKShareDialogMode.feedWeb
+        if (shareDialog.canShow() == false) {
+            // fallback presentation when there is no FB app
+            shareDialog.mode = FBSDKShareDialogMode.feedBrowser
         }
+        shareDialog.show()
     }
     
     func shareWithOtherApps(_ url: URL) {
         let activityVC = UIActivityViewController(activityItems: [url], applicationActivities: nil)
-        activityVC.popoverPresentationController?.sourceView = self.view
+        
+        if let popoverController = activityVC.popoverPresentationController {
+            popoverController.sourceView = shareButtonsStack
+            popoverController.sourceRect = CGRect(x: shareButtonsStack.bounds.midX, y: shareButtonsStack.bounds.origin.y, width: 0, height: 0)
+            popoverController.permittedArrowDirections = [.down]
+        }
+        
         activityVC.completionWithItemsHandler = activityCompletionHandler
         
         self.present(activityVC, animated: true, completion: nil)
@@ -158,5 +158,24 @@ extension ShareVC {
         case Website = "http://quitsmokingtogether.org"
         case Book = "http://quitsmokingtogether.org/buy.php"
     }
+    
+}
+
+extension ShareVC: FBSDKSharingDelegate {
+    
+    func sharer(_ sharer: FBSDKSharing!, didCompleteWithResults results: [AnyHashable : Any]!) {
+        CurrentUser.didUserShareThisApp = true
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    func sharer(_ sharer: FBSDKSharing!, didFailWithError error: Error!) {
+        print("Share failed with error: ", error)
+    }
+    
+    func sharerDidCancel(_ sharer: FBSDKSharing!) {
+        print("canceled")
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     
 }

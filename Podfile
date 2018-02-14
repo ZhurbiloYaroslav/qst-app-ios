@@ -7,15 +7,17 @@ target 'QuitSmokingTogether' do
 	pod 'FolioReaderKit'
 	pod 'FacebookCore'
 	pod 'FacebookLogin'
-	pod 'FacebookShare'
+	pod 'FBSDKCoreKit'
+	pod 'FBSDKLoginKit'
+	pod 'FBSDKShareKit'
 	pod 'Firebase/Core'
 	pod 'Firebase/Auth'
 	pod 'Firebase/Database'
-    pod 'Google-Mobile-Ads-SDK'
+  pod 'Google-Mobile-Ads-SDK'
 	pod 'KeychainSwift', '~> 9.0' # https://github.com/evgenyneu/keychain-swift
-    pod 'SDWebImage', '~> 4.0'
-    pod 'Alamofire', '~> 4.5'
-    pod 'SwiftSoup'
+  pod 'SDWebImage', '~> 4.0'
+  pod 'Alamofire', '~> 4.5'
+  pod 'SwiftSoup'
 
 end
 
