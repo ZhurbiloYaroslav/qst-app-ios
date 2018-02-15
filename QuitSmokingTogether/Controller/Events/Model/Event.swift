@@ -21,11 +21,9 @@ public class Event: NSObject {
     var htmlContent: String
     var textContent: String
     let defaultImage: [UIImage] = [UIImage()]
-    var arrayWithImageLinks: [String] {
-        return parseImagesAndContentFromHTML()
-    }
+    var arrayWithImageLinks: [String]!
     
-    init(id: Int, date: String, title: String, htmlContent: String, textContent: String,
+    init(id: Int, date: String, title: String, htmlContent: String,
          type: [EventType], status: EventStatus) {
         
         self.id = id
@@ -34,7 +32,26 @@ public class Event: NSObject {
         self.status = status
         self.title = title
         self.htmlContent = htmlContent
-        self.textContent = textContent
+        
+        do {
+            var arrayWithImageLinks = [String]()
+            
+            let doc: Document = try! SwiftSoup.parse(htmlContent)
+            
+            let els: Elements = try SwiftSoup.parse(htmlContent).select("img")
+            for link: Element in els.array(){
+                let linkSrc: String = try link.attr("src")
+                arrayWithImageLinks.append(linkSrc)
+            }
+            arrayWithImageLinks.uniqInPlace()
+            
+            self.textContent = try doc.body()?.text() ?? ""
+            self.arrayWithImageLinks = arrayWithImageLinks
+            
+        } catch {
+            self.textContent = ""
+            self.arrayWithImageLinks = [String]()
+        }
     }
     
     func getStringWithDate() -> String {
@@ -42,29 +59,8 @@ public class Event: NSObject {
     }
     
     convenience override init() {
-        self.init(id: 0, date: "", title: "Template", htmlContent: "", textContent: "",
+        self.init(id: 0, date: "", title: "Template", htmlContent: "",
                   type: [.Undefined], status: .Unread)
-    }
-    
-    func parseImagesAndContentFromHTML() -> [String] {
-        do {
-            var arrayWithImageLinks = [String]()
-            
-            let doc: Document = try! SwiftSoup.parse(htmlContent)
-            textContent = try doc.body()?.text() ?? ""
-            
-            let els: Elements = try SwiftSoup.parse(htmlContent).select("img")
-            for link: Element in els.array(){
-                let linkSrc: String = try link.attr("src")
-                arrayWithImageLinks.append(linkSrc)
-            }
-            
-            arrayWithImageLinks.uniqInPlace()
-            
-            return arrayWithImageLinks
-        } catch {
-            return [String]()
-        }
     }
     
     convenience init(withResult resultDictionary: [String: Any]) {
@@ -73,7 +69,6 @@ public class Event: NSObject {
         let date = resultDictionary["date"] as? String ?? ""
         let title = resultDictionary["title"] as? String  ?? ""
         let htmlContent = resultDictionary["content"] as? String  ?? ""
-        let textContent = htmlContent
         let dictWithTypes = resultDictionary["categories"] as? [[String: Any]] ?? [[String: Any]]()
         
         var eventTypes = [EventType]()
@@ -85,7 +80,7 @@ public class Event: NSObject {
         let status = EventStatus.Unread
         
         self.init(id: id, date: date, title: title,
-                  htmlContent: htmlContent, textContent: textContent,
+                  htmlContent: htmlContent,
                   type: eventTypes, status: status)
     }
     

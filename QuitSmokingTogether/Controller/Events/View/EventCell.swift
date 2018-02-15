@@ -25,12 +25,11 @@ class EventCell: UITableViewCell {
     func updateWith(_ event: Event) {
         
         currentEvent = event
-        eventImage.image = UIImage(named: "placeHolder.png")
         eventTitle.text = event.title
         eventDescription.text = event.textContent
         
         if event.arrayWithImageLinks.count > 0 {
-            eventImage.sd_setImage(with: URL(string: event.arrayWithImageLinks[0]), placeholderImage: #imageLiteral(resourceName: "bookCover"))
+            eventImage.sd_setImage(with: URL(string: event.arrayWithImageLinks[0]), placeholderImage: UIImage())
         }
         
         eventStarredButton.makeButtonActiveIfActive(currentEvent)

@@ -12,6 +12,7 @@ import FolioReaderKit
 import Firebase
 import GoogleMobileAds
 import UserNotifications
+import FBSDKCoreKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -29,11 +30,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         initializeAndConfigureFirebase()
         initializeGoogleMobileAds()
         
-        authForNotifications()
-        checkForAllowedNotifications()
+        // authForNotifications()
+        // checkForAllowedNotifications()
         UIApplication.shared.applicationIconBadgeNumber = 0
         
+        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        
         return true
+    }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplicationOpenURLOptionsKey : Any] = [:]) -> Bool {
+        
+        let handled = FBSDKApplicationDelegate.sharedInstance().application(app, open: url, sourceApplication: options[UIApplicationOpenURLOptionsKey.sourceApplication] as! String, annotation: options[UIApplicationOpenURLOptionsKey.annotation])
+        
+        return handled
     }
     
     func applicationWillResignActive(_ application: UIApplication) {
@@ -52,61 +62,62 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func applicationDidBecomeActive(_ application: UIApplication) {
         
+        FBSDKAppEvents.activateApp()
         UIApplication.shared.applicationIconBadgeNumber = 0
-        scheduleNotification()
+        // scheduleNotification()
 
     }
     
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
         // Saves changes in the application's managed object context before the application terminates.
-        self.saveContext()
+        // self.saveContext()
     }
     
-    // MARK: - Core Data stack
-    
-    lazy var persistentContainer: NSPersistentContainer = {
-        /*
-         The persistent container for the application. This implementation
-         creates and returns a container, having loaded the store for the
-         application to it. This property is optional since there are legitimate
-         error conditions that could cause the creation of the store to fail.
-         */
-        let container = NSPersistentContainer(name: "QuitSmokingTogether")
-        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
-            if let error = error as NSError? {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                
-                /*
-                 Typical reasons for an error here include:
-                 * The parent directory does not exist, cannot be created, or disallows writing.
-                 * The persistent store is not accessible, due to permissions or data protection when the device is locked.
-                 * The device is out of space.
-                 * The store could not be migrated to the current model version.
-                 Check the error message to determine what the actual problem was.
-                 */
-                fatalError("Unresolved error \(error), \(error.userInfo)")
-            }
-        })
-        return container
-    }()
-    
-    // MARK: - Core Data Saving support
-    
-    func saveContext () {
-        let context = persistentContainer.viewContext
-        if context.hasChanges {
-            do {
-                try context.save()
-            } catch {
-                // Replace this implementation with code to handle the error appropriately.
-                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
-                let nserror = error as NSError
-                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-            }
-        }
-    }
+    //    // MARK: - Core Data stack
+    //
+    //    lazy var persistentContainer: NSPersistentContainer = {
+    //        /*
+    //         The persistent container for the application. This implementation
+    //         creates and returns a container, having loaded the store for the
+    //         application to it. This property is optional since there are legitimate
+    //         error conditions that could cause the creation of the store to fail.
+    //         */
+    //        let container = NSPersistentContainer(name: "QuitSmokingTogether")
+    //        container.loadPersistentStores(completionHandler: { (storeDescription, error) in
+    //            if let error = error as NSError? {
+    //                // Replace this implementation with code to handle the error appropriately.
+    //                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+    //
+    //                /*
+    //                 Typical reasons for an error here include:
+    //                 * The parent directory does not exist, cannot be created, or disallows writing.
+    //                 * The persistent store is not accessible, due to permissions or data protection when the device is locked.
+    //                 * The device is out of space.
+    //                 * The store could not be migrated to the current model version.
+    //                 Check the error message to determine what the actual problem was.
+    //                 */
+    //                fatalError("Unresolved error \(error), \(error.userInfo)")
+    //            }
+    //        })
+    //        return container
+    //    }()
+    //
+    //    // MARK: - Core Data Saving support
+    //
+    //    func saveContext () {
+    //        let context = persistentContainer.viewContext
+    //        if context.hasChanges {
+    //            do {
+    //                try context.save()
+    //            } catch {
+    //                // Replace this implementation with code to handle the error appropriately.
+    //                // fatalError() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
+    //                let nserror = error as NSError
+    //                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+    //            }
+    //        }
+    //    }
     
 }
 
@@ -158,68 +169,68 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     /// Local and Push Notifications in IOS 9 and 10 using swift3
     /// https://stackoverflow.com/questions/42688760/local-and-push-notifications-in-ios-9-and-10-using-swift3
     
-    func scheduleNotification() {
-        // timeInterval is in seconds, so 60*60*12*3 = 3 days, set repeats to true if you want to repeat the trigger
-        //let time = Constants.Time.didNotOpenApp
-        let time = Constants.Time.didNotOpenApp
-        let requestTrigger = UNTimeIntervalNotificationTrigger(timeInterval: time, repeats: false)
-        
-        let requestContent = UNMutableNotificationContent()
-        requestContent.title = "Continue quit smoking"
-        requestContent.subtitle = "You haven't open the App within 2 days"
-        requestContent.body = "Open the App and continue reading!"
-        requestContent.badge = 1
-        requestContent.sound = UNNotificationSound.default()
-        
-        let notifID = NotificationID.RemindUserOpenApp.rawValue
-        let request = UNNotificationRequest(identifier: notifID, content: requestContent, trigger: requestTrigger)
-        
-        UNUserNotificationCenter.current().add(request) { error in
-            if let error = error {
-                print(error.localizedDescription)
-            } else {
-                
-            }
-        }
-    }
-    
-    enum NotificationID: String {
-        case RemindUserOpenApp = "RemindUserAboutOpenApp"
-    }
-    
-    func authForNotifications() {
-        let notifCenter = UNUserNotificationCenter.current()
-        let options: UNAuthorizationOptions = [.alert, .badge, .sound]
-        notifCenter.requestAuthorization(options: options) { (boolValue, error) in
-            if error == nil {
-
-            } else {
-                print(error?.localizedDescription ?? "")
-            }
-        }
-//        /// In case you want to register for the remote notifications
-//        let application = UIApplication.shared
-//        application.registerForRemoteNotifications()
-    }
-
-    func checkForAllowedNotifications() {
-        let notifCenter = UNUserNotificationCenter.current()
-        notifCenter.getNotificationSettings { (settings) in
-            if settings.authorizationStatus != .authorized {
-                // Notifications not allowed
-            }
-        }
-    }
-
-    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        let deviceTokenString = deviceToken.reduce("", {$0 + String(format: "%02X", $1)})
-        print(deviceTokenString)
-        // Send to your server here...
-    }
-
-    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
-        print("i am not available in simulator \(error)")
-    }
+//    func scheduleNotification() {
+//        // timeInterval is in seconds, so 60*60*12*3 = 3 days, set repeats to true if you want to repeat the trigger
+//        //let time = Constants.Time.didNotOpenApp
+//        let time = Constants.Time.didNotOpenApp
+//        let requestTrigger = UNTimeIntervalNotificationTrigger(timeInterval: time, repeats: false)
+//        
+//        let requestContent = UNMutableNotificationContent()
+//        requestContent.title = "Continue quit smoking"
+//        requestContent.subtitle = "You haven't open the App within 2 days"
+//        requestContent.body = "Open the App and continue reading!"
+//        requestContent.badge = 1
+//        requestContent.sound = UNNotificationSound.default()
+//        
+//        let notifID = NotificationID.RemindUserOpenApp.rawValue
+//        let request = UNNotificationRequest(identifier: notifID, content: requestContent, trigger: requestTrigger)
+//        
+//        UNUserNotificationCenter.current().add(request) { error in
+//            if let error = error {
+//                print(error.localizedDescription)
+//            } else {
+//                
+//            }
+//        }
+//    }
+//    
+//    enum NotificationID: String {
+//        case RemindUserOpenApp = "RemindUserAboutOpenApp"
+//    }
+//    
+//    func authForNotifications() {
+//        let notifCenter = UNUserNotificationCenter.current()
+//        let options: UNAuthorizationOptions = [.alert, .badge, .sound]
+//        notifCenter.requestAuthorization(options: options) { (boolValue, error) in
+//            if error == nil {
+//
+//            } else {
+//                print(error?.localizedDescription ?? "")
+//            }
+//        }
+////        /// In case you want to register for the remote notifications
+////        let application = UIApplication.shared
+////        application.registerForRemoteNotifications()
+//    }
+//
+//    func checkForAllowedNotifications() {
+//        let notifCenter = UNUserNotificationCenter.current()
+//        notifCenter.getNotificationSettings { (settings) in
+//            if settings.authorizationStatus != .authorized {
+//                // Notifications not allowed
+//            }
+//        }
+//    }
+//
+//    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+//        let deviceTokenString = deviceToken.reduce("", {$0 + String(format: "%02X", $1)})
+//        print(deviceTokenString)
+//        // Send to your server here...
+//    }
+//
+//    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+//        print("i am not available in simulator \(error)")
+//    }
 }
 
 extension AppDelegate: GADInterstitialDelegate {

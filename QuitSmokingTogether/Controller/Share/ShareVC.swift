@@ -55,7 +55,14 @@ extension ShareVC {
         
         addActionsTo(alertController, withProvider: provider)
         
-        self.present(alertController, animated: true, completion: nil)
+        self.present(alertController, animated: true) {
+            alertController.view.superview?.isUserInteractionEnabled = true
+            alertController.view.superview?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.alertControllerBackgroundTapped)))
+        }
+    }
+    
+    @objc func alertControllerBackgroundTapped(){
+        self.dismiss(animated: true, completion: nil)
     }
     
     func addActionsTo(_ alertController: UIAlertController, withProvider provider: ContentSharingProvider) {
@@ -101,18 +108,21 @@ extension ShareVC {
     }
     
     func shareWithFacebook(_ url: URL) {
+
         let shareContent = FBSDKShareLinkContent()
         shareContent.contentURL = url
-        
+
         let shareDialog = FBSDKShareDialog()
         shareDialog.fromViewController = self
         shareDialog.shareContent = shareContent
         shareDialog.delegate = self
-        shareDialog.mode = FBSDKShareDialogMode.feedWeb
-        if (shareDialog.canShow() == false) {
-            // fallback presentation when there is no FB app
+        
+        if let url = URL(string: "fbauth2://"), (UIApplication.shared.canOpenURL(url)) {
+            shareDialog.mode = FBSDKShareDialogMode.shareSheet
+        } else {
             shareDialog.mode = FBSDKShareDialogMode.feedBrowser
         }
+        
         shareDialog.show()
     }
     
