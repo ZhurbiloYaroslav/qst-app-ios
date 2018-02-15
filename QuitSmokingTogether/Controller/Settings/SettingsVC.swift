@@ -82,6 +82,7 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
             return cell
         case [1,2]: // Like on Facebook
             let cell = tableView.dequeueReusableCell(withIdentifier: "LikeOnFacebook", for: indexPath) as UITableViewCell
+            // https://github.com/facebook/facebook-sdk-swift/blob/master/Sources/Share/Views/LikeButton.swift
             if let fbSome = cell.viewWithTag(8) {
                 let bounds = fbSome.bounds
                 facebookLikeButton.frame = CGRect(x: 30, y: (bounds.midY - ((bounds.height + 4 ) / 2)), width: bounds.width, height: bounds.height)

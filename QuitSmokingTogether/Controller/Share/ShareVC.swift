@@ -55,10 +55,11 @@ extension ShareVC {
         
         addActionsTo(alertController, withProvider: provider)
         
-        self.present(alertController, animated: true) {
-            alertController.view.superview?.isUserInteractionEnabled = true
-            alertController.view.superview?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.alertControllerBackgroundTapped)))
-        }
+        self.present(alertController, animated: true, completion: nil)
+        //        self.present(alertController, animated: true) {
+        //            alertController.view.superview?.isUserInteractionEnabled = true
+        //            alertController.view.superview?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.alertControllerBackgroundTapped)))
+        //        }
     }
     
     @objc func alertControllerBackgroundTapped(){

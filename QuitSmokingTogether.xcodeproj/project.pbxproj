@@ -33,6 +33,8 @@
 		C429370C1FB9E9010016A02F /* UIScrollView+scrollToView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429370B1FB9E9000016A02F /* UIScrollView+scrollToView.swift */; };
 		C42F0B711FDDC71100C3D619 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42F0B701FDDC71100C3D619 /* IAPHelper.swift */; };
 		C42F0B731FDDC75200C3D619 /* AppProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42F0B721FDDC75200C3D619 /* AppProducts.swift */; };
+		C4488C5420360DC3002B152F /* LocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4488C5320360DC3002B152F /* LocalNotification.swift */; };
+		C4488C5620360E5B002B152F /* Date+addedBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4488C5520360E5B002B152F /* Date+addedBy.swift */; };
 		C455D5871F8CFE75002846D9 /* AdviceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C455D5861F8CFE75002846D9 /* AdviceVC.swift */; };
 		C455D58B1F8D0024002846D9 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C455D58A1F8D0024002846D9 /* SettingsVC.swift */; };
 		C45FE1891FB860350080E172 /* QST-iBook.epub in Resources */ = {isa = PBXBuildFile; fileRef = C45FE1881FB860330080E172 /* QST-iBook.epub */; };
@@ -167,6 +169,8 @@
 		C429370B1FB9E9000016A02F /* UIScrollView+scrollToView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+scrollToView.swift"; sourceTree = "<group>"; };
 		C42F0B701FDDC71100C3D619 /* IAPHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
 		C42F0B721FDDC75200C3D619 /* AppProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppProducts.swift; sourceTree = "<group>"; };
+		C4488C5320360DC3002B152F /* LocalNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotification.swift; sourceTree = "<group>"; };
+		C4488C5520360E5B002B152F /* Date+addedBy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+addedBy.swift"; sourceTree = "<group>"; };
 		C455D5861F8CFE75002846D9 /* AdviceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceVC.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		C455D58A1F8D0024002846D9 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		C45FE1881FB860330080E172 /* QST-iBook.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "QST-iBook.epub"; sourceTree = "<group>"; };
@@ -314,6 +318,7 @@
 				C429370B1FB9E9000016A02F /* UIScrollView+scrollToView.swift */,
 				C4BF37711FCC3A1500BFD881 /* UIImageView+downloadedFromURL.swift */,
 				C4A4F5DB2025BAB300D65663 /* UIViewController+fastInitialization.swift */,
+				C4488C5520360E5B002B152F /* Date+addedBy.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -852,6 +857,7 @@
 				C4C0EEC41FCEF07C00CA258B /* FirebaseManager.swift */,
 				C47FE0BE1FDB36B2008232CA /* AdMobManager.swift */,
 				C48744E92026002500672523 /* NetworkManager.swift */,
+				C4488C5320360DC3002B152F /* LocalNotification.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -1114,6 +1120,7 @@
 				C4A4F5DC2025BAB300D65663 /* UIViewController+fastInitialization.swift in Sources */,
 				C4B53FFC2021F51C000D7C73 /* ImageSlideshow.swift in Sources */,
 				C4CA86681F9641C800A8772D /* FAQAnswerVC.swift in Sources */,
+				C4488C5620360E5B002B152F /* Date+addedBy.swift in Sources */,
 				C4D458461F8021D100565A3F /* QuitSmokingTogether.xcdatamodeld in Sources */,
 				C4B540012021F51C000D7C73 /* ZoomAnimatedTransitioning.swift in Sources */,
 				C4C0EEE51FD061F100CA258B /* EventsFilter.swift in Sources */,
@@ -1127,6 +1134,7 @@
 				C455D58B1F8D0024002846D9 /* SettingsVC.swift in Sources */,
 				C4B540002021F51C000D7C73 /* UIImageView+Tools.swift in Sources */,
 				C4B53FFB2021F51C000D7C73 /* FullScreenSlideshowViewController.swift in Sources */,
+				C4488C5420360DC3002B152F /* LocalNotification.swift in Sources */,
 				C42F0B711FDDC71100C3D619 /* IAPHelper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1310,7 +1318,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4PM46468DE;
 				INFOPLIST_FILE = QuitSmokingTogether/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.diglabstudio.QuitSmokingTogether;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1328,7 +1336,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4PM46468DE;
 				INFOPLIST_FILE = QuitSmokingTogether/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.diglabstudio.QuitSmokingTogether;
 				PRODUCT_NAME = "$(TARGET_NAME)";
