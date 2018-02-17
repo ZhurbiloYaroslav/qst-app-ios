@@ -78,7 +78,7 @@ extension ContactsVC: UITableViewDelegate, UITableViewDataSource {
         case [0,0]: // Image cell
             break
         case [0,1]: // Text cell
-            break
+            Browser.openURLWith(.Map_QST)
         case [0,2]:
             Browser.openURLWith(.Call_Phone)
         case [0,3]:
