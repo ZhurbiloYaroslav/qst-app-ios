@@ -60,6 +60,8 @@
 		C4968DD8202ADF5B009DC678 /* ResultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4968DD7202ADF5B009DC678 /* ResultData.swift */; };
 		C4968DDC202AF64D009DC678 /* ArticleDesc.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4968DDA202AF64D009DC678 /* ArticleDesc.storyboard */; };
 		C4968DDD202AF64D009DC678 /* ArticleDescVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4968DDB202AF64D009DC678 /* ArticleDescVC.swift */; };
+		C49ABA1320389914007900F5 /* AddressCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C49ABA1120389914007900F5 /* AddressCell.swift */; };
+		C49ABA1420389914007900F5 /* AddressCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C49ABA1220389914007900F5 /* AddressCell.xib */; };
 		C4A12E701FE1B45800E843F8 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4A12E6E1FE1B45800E843F8 /* Profile.storyboard */; };
 		C4A12E731FE1B56400E843F8 /* Settings.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4A12E711FE1B56400E843F8 /* Settings.storyboard */; };
 		C4A12E761FE1B61B00E843F8 /* RegisterVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4A12E741FE1B61B00E843F8 /* RegisterVC.storyboard */; };
@@ -186,6 +188,8 @@
 		C4968DD7202ADF5B009DC678 /* ResultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultData.swift; sourceTree = "<group>"; };
 		C4968DDA202AF64D009DC678 /* ArticleDesc.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ArticleDesc.storyboard; sourceTree = "<group>"; };
 		C4968DDB202AF64D009DC678 /* ArticleDescVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArticleDescVC.swift; sourceTree = "<group>"; };
+		C49ABA1120389914007900F5 /* AddressCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddressCell.swift; sourceTree = "<group>"; };
+		C49ABA1220389914007900F5 /* AddressCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddressCell.xib; sourceTree = "<group>"; };
 		C4A12E6F1FE1B45800E843F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Profile.storyboard; sourceTree = "<group>"; };
 		C4A12E721FE1B56400E843F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Settings.storyboard; sourceTree = "<group>"; };
 		C4A12E751FE1B61B00E843F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/RegisterVC.storyboard; sourceTree = "<group>"; };
@@ -391,8 +395,8 @@
 		C463F86C1FF43157001FBBC1 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C463F86D1FF4317F001FBBC1 /* ContactCell.xib */,
-				C463F86F1FF43932001FBBC1 /* ContactCell.swift */,
+				C49ABA1620389923007900F5 /* ContactCell */,
+				C49ABA1520389919007900F5 /* AddressCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -440,6 +444,24 @@
 				C4968DDB202AF64D009DC678 /* ArticleDescVC.swift */,
 			);
 			path = ArticleDescVC;
+			sourceTree = "<group>";
+		};
+		C49ABA1520389919007900F5 /* AddressCell */ = {
+			isa = PBXGroup;
+			children = (
+				C49ABA1120389914007900F5 /* AddressCell.swift */,
+				C49ABA1220389914007900F5 /* AddressCell.xib */,
+			);
+			path = AddressCell;
+			sourceTree = "<group>";
+		};
+		C49ABA1620389923007900F5 /* ContactCell */ = {
+			isa = PBXGroup;
+			children = (
+				C463F86D1FF4317F001FBBC1 /* ContactCell.xib */,
+				C463F86F1FF43932001FBBC1 /* ContactCell.swift */,
+			);
+			path = ContactCell;
 			sourceTree = "<group>";
 		};
 		C4A12E7D1FE1BB1A00E843F8 /* Controller */ = {
@@ -927,6 +949,7 @@
 				C415AA961FE16E1C00BC5365 /* Advice.storyboard in Resources */,
 				C4B53FF82021F51C000D7C73 /* ic_cross_white@2x.png in Resources */,
 				C46DFB261FC4888F00A62D69 /* Advices.plist in Resources */,
+				C49ABA1420389914007900F5 /* AddressCell.xib in Resources */,
 				C415AA9E1FE16FCE00BC5365 /* EventsList.storyboard in Resources */,
 				C47317921F8D1C1600A6AE43 /* Notes and links.rtf in Resources */,
 				C4968DDC202AF64D009DC678 /* ArticleDesc.storyboard in Resources */,
@@ -1060,6 +1083,7 @@
 				C461A2D21F8F9EF400B698FA /* NavBarVC.swift in Sources */,
 				C4A4F5DC2025BAB300D65663 /* UIViewController+fastInitialization.swift in Sources */,
 				C4B53FFC2021F51C000D7C73 /* ImageSlideshow.swift in Sources */,
+				C49ABA1320389914007900F5 /* AddressCell.swift in Sources */,
 				C4CA86681F9641C800A8772D /* FAQAnswerVC.swift in Sources */,
 				C4488C5620360E5B002B152F /* Date+addedBy.swift in Sources */,
 				C4B540012021F51C000D7C73 /* ZoomAnimatedTransitioning.swift in Sources */,

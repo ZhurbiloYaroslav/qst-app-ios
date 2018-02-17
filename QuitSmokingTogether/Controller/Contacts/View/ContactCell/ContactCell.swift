@@ -11,21 +11,24 @@ import UIKit
 class ContactCell: UITableViewCell {
     
     @IBOutlet weak var contactIcon: UIImageView!
+    @IBOutlet weak var iconBackground: UIView!
     @IBOutlet weak var contactTitle: UILabel!
-    @IBOutlet weak var contactAddress: UILabel!
+    @IBOutlet weak var contactAddress: UITextField!
     
     var arrayWithCells: [Cell] = [
-        Cell(type: .Text, icon: UIImage(), title: "", value: "Dear friend, you can contact with me and I will help you to quit smoking!"),
+        Cell(type: .Undefined, icon: UIImage(), title: "", value: ""), // This will be Image cell
+        Cell(type: .Undefined, icon: UIImage(), title: "", value: ""), // This will be Image cell
         Cell(type: .Call, icon: #imageLiteral(resourceName: "icon-call"), title: "Phone/fax:", value: "+38 (050) 202-23-02"),
-        Cell(type: .Skype, icon: #imageLiteral(resourceName: "icon-skype-1"), title: "Skype:", value: "alexeykovalua"),
-        Cell(type: .Viber, icon: #imageLiteral(resourceName: "icon-viber-1"), title: "Viber:", value: "+380502022302"),
-        Cell(type: .WhatsApp, icon: #imageLiteral(resourceName: "icon-whatsapp-1"), title: "WhatsApp:", value: "+380502022302"),
+        Cell(type: .Skype, icon: #imageLiteral(resourceName: "icon-skype"), title: "Skype:", value: "alexeykovalua"),
+        Cell(type: .Viber, icon: #imageLiteral(resourceName: "icon-viber"), title: "Viber:", value: "+380502022302"),
+        Cell(type: .WhatsApp, icon: #imageLiteral(resourceName: "icon-whatsapp"), title: "WhatsApp:", value: "+380502022302"),
         Cell(type: .Email, icon: #imageLiteral(resourceName: "icon-gmail-online"), title: "Email:", value: "quitsmokingtogether@gmail.com")
     ]
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        iconBackground.setRadius(30, withWidth: 1, andColor: UIColor.clear)
     }
     
     func configureCellWithType(_ cellType: CellType) {
@@ -34,7 +37,6 @@ class ContactCell: UITableViewCell {
             contactIcon.isHidden = true
             contactTitle.isHidden = true
             contactAddress.textColor = UIColor.darkGray
-            contactAddress.numberOfLines = 0
         }
         
         for cell in arrayWithCells {

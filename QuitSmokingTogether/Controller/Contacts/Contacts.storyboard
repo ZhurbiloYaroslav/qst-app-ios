@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -19,8 +20,32 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ZjR-WI-Nd6">
-                                <rect key="frame" x="0.0" y="50" width="375" height="617"/>
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="ImageCell" rowHeight="289" id="8St-Aq-Esr">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="289"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8St-Aq-Esr" id="mjW-ad-sjZ">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="289"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="image-contacts" translatesAutoresizingMaskIntoConstraints="NO" id="IPH-jn-tCy">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="IPH-jn-tCy" secondAttribute="height" multiplier="3:2" id="hze-zq-8p7"/>
+                                                    </constraints>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="IPH-jn-tCy" firstAttribute="leading" secondItem="mjW-ad-sjZ" secondAttribute="leading" id="1PC-iN-9G3"/>
+                                                <constraint firstAttribute="trailing" secondItem="IPH-jn-tCy" secondAttribute="trailing" id="3tr-eE-A2E"/>
+                                                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="IPH-jn-tCy" secondAttribute="bottom" id="87j-a7-Td0"/>
+                                                <constraint firstItem="IPH-jn-tCy" firstAttribute="top" secondItem="mjW-ad-sjZ" secondAttribute="top" id="TzL-xt-fTV"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -28,7 +53,7 @@
                             <constraint firstItem="ZjR-WI-Nd6" firstAttribute="trailing" secondItem="mbm-5L-f6K" secondAttribute="trailing" id="DoQ-dg-P9W"/>
                             <constraint firstItem="ZjR-WI-Nd6" firstAttribute="bottom" secondItem="mbm-5L-f6K" secondAttribute="bottom" id="bYx-15-NOn"/>
                             <constraint firstItem="ZjR-WI-Nd6" firstAttribute="leading" secondItem="mbm-5L-f6K" secondAttribute="leading" id="dEd-rV-OOh"/>
-                            <constraint firstItem="ZjR-WI-Nd6" firstAttribute="top" secondItem="mbm-5L-f6K" secondAttribute="top" constant="30" id="zPp-tC-cO9"/>
+                            <constraint firstItem="ZjR-WI-Nd6" firstAttribute="top" secondItem="mbm-5L-f6K" secondAttribute="top" id="zPp-tC-cO9"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="mbm-5L-f6K"/>
                     </view>
@@ -43,4 +68,7 @@
             <point key="canvasLocation" x="380" y="1659.2203898050975"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="image-contacts" width="589" height="393"/>
+    </resources>
 </document>

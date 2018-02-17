@@ -13,6 +13,7 @@ class EventCell: UITableViewCell {
     @IBOutlet weak var eventImage: UIImageView!
     @IBOutlet weak var eventTitle: UILabel!
     @IBOutlet weak var eventDescription: UILabel!
+    @IBOutlet weak var readMoreLabel: UILabel!
     @IBOutlet weak var eventStarredButton: StarButton!
     
     var currentEvent: Event!
@@ -20,6 +21,7 @@ class EventCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        readMoreLabel.setRadius(10, withWidth: 1, andColor: UIColor.clear)
     }
     
     func updateWith(_ event: Event) {

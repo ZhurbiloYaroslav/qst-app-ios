@@ -54,7 +54,7 @@
                                         </constraints>
                                     </stackView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.92148083449999996" green="0.9216319919" blue="0.92144864800000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="lXV-pe-xaT" firstAttribute="leading" secondItem="CJn-Or-dgc" secondAttribute="leading" constant="5" id="71Y-GS-sDK"/>
                                     <constraint firstItem="lXV-pe-xaT" firstAttribute="top" secondItem="CJn-Or-dgc" secondAttribute="top" constant="5" id="CKX-QO-JAF"/>
@@ -65,10 +65,10 @@
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="umf-fv-U11">
                                 <rect key="frame" x="0.0" y="100" width="375" height="567"/>
-                                <color key="backgroundColor" red="0.92148083449999996" green="0.9216319919" blue="0.92144864800000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" red="0.92148083449999996" green="0.9216319919" blue="0.92144864800000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="CJn-Or-dgc" firstAttribute="top" secondItem="Gkr-Hj-RoZ" secondAttribute="top" id="Z6g-IH-0Nl"/>
                             <constraint firstItem="umf-fv-U11" firstAttribute="bottom" secondItem="Gkr-Hj-RoZ" secondAttribute="bottom" id="abc-Wn-NAO"/>
@@ -80,13 +80,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Gkr-Hj-RoZ"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Events" id="4vB-sX-ETE">
-                        <barButtonItem key="rightBarButtonItem" enabled="NO" title="Item" image="icon-filter" id="88k-f2-30q">
-                            <connections>
-                                <action selector="filterButtonPressed:" destination="Vcw-i0-cMh" id="tlS-bu-Oy0"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
+                    <navigationItem key="navigationItem" title="Events" id="4vB-sX-ETE"/>
                     <connections>
                         <outlet property="constraintHeightForFilterStack" destination="oA0-AN-jhw" id="T1l-Qh-7fH"/>
                         <outlet property="filterStack" destination="lXV-pe-xaT" id="ps0-Tf-DFn"/>
@@ -94,6 +88,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cQO-mx-3yC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <barButtonItem enabled="NO" title="Item" image="icon-filter" id="88k-f2-30q">
+                    <connections>
+                        <action selector="filterButtonPressed:" destination="Vcw-i0-cMh" id="tlS-bu-Oy0"/>
+                    </connections>
+                </barButtonItem>
             </objects>
             <point key="canvasLocation" x="-581.25" y="1659.5070422535211"/>
         </scene>
