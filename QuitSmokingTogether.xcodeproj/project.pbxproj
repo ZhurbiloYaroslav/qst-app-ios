@@ -119,6 +119,7 @@
 		C4D458431F8021D100565A3F /* TabBar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4D458411F8021D100565A3F /* TabBar.storyboard */; };
 		C4D458481F8021D100565A3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4D458471F8021D100565A3F /* Assets.xcassets */; };
 		C4D4584B1F8021D100565A3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4D458491F8021D100565A3F /* LaunchScreen.storyboard */; };
+		C4D48C6C203DAF1100FA5E37 /* NGO.html in Resources */ = {isa = PBXBuildFile; fileRef = C4D48C6B203DAF1100FA5E37 /* NGO.html */; };
 		C4DD56932024955800BF3A04 /* Character.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4DD56922024955800BF3A04 /* Character.xcassets */; };
 		C4DD569B2024A3CB00BF3A04 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4DD569D2024A3CB00BF3A04 /* Localizable.strings */; };
 		C4E5F0DD1FD7FFBB00AE1D93 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E5F0DC1FD7FFBB00AE1D93 /* Validator.swift */; };
@@ -248,6 +249,7 @@
 		C4D458471F8021D100565A3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C4D4584A1F8021D100565A3F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C4D4584C1F8021D100565A3F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C4D48C6B203DAF1100FA5E37 /* NGO.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = NGO.html; sourceTree = "<group>"; };
 		C4DD56922024955800BF3A04 /* Character.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Character.xcassets; sourceTree = "<group>"; };
 		C4DD569C2024A3CB00BF3A04 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C4DD569E2024A3F900BF3A04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -787,9 +789,18 @@
 			path = QuitSmokingTogether;
 			sourceTree = "<group>";
 		};
+		C4D48C6D203DB28800FA5E37 /* NGO */ = {
+			isa = PBXGroup;
+			children = (
+				C4D48C6B203DAF1100FA5E37 /* NGO.html */,
+			);
+			path = NGO;
+			sourceTree = "<group>";
+		};
 		C4DD5694202495D900BF3A04 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				C4D48C6D203DB28800FA5E37 /* NGO */,
 				C4C0EEE01FD0515400CA258B /* FAQ.plist */,
 			);
 			path = Data;
@@ -955,6 +966,7 @@
 				C4968DDC202AF64D009DC678 /* ArticleDesc.storyboard in Resources */,
 				C4D458431F8021D100565A3F /* TabBar.storyboard in Resources */,
 				C4A12E731FE1B56400E843F8 /* Settings.storyboard in Resources */,
+				C4D48C6C203DAF1100FA5E37 /* NGO.html in Resources */,
 				C4C236491FE190B3005219A0 /* About.storyboard in Resources */,
 				C4FE6F76202B0170000ACEAA /* ArticleStyles.css in Resources */,
 				C4DD56932024955800BF3A04 /* Character.xcassets in Resources */,

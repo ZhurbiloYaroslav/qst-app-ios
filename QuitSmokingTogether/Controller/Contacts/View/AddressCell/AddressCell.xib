@@ -11,69 +11,51 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AddressCell" rowHeight="216" id="axC-3Z-ZeF" customClass="AddressCell" customModule="QuitSmokingTogether" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="216"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="AddressCell" rowHeight="145" id="axC-3Z-ZeF" customClass="AddressCell" customModule="QuitSmokingTogether" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="145"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="axC-3Z-ZeF" id="hrv-tN-PC7">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="215.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="144.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-map" translatesAutoresizingMaskIntoConstraints="NO" id="nFq-iM-FTf">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="250" id="oBj-jJ-k8D"/>
-                        </constraints>
-                    </imageView>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Me-Sb-zkJ">
-                        <rect key="frame" x="15" y="15" width="345" height="34"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="qVl-43-8VJ">
+                        <rect key="frame" x="15" y="15" width="345" height="114.5"/>
                         <subviews>
-                            <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k3C-zJ-doj">
-                                <rect key="frame" x="0.0" y="0.0" width="345" height="34"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="clip" baselineAdjustment="alignBaselines" minimumFontSize="15" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iaO-Ej-cA1" userLabel="Organization name">
+                                <rect key="frame" x="0.0" y="0.0" width="345" height="24"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Label" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Owq-4G-NJd">
-                                <rect key="frame" x="5" y="5" width="335" height="24"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact">
-                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <variation key="widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="24"/>
+                                </variation>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" lineBreakMode="wordWrap" numberOfLines="3" baselineAdjustment="alignBaselines" minimumFontSize="14" highlighted="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Owq-4G-NJd">
+                                <rect key="frame" x="0.0" y="34" width="345" height="80.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="widthClass=regular">
+                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 </variation>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="trailing" secondItem="k3C-zJ-doj" secondAttribute="trailing" id="05F-1a-GWK"/>
-                            <constraint firstItem="Owq-4G-NJd" firstAttribute="leading" secondItem="8Me-Sb-zkJ" secondAttribute="leading" constant="5" id="8tC-a8-8mB"/>
-                            <constraint firstItem="Owq-4G-NJd" firstAttribute="top" secondItem="8Me-Sb-zkJ" secondAttribute="top" constant="5" id="BBo-Q4-iAU"/>
-                            <constraint firstAttribute="bottom" secondItem="k3C-zJ-doj" secondAttribute="bottom" id="JI7-Sk-exb"/>
-                            <constraint firstItem="k3C-zJ-doj" firstAttribute="top" secondItem="8Me-Sb-zkJ" secondAttribute="top" id="Oqu-NX-7DX"/>
-                            <constraint firstAttribute="bottom" secondItem="Owq-4G-NJd" secondAttribute="bottom" constant="5" id="eyn-Tk-Xkh"/>
-                            <constraint firstItem="k3C-zJ-doj" firstAttribute="leading" secondItem="8Me-Sb-zkJ" secondAttribute="leading" id="fed-84-3fa"/>
-                            <constraint firstAttribute="trailing" secondItem="Owq-4G-NJd" secondAttribute="trailing" constant="5" id="maF-2T-H08"/>
-                        </constraints>
-                    </view>
+                    </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="nFq-iM-FTf" firstAttribute="leading" secondItem="hrv-tN-PC7" secondAttribute="leading" id="2tc-jf-egM"/>
-                    <constraint firstAttribute="bottom" secondItem="8Me-Sb-zkJ" secondAttribute="bottom" constant="15" id="79b-it-PNg"/>
-                    <constraint firstItem="8Me-Sb-zkJ" firstAttribute="leading" secondItem="hrv-tN-PC7" secondAttribute="leading" constant="15" id="EXq-Yw-AFB"/>
-                    <constraint firstAttribute="trailing" secondItem="nFq-iM-FTf" secondAttribute="trailing" id="LCK-vZ-3sx"/>
-                    <constraint firstItem="8Me-Sb-zkJ" firstAttribute="top" secondItem="hrv-tN-PC7" secondAttribute="top" constant="15" id="MXG-nr-3WR"/>
-                    <constraint firstAttribute="bottom" secondItem="nFq-iM-FTf" secondAttribute="bottom" id="Orm-er-1eX"/>
-                    <constraint firstItem="nFq-iM-FTf" firstAttribute="top" secondItem="hrv-tN-PC7" secondAttribute="top" id="aAo-sC-uuR"/>
-                    <constraint firstAttribute="trailing" secondItem="8Me-Sb-zkJ" secondAttribute="trailing" constant="15" id="xzj-LG-jDd"/>
+                    <constraint firstItem="qVl-43-8VJ" firstAttribute="top" secondItem="hrv-tN-PC7" secondAttribute="top" constant="15" id="6mx-Sb-Wk0"/>
+                    <constraint firstItem="qVl-43-8VJ" firstAttribute="leading" secondItem="hrv-tN-PC7" secondAttribute="leading" constant="15" id="GZ7-CC-s9K"/>
+                    <constraint firstAttribute="trailing" secondItem="qVl-43-8VJ" secondAttribute="trailing" constant="15" id="R7G-T1-7Mm"/>
+                    <constraint firstAttribute="bottom" secondItem="qVl-43-8VJ" secondAttribute="bottom" constant="15" id="YGM-Ac-ekx"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
                 <outlet property="addressTextView" destination="Owq-4G-NJd" id="RDf-9j-lIL"/>
-                <outlet property="mapImageView" destination="nFq-iM-FTf" id="MJZ-88-N7w"/>
+                <outlet property="organizationNameLabel" destination="iaO-Ej-cA1" id="Agq-5o-5m0"/>
             </connections>
-            <point key="canvasLocation" x="32.5" y="73"/>
+            <point key="canvasLocation" x="32.5" y="37.5"/>
         </tableViewCell>
     </objects>
-    <resources>
-        <image name="background-map" width="1024" height="1024"/>
-    </resources>
 </document>

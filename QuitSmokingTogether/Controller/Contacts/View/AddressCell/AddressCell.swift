@@ -10,12 +10,13 @@ import UIKit
 
 class AddressCell: UITableViewCell {
 
+    @IBOutlet weak var organizationNameLabel: UILabel!
     @IBOutlet weak var addressTextView: UILabel!
-    @IBOutlet weak var mapImageView: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
         
+        organizationNameLabel.text = "contacts_text_organization".localized()
         addressTextView.text = "contacts_text_message".localized()
     }
     

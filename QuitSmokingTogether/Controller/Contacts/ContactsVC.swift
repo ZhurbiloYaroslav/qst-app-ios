@@ -54,19 +54,19 @@ extension ContactsVC: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "AddressCell", for: indexPath) as! AddressCell
             return cell
         case [0,2]:
-            cell.configureCellWithType(.Call)
+            cell.configureCellWithType(.call)
             return cell
         case [0,3]:
-            cell.configureCellWithType(.Skype)
+            cell.configureCellWithType(.skype)
             return cell
         case [0,4]:
-            cell.configureCellWithType(.Viber)
+            cell.configureCellWithType(.viber)
             return cell
         case [0,5]:
-            cell.configureCellWithType(.WhatsApp)
+            cell.configureCellWithType(.whatsApp)
             return cell
         case [0,6]:
-            cell.configureCellWithType(.Email)
+            cell.configureCellWithType(.email)
             return cell
         default:
             return UITableViewCell()
@@ -77,16 +77,16 @@ extension ContactsVC: UITableViewDelegate, UITableViewDataSource {
         switch indexPath {
         case [0,0]: // Image cell
             break
-        case [0,1]: // Text cell
+        case [0,1]: // Address cell
             Browser.openURLWith(.Map_QST)
         case [0,2]:
             Browser.openURLWith(.Call_Phone)
         case [0,3]:
-            Browser.openURLWith(.Call_Viber)
-        case [0,4]:
-            Browser.openURLWith(.Call_WhatsApp)
-        case [0,5]:
             Browser.openURLWith(.Call_Skype)
+        case [0,4]:
+            Browser.openURLWith(.Call_Viber)
+        case [0,5]:
+            Browser.openURLWith(.Call_WhatsApp)
         case [0,6]:
             Browser.openURLWith(.Mail_Alexeykovalua)
         default:

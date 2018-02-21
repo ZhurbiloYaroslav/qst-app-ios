@@ -222,8 +222,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="helpTextLabel" destination="v9Y-GC-Oy9" id="mem-0V-8vr"/>
+                                            <outlet property="cellImage" destination="YtV-nN-HtY" id="12b-hB-cqI"/>
+                                            <outlet property="messageLabel" destination="v9Y-GC-Oy9" id="mem-0V-8vr"/>
                                             <outlet property="readMoreView" destination="ujY-Bb-30b" id="hgi-Tl-FEz"/>
+                                            <outlet property="titleLabel" destination="iXn-BO-UH4" id="rkG-lm-90G"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -253,6 +255,6 @@
     <resources>
         <image name="book-cover" width="556" height="245"/>
         <image name="character-thumbs-up" width="1100" height="616"/>
-        <image name="image-contacts" width="589" height="393"/>
+        <image name="image-contacts" width="2560" height="1707"/>
     </resources>
 </document>

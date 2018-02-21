@@ -16,13 +16,13 @@ class ContactCell: UITableViewCell {
     @IBOutlet weak var contactAddress: UITextField!
     
     var arrayWithCells: [Cell] = [
-        Cell(type: .Undefined, icon: UIImage(), title: "", value: ""), // This will be Image cell
-        Cell(type: .Undefined, icon: UIImage(), title: "", value: ""), // This will be Image cell
-        Cell(type: .Call, icon: #imageLiteral(resourceName: "icon-call"), title: "Phone/fax:", value: "+38 (050) 202-23-02"),
-        Cell(type: .Skype, icon: #imageLiteral(resourceName: "icon-skype"), title: "Skype:", value: "alexeykovalua"),
-        Cell(type: .Viber, icon: #imageLiteral(resourceName: "icon-viber"), title: "Viber:", value: "+380502022302"),
-        Cell(type: .WhatsApp, icon: #imageLiteral(resourceName: "icon-whatsapp"), title: "WhatsApp:", value: "+380502022302"),
-        Cell(type: .Email, icon: #imageLiteral(resourceName: "icon-gmail-online"), title: "Email:", value: "quitsmokingtogether@gmail.com")
+        Cell(type: .undefined, icon: UIImage(), title: "", value: ""), // This will be Image cell
+        Cell(type: .undefined, icon: UIImage(), title: "", value: ""), // This will be Address cell
+        Cell(type: .call, icon: #imageLiteral(resourceName: "icon-call"), title: "Phone/fax:", value: "+380502022302"),
+        Cell(type: .skype, icon: #imageLiteral(resourceName: "icon-skype"), title: "Skype:", value: "alexeykovalua"),
+        Cell(type: .viber, icon: #imageLiteral(resourceName: "icon-viber"), title: "Viber:", value: "+380502022302"),
+        Cell(type: .whatsApp, icon: #imageLiteral(resourceName: "icon-whatsapp"), title: "WhatsApp:", value: "+380502022302"),
+        Cell(type: .email, icon: #imageLiteral(resourceName: "icon-gmail-online"), title: "Email:", value: "quitsmokingtogether@gmail.com")
     ]
     
     override func awakeFromNib() {
@@ -33,7 +33,7 @@ class ContactCell: UITableViewCell {
     
     func configureCellWithType(_ cellType: CellType) {
         
-        if cellType == .Text {
+        if cellType == .text {
             contactIcon.isHidden = true
             contactTitle.isHidden = true
             contactAddress.textColor = UIColor.darkGray
@@ -56,13 +56,13 @@ class ContactCell: UITableViewCell {
     }
     
     enum CellType {
-        case Text
-        case Call
-        case Skype
-        case Viber
-        case WhatsApp
-        case Email
-        case Undefined
+        case text
+        case call
+        case skype
+        case viber
+        case whatsApp
+        case email
+        case undefined
     }
     
 }

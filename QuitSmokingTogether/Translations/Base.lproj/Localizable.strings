@@ -179,4 +179,5 @@
 "donate_04_message" = "We would like to ask you for any help you can provide to save lives—a person who quits smoking may live for up to ten or twenty years longer, after all, and it is you who can give these extra years of life to them. These people will be able to see their children, grandchildren, do something good, plant a tree, build a house, and help those in need.\n\nSaving a life is easy. Donate and you may help save someone’s life.\n\nIt’s so simple but so much. It’s all in your hands!";
 "donate_05_message" = "Your help is important to us! Dozens of people die from nicotine addiction every day. Helping us, you may save someone’s life!";
 "donate_06_message" = "";
-"contacts_text_message" = "NGO \"Quit Smoking Together\"\n\nContact Information:\nAddress: 23B Velika Vasilkivska Street, 01004, Kyiv, Ukraine.";
+"contacts_text_message" = "Address: 23B Velika Vasilkivska Street, 01004, Kyiv, Ukraine.";
+"contacts_text_organization" = "NGO \"Quit Smoking Together\"";

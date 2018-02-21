@@ -58,37 +58,6 @@ class OverviewVC: UIViewController {
         }
     }
     
-    func showReader() {
-        tabBarController?.selectedIndex = 2
-    }
-    
-    func showAdviceView() {
-        if let messagesVC = AdviceVC.getInstance() {
-            messagesVC.messagesManager = MessagesManager(messageType: .advice)
-            navigationController?.pushViewController(messagesVC, animated: true)
-        }
-    }
-
-    func showEventDescriptionWith(type: Event.EventType) {
-        
-        if let navController = self.tabBarController?.viewControllers?[1] as? UINavigationController{
-            if let eventsListController = navController.childViewControllers.first as? EventsListVC {
-                
-                let event = EventsData.shared.getFirstEventWithType(type, andStatus: .Unread)
-                eventsListController.eventToPresentFromOverview = event
-                eventsListController.doWePresentEventFromOverview = true
-                self.tabBarController?.selectedIndex = 1
-            }
-        }
-
-    }
-    
-    func showContactsView() {
-        if let contactsVC = ContactsVC.getInstance() {
-            navigationController?.pushViewController(contactsVC, animated: true)
-        }
-    }
-    
 }
 
 extension OverviewVC {
@@ -100,7 +69,7 @@ extension OverviewVC {
 extension OverviewVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 7
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -130,8 +99,19 @@ extension OverviewVC: UITableViewDataSource, UITableViewDelegate {
             
         case [0,4]:
             let cell = tableView.dequeueReusableCell(withIdentifier: "OverviewContactsCell", for: indexPath) as! OverviewContactsCell
-            cell.helpTextLabel?.text = "Dear friend, you can contact with me and I will help you to quit smoking!"
+            cell.updateWithType(.contacts)
             return cell
+            
+        case [0,5]:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "OverviewContactsCell", for: indexPath) as! OverviewContactsCell
+            cell.updateWithType(.ngo)
+            return cell
+            
+        case [0,6]:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "OverviewContactsCell", for: indexPath) as! OverviewContactsCell
+            cell.updateWithType(.shirts)
+            return cell
+            
             
         default:
             return UITableViewCell()
@@ -150,6 +130,10 @@ extension OverviewVC: UITableViewDataSource, UITableViewDelegate {
             showEventDescriptionWith(type: .Competition)
         case [0,4]:
             showContactsView()
+        case [0,5]:
+            showNGOView()
+        case [0,6]:
+            showShirtsView()
         default:
             return
         }
@@ -157,3 +141,46 @@ extension OverviewVC: UITableViewDataSource, UITableViewDelegate {
     
 }
 
+// MARK: Supporting methods
+extension OverviewVC {
+    
+    func showReader() {
+        tabBarController?.selectedIndex = 2
+    }
+    
+    func showAdviceView() {
+        if let messagesVC = AdviceVC.getInstance() {
+            messagesVC.messagesManager = MessagesManager(messageType: .advice)
+            navigationController?.pushViewController(messagesVC, animated: true)
+        }
+    }
+    
+    func showEventDescriptionWith(type: Event.EventType) {
+        
+        if let navController = self.tabBarController?.viewControllers?[1] as? UINavigationController{
+            if let eventsListController = navController.childViewControllers.first as? EventsListVC {
+                
+                let event = EventsData.shared.getFirstEventWithType(type, andStatus: .Unread)
+                eventsListController.eventToPresentFromOverview = event
+                eventsListController.doWePresentEventFromOverview = true
+                self.tabBarController?.selectedIndex = 1
+            }
+        }
+        
+    }
+    
+    func showContactsView() {
+        if let contactsVC = ContactsVC.getInstance() {
+            navigationController?.pushViewController(contactsVC, animated: true)
+        }
+    }
+    
+    func showNGOView() {
+        
+    }
+    
+    func showShirtsView() {
+        
+    }
+    
+}
