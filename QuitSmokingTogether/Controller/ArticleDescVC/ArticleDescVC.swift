@@ -32,16 +32,6 @@ class ArticleDescVC: UIViewController {
         updateUIWithValues()
     }
     
-//    func viewWillLoad(_ animated: Bool) {
-//        super.viewWillLoad(animated)
-//
-//        if let currentArticle = currentArticle {
-//            titleLabel.isHidden = currentArticle.title.isEmpty
-//            dateLabel.isHidden = currentArticle.date.isEmpty
-//        }
-//
-//    }
-    
     func setDelegates() {
         contentWebView.delegate = self
     }

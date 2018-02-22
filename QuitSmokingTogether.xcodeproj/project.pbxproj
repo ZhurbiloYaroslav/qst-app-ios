@@ -36,6 +36,11 @@
 		C455432F203EA8CB008B7882 /* ShirtsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C455432E203EA8CB008B7882 /* ShirtsVC.swift */; };
 		C4554331203EC196008B7882 /* Shirts.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4554330203EC196008B7882 /* Shirts.xcassets */; };
 		C4554333203ECB34008B7882 /* AssetExtractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4554332203ECB34008B7882 /* AssetExtractor.swift */; };
+		C4554340203EE43A008B7882 /* image-alex-table.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C455433A203EE438008B7882 /* image-alex-table.jpg */; };
+		C4554341203EE43A008B7882 /* image-sport.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C455433B203EE438008B7882 /* image-sport.jpg */; };
+		C4554342203EE43A008B7882 /* image-girls-break-cigar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C455433C203EE439008B7882 /* image-girls-break-cigar.jpg */; };
+		C4554343203EE43A008B7882 /* image-maidan.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C455433D203EE439008B7882 /* image-maidan.jpg */; };
+		C4554344203EE43A008B7882 /* image-burn-cigar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C455433E203EE43A008B7882 /* image-burn-cigar.jpg */; };
 		C455D5871F8CFE75002846D9 /* AdviceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C455D5861F8CFE75002846D9 /* AdviceVC.swift */; };
 		C455D58B1F8D0024002846D9 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C455D58A1F8D0024002846D9 /* SettingsVC.swift */; };
 		C45FE1891FB860350080E172 /* QST-iBook.epub in Resources */ = {isa = PBXBuildFile; fileRef = C45FE1881FB860330080E172 /* QST-iBook.epub */; };
@@ -169,6 +174,11 @@
 		C455432E203EA8CB008B7882 /* ShirtsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShirtsVC.swift; sourceTree = "<group>"; };
 		C4554330203EC196008B7882 /* Shirts.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Shirts.xcassets; sourceTree = "<group>"; };
 		C4554332203ECB34008B7882 /* AssetExtractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssetExtractor.swift; sourceTree = "<group>"; };
+		C455433A203EE438008B7882 /* image-alex-table.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "image-alex-table.jpg"; sourceTree = "<group>"; };
+		C455433B203EE438008B7882 /* image-sport.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "image-sport.jpg"; sourceTree = "<group>"; };
+		C455433C203EE439008B7882 /* image-girls-break-cigar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "image-girls-break-cigar.jpg"; sourceTree = "<group>"; };
+		C455433D203EE439008B7882 /* image-maidan.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "image-maidan.jpg"; sourceTree = "<group>"; };
+		C455433E203EE43A008B7882 /* image-burn-cigar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "image-burn-cigar.jpg"; sourceTree = "<group>"; };
 		C455D5861F8CFE75002846D9 /* AdviceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceVC.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		C455D58A1F8D0024002846D9 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		C45FE1881FB860330080E172 /* QST-iBook.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "QST-iBook.epub"; sourceTree = "<group>"; };
@@ -816,6 +826,11 @@
 			isa = PBXGroup;
 			children = (
 				C4D48C6B203DAF1100FA5E37 /* NGO.html */,
+				C455433A203EE438008B7882 /* image-alex-table.jpg */,
+				C455433E203EE43A008B7882 /* image-burn-cigar.jpg */,
+				C455433C203EE439008B7882 /* image-girls-break-cigar.jpg */,
+				C455433D203EE439008B7882 /* image-maidan.jpg */,
+				C455433B203EE438008B7882 /* image-sport.jpg */,
 			);
 			path = NGO;
 			sourceTree = "<group>";
@@ -956,6 +971,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C4554340203EE43A008B7882 /* image-alex-table.jpg in Resources */,
 				C4B808921F9F36FA0099DA49 /* GoogleService-Info.plist in Resources */,
 				C455432D203EA899008B7882 /* ShirtsVC.storyboard in Resources */,
 				C4A4F5E22025C43600D65663 /* LanguagePicker.storyboard in Resources */,
@@ -977,6 +993,7 @@
 				C4A12E7C1FE1B87B00E843F8 /* Auth.storyboard in Resources */,
 				C415AA941FE16D7C00BC5365 /* Contacts.storyboard in Resources */,
 				C46272572024F56200B7AEA8 /* Events.xcassets in Resources */,
+				C4554344203EE43A008B7882 /* image-burn-cigar.jpg in Resources */,
 				C463F86E1FF4317F001FBBC1 /* ContactCell.xib in Resources */,
 				C463F86A1FF4270B001FBBC1 /* OverviewEventCell.xib in Resources */,
 				C4B53FF92021F51C000D7C73 /* ic_cross_white@3x.png in Resources */,
@@ -986,6 +1003,7 @@
 				C46DFB261FC4888F00A62D69 /* Advices.plist in Resources */,
 				C49ABA1420389914007900F5 /* AddressCell.xib in Resources */,
 				C415AA9E1FE16FCE00BC5365 /* EventsList.storyboard in Resources */,
+				C4554342203EE43A008B7882 /* image-girls-break-cigar.jpg in Resources */,
 				C47317921F8D1C1600A6AE43 /* Notes and links.rtf in Resources */,
 				C4968DDC202AF64D009DC678 /* ArticleDesc.storyboard in Resources */,
 				C4554331203EC196008B7882 /* Shirts.xcassets in Resources */,
@@ -996,6 +1014,8 @@
 				C4FE6F76202B0170000ACEAA /* ArticleStyles.css in Resources */,
 				C4DD56932024955800BF3A04 /* Character.xcassets in Resources */,
 				C4B540032021F51C000D7C73 /* README.md in Resources */,
+				C4554343203EE43A008B7882 /* image-maidan.jpg in Resources */,
+				C4554341203EE43A008B7882 /* image-sport.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

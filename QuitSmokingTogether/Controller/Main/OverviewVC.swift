@@ -186,7 +186,7 @@ extension OverviewVC {
             guard let linkForNGOTitle = AssetExtractor.createLocalUrl(forImageNamed: "image-ngo")
                 else { return }
             let absoluteURL = linkForNGOTitle.absoluteString
-            articleWithNGO.arrayWithImageLinks.append(absoluteURL)
+            articleWithNGO.arrayWithImageLinks = [absoluteURL]
             articleDescVC.currentArticle = articleWithNGO
             navigationController?.pushViewController(articleDescVC, animated: true)
         }
