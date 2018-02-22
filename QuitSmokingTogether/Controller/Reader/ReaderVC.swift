@@ -47,8 +47,13 @@ class ReaderVC: UIViewController {
 extension ReaderVC: FolioReaderDelegate, FolioReaderPageDelegate, FolioReaderCenterDelegate {
     
     func pageDidAppear(_ page: FolioReaderPage) {
-        
         presentShareAlertIfDidNotSharedThisApp(page)
+    }
+    
+    func pageDidLoad(_ page: FolioReaderPage) {
+        guard let folioReaderCenter = folioReader.readerCenter
+            else { return }
+        AdMobManager.shared.getFullScreenInterstitialForVC(folioReaderCenter)
     }
     
     func presentShareAlertIfDidNotSharedThisApp(_ page: FolioReaderPage) {

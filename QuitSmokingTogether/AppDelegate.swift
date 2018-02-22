@@ -187,11 +187,12 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
 
 extension AppDelegate: GADInterstitialDelegate {
     func showAdmobInterstitial() {
-        self.interstitial = GADInterstitial(adUnitID: "ca-app-pub-3940256099942544/4411468910")
+        let interstitialID = AdMobManager.BannerID.Test_InterstitialID.rawValue
+        self.interstitial = GADInterstitial(adUnitID: interstitialID)
         
         interstitial.delegate = self
         let request  = GADRequest()
-        request.testDevices = [kGADSimulatorID, "e9ebcd52a35476ac486fdfb4a9c6567a57c1b88c"]
+        request.testDevices = [kGADSimulatorID] // , "e9ebcd52a35476ac486fdfb4a9c6567a57c1b88c"
         interstitial.load(request)
     }
     
