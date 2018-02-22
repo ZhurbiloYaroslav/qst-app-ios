@@ -99,19 +99,18 @@ extension OverviewVC: UITableViewDataSource, UITableViewDelegate {
             
         case [0,4]:
             let cell = tableView.dequeueReusableCell(withIdentifier: "OverviewContactsCell", for: indexPath) as! OverviewContactsCell
-            cell.updateWithType(.contacts)
+            cell.updateWithType(.ngo)
             return cell
             
         case [0,5]:
             let cell = tableView.dequeueReusableCell(withIdentifier: "OverviewContactsCell", for: indexPath) as! OverviewContactsCell
-            cell.updateWithType(.ngo)
+            cell.updateWithType(.shirts)
             return cell
             
         case [0,6]:
             let cell = tableView.dequeueReusableCell(withIdentifier: "OverviewContactsCell", for: indexPath) as! OverviewContactsCell
-            cell.updateWithType(.shirts)
+            cell.updateWithType(.contacts)
             return cell
-            
             
         default:
             return UITableViewCell()
@@ -129,11 +128,11 @@ extension OverviewVC: UITableViewDataSource, UITableViewDelegate {
         case [0,3]:
             showEventDescriptionWith(type: .Competition)
         case [0,4]:
-            showContactsView()
-        case [0,5]:
             showNGOView()
-        case [0,6]:
+        case [0,5]:
             showShirtsView()
+        case [0,6]:
+            showContactsView()
         default:
             return
         }
@@ -176,11 +175,28 @@ extension OverviewVC {
     }
     
     func showNGOView() {
-        
+        if let articleDescVC = ArticleDescVC.getInstance() {
+            
+            guard let path = Bundle.main.path(forResource: "NGO", ofType: "html") else { return }
+            let ngoHtmlText = try! String(contentsOfFile: path).trimmingCharacters(in: .whitespacesAndNewlines)
+            
+            let articleWithNGO = Event(id: 0, date: "",
+                              title: "", htmlContent: ngoHtmlText,
+                              type: [.Undefined], status: .All)
+            guard let linkForNGOTitle = AssetExtractor.createLocalUrl(forImageNamed: "image-ngo")
+                else { return }
+            let absoluteURL = linkForNGOTitle.absoluteString
+            articleWithNGO.arrayWithImageLinks.append(absoluteURL)
+            articleDescVC.currentArticle = articleWithNGO
+            navigationController?.pushViewController(articleDescVC, animated: true)
+        }
     }
     
     func showShirtsView() {
-        
+        if let shirtsVC = ShirtsVC.getInstance() {
+            navigationController?.pushViewController(shirtsVC, animated: true)
+        }
     }
     
 }
+

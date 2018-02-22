@@ -30,14 +30,15 @@ class OverviewContactsCell: UITableViewCell {
             )
         case .ngo:
             updateUIWith(image: UIImage(named: "image-ngo") ?? UIImage(),
-                         title: "NGO title",
-                         message: "NGO message text"
+                         title: "ngo_screen_title".localized(),
+                         message: "ngo_screen_message".localized()
             )
         case .shirts:
-            updateUIWith(image: UIImage(named: "dsc06257") ?? UIImage(),
-                         title: "Shirts",
-                         message: "Shirts message text"
+            updateUIWith(image: UIImage(named: "image-shirt-1") ?? UIImage(),
+                         title: "shirts_screen_title".localized(),
+                         message: "shirts_text_message".localized()
             )
+            messageLabel.numberOfLines = 3
         }
     }
     

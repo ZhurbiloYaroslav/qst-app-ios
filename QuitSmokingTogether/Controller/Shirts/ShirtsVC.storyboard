@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bDX-SK-oNc">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ShirtsVC-->
+        <scene sceneID="z4O-Vj-YaE">
+            <objects>
+                <viewController storyboardIdentifier="ShirtsVC" id="bDX-SK-oNc" customClass="ShirtsVC" customModule="QuitSmokingTogether" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="D4R-Do-bMM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kT5-eH-PRj">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qNf-Ra-mcs" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="316.5"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yQz-0X-e0l" customClass="ImageSlideshow" customModule="QuitSmokingTogether" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="375" height="250"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="yQz-0X-e0l" secondAttribute="height" multiplier="3:2" id="hJ4-XJ-sxp"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Shirts message" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kne-Zr-6rL">
+                                                <rect key="frame" x="16" y="265" width="343" height="21.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <nil key="highlightedColor"/>
+                                                <variation key="widthClass=regular">
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                </variation>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="kne-Zr-6rL" secondAttribute="bottom" constant="30" id="HQ4-KA-XaC"/>
+                                            <constraint firstAttribute="trailing" secondItem="yQz-0X-e0l" secondAttribute="trailing" id="MJz-aL-AYr"/>
+                                            <constraint firstItem="kne-Zr-6rL" firstAttribute="leading" secondItem="qNf-Ra-mcs" secondAttribute="leading" constant="16" id="aPd-zi-xUD"/>
+                                            <constraint firstItem="yQz-0X-e0l" firstAttribute="top" secondItem="qNf-Ra-mcs" secondAttribute="top" id="aVa-bj-nAq"/>
+                                            <constraint firstAttribute="trailing" secondItem="kne-Zr-6rL" secondAttribute="trailing" constant="16" id="g3p-FZ-xUo"/>
+                                            <constraint firstItem="yQz-0X-e0l" firstAttribute="leading" secondItem="qNf-Ra-mcs" secondAttribute="leading" id="nTZ-Y7-C7b"/>
+                                            <constraint firstItem="kne-Zr-6rL" firstAttribute="top" secondItem="yQz-0X-e0l" secondAttribute="bottom" constant="15" id="vnW-hH-fJZ"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="qNf-Ra-mcs" firstAttribute="top" secondItem="kT5-eH-PRj" secondAttribute="top" id="IFU-5U-SMW"/>
+                                    <constraint firstItem="qNf-Ra-mcs" firstAttribute="leading" secondItem="kT5-eH-PRj" secondAttribute="leading" id="RB7-dS-IUj"/>
+                                    <constraint firstAttribute="bottom" secondItem="qNf-Ra-mcs" secondAttribute="bottom" id="Uuo-2e-kCQ"/>
+                                    <constraint firstAttribute="trailing" secondItem="qNf-Ra-mcs" secondAttribute="trailing" id="WNH-fA-Beg"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ayw-d5-XzR" firstAttribute="trailing" secondItem="kT5-eH-PRj" secondAttribute="trailing" id="8Sc-3y-2o3"/>
+                            <constraint firstItem="kT5-eH-PRj" firstAttribute="top" secondItem="ayw-d5-XzR" secondAttribute="top" id="S43-cn-WrC"/>
+                            <constraint firstItem="kT5-eH-PRj" firstAttribute="leading" secondItem="ayw-d5-XzR" secondAttribute="leading" id="Xy3-ik-giE"/>
+                            <constraint firstItem="qNf-Ra-mcs" firstAttribute="height" secondItem="D4R-Do-bMM" secondAttribute="height" priority="250" id="ebZ-dZ-AAB"/>
+                            <constraint firstItem="qNf-Ra-mcs" firstAttribute="width" secondItem="D4R-Do-bMM" secondAttribute="width" id="igd-Vu-nNn"/>
+                            <constraint firstItem="ayw-d5-XzR" firstAttribute="bottom" secondItem="kT5-eH-PRj" secondAttribute="bottom" id="wuQ-ki-0sE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ayw-d5-XzR"/>
+                    </view>
+                    <connections>
+                        <outlet property="messageTextLabel" destination="kne-Zr-6rL" id="QA6-Fh-Grl"/>
+                        <outlet property="slideshow" destination="yQz-0X-e0l" id="Pmf-nb-5ks"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fYl-bk-MEm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="130" y="131"/>
+        </scene>
+    </scenes>
+</document>

@@ -163,7 +163,7 @@
 
 /*Fuzzy*/
 "overview_screen_title" = "Main";
-"donate_text_message" = "Общественная негосударственная неприбыльная организация «Бросим курить вместе» существует на протяжение шести лет за счет автора книги Бросим курить вместе Алексея Коваля и пожертвований частных лиц, небезразличных к судьбе людей, ставших никотинозависимыми";
+"donate_text_message" = "NGO \"Quit Smoking Together\"";
 "greeting_01_message" = "Hello! My name is Alexey Koval. I will help you get rid of nicotine addiction and remember what it’s like to be a non-smoker!";
 "greeting_02_message" = "My book is for “severe cases”—the people for whom smoking has become a part of life. Only for a short time can they suppress the habit, starting to smoke again after a while whatever the method or way of quitting they choose.";
 "greeting_03_message" = "This time, you will get rid of this addiction forever! Over the next nine days, we will wake up together, go to work, spend time, hang out with friends, experience unpleasant moments during quitting, and help you get through hard times. You will not be alone. You will have a plan, answers to questions that may arise, and my help—all that was missing during your past attempts.";
@@ -181,3 +181,7 @@
 "donate_06_message" = "";
 "contacts_text_message" = "Address: 23B Velika Vasilkivska Street, 01004, Kyiv, Ukraine.";
 "contacts_text_organization" = "NGO \"Quit Smoking Together\"";
+"shirts_text_message" = "How do you like our exclusive T-shirts? Want to get one?\n\nQuit Smoking Together is a Public Non-Profit NGO. We don’t sell our exclusive T-shirts, cups, and other merchandise. However, you can win such a T-shirt by participating in our contests or by helping us. Let everyone know that you help nicotine-dependent people!\n\nFor more information, see the Donate section.";
+"shirts_screen_title" = "Gifts";
+"ngo_screen_title" = "NGO \"Quit Smoking Together\"";
+"ngo_screen_message" = "\"Quit Smoking Together\" is a non-government initiative founded in 2012, right after the publication of the eponymous book by Aleksei Koval describing his method of fighting nicotine addiction for “difficult cases”—the people who lost their last hope. ";
