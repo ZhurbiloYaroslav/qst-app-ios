@@ -59,7 +59,7 @@ public class Event: NSObject {
     }
     
     convenience override init() {
-        self.init(id: 0, date: "", title: "Template", htmlContent: "",
+        self.init(id: 0, date: "", title: "", htmlContent: "",
                   type: [.Undefined], status: .Unread)
     }
     

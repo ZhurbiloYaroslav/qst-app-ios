@@ -30,6 +30,7 @@ class ArticleDescVC: UIViewController {
         updateUIWithLocalizedText()
         setupImageSlider()
         updateUIWithValues()
+        removeElementsIfEmpty()
     }
     
     func setDelegates() {
@@ -59,6 +60,17 @@ extension ArticleDescVC {
         contentWebView.scrollView.bounces = true
         contentWebView.backgroundColor = UIColor.clear
         contentWebView.sizeToFit()
+    }
+    
+    func removeElementsIfEmpty() {
+        guard let article = currentArticle
+            else { return }
+        if article.title.isEmpty {
+            titleLabel.isHidden = true
+        }
+        if article.getStringWithDate().isEmpty {
+            dateLabel.isHidden = true
+        }
     }
 }
 
@@ -92,7 +104,7 @@ extension ArticleDescVC {
     func setupImageSlider() {
         slideshow.backgroundColor = UIColor.clear
         slideshow.slideshowInterval = 5.0
-        slideshow.pageControlPosition = PageControlPosition.underScrollView
+        slideshow.pageControlPosition = PageControlPosition.insideScrollView
         slideshow.pageControl.currentPageIndicatorTintColor = UIColor.lightGray
         slideshow.pageControl.pageIndicatorTintColor = UIColor.black
         slideshow.contentScaleMode = UIViewContentMode.scaleAspectFill

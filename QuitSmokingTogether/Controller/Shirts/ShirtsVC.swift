@@ -11,22 +11,32 @@ import UIKit
 class ShirtsVC: UIViewController {
     
     @IBOutlet var slideshow: ImageSlideshow!
+    @IBOutlet weak var titleTextLabel: UILabel!
     @IBOutlet weak var messageTextLabel: UILabel!
+    @IBOutlet weak var donateButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         updateUIWithLocalizedText()
         setupImageSlider()
-
+        donateButton.setRadius(10, withWidth: 1, andColor: UIColor.clear)
     }
     
     func updateUIWithLocalizedText() {
         
         navigationItem.title = "shirts_screen_title".localized()
+        titleTextLabel.text = "shirts_text_title".localized()
         messageTextLabel.text = "shirts_text_message".localized()
     }
-
+    
+    @IBAction func donateButtonPressed(_ sender: UIButton) {
+        tabBarController?.selectedIndex = 3
+//        if let donateVC = DonateVC.getInstance() {
+//            navigationController?.pushViewController(donateVC, animated: true)
+//        }
+    }
+    
 }
 
 // Slider
@@ -35,7 +45,7 @@ extension ShirtsVC {
     func setupImageSlider() {
         slideshow.backgroundColor = UIColor.clear
         slideshow.slideshowInterval = 5.0
-        slideshow.pageControlPosition = PageControlPosition.underScrollView
+        slideshow.pageControlPosition = PageControlPosition.insideScrollView
         slideshow.pageControl.currentPageIndicatorTintColor = UIColor.lightGray
         slideshow.pageControl.pageIndicatorTintColor = UIColor.black
         slideshow.contentScaleMode = UIViewContentMode.scaleAspectFill

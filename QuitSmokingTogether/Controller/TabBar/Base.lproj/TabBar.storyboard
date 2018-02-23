@@ -25,6 +25,7 @@
                         <segue destination="k8t-bX-4uA" kind="relationship" relationship="viewControllers" id="SjR-Lh-Be2"/>
                         <segue destination="kYQ-4n-II4" kind="relationship" relationship="viewControllers" id="nTs-Cs-VcM"/>
                         <segue destination="HtM-za-PvI" kind="relationship" relationship="viewControllers" id="B4X-kE-GA7"/>
+                        <segue destination="hJg-6k-kgZ" kind="relationship" relationship="viewControllers" id="gCa-tN-BJZ"/>
                         <segue destination="OIw-Ud-rcf" kind="relationship" relationship="viewControllers" id="Co0-wJ-dbG"/>
                     </connections>
                 </tabBarController>
@@ -131,7 +132,7 @@
         <!--Donate-->
         <scene sceneID="1uZ-z3-NtX">
             <objects>
-                <navigationController storyboardIdentifier="NavBarVcOnline" automaticallyAdjustsScrollViewInsets="NO" id="hJg-6k-kgZ" customClass="NavBarVC" customModule="QuitSmokingTogether" customModuleProvider="target" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="NavBarVcOnline" automaticallyAdjustsScrollViewInsets="NO" id="hJg-6k-kgZ" customClass="DonateNavBarVC" customModule="QuitSmokingTogether" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Donate" image="icon-donate" id="DbT-0X-LSx"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="Yzd-T2-o9U">
@@ -144,23 +145,10 @@
                         </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="USb-eW-g4J" kind="relationship" relationship="rootViewController" id="zcK-Hx-gmg"/>
-                    </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lNe-2c-Ese" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="381" y="920"/>
-        </scene>
-        <!--DonateVC-->
-        <scene sceneID="I6a-il-FfZ">
-            <objects>
-                <viewControllerPlaceholder storyboardIdentifier="OnlineVC" storyboardName="Donate" referencedIdentifier="DonateVC" id="USb-eW-g4J" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="HcG-Um-St4"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fiR-Ew-3mi" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="380.625" y="1659.5070422535211"/>
         </scene>
         <!--Overview-->
         <scene sceneID="Ios-qN-bZi">

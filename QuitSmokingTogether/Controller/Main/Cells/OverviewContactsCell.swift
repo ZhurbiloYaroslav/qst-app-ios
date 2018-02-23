@@ -45,7 +45,7 @@ class OverviewContactsCell: UITableViewCell {
     private func updateUIWith(image: UIImage, title: String, message: String) {
         cellImage.image = image
         titleLabel.text = title
-        messageLabel.text = message
+        messageLabel.text = message.removeNewLines()
     }
     
     public enum CellType {

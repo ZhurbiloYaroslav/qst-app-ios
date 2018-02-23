@@ -113,7 +113,7 @@ extension RemoveAdvertVC {
     func setupImageSlider() {
         slideshow.backgroundColor = UIColor.clear
         slideshow.slideshowInterval = 5.0
-        slideshow.pageControlPosition = PageControlPosition.underScrollView
+        slideshow.pageControlPosition = PageControlPosition.insideScrollView
         slideshow.pageControl.currentPageIndicatorTintColor = UIColor.lightGray
         slideshow.pageControl.pageIndicatorTintColor = UIColor.black
         slideshow.contentScaleMode = UIViewContentMode.scaleAspectFill

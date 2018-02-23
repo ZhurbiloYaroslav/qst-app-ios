@@ -1,7 +1,8 @@
+
 body {
     background-color: white;
     font-family: HelveticaNeue;
-    font-size: 18px;
+    font-size: 20px;
     color: #333;
     font-size: 1rem;
     font-weight: 400;
@@ -25,5 +26,23 @@ img {
     width: 100%;
     max-width: 100%;
     margin-top: 15pt;
+}
+
+/* Donate Button like in iOS App */
+.app-button {
+    color: white;
+    display: block;
+    padding: 5pt 15pt;
+    border-radius: 10px;
+    background-color: #5EBC36;
+    text-decoration: none !important;
+    
+    text-align: center;
+    vertical-align: middle;
+}
+
+a.app-button:hover, a.app-button:active {
+    color: white !important;
+    text-decoration: none !important;
 }
 
