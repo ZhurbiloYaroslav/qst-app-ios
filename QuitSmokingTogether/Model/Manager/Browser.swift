@@ -43,13 +43,14 @@ class Browser {
         
         case Mail_Alexeykovalua = "mailto:quitsmokingtogether@gmail.com"
         
-        case AppInItunes = "https://soft4status.com/"
+        case AppInItunes = "http://quitsmokingtogether.org/"
         case Soft4Status = "https://soft4status.com"
         
         case Map_QST = "https://goo.gl/maps/ey8wMPzhm392"
         
-        case Donate_100_UAH = """
-        https://www.liqpay.ua/api/3/checkout?data=eyJ2ZXJzaW9uIjozLCJhY3Rpb24iOiJwYXlkb25hdGUiLCJwdWJsaWNfa2V5IjoiaTcwNzM2MjY2OTcyIiwiYW1vdW50IjoiNSIsImN1cnJlbmN5IjoiVVNEIiwiZGVzY3JpcHRpb24iOiJEb25hdGlvbiIsInR5cGUiOiJkb25hdGUiLCJsYW5ndWFnZSI6ImVuIn0%3D&signature=tqGq7%2F0Bngx6geeEzhlJbL5osm8%3D
-        """
+        case Surf_LinkedIn_Yaroslav = "https://www.linkedin.com/in/zhurbilo-yaroslav/"
+        case Surf_LinkedIn_Vlad = "https://www.linkedin.com/in/ivlad003/"
+        
+        case Surf_QSTWebsite = "http://quitsmokingtogether.org"
     }
 }

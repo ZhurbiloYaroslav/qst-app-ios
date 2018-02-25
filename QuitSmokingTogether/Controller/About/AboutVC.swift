@@ -16,6 +16,12 @@ class AboutVC: UITableViewController {
         super.viewDidLoad()
 
         updateLabelsText()
+        setupTableView()
+    }
+    
+    func setupTableView() {
+        tableView.estimatedRowHeight = 50
+        tableView.rowHeight = UITableViewAutomaticDimension
     }
     
     func updateLabelsText() {
@@ -24,6 +30,19 @@ class AboutVC: UITableViewController {
     
     @IBAction func websiteButtonPressed(_ sender: UIButton) {
         Browser.openURLWith(.Soft4Status)
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath {
+        case [1,0]:
+            Browser.openURLWith(.Surf_QSTWebsite)
+        case [2,0]:
+            Browser.openURLWith(.Surf_LinkedIn_Yaroslav)
+        case [2,1]:
+            Browser.openURLWith(.Surf_LinkedIn_Yaroslav)
+        default:
+            break
+        }
     }
 
 }

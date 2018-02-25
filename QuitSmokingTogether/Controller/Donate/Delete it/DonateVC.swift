@@ -24,10 +24,6 @@ class DonateVC: UITableViewController {
         paymentPicker.dataSource = self
     }
     
-    @IBAction func donateButtonPressed(_ sender: UIButton) {
-        Browser.openURLWith(.Donate_100_UAH)
-    }
-    
 }
 
 extension DonateVC: UIPickerViewDelegate, UIPickerViewDataSource {

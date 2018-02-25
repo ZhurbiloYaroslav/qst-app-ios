@@ -19,6 +19,8 @@ class ShareVC: UIViewController {
     
     var presentThisVcFromReader: Bool?
     
+    var currentAlertController: UIAlertController?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -40,6 +42,23 @@ class ShareVC: UIViewController {
     
 }
 
+
+// MARK: Supporting methods and values
+extension ShareVC {
+    
+    var doWeNeedToDismissCurrentScreen: Bool {
+        let doesWeCameFromReaderScreen = presentThisVcFromReader ?? false
+        return doesWeCameFromReaderScreen
+    }
+    
+    func dismissScreenIfNeeded() {
+        if doWeNeedToDismissCurrentScreen {
+            self.dismiss(animated: true, completion: nil)
+        }
+    }
+    
+}
+
 // Sharing related Methods and Entities
 extension ShareVC {
     
@@ -55,15 +74,16 @@ extension ShareVC {
         
         addActionsTo(alertController, withProvider: provider)
         
-        self.present(alertController, animated: true, completion: nil)
-        //        self.present(alertController, animated: true) {
-        //            alertController.view.superview?.isUserInteractionEnabled = true
-        //            alertController.view.superview?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.alertControllerBackgroundTapped)))
-        //        }
+        currentAlertController = alertController
+        // self.present(alertController, animated: true, completion: nil)
+        self.present(alertController, animated: true) {
+            alertController.view.superview?.isUserInteractionEnabled = true
+            alertController.view.superview?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.alertControllerBackgroundTapped)))
+        }
     }
     
     @objc func alertControllerBackgroundTapped(){
-        self.dismiss(animated: true, completion: nil)
+        dismissScreenIfNeeded()
     }
     
     func addActionsTo(_ alertController: UIAlertController, withProvider provider: ContentSharingProvider) {
@@ -84,9 +104,7 @@ extension ShareVC {
         shareWebsiteAction.setValue(UIImage(named: "icon-website"), forKey: "image")
         
         let actionCancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
-            if let presentFromReader = self.presentThisVcFromReader, presentFromReader == true {
-                self.dismiss(animated: true, completion: nil)
-            }
+            self.dismissScreenIfNeeded()
         }
         
         alertController.addAction(shareAppAction)
@@ -143,12 +161,12 @@ extension ShareVC {
     
     func activityCompletionHandler(activityType: UIActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?) {
         if !completed {
-            self.dismiss(animated: true, completion: nil)
+            dismissScreenIfNeeded()
             print("canceled share with other apps")
             return
         }
         CurrentUser.didUserShareThisApp = true
-        self.dismiss(animated: true, completion: nil)
+        dismissScreenIfNeeded()
         print("User completed share with other apps")
     }
     
@@ -176,7 +194,7 @@ extension ShareVC: FBSDKSharingDelegate {
     
     func sharer(_ sharer: FBSDKSharing!, didCompleteWithResults results: [AnyHashable : Any]!) {
         CurrentUser.didUserShareThisApp = true
-        self.dismiss(animated: true, completion: nil)
+        dismissScreenIfNeeded()
     }
     
     func sharer(_ sharer: FBSDKSharing!, didFailWithError error: Error!) {
@@ -185,7 +203,7 @@ extension ShareVC: FBSDKSharingDelegate {
     
     func sharerDidCancel(_ sharer: FBSDKSharing!) {
         print("canceled")
-        self.dismiss(animated: true, completion: nil)
+        dismissScreenIfNeeded()
     }
     
     

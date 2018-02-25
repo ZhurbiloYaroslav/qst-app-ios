@@ -31,11 +31,15 @@ class OverviewEventCell: UITableViewCell {
     }
     
     func updateCellFor(eventType: Event.EventType) {
+        
+        var eventTitle = ""
         switch eventType {
         case .News:
             readMoreButton.tag = ReadMoreButtonTag.News.rawValue
+            eventTitle += "News: "
         case .Competition:
             readMoreButton.tag = ReadMoreButtonTag.Competitions.rawValue
+            eventTitle += "Events: "
         default:
             break
         }
@@ -43,7 +47,9 @@ class OverviewEventCell: UITableViewCell {
         let event = EventsData.shared.getFirstEventWithType(eventType, andStatus: .Unread)
         self.currentEvent = event
         
-        eventTitleLabel.text = event.title
+        eventTitle += event.title
+        eventTitleLabel.text = eventTitle
+        
         eventTextLabel.text = event.textContent
         
         if event.arrayWithImageLinks.count > 0 {
