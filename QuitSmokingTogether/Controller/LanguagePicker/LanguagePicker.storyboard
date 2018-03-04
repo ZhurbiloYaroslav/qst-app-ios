@@ -14,7 +14,7 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Language PickerVC-->
+        <!--Languages-->
         <scene sceneID="4aX-x3-zyr">
             <objects>
                 <tableViewController storyboardIdentifier="LanguagePickerVC" id="0gz-nw-kKi" customClass="LanguagePickerVC" customModule="QuitSmokingTogether" customModuleProvider="target" sceneMemberID="viewController">
@@ -71,6 +71,7 @@
                             <outlet property="delegate" destination="0gz-nw-kKi" id="Hpu-ja-r7I"/>
                         </connections>
                     </tableView>
+                    <navigationItem key="navigationItem" title="Languages" id="u4f-ep-GF3"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dwa-yP-g0e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

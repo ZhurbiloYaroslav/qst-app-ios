@@ -29,7 +29,7 @@ class OverviewVC: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        //tableView.reloadData()
+        tableView.reloadRows(at: [[0,0], [0,1]], with: .fade)
     }
     
     func setupTableView() {

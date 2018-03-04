@@ -36,10 +36,21 @@ class ReaderVC: UIViewController {
         config.enableTTS = false
         config.allowSharing = false
         config.useReaderMenuController = true
-        let bookPath = Bundle.main.path(forResource: "QST-iBook", ofType: "epub")
         
         folioReader.currentFontSize = FolioReaderFontSize.xs
+        
+        let bookPath = getPathWithLocalizedBook()
         folioReader.presentReader(parentViewController: self, withEpubPath: bookPath!, andConfig: config, shouldRemoveEpub: false)
+    }
+    
+    func getPathWithLocalizedBook() -> String? {
+        let currentLanguage = LanguageManager().currentLanguage
+        switch currentLanguage {
+        case .russian:
+            return Bundle.main.path(forResource: "QST-iBook-ru", ofType: "epub")
+        default:
+            return Bundle.main.path(forResource: "QST-iBook-en", ofType: "epub")
+        }
     }
     
 }

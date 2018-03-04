@@ -55,7 +55,7 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
         case 0:
-            return 1
+            return 2
         case 1:
             return 3
         case 2:
@@ -73,6 +73,9 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
         case [0,0]: // Account
             let cell = tableView.dequeueReusableCell(withIdentifier: "AccountName", for: indexPath) as! OptAccountCell
             cell.update()
+            return cell
+        case [0,1]: // Language
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Language", for: indexPath) as! UITableViewCell
             return cell
         case [1,0]: // Share
             let cell = tableView.dequeueReusableCell(withIdentifier: "Share", for: indexPath) as UITableViewCell
@@ -111,6 +114,10 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
         switch indexPath {
         case [0,0]: // Account
             performSegue(withIdentifier: "ShowProfileFromSettings", sender: nil)
+        case [0,1]: // Language
+            if let languageVC = LanguagePickerVC.getInstance() {
+                self.present(languageVC, animated: true)
+            }
         case [1,0]: // Share
             performSegue(withIdentifier: "ShowShareFromSettings", sender: nil)
         case [1,1]: // Like on App Store

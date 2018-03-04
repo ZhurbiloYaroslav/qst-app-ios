@@ -1,0 +1,18 @@
+
+/* Class = "UIButton"; normalTitle = "Register"; ObjectID = "CKj-MJ-5XV"; */
+"CKj-MJ-5XV.normalTitle" = "Register";
+
+/* Class = "UIButton"; normalTitle = "Have account? Log in!"; ObjectID = "GnG-vI-Dpc"; */
+"GnG-vI-Dpc.normalTitle" = "Have account? Log in!";
+
+/* Class = "UITextField"; placeholder = "Email"; ObjectID = "P6B-Rg-pma"; */
+"P6B-Rg-pma.placeholder" = "Email";
+
+/* Class = "UITextField"; placeholder = "Name"; ObjectID = "hZI-9e-VGS"; */
+"hZI-9e-VGS.placeholder" = "Name";
+
+/* Class = "UIButton"; normalTitle = "Continue without login"; ObjectID = "hbb-jF-6Tb"; */
+"hbb-jF-6Tb.normalTitle" = "Continue without login";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "vBA-18-b4O"; */
+"vBA-18-b4O.placeholder" = "Password";

@@ -1,0 +1,12 @@
+/* 
+  Language.strings
+  QuitSmokingTogether
+
+  Created by Yaroslav Zhurbilo on 04.03.18.
+  Copyright © 2018 Yaroslav Zhurbilo. All rights reserved.
+*/
+
+"language_en" = "Английский";
+"language_ru" = "Русский";
+"language_uk" = "Украинский";
+"language_system" = "Системный";

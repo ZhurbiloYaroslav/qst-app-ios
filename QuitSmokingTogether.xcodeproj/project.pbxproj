@@ -43,7 +43,6 @@
 		C4554344203EE43A008B7882 /* image-burn-cigar.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C455433E203EE43A008B7882 /* image-burn-cigar.jpg */; };
 		C455D5871F8CFE75002846D9 /* AdviceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C455D5861F8CFE75002846D9 /* AdviceVC.swift */; };
 		C455D58B1F8D0024002846D9 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C455D58A1F8D0024002846D9 /* SettingsVC.swift */; };
-		C45FE1891FB860350080E172 /* QST-iBook.epub in Resources */ = {isa = PBXBuildFile; fileRef = C45FE1881FB860330080E172 /* QST-iBook.epub */; };
 		C461A2C81F8E533400B698FA /* OverviewAdviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C461A2C71F8E533400B698FA /* OverviewAdviceCell.swift */; };
 		C461A2CA1F8E534900B698FA /* OverviewContactsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C461A2C91F8E534900B698FA /* OverviewContactsCell.swift */; };
 		C461A2CC1F8F8F5300B698FA /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C461A2CB1F8F8F5300B698FA /* TabBarVC.swift */; };
@@ -140,6 +139,9 @@
 		C4E77CD62040781300D1DF75 /* image-donate-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4E77CD42040781200D1DF75 /* image-donate-2.jpg */; };
 		C4EBF52F1FA5E74A00753D0C /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EBF52E1FA5E74A00753D0C /* RegisterVC.swift */; };
 		C4EBF5321FA61BE900753D0C /* HideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EBF5311FA61BE900753D0C /* HideKeyboard.swift */; };
+		C4FD07F2204C517300A02BA5 /* QST-iBook-en.epub in Resources */ = {isa = PBXBuildFile; fileRef = C4FD07F1204C517300A02BA5 /* QST-iBook-en.epub */; };
+		C4FD07F4204C518000A02BA5 /* QST-iBook-ru.epub in Resources */ = {isa = PBXBuildFile; fileRef = C4FD07F3204C518000A02BA5 /* QST-iBook-ru.epub */; };
+		C4FD0807204C529400A02BA5 /* Language.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4FD0809204C529400A02BA5 /* Language.strings */; };
 		C4FE6F76202B0170000ACEAA /* ArticleStyles.css in Resources */ = {isa = PBXBuildFile; fileRef = C4FE6F75202B0170000ACEAA /* ArticleStyles.css */; };
 		C4FE6F78202B0321000ACEAA /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FE6F77202B0321000ACEAA /* Formatter.swift */; };
 		C4FE6F7A202B3A4A000ACEAA /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FE6F79202B3A4A000ACEAA /* Category.swift */; };
@@ -163,7 +165,7 @@
 		C415AA991FE16EF500BC5365 /* RemoveAdvert.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = RemoveAdvert.storyboard; sourceTree = "<group>"; };
 		C415AA9B1FE16F6500BC5365 /* Reader.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Reader.storyboard; sourceTree = "<group>"; };
 		C415AA9D1FE16FCE00BC5365 /* EventsList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EventsList.storyboard; sourceTree = "<group>"; };
-		C415AA9F1FE170C400BC5365 /* About.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = About.storyboard; path = /Users/Yaroslav/Coding/Clients_Apps/QuitSmokingTogether/QuitSmokingTogether/Controller/About/About.storyboard; sourceTree = "<absolute>"; };
+		C415AA9F1FE170C400BC5365 /* About.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = About.storyboard; path = /Users/Yaroslav/Development/Clients_Apps/QuitSmokingTogether/QuitSmokingTogether/Controller/About/About.storyboard; sourceTree = "<absolute>"; };
 		C41B6F0B1FA2486B00B40F93 /* UIViewController+hideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+hideKeyboard.swift"; sourceTree = "<group>"; };
 		C4258F031FC4522B009FCBC8 /* DonateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateVC.swift; sourceTree = "<group>"; };
 		C4258F051FC46184009FCBC8 /* Browser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Browser.swift; sourceTree = "<group>"; };
@@ -185,7 +187,6 @@
 		C455433E203EE43A008B7882 /* image-burn-cigar.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "image-burn-cigar.jpg"; sourceTree = "<group>"; };
 		C455D5861F8CFE75002846D9 /* AdviceVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdviceVC.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		C455D58A1F8D0024002846D9 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
-		C45FE1881FB860330080E172 /* QST-iBook.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "QST-iBook.epub"; sourceTree = "<group>"; };
 		C461A2C71F8E533400B698FA /* OverviewAdviceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewAdviceCell.swift; sourceTree = "<group>"; };
 		C461A2C91F8E534900B698FA /* OverviewContactsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverviewContactsCell.swift; sourceTree = "<group>"; };
 		C461A2CB1F8F8F5300B698FA /* TabBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
@@ -285,6 +286,12 @@
 		C4E77CD42040781200D1DF75 /* image-donate-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "image-donate-2.jpg"; sourceTree = "<group>"; };
 		C4EBF52E1FA5E74A00753D0C /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		C4EBF5311FA61BE900753D0C /* HideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboard.swift; sourceTree = "<group>"; };
+		C4FD07F1204C517300A02BA5 /* QST-iBook-en.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "QST-iBook-en.epub"; sourceTree = "<group>"; };
+		C4FD07F3204C518000A02BA5 /* QST-iBook-ru.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "QST-iBook-ru.epub"; sourceTree = "<group>"; };
+		C4FD0808204C529400A02BA5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Language.strings; sourceTree = "<group>"; };
+		C4FD080A204C52AD00A02BA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Language.strings; sourceTree = "<group>"; };
+		C4FD080B204C52F000A02BA5 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
+		C4FD080C204C52F000A02BA5 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Language.strings; sourceTree = "<group>"; };
 		C4FE6F75202B0170000ACEAA /* ArticleStyles.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = ArticleStyles.css; sourceTree = "<group>"; };
 		C4FE6F77202B0321000ACEAA /* Formatter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Formatter.swift; sourceTree = "<group>"; };
 		C4FE6F79202B3A4A000ACEAA /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
@@ -350,7 +357,8 @@
 		C43624151F98DD3700ECD14A /* Books */ = {
 			isa = PBXGroup;
 			children = (
-				C45FE1881FB860330080E172 /* QST-iBook.epub */,
+				C4FD07F1204C517300A02BA5 /* QST-iBook-en.epub */,
+				C4FD07F3204C518000A02BA5 /* QST-iBook-ru.epub */,
 			);
 			path = Books;
 			sourceTree = "<group>";
@@ -867,6 +875,7 @@
 			isa = PBXGroup;
 			children = (
 				C4DD569D2024A3CB00BF3A04 /* Localizable.strings */,
+				C4FD0809204C529400A02BA5 /* Language.strings */,
 			);
 			path = Translations;
 			sourceTree = "<group>";
@@ -983,6 +992,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ru,
 			);
 			mainGroup = C4D458311F8021D100565A3F;
 			productRefGroup = C4D4583B1F8021D100565A3F /* Products */;
@@ -1013,7 +1023,6 @@
 				C4E77CD62040781300D1DF75 /* image-donate-2.jpg in Resources */,
 				C4E77CCC2040503800D1DF75 /* Donate.html in Resources */,
 				C4A9BF30202CCC1600F71C94 /* Greetings.plist in Resources */,
-				C45FE1891FB860350080E172 /* QST-iBook.epub in Resources */,
 				C415AA8E1FE16C3600BC5365 /* Share.storyboard in Resources */,
 				C4D4584B1F8021D100565A3F /* LaunchScreen.storyboard in Resources */,
 				C415AA8B1FE16B6500BC5365 /* Donate.storyboard in Resources */,
@@ -1027,6 +1036,7 @@
 				C463F86E1FF4317F001FBBC1 /* ContactCell.xib in Resources */,
 				C463F86A1FF4270B001FBBC1 /* OverviewEventCell.xib in Resources */,
 				C4B53FF92021F51C000D7C73 /* ic_cross_white@3x.png in Resources */,
+				C4FD0807204C529400A02BA5 /* Language.strings in Resources */,
 				C4D458481F8021D100565A3F /* Assets.xcassets in Resources */,
 				C415AA961FE16E1C00BC5365 /* Advice.storyboard in Resources */,
 				C4B53FF82021F51C000D7C73 /* ic_cross_white@2x.png in Resources */,
@@ -1040,11 +1050,13 @@
 				C4D458431F8021D100565A3F /* TabBar.storyboard in Resources */,
 				C4A12E731FE1B56400E843F8 /* Settings.storyboard in Resources */,
 				C4D48C6C203DAF1100FA5E37 /* NGO.html in Resources */,
+				C4FD07F4204C518000A02BA5 /* QST-iBook-ru.epub in Resources */,
 				C4C236491FE190B3005219A0 /* About.storyboard in Resources */,
 				C4FE6F76202B0170000ACEAA /* ArticleStyles.css in Resources */,
 				C4DD56932024955800BF3A04 /* Character.xcassets in Resources */,
 				C4B540032021F51C000D7C73 /* README.md in Resources */,
 				C4554343203EE43A008B7882 /* image-maidan.jpg in Resources */,
+				C4FD07F2204C517300A02BA5 /* QST-iBook-en.epub in Resources */,
 				C4554341203EE43A008B7882 /* image-sport.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1251,8 +1263,19 @@
 			children = (
 				C4DD569C2024A3CB00BF3A04 /* en */,
 				C4DD569E2024A3F900BF3A04 /* Base */,
+				C4FD080B204C52F000A02BA5 /* ru */,
 			);
 			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		C4FD0809204C529400A02BA5 /* Language.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C4FD0808204C529400A02BA5 /* en */,
+				C4FD080A204C52AD00A02BA5 /* Base */,
+				C4FD080C204C52F000A02BA5 /* ru */,
+			);
+			name = Language.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -1262,6 +1285,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -1319,6 +1343,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
