@@ -181,7 +181,12 @@
 "donate_06_message" = "";
 "contacts_text_message" = "Address: 23B Velika Vasilkivska Street, 01004, Kyiv, Ukraine.";
 "contacts_text_organization" = "NGO \"Quit Smoking Together\"";
-"shirts_text_message" = "How do you like our exclusive T-shirts? Want to get one?\n\nQuit Smoking Together is a Public Non-Profit NGO. We don’t sell our exclusive T-shirts, cups, and other merchandise. However, you can win such a T-shirt by participating in our contests or by helping us. Let everyone know that you help nicotine-dependent people!\n\nFor more information, see the Donate section.";
+"shirts_text_message" = "Quit Smoking Together is a Public Non-Profit NGO. We don’t sell our exclusive T-shirts, cups, and other merchandise. However, you can win such a T-shirt by participating in our contests or by helping us. Let everyone know that you help nicotine-dependent people!\n\nFor more information, see the Donate section.";
 "shirts_screen_title" = "Gifts";
 "ngo_screen_title" = "NGO \"Quit Smoking Together\"";
 "ngo_screen_message" = "\"Quit Smoking Together\" is a non-government initiative founded in 2012, right after the publication of the eponymous book by Aleksei Koval describing his method of fighting nicotine addiction for “difficult cases”—the people who lost their last hope. ";
+"shirts_text_title" = "How do you like our exclusive T-shirts? Want to get one?";
+"share_title" = "Share and help save lives!";
+"share_fragment" = "Help your friends and acquaintances get rid of nicotine addiction and you will give them ten or twenty extra years of life. They will see their children, grandchildren, do something deed, plant a tree, build a house, and help those in need.";
+"button_readmore" = "read more";
+"button_share" = "share";
