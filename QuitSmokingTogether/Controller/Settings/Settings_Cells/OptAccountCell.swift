@@ -11,9 +11,11 @@ import UIKit
 class OptAccountCell: UITableViewCell {
 
     @IBOutlet weak var iconImage: UIImageView!
+    @IBOutlet weak var cellTitle: UILabel!
     @IBOutlet weak var accountName: UILabel!
     
     func update() {
+        cellTitle.text = "cell_account_title".localized()
         accountName.text = CurrentUser.accountName
     }
 }

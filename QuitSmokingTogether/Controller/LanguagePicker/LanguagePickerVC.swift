@@ -48,7 +48,7 @@ class LanguagePickerVC: UITableViewController {
         languageManager.saveCurrentLanguageWith(indexPath)
         
         updateUIWithLocalizedText()
-        self.dismiss(animated: true, completion: nil)
+        navigationController?.popViewController(animated: true)
     }
 
 }

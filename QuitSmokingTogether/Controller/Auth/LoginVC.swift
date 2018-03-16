@@ -32,7 +32,7 @@ class LoginVC: UIViewController {
         
         hideKeyboardWhenTappedAround()
         registerForKeyboardNotifications()
-        
+        localizeUI()
     }
     
     func initializeDelegates() {
@@ -42,6 +42,10 @@ class LoginVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         performSegueIfLoggedInFacebook()
+    }
+    
+    func localizeUI() {
+        
     }
     
     func performSegueIfLoggedInFacebook() {

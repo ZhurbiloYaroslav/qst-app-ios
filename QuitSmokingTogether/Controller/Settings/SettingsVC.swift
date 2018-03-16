@@ -25,7 +25,6 @@ class SettingsVC: UIViewController {
         
         setDelegates()
         setupFacebookLikeButton()
-
     }
     
     func setupFacebookLikeButton() {
@@ -36,12 +35,19 @@ class SettingsVC: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        
         tableView.reloadData()
+        (tabBarController as! TabBarVC).localizeUI()
+        localizeUI()
     }
     
     func setDelegates() {
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    func localizeUI() {
+        navigationItem.title = "settings_screen_title".localized()
     }
     
 }
@@ -75,13 +81,16 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
             cell.update()
             return cell
         case [0,1]: // Language
-            let cell = tableView.dequeueReusableCell(withIdentifier: "Language", for: indexPath) as! UITableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Language", for: indexPath) as! SettingsCell
+            cell.updateAs(.language)
             return cell
         case [1,0]: // Share
-            let cell = tableView.dequeueReusableCell(withIdentifier: "Share", for: indexPath) as UITableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Share", for: indexPath) as! SettingsCell
+            cell.updateAs(.share)
             return cell
         case [1,1]: // Like on App Store
-            let cell = tableView.dequeueReusableCell(withIdentifier: "LikeOnAppStore", for: indexPath) as UITableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "LikeOnAppStore", for: indexPath) as! SettingsCell
+            cell.updateAs(.likeOnAppStore)
             return cell
         case [1,2]: // Like on Facebook
             let cell = tableView.dequeueReusableCell(withIdentifier: "LikeOnFacebook", for: indexPath) as UITableViewCell
@@ -93,16 +102,16 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
             }
             return cell
         case [2,0]: // Remove advert
-            let cell = tableView.dequeueReusableCell(withIdentifier: "Advert", for: indexPath) as UITableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Advert", for: indexPath) as! SettingsCell
+            cell.updateAs(.removeAdvert)
             return cell
         case [2,1]: // Donate
-            let cell = tableView.dequeueReusableCell(withIdentifier: "Donate", for: indexPath) as UITableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "Contacts", for: indexPath) as! SettingsCell
+            cell.updateAs(.contacts)
             return cell
-//        case [3,0]: // FAQ
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "FAQ", for: indexPath) as UITableViewCell
-//            return cell
         case [3,0]: // About
-            let cell = tableView.dequeueReusableCell(withIdentifier: "About", for: indexPath) as UITableViewCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "About", for: indexPath) as! SettingsCell
+            cell.updateAs(.about)
             return cell
             
         default:
@@ -116,7 +125,8 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
             performSegue(withIdentifier: "ShowProfileFromSettings", sender: nil)
         case [0,1]: // Language
             if let languageVC = LanguagePickerVC.getInstance() {
-                self.present(languageVC, animated: true)
+                navigationController?.pushViewController(languageVC, animated: true)
+                //self.present(languageVC, animated: true)
             }
         case [1,0]: // Share
             performSegue(withIdentifier: "ShowShareFromSettings", sender: nil)
@@ -128,8 +138,6 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
             performSegue(withIdentifier: "ShowRemoveAdvertFromSettings", sender: nil)
         case [2,1]: // Donate
             performSegue(withIdentifier: "ShowDonateFromSettings", sender: nil)
-//        case [3,0]: // FAQ
-//            performSegue(withIdentifier: "ShowFAQFromSettings", sender: nil)
         case [3,0]: // About
             performSegue(withIdentifier: "ShowAboutFromSettings", sender: nil)
         default:

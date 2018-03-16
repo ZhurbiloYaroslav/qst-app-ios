@@ -29,6 +29,7 @@ class AdviceVC: UIViewController {
 
         setUIStyles()
         initializeVariables()
+        localizeUI()
     }
     
     func setUIStyles() {
@@ -46,6 +47,12 @@ class AdviceVC: UIViewController {
             
             backButton.isHidden = messagesManager.doesWeHidePreviousButton()
         }
+    }
+    
+    func localizeUI() {
+        navigationItem.title = "advices_screen_title".localized()
+        backButton.setTitle("button_back".localized(), for: .normal)
+        nextButton.setTitle("button_next".localized(), for: .normal)
     }
     
     @IBAction func backAdviceButtonPressed(_ sender: UIButton) {
@@ -71,7 +78,7 @@ class AdviceVC: UIViewController {
             if messagesManager.thisIsTheLastMessage() {
 
                 messagesManager.resetCurrentIndex()
-                nextButton.setTitle("Begin", for: .normal)
+                nextButton.setTitle("button_begin".localized(), for: .normal)
                 nextButton.removeTarget(nil, action: #selector(nextAdviceButtonPressed(_:)), for: .allEvents)
                 nextButton.addTarget(self, action: #selector(finishGreetings(_:)), for: .touchUpInside)
             }

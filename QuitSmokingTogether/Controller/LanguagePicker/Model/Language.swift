@@ -13,8 +13,8 @@ enum Language {
     case system
     case english
     case russian
-    case ukrainian
-    case polish
+    //case ukrainian
+    //case polish
     
     var baseLanguage: Language {
         return .english
@@ -25,8 +25,8 @@ enum Language {
         case .system: return LanguageManager.getSystemPrefferedLanguageCode()
         case .english: return "en"
         case .russian: return "ru"
-        case .ukrainian: return "uk"
-        case .polish: return "pl"
+        //case .ukrainian: return "uk"
+        //case .polish: return "pl"
         }
     }
     
@@ -93,8 +93,8 @@ enum Language {
         switch stringWithCode {
         case "system": return .system
         case "ru": return .russian
-        case "uk": return .ukrainian
-        case "pl": return .polish
+        //case "uk": return .ukrainian
+        //case "pl": return .polish
         default: return .english
         }
     }
@@ -110,8 +110,8 @@ extension Language {
             return languageParts.count > 1 ? languageParts[1] : "Base"
         case .english: return ""
         case .russian: return ""
-        case .ukrainian: return ""
-        case .polish: return ""
+        //case .ukrainian: return ""
+        //case .polish: return ""
         }
     }
     

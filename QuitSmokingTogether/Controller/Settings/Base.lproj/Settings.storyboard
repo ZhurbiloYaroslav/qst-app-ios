@@ -69,10 +69,11 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="accountName" destination="dgT-0p-ljL" id="NPK-nq-IlX"/>
+                                            <outlet property="cellTitle" destination="sei-K3-4d2" id="pDu-gH-vdO"/>
                                             <outlet property="iconImage" destination="FiF-Q9-qM4" id="SJS-gs-TQb"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Language" rowHeight="60" id="UGx-Vx-dP5">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Language" rowHeight="60" id="UGx-Vx-dP5" customClass="SettingsCell" customModule="QuitSmokingTogether" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="125.5" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="UGx-Vx-dP5" id="j0t-qm-nC8">
@@ -110,8 +111,11 @@
                                                 <constraint firstItem="lbg-UJ-Lmb" firstAttribute="top" secondItem="j0t-qm-nC8" secondAttribute="topMargin" constant="5" id="lc7-sb-g0j"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="languageLabel" destination="mXM-rB-U1W" id="qC6-hw-HP3"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Share" rowHeight="60" id="8R6-K9-W6X">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Share" rowHeight="60" id="8R6-K9-W6X" customClass="SettingsCell" customModule="QuitSmokingTogether" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="185.5" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="8R6-K9-W6X" id="UOt-a8-EnY">
@@ -149,8 +153,11 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="odg-i6-Mdy" secondAttribute="bottom" constant="5" id="wl0-yR-zxm"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="languageLabel" destination="TAB-fl-8W5" id="m7H-Ea-RMm"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LikeOnAppStore" rowHeight="60" id="OqJ-qF-DH7" userLabel="Like on AppStore">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LikeOnAppStore" rowHeight="60" id="OqJ-qF-DH7" userLabel="Like on AppStore" customClass="SettingsCell" customModule="QuitSmokingTogether" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="245.5" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OqJ-qF-DH7" id="Bpt-7l-Upn">
@@ -188,6 +195,9 @@
                                                 <constraint firstAttribute="bottomMargin" secondItem="XMO-p8-Stx" secondAttribute="bottom" constant="5" id="xNp-Kn-a5W"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="languageLabel" destination="ZON-Ad-D4O" id="C4v-B4-0Cg"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LikeOnFacebook" rowHeight="60" id="6ON-fn-Zzv" userLabel="Like on Facebook">
                                         <rect key="frame" x="0.0" y="305.5" width="375" height="60"/>
@@ -220,7 +230,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Advert" rowHeight="60" id="PUZ-AU-jZO" userLabel="Remove advert">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Advert" rowHeight="60" id="PUZ-AU-jZO" userLabel="Remove advert" customClass="SettingsCell" customModule="QuitSmokingTogether" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="365.5" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="PUZ-AU-jZO" id="iTq-vL-F27">
@@ -258,8 +268,11 @@
                                                 <constraint firstItem="dnX-by-uEi" firstAttribute="leading" secondItem="iTq-vL-F27" secondAttribute="leadingMargin" constant="15" id="zg9-sq-0dK"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="languageLabel" destination="l1S-Of-pSj" id="mGZ-9T-tzx"/>
+                                        </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Donate" rowHeight="60" id="1NR-i8-vtZ">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Contacts" rowHeight="60" id="1NR-i8-vtZ" customClass="SettingsCell" customModule="QuitSmokingTogether" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="425.5" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1NR-i8-vtZ" id="nuy-Im-l9Q">
@@ -297,6 +310,9 @@
                                                 <constraint firstItem="60n-37-DB7" firstAttribute="top" secondItem="nuy-Im-l9Q" secondAttribute="topMargin" constant="5" id="kE5-lv-O9F"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="languageLabel" destination="NMt-L4-NB0" id="1Fs-jE-1YV"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FAQ" rowHeight="60" id="sHU-a1-csX">
                                         <rect key="frame" x="0.0" y="485.5" width="375" height="60"/>
@@ -341,7 +357,7 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="About" rowHeight="60" id="aWH-hw-Cs6" userLabel="About">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="About" rowHeight="60" id="aWH-hw-Cs6" userLabel="About" customClass="SettingsCell" customModule="QuitSmokingTogether" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="545.5" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="aWH-hw-Cs6" id="HX4-zt-ujR">
@@ -379,6 +395,9 @@
                                                 <constraint firstItem="Gec-MS-eO3" firstAttribute="leading" secondItem="HX4-zt-ujR" secondAttribute="leadingMargin" constant="15" id="ybC-rr-sEn"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="languageLabel" destination="SKA-n4-A4v" id="WFa-nh-lX2"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

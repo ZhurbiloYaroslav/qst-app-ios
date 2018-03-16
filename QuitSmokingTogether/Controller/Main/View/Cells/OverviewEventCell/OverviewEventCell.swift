@@ -49,6 +49,7 @@ class OverviewEventCell: UITableViewCell {
         
         eventTitle += event.title
         eventTitleLabel.text = eventTitle
+        readMoreLabel.text = "button_readmore".localized()
         
         eventTextLabel.text = event.textContent
         

@@ -29,6 +29,7 @@ class OverviewVC: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        updateUIWithLocalizedText()
         tableView.reloadRows(at: [[0,0], [0,1], [0,2]], with: .fade)
     }
     
@@ -69,7 +70,7 @@ extension OverviewVC {
 extension OverviewVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 7
+        return 8
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -86,30 +87,30 @@ extension OverviewVC: UITableViewDataSource, UITableViewDelegate {
             return cell
             
         case [0,2]:
-            let cell = tableView.dequeueReusableCell(withIdentifier: "OverviewContactsCell", for: indexPath) as! OverviewContactsCell
-            cell.updateWithType(.share)
-            return cell
-            
-        case [0,3]:
             let cell = tableView.dequeueReusableCell(withIdentifier: "OverviewEventCell", for: indexPath) as! OverviewEventCell
             cell.updateCellFor(eventType: .News)
             cell.readMoreButton.addTarget(self, action: #selector(readMoreEventButtonPressed(_:)), for: .touchUpInside)
             return cell
             
-        case [0,4]:
+        case [0,3]:
             let cell = tableView.dequeueReusableCell(withIdentifier: "OverviewEventCell", for: indexPath) as! OverviewEventCell
             cell.updateCellFor(eventType: .Competition)
             cell.readMoreButton.addTarget(self, action: #selector(readMoreEventButtonPressed(_:)), for: .touchUpInside)
             return cell
             
-        case [0,5]:
+        case [0,4]:
             let cell = tableView.dequeueReusableCell(withIdentifier: "OverviewContactsCell", for: indexPath) as! OverviewContactsCell
             cell.updateWithType(.ngo)
             return cell
             
-        case [0,6]:
+        case [0,5]:
             let cell = tableView.dequeueReusableCell(withIdentifier: "OverviewContactsCell", for: indexPath) as! OverviewContactsCell
             cell.updateWithType(.shirts)
+            return cell
+            
+        case [0,6]:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "OverviewContactsCell", for: indexPath) as! OverviewContactsCell
+            cell.updateWithType(.share)
             return cell
             
         case [0,7]:
@@ -129,15 +130,15 @@ extension OverviewVC: UITableViewDataSource, UITableViewDelegate {
         case [0,1]:
             showAdviceView()
         case [0,2]:
-            showShareView()
-        case [0,3]:
             showEventDescriptionWith(type: .News)
-        case [0,4]:
+        case [0,3]:
             showEventDescriptionWith(type: .Competition)
-        case [0,5]:
+        case [0,4]:
             showNGOView()
-        case [0,6]:
+        case [0,5]:
             showShirtsView()
+        case [0,6]:
+            showShareView()
         case [0,7]:
             showContactsView()
         default:

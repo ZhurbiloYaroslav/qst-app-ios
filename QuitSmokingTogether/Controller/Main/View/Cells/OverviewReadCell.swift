@@ -18,6 +18,7 @@ class OverviewReadCell: UITableViewCell {
         bookTitleLabel.text = UserDefaultsManager().chapterInText
         bookTextLabel.text = UserDefaultsManager().firstParagraphInText
         continueReadingView.setRadius(10, withWidth: 1, andColor: UIColor.clear)
+        continueReadingView.text = "button_continue_reading".localized()
     }
 
 }

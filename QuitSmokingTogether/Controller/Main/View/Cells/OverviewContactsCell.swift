@@ -36,8 +36,8 @@ class OverviewContactsCell: UITableViewCell {
             
         case .contacts:
             updateUIWith(image: UIImage(named: "image-contacts") ?? UIImage(),
-                         title: "Contacts",
-                         message: "Dear friend, you can contact with me and I will help you to quit smoking!"
+                         title: "contacts_screen_title".localized(),
+                         message: "contacts_fragment".localized()
             )
             
         case .ngo:

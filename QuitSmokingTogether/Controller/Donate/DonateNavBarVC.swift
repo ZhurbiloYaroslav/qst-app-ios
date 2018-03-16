@@ -10,16 +10,17 @@ import UIKit
 
 class DonateNavBarVC: NavBarVC {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         
         showDonateView()
     }
     
-    func showDonateView() {
+    private func showDonateView() {
         if let articleDescVC = ArticleDescVC.getInstance() {
             
-            guard let path = Bundle.main.path(forResource: "Donate", ofType: "html") else { return }
+            let donateFileName = getLocalizedDonateFileName()
+            guard let path = Bundle.main.path(forResource: donateFileName, ofType: "html") else { return }
             let ngoHtmlText = try! String(contentsOfFile: path).trimmingCharacters(in: .whitespacesAndNewlines)
             
             let articleWithNGO = Event(id: 0, date: "",
@@ -30,7 +31,18 @@ class DonateNavBarVC: NavBarVC {
             let absoluteURL = linkForNGOTitle.absoluteString
             articleWithNGO.arrayWithImageLinks = [absoluteURL]
             articleDescVC.currentArticle = articleWithNGO
+            navigationItem.title = "tabbar_donate".localized()
+            //articleDescVC.title = "tabbar_donate".localized()
             self.pushViewController(articleDescVC, animated: true)
+        }
+    }
+    
+    private func getLocalizedDonateFileName() -> String {
+        switch LanguageManager().currentLanguage {
+        case .russian:
+            return "Donate-ru"
+        default:
+            return "Donate-en"
         }
     }
     

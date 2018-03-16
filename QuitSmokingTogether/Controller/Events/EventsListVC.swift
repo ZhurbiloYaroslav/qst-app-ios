@@ -32,6 +32,7 @@ class EventsListVC: UIViewController {
         switchFilterVisibility()
         setupTableView()
         updateUI()
+        localizeUI()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -39,11 +40,16 @@ class EventsListVC: UIViewController {
         
         //tableView.reloadData()
         presentEventFromOverview()
+        localizeUI()
     }
     
     func setDelegates() {
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    func localizeUI() {
+        navigationItem.title = "events_screen_title".localized()
     }
     
     func presentEventFromOverview() {

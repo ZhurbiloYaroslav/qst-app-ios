@@ -48,7 +48,10 @@ class RemoveAdvertVC: UIViewController {
     }
     
     func updateUIWithLocalizedText() {
+        navigationItem.title = "remove_advert_screen_title".localized()
         messageTextLabel.text = "advert_remove_text_message".localized()
+        removeAdvertButton.setTitle("button_remove_advert".localized(), for: .normal)
+        restorePurchasesButton.setTitle("button_restore_purchases".localized(), for: .normal)
     }
     
     func reload() {
@@ -88,7 +91,7 @@ class RemoveAdvertVC: UIViewController {
     
     func enableProFunctions() {
         
-        removeAdvertButton.setTitle("IS PRO", for: .normal)
+        removeAdvertButton.setTitle("button_is_pro".localized(), for: .normal)
         
         if userDefaultsManager.isProVersion {
 

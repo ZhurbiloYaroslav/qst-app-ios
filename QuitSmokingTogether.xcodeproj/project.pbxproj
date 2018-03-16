@@ -27,6 +27,7 @@
 		C4258F061FC46184009FCBC8 /* Browser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4258F051FC46184009FCBC8 /* Browser.swift */; };
 		C4258F081FC463B4009FCBC8 /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4258F071FC463B4009FCBC8 /* AboutVC.swift */; };
 		C429370C1FB9E9010016A02F /* UIScrollView+scrollToView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429370B1FB9E9000016A02F /* UIScrollView+scrollToView.swift */; };
+		C42DD342205635F40064C849 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42DD341205635F40064C849 /* SettingsCell.swift */; };
 		C42F0B711FDDC71100C3D619 /* IAPHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42F0B701FDDC71100C3D619 /* IAPHelper.swift */; };
 		C42F0B731FDDC75200C3D619 /* AppProducts.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42F0B721FDDC75200C3D619 /* AppProducts.swift */; };
 		C439F614203E92AE00DA1A24 /* Date+offset.swift in Sources */ = {isa = PBXBuildFile; fileRef = C439F613203E92AE00DA1A24 /* Date+offset.swift */; };
@@ -133,10 +134,11 @@
 		C4DD569B2024A3CB00BF3A04 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4DD569D2024A3CB00BF3A04 /* Localizable.strings */; };
 		C4E5F0DD1FD7FFBB00AE1D93 /* Validator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E5F0DC1FD7FFBB00AE1D93 /* Validator.swift */; };
 		C4E5F0DF1FD8026400AE1D93 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E5F0DE1FD8026400AE1D93 /* Alert.swift */; };
-		C4E77CCC2040503800D1DF75 /* Donate.html in Resources */ = {isa = PBXBuildFile; fileRef = C4E77CCB2040503800D1DF75 /* Donate.html */; };
+		C4E77CCC2040503800D1DF75 /* Donate-en.html in Resources */ = {isa = PBXBuildFile; fileRef = C4E77CCB2040503800D1DF75 /* Donate-en.html */; };
 		C4E77CCF204062C300D1DF75 /* DonateNavBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E77CCE204062C300D1DF75 /* DonateNavBarVC.swift */; };
 		C4E77CD2204066A900D1DF75 /* String+removeNewLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4E77CD1204066A900D1DF75 /* String+removeNewLine.swift */; };
 		C4E77CD62040781300D1DF75 /* image-donate-2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C4E77CD42040781200D1DF75 /* image-donate-2.jpg */; };
+		C4E97695205C5BA60069ADB3 /* Donate-ru.html in Resources */ = {isa = PBXBuildFile; fileRef = C4E97694205C5B8E0069ADB3 /* Donate-ru.html */; };
 		C4EBF52F1FA5E74A00753D0C /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EBF52E1FA5E74A00753D0C /* RegisterVC.swift */; };
 		C4EBF5321FA61BE900753D0C /* HideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EBF5311FA61BE900753D0C /* HideKeyboard.swift */; };
 		C4FD07F2204C517300A02BA5 /* QST-iBook-en.epub in Resources */ = {isa = PBXBuildFile; fileRef = C4FD07F1204C517300A02BA5 /* QST-iBook-en.epub */; };
@@ -171,6 +173,7 @@
 		C4258F051FC46184009FCBC8 /* Browser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Browser.swift; sourceTree = "<group>"; };
 		C4258F071FC463B4009FCBC8 /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
 		C429370B1FB9E9000016A02F /* UIScrollView+scrollToView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+scrollToView.swift"; sourceTree = "<group>"; };
+		C42DD341205635F40064C849 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		C42F0B701FDDC71100C3D619 /* IAPHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IAPHelper.swift; sourceTree = "<group>"; };
 		C42F0B721FDDC75200C3D619 /* AppProducts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppProducts.swift; sourceTree = "<group>"; };
 		C439F613203E92AE00DA1A24 /* Date+offset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+offset.swift"; sourceTree = "<group>"; };
@@ -280,10 +283,11 @@
 		C4DD569E2024A3F900BF3A04 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		C4E5F0DC1FD7FFBB00AE1D93 /* Validator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validator.swift; sourceTree = "<group>"; };
 		C4E5F0DE1FD8026400AE1D93 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
-		C4E77CCB2040503800D1DF75 /* Donate.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = Donate.html; sourceTree = "<group>"; };
+		C4E77CCB2040503800D1DF75 /* Donate-en.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Donate-en.html"; sourceTree = "<group>"; };
 		C4E77CCE204062C300D1DF75 /* DonateNavBarVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateNavBarVC.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		C4E77CD1204066A900D1DF75 /* String+removeNewLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+removeNewLine.swift"; sourceTree = "<group>"; };
 		C4E77CD42040781200D1DF75 /* image-donate-2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "image-donate-2.jpg"; sourceTree = "<group>"; };
+		C4E97694205C5B8E0069ADB3 /* Donate-ru.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Donate-ru.html"; sourceTree = "<group>"; };
 		C4EBF52E1FA5E74A00753D0C /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		C4EBF5311FA61BE900753D0C /* HideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboard.swift; sourceTree = "<group>"; };
 		C4FD07F1204C517300A02BA5 /* QST-iBook-en.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "QST-iBook-en.epub"; sourceTree = "<group>"; };
@@ -484,6 +488,7 @@
 		C48D3647202C46EA001D3D1A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C46DFB2F1FC48C6F00A62D69 /* Cells */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -598,7 +603,6 @@
 				C415AA971FE16E6900BC5365 /* Overview.storyboard */,
 				C4D4583F1F8021D100565A3F /* OverviewVC.swift */,
 				C48D3647202C46EA001D3D1A /* View */,
-				C46DFB2F1FC48C6F00A62D69 /* Cells */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -799,6 +803,7 @@
 			children = (
 				C4A4D3031FA87AE800EC9D50 /* OptAccountCell.swift */,
 				C4CECEE51F94CDA9009C85DE /* FAQCell.swift */,
+				C42DD341205635F40064C849 /* SettingsCell.swift */,
 			);
 			path = Settings_Cells;
 			sourceTree = "<group>";
@@ -883,7 +888,8 @@
 		C4E77CCA20404FB200D1DF75 /* Donate */ = {
 			isa = PBXGroup;
 			children = (
-				C4E77CCB2040503800D1DF75 /* Donate.html */,
+				C4E77CCB2040503800D1DF75 /* Donate-en.html */,
+				C4E97694205C5B8E0069ADB3 /* Donate-ru.html */,
 				C4E77CD42040781200D1DF75 /* image-donate-2.jpg */,
 			);
 			path = Donate;
@@ -1021,10 +1027,11 @@
 				C4DD569B2024A3CB00BF3A04 /* Localizable.strings in Resources */,
 				C415AA901FE16CA900BC5365 /* FaqAnswer.storyboard in Resources */,
 				C4E77CD62040781300D1DF75 /* image-donate-2.jpg in Resources */,
-				C4E77CCC2040503800D1DF75 /* Donate.html in Resources */,
+				C4E77CCC2040503800D1DF75 /* Donate-en.html in Resources */,
 				C4A9BF30202CCC1600F71C94 /* Greetings.plist in Resources */,
 				C415AA8E1FE16C3600BC5365 /* Share.storyboard in Resources */,
 				C4D4584B1F8021D100565A3F /* LaunchScreen.storyboard in Resources */,
+				C4E97695205C5BA60069ADB3 /* Donate-ru.html in Resources */,
 				C415AA8B1FE16B6500BC5365 /* Donate.storyboard in Resources */,
 				C415AA921FE16CFB00BC5365 /* FaqList.storyboard in Resources */,
 				C415AA981FE16E6900BC5365 /* Overview.storyboard in Resources */,
@@ -1138,6 +1145,7 @@
 				C4E77CCF204062C300D1DF75 /* DonateNavBarVC.swift in Sources */,
 				C41B6F0C1FA2486B00B40F93 /* UIViewController+hideKeyboard.swift in Sources */,
 				C4EBF5321FA61BE900753D0C /* HideKeyboard.swift in Sources */,
+				C42DD342205635F40064C849 /* SettingsCell.swift in Sources */,
 				C4B057131FC6E35C00699B6F /* ContactsVC.swift in Sources */,
 				C48768351FFE2B59006D1FE8 /* Array+uniq.swift in Sources */,
 				C4B5401620221F7C000D7C73 /* Language.swift in Sources */,

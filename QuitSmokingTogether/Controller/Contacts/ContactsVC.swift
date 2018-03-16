@@ -17,11 +17,23 @@ class ContactsVC: UIViewController {
         
         setDelegates()
         setupTableView()
+        localizeUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        localizeUI()
     }
     
     func setDelegates() {
         tableView.delegate = self
         tableView.dataSource = self
+    }
+    
+    func localizeUI() {
+        navigationItem.title = "contacts_screen_title".localized()
+        tableView.reloadData()
     }
     
     func setupTableView() {

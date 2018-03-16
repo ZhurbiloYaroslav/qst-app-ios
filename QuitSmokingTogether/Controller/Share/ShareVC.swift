@@ -29,6 +29,7 @@ class ShareVC: UIViewController {
     }
     
     func updateUIWithLocalizedText() {
+        navigationItem.title = "share_screen_title".localized()
         shareTextMessage.text = "share_text_message".localized()
     }
     
@@ -64,7 +65,9 @@ extension ShareVC {
     
     func chooseContentForSharingWith(_ provider: ContentSharingProvider) {
         
-        let alertController = UIAlertController(title: "Share", message: "Choose content for sharing", preferredStyle: .actionSheet)
+        let shareTitle = "alert_share_title".localized()
+        let shareMessage = "alert_share_message".localized()
+        let alertController = UIAlertController(title: shareTitle, message: shareMessage, preferredStyle: .actionSheet)
         
         if let popoverController = alertController.popoverPresentationController {
             popoverController.sourceView = shareButtonsStack
@@ -75,7 +78,6 @@ extension ShareVC {
         addActionsTo(alertController, withProvider: provider)
         
         currentAlertController = alertController
-        // self.present(alertController, animated: true, completion: nil)
         self.present(alertController, animated: true) {
             alertController.view.superview?.isUserInteractionEnabled = true
             alertController.view.superview?.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.alertControllerBackgroundTapped)))
@@ -88,22 +90,26 @@ extension ShareVC {
     
     func addActionsTo(_ alertController: UIAlertController, withProvider provider: ContentSharingProvider) {
         
-        let shareAppAction = UIAlertAction(title: "Share this Application", style: .default) { (action) in
+        let shareAppText = "share_app_text".localized()
+        let shareAppAction = UIAlertAction(title: shareAppText, style: .default) { (action) in
             self.shareWithProvider(provider, enumWithURL: .ThisApp)
         }
         shareAppAction.setValue(UIImage(named: "icon-app"), forKey: "image")
         
-        let shareBookAction = UIAlertAction(title: "Share author's book", style: .default) { (action) in
+        let shareBookText = "share_book_text".localized()
+        let shareBookAction = UIAlertAction(title: shareBookText, style: .default) { (action) in
             self.shareWithProvider(provider, enumWithURL: .Book)
         }
         shareBookAction.setValue(UIImage(named: "icon_book"), forKey: "image")
         
-        let shareWebsiteAction = UIAlertAction(title: "Share author's website", style: .default) { (action) in
+        let shareWebsiteText = "share_website_text".localized()
+        let shareWebsiteAction = UIAlertAction(title: shareWebsiteText, style: .default) { (action) in
             self.shareWithProvider(provider, enumWithURL: .Website)
         }
         shareWebsiteAction.setValue(UIImage(named: "icon-website"), forKey: "image")
         
-        let actionCancel = UIAlertAction(title: "Cancel", style: .cancel) { (action) in
+        let cencelActionText = "button_cancel".localized()
+        let actionCancel = UIAlertAction(title: cencelActionText, style: .cancel) { (action) in
             self.dismissScreenIfNeeded()
         }
         
@@ -162,17 +168,18 @@ extension ShareVC {
     func activityCompletionHandler(activityType: UIActivityType?, completed: Bool, returnedItems: [Any]?, error: Error?) {
         if !completed {
             dismissScreenIfNeeded()
-            print("canceled share with other apps")
             return
         }
         CurrentUser.didUserShareThisApp = true
         dismissScreenIfNeeded()
-        print("User completed share with other apps")
     }
     
     func showAlert(service: String) {
-        let alert = UIAlertController(title: "Error", message: "You are not connected to \(service)", preferredStyle: .alert)
-        let dismissAction = UIAlertAction(title: "Dismiss", style: .cancel, handler: nil)
+        let errorTitle = "alert_share_error_title".localized()
+        let errorMessage = "alert_share_error_message".localized()
+        let alert = UIAlertController(title: errorTitle, message: "\(errorMessage) \(service)", preferredStyle: .alert)
+        let dismissText = "button_dismiss".localized()
+        let dismissAction = UIAlertAction(title: dismissText, style: .cancel, handler: nil)
         alert.addAction(dismissAction)
         self.present(alert, animated: true, completion: nil)
     }
@@ -198,11 +205,10 @@ extension ShareVC: FBSDKSharingDelegate {
     }
     
     func sharer(_ sharer: FBSDKSharing!, didFailWithError error: Error!) {
-        print("Share failed with error: ", error)
+
     }
     
     func sharerDidCancel(_ sharer: FBSDKSharing!) {
-        print("canceled")
         dismissScreenIfNeeded()
     }
     

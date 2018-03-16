@@ -13,10 +13,20 @@ import FirebaseAuth
 
 class ProfileVC: UITableViewController {
     
+    @IBOutlet weak var firstNamePlaceholder: UILabel!
     @IBOutlet weak var firstNameLabel: UILabel!
+    
+    @IBOutlet weak var lastNamePlaceholder: UILabel!
     @IBOutlet weak var lastNameLabel: UILabel!
+    
+    @IBOutlet weak var emailPlaceholder: UILabel!
     @IBOutlet weak var userEmailLabel: UILabel!
+    
+    @IBOutlet weak var passwordPlaceholder: UILabel!
+    
+    @IBOutlet weak var phonePlaceholder: UILabel!
     @IBOutlet weak var userPhoneLabel: UILabel!
+    
     @IBOutlet weak var logOutLabel: UILabel!
     
     var currentAlertVC: UIAlertController!
@@ -28,12 +38,27 @@ class ProfileVC: UITableViewController {
         fillLabelsWithValues()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        localizeUI()
+    }
+    
     func fillLabelsWithValues() {
         firstNameLabel.text = CurrentUser.firstName
         lastNameLabel.text = CurrentUser.lastName
         userEmailLabel.text = CurrentUser.email
         userPhoneLabel.text = CurrentUser.phone
-        logOutLabel.text = "Log Out"
+    }
+    
+    func localizeUI() {
+        navigationItem.title = "profile_screen_title".localized()
+        firstNamePlaceholder.text = "placeholder_firstname".localized()
+        lastNamePlaceholder.text = "placeholder_lastname".localized()
+        emailPlaceholder.text = "placeholder_email".localized()
+        passwordPlaceholder.text = "placeholder_password".localized()
+        phonePlaceholder.text = "placeholder_phone".localized()
+        logOutLabel.text = "log_out".localized()
     }
     
     override func numberOfSections(in tableView: UITableView) -> Int {

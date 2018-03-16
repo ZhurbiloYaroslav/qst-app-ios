@@ -12,7 +12,7 @@
         <!--Profile-->
         <scene sceneID="c0i-ao-PXL">
             <objects>
-                <tableViewController title="Profile" id="iLj-lO-ozH" customClass="ProfileVC" customModule="QuitSmokingTogether" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController title="Profile" hidesBottomBarWhenPushed="YES" id="iLj-lO-ozH" customClass="ProfileVC" customModule="QuitSmokingTogether" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="1" id="qwj-QY-eJx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -294,9 +294,14 @@
                     </tableView>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="emailPlaceholder" destination="EsF-an-fAc" id="3GB-A5-jPO"/>
                         <outlet property="firstNameLabel" destination="eI3-O7-8xW" id="Trb-lj-MWK"/>
+                        <outlet property="firstNamePlaceholder" destination="KzV-CD-scQ" id="UPU-Om-elu"/>
                         <outlet property="lastNameLabel" destination="YK4-Yx-ekF" id="Qns-7Q-7dE"/>
+                        <outlet property="lastNamePlaceholder" destination="jVq-7E-HyW" id="NyE-xe-aqR"/>
                         <outlet property="logOutLabel" destination="pM1-Jq-LS7" id="Xli-Vw-Kjz"/>
+                        <outlet property="passwordPlaceholder" destination="D4S-EM-FKT" id="PrU-iF-ST7"/>
+                        <outlet property="phonePlaceholder" destination="JcZ-aP-2C4" id="WOX-lq-1kb"/>
                         <outlet property="userEmailLabel" destination="i5s-1K-J7M" id="vkc-hf-Uxr"/>
                         <outlet property="userPhoneLabel" destination="zpi-wP-aaS" id="dm2-aH-6Tr"/>
                         <segue destination="BR4-hJ-wEN" kind="presentation" identifier="LoggedOutFromProfile" id="oeg-ft-Qfi"/>

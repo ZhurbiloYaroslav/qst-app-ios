@@ -16,6 +16,22 @@ class TabBarVC: UITabBarController {
         giveShadowToView()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        localizeUI()
+    }
+    
+    func localizeUI() {
+        guard let items = tabBar.items else { return }
+        
+        items[0].title = "tabbar_main".localized()
+        items[1].title = "tabbar_events".localized()
+        items[2].title = "tabbar_read".localized()
+        items[3].title = "tabbar_donate".localized()
+        items[4].title = "tabbar_options".localized()
+    }
+    
     func giveShadowToView() {
         tabBar.layer.shadowColor = UIColor.black.cgColor
         tabBar.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
