@@ -10,7 +10,6 @@ import UIKit
 
 class LanguageCell: UITableViewCell {
 
-    @IBOutlet weak var translatedTitleLabel: UILabel!
     @IBOutlet weak var nativeTitleLabel: UILabel!
     
     var currentLanguage: Language!
@@ -22,7 +21,6 @@ class LanguageCell: UITableViewCell {
     
     func updateCellWith(_ language: Language) {
         currentLanguage = language
-        translatedTitleLabel.text = language.getTranslatedName()
         nativeTitleLabel.text = language.getNativeName()
     }
 

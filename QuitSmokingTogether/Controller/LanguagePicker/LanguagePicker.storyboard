@@ -35,34 +35,22 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="77.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="TcF-41-rve">
-                                            <rect key="frame" x="16" y="5" width="343" height="45"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aKw-Xw-Jui">
-                                                    <rect key="frame" x="0.0" y="0.0" width="343" height="20"/>
-                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OBB-s0-PeG">
-                                                    <rect key="frame" x="0.0" y="25" width="343" height="20"/>
-                                                    <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </stackView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Native Language Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OBB-s0-PeG">
+                                            <rect key="frame" x="16" y="16" width="343" height="45.5"/>
+                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="TcF-41-rve" firstAttribute="top" secondItem="h2x-QM-jzN" secondAttribute="top" constant="5" id="KMA-sv-ycC"/>
-                                        <constraint firstItem="TcF-41-rve" firstAttribute="leading" secondItem="h2x-QM-jzN" secondAttribute="leading" constant="16" id="N5D-LQ-Alq"/>
-                                        <constraint firstAttribute="trailing" secondItem="TcF-41-rve" secondAttribute="trailing" constant="16" id="Nuz-Vd-2pk"/>
-                                        <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="TcF-41-rve" secondAttribute="bottom" constant="5" id="TgN-pw-ShQ"/>
+                                        <constraint firstAttribute="bottom" secondItem="OBB-s0-PeG" secondAttribute="bottom" constant="16" id="IQe-i1-ZTC"/>
+                                        <constraint firstItem="OBB-s0-PeG" firstAttribute="leading" secondItem="h2x-QM-jzN" secondAttribute="leading" constant="16" id="Z2O-WH-P43"/>
+                                        <constraint firstAttribute="trailing" secondItem="OBB-s0-PeG" secondAttribute="trailing" constant="16" id="eiN-09-EtA"/>
+                                        <constraint firstItem="OBB-s0-PeG" firstAttribute="top" secondItem="h2x-QM-jzN" secondAttribute="top" constant="16" id="erI-xh-UPd"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="nativeTitleLabel" destination="OBB-s0-PeG" id="NXn-IU-w1P"/>
-                                    <outlet property="translatedTitleLabel" destination="aKw-Xw-Jui" id="Mk8-tP-eLQ"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

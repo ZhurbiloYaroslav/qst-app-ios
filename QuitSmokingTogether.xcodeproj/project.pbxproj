@@ -12,7 +12,6 @@
 		C410E7CE1F97BC5B00EEFB7B /* UIView+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C410E7CD1F97BC5B00EEFB7B /* UIView+IBInspectable.swift */; };
 		C410E7D01F97BEB200EEFB7B /* UIButton+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C410E7CF1F97BEB200EEFB7B /* UIButton+IBInspectable.swift */; };
 		C410E7D41F97C67E00EEFB7B /* MessagesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C410E7D31F97C67E00EEFB7B /* MessagesManager.swift */; };
-		C415AA8B1FE16B6500BC5365 /* Donate.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C415AA8A1FE16B6500BC5365 /* Donate.storyboard */; };
 		C415AA8E1FE16C3600BC5365 /* Share.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C415AA8D1FE16C3600BC5365 /* Share.storyboard */; };
 		C415AA901FE16CA900BC5365 /* FaqAnswer.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C415AA8F1FE16CA900BC5365 /* FaqAnswer.storyboard */; };
 		C415AA921FE16CFB00BC5365 /* FaqList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C415AA911FE16CFB00BC5365 /* FaqList.storyboard */; };
@@ -23,7 +22,6 @@
 		C415AA9C1FE16F6500BC5365 /* Reader.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C415AA9B1FE16F6500BC5365 /* Reader.storyboard */; };
 		C415AA9E1FE16FCE00BC5365 /* EventsList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C415AA9D1FE16FCE00BC5365 /* EventsList.storyboard */; };
 		C41B6F0C1FA2486B00B40F93 /* UIViewController+hideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C41B6F0B1FA2486B00B40F93 /* UIViewController+hideKeyboard.swift */; };
-		C4258F041FC4522B009FCBC8 /* DonateVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4258F031FC4522B009FCBC8 /* DonateVC.swift */; };
 		C4258F061FC46184009FCBC8 /* Browser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4258F051FC46184009FCBC8 /* Browser.swift */; };
 		C4258F081FC463B4009FCBC8 /* AboutVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4258F071FC463B4009FCBC8 /* AboutVC.swift */; };
 		C429370C1FB9E9010016A02F /* UIScrollView+scrollToView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C429370B1FB9E9000016A02F /* UIScrollView+scrollToView.swift */; };
@@ -157,7 +155,6 @@
 		C410E7CD1F97BC5B00EEFB7B /* UIView+IBInspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+IBInspectable.swift"; sourceTree = "<group>"; };
 		C410E7CF1F97BEB200EEFB7B /* UIButton+IBInspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+IBInspectable.swift"; sourceTree = "<group>"; };
 		C410E7D31F97C67E00EEFB7B /* MessagesManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesManager.swift; sourceTree = "<group>"; };
-		C415AA8A1FE16B6500BC5365 /* Donate.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Donate.storyboard; sourceTree = "<group>"; };
 		C415AA8D1FE16C3600BC5365 /* Share.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Share.storyboard; sourceTree = "<group>"; };
 		C415AA8F1FE16CA900BC5365 /* FaqAnswer.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FaqAnswer.storyboard; sourceTree = "<group>"; };
 		C415AA911FE16CFB00BC5365 /* FaqList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = FaqList.storyboard; sourceTree = "<group>"; };
@@ -169,7 +166,6 @@
 		C415AA9D1FE16FCE00BC5365 /* EventsList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = EventsList.storyboard; sourceTree = "<group>"; };
 		C415AA9F1FE170C400BC5365 /* About.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = About.storyboard; path = /Users/Yaroslav/Development/Clients_Apps/QuitSmokingTogether/QuitSmokingTogether/Controller/About/About.storyboard; sourceTree = "<absolute>"; };
 		C41B6F0B1FA2486B00B40F93 /* UIViewController+hideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+hideKeyboard.swift"; sourceTree = "<group>"; };
-		C4258F031FC4522B009FCBC8 /* DonateVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonateVC.swift; sourceTree = "<group>"; };
 		C4258F051FC46184009FCBC8 /* Browser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Browser.swift; sourceTree = "<group>"; };
 		C4258F071FC463B4009FCBC8 /* AboutVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutVC.swift; sourceTree = "<group>"; };
 		C429370B1FB9E9000016A02F /* UIScrollView+scrollToView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+scrollToView.swift"; sourceTree = "<group>"; };
@@ -650,7 +646,6 @@
 			isa = PBXGroup;
 			children = (
 				C4E77CCE204062C300D1DF75 /* DonateNavBarVC.swift */,
-				C4E77CD02040661600D1DF75 /* Delete it */,
 			);
 			path = Donate;
 			sourceTree = "<group>";
@@ -895,15 +890,6 @@
 			path = Donate;
 			sourceTree = "<group>";
 		};
-		C4E77CD02040661600D1DF75 /* Delete it */ = {
-			isa = PBXGroup;
-			children = (
-				C415AA8A1FE16B6500BC5365 /* Donate.storyboard */,
-				C4258F031FC4522B009FCBC8 /* DonateVC.swift */,
-			);
-			path = "Delete it";
-			sourceTree = "<group>";
-		};
 		C4EBF5301FA61B8D00753D0C /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
@@ -1032,7 +1018,6 @@
 				C415AA8E1FE16C3600BC5365 /* Share.storyboard in Resources */,
 				C4D4584B1F8021D100565A3F /* LaunchScreen.storyboard in Resources */,
 				C4E97695205C5BA60069ADB3 /* Donate-ru.html in Resources */,
-				C415AA8B1FE16B6500BC5365 /* Donate.storyboard in Resources */,
 				C415AA921FE16CFB00BC5365 /* FaqList.storyboard in Resources */,
 				C415AA981FE16E6900BC5365 /* Overview.storyboard in Resources */,
 				C4C0EEE11FD0515400CA258B /* FAQ.plist in Resources */,
@@ -1150,7 +1135,6 @@
 				C48768351FFE2B59006D1FE8 /* Array+uniq.swift in Sources */,
 				C4B5401620221F7C000D7C73 /* Language.swift in Sources */,
 				C487682D1FFE16B2006D1FE8 /* NetworkError.swift in Sources */,
-				C4258F041FC4522B009FCBC8 /* DonateVC.swift in Sources */,
 				C4B5401320221F7C000D7C73 /* String+localized.swift in Sources */,
 				C4CA865F1F94FDCA00A8772D /* FAQ.swift in Sources */,
 				C4B057151FC6FF9400699B6F /* EventCell.swift in Sources */,

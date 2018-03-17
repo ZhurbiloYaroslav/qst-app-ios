@@ -31,8 +31,8 @@ class DonateNavBarVC: NavBarVC {
             let absoluteURL = linkForNGOTitle.absoluteString
             articleWithNGO.arrayWithImageLinks = [absoluteURL]
             articleDescVC.currentArticle = articleWithNGO
-            navigationItem.title = "tabbar_donate".localized()
-            //articleDescVC.title = "tabbar_donate".localized()
+            (tabBarController as! TabBarVC).localizeUI()
+            navigationController?.navigationItem.title = "tabbar_donate".localized()
             self.pushViewController(articleDescVC, animated: true)
         }
     }
