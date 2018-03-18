@@ -120,7 +120,7 @@ extension ShareVC {
         
     }
     
-    func shareWithProvider(_ provider: ContentSharingProvider, enumWithURL: URLForSharing) {
+    func shareWithProvider(_ provider: ContentSharingProvider, enumWithURL: MessageForSharing) {
         let urlText = enumWithURL.rawValue
         let url = URL(string: urlText)!
         
@@ -189,10 +189,10 @@ extension ShareVC {
         case ActivityVC = "Other apps"
     }
     
-    enum URLForSharing: String {
-        case ThisApp = "https://quitsmokingtogether.org/ratingmovies.php"
-        case Website = "http://quitsmokingtogether.org"
-        case Book = "http://quitsmokingtogether.org/buy.php"
+    enum MessageForSharing: String {
+        case ThisApp = "share_message_app"
+        case Website = "share_message_website"
+        case Book = "share_message_book"
     }
     
 }

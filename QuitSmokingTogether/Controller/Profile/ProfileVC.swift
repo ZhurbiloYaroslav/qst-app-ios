@@ -102,13 +102,13 @@ class ProfileVC: UITableViewController {
     
     func showAlertToChange(field: ProfileField) {
         
-        let alertTitle = "Change profile"
-        let alertMessage = "Change field"
+        let alertTitle = "profile_change_title".localized()
+        let alertMessage = "profile_change_message".localized()
         
         let alertController = UIAlertController(title: alertTitle, message: alertMessage, preferredStyle: .alert)
         
-        let alertActionCancel = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        let alertActionOk = UIAlertAction(title: "OK", style: .default) { [weak alertController] (_) in
+        let alertActionCancel = UIAlertAction(title: "button_cancel".localized(), style: .cancel, handler: nil)
+        let alertActionOk = UIAlertAction(title: "button_ok".localized(), style: .default) { [weak alertController] (_) in
             self.saveUserInfoFromAlertTextField(alertController, field: field)
         }
         
@@ -116,34 +116,34 @@ class ProfileVC: UITableViewController {
         
         switch field {
         case .FirstName:
-            alertController.title = "Change First name"
-            alertController.message = "\(alertMessage): First name" + ""
+            alertController.title = "change_first_name".localized()
+            alertController.message = "" // "\(alertMessage): First name"
             makeFirstTextFieldForAlertController(alertVC: alertController, field: .FirstName)
             alertController.addAction(alertActionOk)
         case .LastName:
-            alertController.title = "Change Last name"
-            alertController.message = "\(alertMessage): Last name" + ""
+            alertController.title = "change_last_name".localized()
+            alertController.message = "" // "\(alertMessage): Last name"
             makeFirstTextFieldForAlertController(alertVC: alertController, field: .LastName)
             alertController.addAction(alertActionOk)
         case .Email:
-            alertController.title = "Change Email"
-            alertController.message = "\(alertMessage): Email" + ""
+            alertController.title = "change_email".localized()
+            alertController.message = "" // "\(alertMessage): Email"
             makeFirstTextFieldForAlertController(alertVC: alertController, field: .Email)
             alertController.addAction(alertActionOk)
         case .Password:
-            alertController.title = "Change Password"
-            alertController.message = "\(alertMessage): Password" + ""
+            alertController.title = "change_password".localized()
+            alertController.message = "" // "\(alertMessage): Password"
             makeFirstTextFieldForAlertController(alertVC: alertController, field: .Password)
             alertController.addAction(alertActionOk)
         case .Phone:
-            alertController.title = "Change Phone"
-            alertController.message = "\(alertMessage): Phone" + ""
+            alertController.title = "change_phone".localized()
+            alertController.message = "" // "\(alertMessage): Phone"
             makeFirstTextFieldForAlertController(alertVC: alertController, field: .Phone)
             alertController.addAction(alertActionOk)
         case .LogOut:
-            alertController.title = "Log out"
-            alertController.message = "Do you really want log out?"
-            alertController.addAction(UIAlertAction(title: "Log out", style: .destructive, handler: { (alertAction) in
+            alertController.title = "log_out".localized()
+            alertController.message = "log_out_really_want".localized()
+            alertController.addAction(UIAlertAction(title: "log_out".localized(), style: .destructive, handler: { (alertAction) in
                 self.logOutFromAccout()
             }))
         }
@@ -163,7 +163,7 @@ class ProfileVC: UITableViewController {
             case .Phone:
                 CurrentUser.phone = alertFieldText
             default:
-                print("Undefined 456")
+                break
             }
         }
         self.fillLabelsWithValues()
@@ -186,23 +186,23 @@ class ProfileVC: UITableViewController {
             switch field {
             case .FirstName:
                 textField.text = CurrentUser.firstName
-                textField.placeholder = "First name"
+                textField.placeholder = "placeholder_firstname".localized()
                 textField.autocapitalizationType = UITextAutocapitalizationType.sentences
             case .LastName:
                 textField.text = CurrentUser.lastName
-                textField.placeholder = "Last name"
+                textField.placeholder = "placeholder_lastname".localized()
                 textField.autocapitalizationType = UITextAutocapitalizationType.sentences
             case .Email:
                 textField.text = CurrentUser.email
-                textField.placeholder = "Email"
+                textField.placeholder = "placeholder_email".localized()
                 textField.keyboardType = UIKeyboardType.emailAddress
                 textField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
             case .Password:
                 textField.text = ""
-                textField.placeholder = "Password"
+                textField.placeholder = "placeholder_password".localized()
                 textField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
             case .Phone:
-                textField.placeholder = "Phone"
+                textField.placeholder = "placeholder_phone".localized()
                 textField.text = CurrentUser.phone
                 textField.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
             case .LogOut:
@@ -221,28 +221,28 @@ class ProfileVC: UITableViewController {
             
         case .Email:
             if Validator.isEmailValid(fieldText) {
-                newMessage = "Your email is okay"
+                newMessage = "email_is_okay".localized()
                 attributes = [ NSAttributedStringKey.foregroundColor : UIColor.green ]
             } else {
-                newMessage = "Your email is invalid"
+                newMessage = "email_is_invalid".localized()
                 attributes = [ NSAttributedStringKey.foregroundColor : UIColor.red ]
             }
             
         case .Password:
             if Validator.isPasswordValid(fieldText) {
-                newMessage = "Your password is okay"
+                newMessage = "password_is_okay".localized()
                 attributes = [ NSAttributedStringKey.foregroundColor : UIColor.green ]
             } else {
-                newMessage = "Your password is invalid"
+                newMessage = "password_is_invalid".localized()
                 attributes = [ NSAttributedStringKey.foregroundColor : UIColor.red ]
             }
             
         case .Phone:
             if Validator.isPhoneValid(fieldText) {
-                newMessage = "Your phone is okay"
+                newMessage = "phone_is_okay".localized()
                 attributes = [ NSAttributedStringKey.foregroundColor : UIColor.green ]
             } else {
-                newMessage = "Your phone is invalid"
+                newMessage = "phone_is_invalid".localized()
                 attributes = [ NSAttributedStringKey.foregroundColor : UIColor.red ]
             }
             
