@@ -14,6 +14,9 @@ class RegisterVC: UIViewController {
     @IBOutlet weak var nameField: UITextField!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var registerButton: UIButton!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var continueButton: UIButton!
     
     var activeTextField = UITextField()
     
@@ -24,7 +27,7 @@ class RegisterVC: UIViewController {
         
         self.hideKeyboardWhenTappedAround()
         registerForKeyboardNotifications()
-        
+        localizeUI()
     }
     
     func initializeDelegates() {
@@ -32,10 +35,14 @@ class RegisterVC: UIViewController {
         passwordField.delegate = self
     }
     
+    func localizeUI() {
+        registerButton.setTitle("button_register".localized(), for: .normal)
+        loginButton.setTitle("button_have_account_login".localized(), for: .normal)
+        continueButton.setTitle("button_continue_without_login".localized(), for: .normal)
+    }
+    
     @IBAction func registerButtonPressed(_ sender: UIButton) {
-
         if fieldsAreValidated() {
-
             FirebaseAuthManager().createUser(withEmail: emailField.text!,
                                              password: passwordField.text!,
                                              name: nameField.text!) {
@@ -87,14 +94,14 @@ extension RegisterVC {
     }
     
     func presentAlert(_ arrayWithMessages: [String]) {
-        let title = "User registration"
+        let title = "alert_register_title".localized()
         var message = ""
         for index in 0...(arrayWithMessages.count - 1) {
             message += arrayWithMessages[index]
             message += (index < (arrayWithMessages.count - 1)) ? "\n" : ""
         }
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "button_ok".localized(), style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
 }

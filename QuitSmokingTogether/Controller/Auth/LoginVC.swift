@@ -19,7 +19,11 @@ class LoginVC: UIViewController {
     @IBOutlet weak var loginFormStackView: UIStackView!
     @IBOutlet weak var emailField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
+    @IBOutlet weak var signUpButton: UIButton!
+    @IBOutlet weak var orLoginWithLabel: UILabel!
     @IBOutlet weak var facebookLoginButton: UIButton!
+    @IBOutlet weak var continueButton: UIButton!
     
     private var activeTextField = UITextField()
     private var fbLoginSuccess = false
@@ -46,6 +50,10 @@ class LoginVC: UIViewController {
     
     func localizeUI() {
         
+        loginButton.setTitle("button_login".localized(), for: .normal)
+        signUpButton.setTitle("button_signup".localized(), for: .normal)
+        orLoginWithLabel.text = "or_login_with".localized()
+        continueButton.setTitle("button_continue_without_login".localized(), for: .normal)
     }
     
     func performSegueIfLoggedInFacebook() {
@@ -101,15 +109,16 @@ class LoginVC: UIViewController {
         
         if Validator.isEmailValid(email) {
             FirebaseAuthManager().restorePasswordFor(email: email, completionHandler: {
-                let alertMessages = ["Check your Email to restore password"]
+                let alertMessages = ["check_email_restore_password".localized()]
                 Alert().presentLoginAlertWith(messages: alertMessages, completionHandler: { alertController in
                     self.present(alertController, animated: true, completion: nil)
                 })
             })
         } else {
             let alertMessages = [
-                "Your Email is invalid",
-                "Please write correct Email"
+                "email_is_invalid".localized(),
+                "write_correct_email".localized(),
+                "email_should_be".localized()
             ]
             Alert().presentLoginAlertWith(messages: alertMessages, completionHandler: { alertController in
                 self.present(alertController, animated: true, completion: nil)
@@ -179,14 +188,14 @@ extension LoginVC {
     }
     
     func presentAlertWith(messages arrayWithMessages: [String]) {
-        let title = "User login"
+        let title = "alert_login_title".localized()
         var message = ""
         for index in 0...(arrayWithMessages.count - 1) {
             message += arrayWithMessages[index]
             message += (index < (arrayWithMessages.count - 1)) ? "\n" : ""
         }
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        alert.addAction(UIAlertAction(title: "button_ok".localized(), style: .default, handler: nil))
         present(alert, animated: true, completion: nil)
     }
 }

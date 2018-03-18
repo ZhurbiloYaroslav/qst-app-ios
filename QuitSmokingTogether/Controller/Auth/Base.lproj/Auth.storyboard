@@ -23,7 +23,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-road" translatesAutoresizingMaskIntoConstraints="NO" id="WC4-0n-zod">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-login" translatesAutoresizingMaskIntoConstraints="NO" id="WC4-0n-zod">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" image="logo-whiteBordered" translatesAutoresizingMaskIntoConstraints="NO" id="jRD-4E-xrA">
@@ -220,10 +220,14 @@
                         <viewLayoutGuide key="safeArea" id="TpM-6Y-GqT"/>
                     </view>
                     <connections>
+                        <outlet property="continueButton" destination="c0D-JC-bfl" id="Fha-EW-5x0"/>
                         <outlet property="emailField" destination="ell-zZ-hgc" id="vd7-OJ-nwW"/>
                         <outlet property="facebookLoginButton" destination="zIM-RO-2fi" id="g6b-UD-JVr"/>
+                        <outlet property="loginButton" destination="Vo2-wl-w8Q" id="4Xr-Eq-G2h"/>
                         <outlet property="loginFormStackView" destination="Dvo-Yu-A0F" id="Kvp-3j-g8P"/>
+                        <outlet property="orLoginWithLabel" destination="AyD-v0-nZv" id="tI6-t2-w4o"/>
                         <outlet property="passwordField" destination="on9-y3-kTw" id="7Jr-cw-ldq"/>
+                        <outlet property="signUpButton" destination="0Tn-bj-xfz" id="pOY-aB-wmW"/>
                         <segue destination="p7G-xb-058" kind="show" identifier="SkipButtonPressedInLogin" id="VYT-KF-rA1"/>
                         <segue destination="p7G-xb-058" kind="show" identifier="LoggedInFromLogin" id="JcQ-no-cWh"/>
                         <segue destination="zAO-zg-CHn" kind="show" identifier="SignUpFromLogin" id="O4K-Ji-J1O"/>
@@ -249,7 +253,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-girl" translatesAutoresizingMaskIntoConstraints="NO" id="8Xu-cC-yUm">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background-register" translatesAutoresizingMaskIntoConstraints="NO" id="8Xu-cC-yUm">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" image="logo-whiteBordered" translatesAutoresizingMaskIntoConstraints="NO" id="8S2-Cg-3Ts">
@@ -413,10 +417,13 @@
                         <viewLayoutGuide key="safeArea" id="yGZ-DB-2Hn"/>
                     </view>
                     <connections>
+                        <outlet property="continueButton" destination="PPT-0C-zyr" id="dh9-A6-R2W"/>
                         <outlet property="emailField" destination="vhj-MO-yFd" id="4wA-5e-kcE"/>
+                        <outlet property="loginButton" destination="3IF-TZ-jjn" id="Fxr-0V-726"/>
                         <outlet property="loginFormStackView" destination="X4J-BV-bJR" id="QIY-c3-pOG"/>
                         <outlet property="nameField" destination="DN9-Nz-ikZ" id="wHZ-6e-edW"/>
                         <outlet property="passwordField" destination="HO1-Dk-lt6" id="Wes-MP-aNi"/>
+                        <outlet property="registerButton" destination="Z1I-LB-aat" id="uTj-fu-Iu9"/>
                         <segue destination="p7G-xb-058" kind="show" identifier="SkipButtonPressedInRegister" id="2Re-f2-LGY"/>
                         <segue destination="p7G-xb-058" kind="show" identifier="RegisteredFromRegister" id="jzK-am-56b"/>
                     </connections>
@@ -431,8 +438,8 @@
         <image name="Button-Facebook" width="43" height="43"/>
         <image name="Button-Google" width="43" height="43"/>
         <image name="Button-VK" width="44" height="44"/>
-        <image name="background-girl" width="3456" height="5184"/>
-        <image name="background-road" width="3744" height="5616"/>
+        <image name="background-login" width="897" height="1345"/>
+        <image name="background-register" width="897" height="1346"/>
         <image name="icon-gmail" width="15" height="13"/>
         <image name="icon-help" width="23" height="23"/>
         <image name="icon-lock" width="13" height="15"/>

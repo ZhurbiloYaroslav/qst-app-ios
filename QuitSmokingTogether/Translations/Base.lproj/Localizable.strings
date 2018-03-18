@@ -1,255 +1,264 @@
 
 /*1*/
 /*Fuzzy*/
-"advice_01_message" = "Lack of confidence that stops us after first unsuccessful attempts, unknown future, expectations for pain and discomfort, new problems are the main reasons that raise doubts in smokers about their chances to give up the cigarette habit. Get ready for the next attempt, do not wait for a miracle, be confident – and you will get over it!";
+"advice_01_message" = "Неуверенность, останавливающая нас после первых неудачных попыток, неизвестность будущего, ожидание болевых или неприятных ощущений, новых проблем - вот основные причины, которые заставляют курящих сомневаться в своих шансах навсегда расстаться с сигаретой. Приготовьтесь к следующей попытке, не надейтесь на чудо, будьте уверены в себе - и вы справитесь! ";
 
 /*2*/
 /*Fuzzy*/
-"advice_02_message" = "Probably you remember when you took up the cigarette again. Did it happen by negligence?  Did you smoke along for the ride? Are you confident now? Go through all these questions.  If the answer is negative, then you do not fully understand the reason you quit smoking and the benefits of finally breaking the addiction. Read the relevant literature, be determined.  If you go back to cigarette smoking with a strong desire to smoke, then you need to master a series of exercises to suppress the acute withdrawal syndrome.  Do not make a new attempt relying on your luck. Otherwise, everything will be repeated, whereas I would like you to be ready for all the contingencies this time.";
+"advice_02_message" = "Вы наверняка помните, как снова взяли в руку сигарету. Это было из-за неосторожности? Вы закурили за компанию? Вы уверены в себе сейчас? Задайте себе все эти вопросы. Если ответ будет отрицательный, то вы не до конца понимаете, зачем бросаете курить и какие получите выгоды, когда окончательно избавитесь от зависимости. Прочтите соответствующую литературу, будьте серьезны в своем решении. Если возврат к сигарете связан с сильным желанием закурить, то вам нужно овладеть рядом упражнений для снятия сильного абстинентного синдрома, не начинайте новой попытки, надеясь на авось. Иначе все будет так же, как и в прошлый раз, а мне бы хотелось, что бы вы в этот раз вы были готовы ко всем неожиданностям. ";
 
 /*3*/
 /*Fuzzy*/
-"advice_03_message" = "The desire to get all you want with a wave of a magic wand fascinates us since childhood. However, what is the payback for such a comfort? All easy ways have a price, and, alas, it may be high. It seems like there is nothing scary about going back to smoking, we will try over and over… Unfortunately, the time between the attempts made by the smokers discouraged by past failures may not be measured in months or years, and every next year with a cigarette is a real risk to be late for overcoming the addiction acquiring diseases that are incurable in some cases.";
+"advice_03_message" = "Желание получить все, что захочешь, по мановению волшебной палочки с детства зачаровывает нас. Но какова расплата за такой комфорт? Все легкие пути имеют свою цену, и она, увы, может оказаться огромной. Казалось бы, что страшного в возвращении к курению, попробуем снова, потом еще… Увы, время между попытками, на которые решаются курящие, разочарованные в прошлых неудачах, исчисляется порой даже не месяцами, а годами, и каждый новый год с сигаретой – это реальный риск не успеть избавиться от зависимости, приобретя заболевания, которые в некоторых случаях неизлечимы. ";
 
 /*4*/
 /*Fuzzy*/
-"advice_04_message" = "Sad to say, but even when you stop smoking, you will constantly have to be in close contact with smokers. It’s rather ironic! We still live in a smoking world (but do not look for excuses in it!), then why to stop smoking? It is crucial to get over the addiction and the sooner the better because by paying minimal attention to your health you will not poison your own body even if you are constantly among smokers. Love yourself, take care of your health, because that is why you decided to stop smoking and read these lines now. Even if you work in the smoking staff, keep in your mind that no one has the right to poison you!";
+"advice_04_message" = "Как это ни печально, но, даже бросив курить, вам придется постоянно находиться в близком контакте с курящими. Ирония судьбы! Мы живем в пока что курящем мире (но не стоит искать в этом оправдания!), так зачем, дескать, бросать курить? Избавляться от зависимости нужно, и чем скорее, тем лучше, так как при минимальном внимании к своему здоровью вы не будете отравлять собственный организм даже при постоянном контакте с курящими. Любите себя, берегите здоровье - ведь именно поэтому вы решили бросить курить и читаете сейчас эти строки. Даже если вам приходится работать в курящем коллективе, помните, что никто не имеет права вас отравлять! ";
 
 /*5*/
 /*Fuzzy*/
-"advice_05_message" = "You should not inform your friends and colleagues that you stop smoking again. Of course, I understand that you need their support, but it is not necessary to do it at least for several weeks. Surprise them with your action! You may tell about your decision to your family, but at the same time, you do not have to make any promises. After all, you quit smoking for yourself first, never forget about that.";
+"advice_05_message" = "Не стоит информировать ваших друзей и коллег о том, что вы снова бросаете курить. Да, я знаю, что есть необходимость в их поддержке, но не нужно этого делать хотя бы несколько недель. Пусть ваш поступок станет сюрпризом. Можете сообщить о своем решении близким, но при этом вы не должны давать никаких обещаний. Ведь вы бросаете курить прежде всего для себя, никогда не забывайте об этом. ";
 
 /*6*/
 /*Fuzzy*/
-"advice_06_message" = "Breaking the cigarette habit along for the ride is quite common mistake. A wish to feel support, share with the person who understands you seems to the smokers a good tool. It really looks good, but only at first, until you went home. You will spend the following hours thinking if your companion has stepped back. The thought that he started smoking long ago will disturb and haunt you, urging to smoke. Your companion will experience the same. As a consequence, attempts made by both of you will result in disappointment.";
+"advice_06_message" = "Избавление от сигарет за компанию – довольно распространенная ошибка. Желание ощущать поддержку, делиться с человеком, который вас понимает, кажется курящим хорошим подспорьем. Выглядит это действительно неплохо, но только сначала, пока вы не разъехались по домам. Следующие часы вы проведете в раздумьях, не сорвался ли ваш компаньон. Мысль о том, что он уже давно начал курить, не даст вам покоя и будет преследовать и беспокоить, перерастая в сильное желание закурить. То же будет испытывать и ваш компаньон. В результате для вас обоих результат предпринятой попытки может оказаться неутешителен. ";
 
 /*7*/
 /*Fuzzy*/
-"advice_07_message" = "When is it better to quit smoking? Next Friday. Did my answer surprise you? Do not wait for a special situation at work or at home, there are always problems, no need to hide from them and wait for a more opportune moment. While on the familiar team, you will easier overcome the addiction, simulate your behavior and possible obstacles on your way. If it is hard for you, then read my book “Quit smoking together”. It will be helpful to you. Do not wait for vacation or holidays, the best time to stop smoking is in a week. Get ready, read the relevant literature to know what you should do, how to act in different situations, which problems you may face and how to deal with them. And remember that every day is a risk for the condition of the smoker, however you certainly aware of that, so I will not repeat it…";
+"advice_07_message" = "Когда лучше бросать курить? В следующую пятницу, вас удивил мой ответ? Какой-то особой ситуации на работе или в быту ждать не стоит, проблемы будут всегда не нужно от них прятаться и ждать более благоприятного момента. Находясь в привычном коллективе вам будет легче расстаться с зависимостью, смоделировать ваше поведение и возможные препятствия на вашем пути, если вам это трудно, то прочтите мою книгу «Бросим курить вместе» она поможет вам в этом. Не стоит ждать отпуска или праздников лучшего времени что бы бросить курить чем через неделю не найти. Подготовьтесь, прочтите соответствующую литературу, что бы знать что вам делать, как повести себя в той или иной ситуации, с какими проблемами можно столкнутся и как с ними справится и помните, что каждый день в статусе курящего это риск но вы безусловно знаете об этом так что не буду повторятся… ";
 
 /*8*/
 /*Fuzzy*/
-"advice_08_message" = "The desire to quit smoking gradually usually occurs in cases of severe nicotine addiction. You consider that phased reduction of the nicotine dose may ease the discomfort and help you go through this less painfully. Sadly, I cannot agree with that, as, in fact, you will feel the urge to smoke with gathering force as soon as you significantly decrease the number of smoked cigarettes. You will constantly want to pick up the cigarette, will worry, think only about it, and that will exhaust you and increase the chance to fail. On the second or third day already you will think only about the next cigarette. It will look like quitting smoking is impossible, you will start worrying, convincing yourself that all is in vain and so on. The smokers that quit abruptly and are already relieved on the second-third day, feel like they are on the right track, and it will get even easier. If you quit gradually consoling yourself with the dream that someday it will end, you start to realize that it will only get worse, and eventually, most people stop torturing themselves and again go back to the usual nicotine dose for many months or even years giving up any sort of attempts to break the cigarette habit.";
+"advice_08_message" = "Желание бросить курить постепенно обычно возникает при наличии сильного никотинового синдрома. Вы считаете, что поэтапное уменьшение дозы никотина сможет облегчить дискомфорт, перенести его менее болезненно. Увы, я не могу согласиться с этим, потому что в реальности вы будете испытывать желание закурить с нарастающей силой как только вы значительно уменьшите количество выкуренных сигарет. Вы постоянно будете хотеть взять в руки сигарету, станете волноваться, думать только об этом, что обессилит вас и увеличит шанс срыва. Уже на второй-третий день вы будете думать только о следующей сигарете. Вам будет казаться, что бросить курить невозможно, начнете переживать, настраивать себя, что это все бессмысленно и так далее. Курящие, которые бросают сразу и уже на второй-третий день испытывают значительное облегчение, появляется ощущение того, что вы находитесь на правильном пути, а дальше будет еще легче. Если же бросать постепенно, медленно «поджаривать» себя мечтой, что это когда-нибудь кончится, то начинаешь понимать, что дальше будет только хуже, и в конце концов большинство перестают мучить себя и снова возвращаются к привычной дозе никотина, на долгие месяцы или даже годы оставив всяческие попытки расстаться с сигаретой. ";
 
 /*9*/
 /*Fuzzy*/
-"advice_09_message" = "You must remember that by quitting smoking you will not only overcome the addiction but change your life. Unfortunately, cigarette smoking is not a simple habit like, for example, biting your nails. Cigarette smoking completely changes your life starting from how and when you think, rest, sleep and eat, and ending with the constant desire to smoke, even if you have smoked several cigarettes successively before. Weakness following the process, lower blood pressure is perceived as relaxation. For several hours you will feel better, you will be able to go back to work again, do your business, reflect on some questions, but at this very moment the desire to smoke comes again, and it all goes again. Isn’t it true? Do you consider that you smoke when you want, and you are not addicted? Then the next tip is for you.";
+"advice_09_message" = "Вы должны помнить, что, бросив курить вы не только избавитесь от зависимости, а измените всю свою жизнь. Увы, сигарета не просто привычка, как, например, обгрызание ногтей. Сигарета кардинально меняет жизнь человека, начиная с того, как и когда думать, отдыхать, спать, есть, и заканчивая постоянным желанием закурить, даже если вы выкурили перед этим несколько сигарет подряд. Слабость, наступившая вследствие этого, упавшее давление воспринимаются как расслабление. В течение нескольких часов самочувствие нормализируется, вы сможете снова приняться за работу, заняться делами, обдумать тот или иной вопрос, но в этот самый момент желание закурить приходит снова, и все начинается сначала. Разве не так? Считаете, что курите, когда хотите и у вас нет зависимости? Тогда следующий совет для вас. ";
 
 /*10*/
 /*Fuzzy*/
-"advice_10_message" = "Do you smoke one cigarette a day or even a week? Only at work or among friends? Do you consider that you smoke along for the ride, for fun? You do not know at all what is the desire to smoke? Lazy smoker is one of the most severe addictions, as in addition to the fact that it is necessary to get over the addiction, you must admit to yourself that you have this problem, and doing it is hundred times harder than the process of quitting smoking itself. If you are certain that you do not have an addiction, try several times to refuse a cigarette in a situation where you usually smoke: do not go for a coffee break with colleagues, do not light a cigarette in the morning going outside or in any other situations. In most cases after such several refusals, you will experience discomfort, have dry mouth, tightness in the chest etc. That is the desire to smoke, which obviously shows the presence of the addiction. If this is still not convincing consider why you want to pick up a cigarette, for example, when you go out for lunch with your colleague? If there was no addiction, you would not have the desire, you could want anything but not smoking.";
+"advice_10_message" = "Вы курите одну сигарету в день или даже в неделю? Только на работе или в кругу друзей? Считаете, что курите ради развлечения, за компанию? Вы вообще не знаете, что такое желание курить? Ленивый курящий - один из самых тяжелых типов зависимости, так как помимо того, что нужно избавиться от самой зависимости, нужно еще и признаться себе, что у вас есть такая проблема, а сделать это иногда во стократ сложнее самого процесса бросания курить. Если вы уверены в том, что не имеете зависимости, попробуйте несколько раз отказаться от сигареты в той ситуации, в которой обычно курили: не выйти с коллегами на перекур с чашкой кофе, не затянуться, выйдя утром на улицу, в прочих ситуациях. В большинстве случаев уже после нескольких таких отказов у вас возникнут неприятные ощущения, могут появиться сухость во рту, тяжесть в груди и так далее. Это и есть желание закурить, то есть факт наличия зависимости налицо. Если и это звучит неубедительно, подумайте, почему вам хочется взять сигарету, например, выйдя с коллегой на обед? При отсутствии зависимости этого желания не возникло бы, вы бы могли захотеть все что угодно, но только не закурить. ";
 
 /*11*/
 /*Fuzzy*/
-"advice_11_message" = "This is an urgent issue, especially for the beautiful half of humanity. Before the next attempt to quit smoking every woman makes one of the three most common mistakes. The first mistake is that she starts to limit her daily intake up to the point that she only eats fruits. However soon, unable to withstand it, she stops the diet and restarts smoking, complaining that she had big hardships while trying to overcome the nicotine addiction. The second mistake is being preoccupated. Desire to smoke, along with the constant preoccupation that “I will gain weight, no, I have already gained”, weighing themselves every hour and worrying for every 100 grams of extra weight bring the miserable woman into a state, where she is ready to smoke already, and she wishes all was like before, so that she did not go through all this nightmare. The third mistake is using medications that relieve depression (if, certainly, it is not prescribed by your doctor), to suppress the fear of extra weight. The fear to remain a smoker, uncertainty, nervousness, food restrictions, friends’ advice that you will surely get weight do not encourage optimism. Whereas the arguments in the family, intolerance may develop depression in a woman, possibly even harming her health. However, the goal itself will not be reached, as in 90% of cases women remain smokers only because of the incompetent approach to the problem solution. You know why you may gain weight when quitting smoking. You may, but not necessarily you will. Pay attention to that! This is not karma to gain weight when overcoming the nicotine addiction. Confident words of your friends may not be a doctrine, as they rely on their experience, while I bring real examples and cases. At competent approach, you even may lose some kilograms and I am serious about it.";
+"advice_11_message" = "Этот вопрос стоит очень остро, особенно для прекрасной половины человечества. Перед очередной попыткой бросить курить каждая женщина делает одну из трех популярных ошибок. Первая ошибка - начинает ограничивать свой дневной рацион, вплоть до того, что питается одними фруктами, но вскоре, не выдерживая, бросает диету и начинает курить снова жалуясь на то, что испытывала большие трудности при попытке избавиться от никотиновой зависимости. Вторая ошибка - это самовнушение. Желание закурить в совокупности с постоянным самовнушением «я поправлюсь, нет, уже поправилась», ежечасными взвешиваниями и волнениями по поводу каждых сто граммов лишнего веса доводят несчастную женщину до состояния, в котором она уже согласна курить, лишь бы все стало как раньше, но не терпеть весь этот кошмар. Третья ошибка – употреблять медикаментозные препараты, снимающие депрессию (если, конечно, вам их не прописал лечащий врач), чтобы подавить страх набрать лишний вес. Боязнь остаться курящей, неуверенность, нервозность, ограничения в пище, советы подруг, что вы обязательно поправитесь, не добавляют оптимизма, а ссоры в семье, нетерпимость могут довести женщину до депрессии, что может крайне негативно сказаться на ее здоровье, причем сама цель не будет достигнута, потому что в 90% случаев женщины так и остаются курящими исключительно из-за неграмотного подхода к решению проблемы. Вы знаете, почему при бросании курить можете поправиться, - именно можете, а не точно поправитесь, обратите на это внимание! Это не карма - поправиться при избавлении от никотиновой зависимости. Уверенные слова ваших подруг не могут быть догмой, так как они основываются на своем опыте, а я привожу реальные примеры и доводы. При грамотном подходе вы даже можете сбросить несколько килограммов, и я говорю абсолютно серьезно! ";
 
 /*12*/
 /*Fuzzy*/
-"advice_12_message" = "The market is full of means for suppressing withdrawal syndrome: there are all kinds of aerosols, non-nicotine, electronic cigarettes, and chewing gums. However, they are perceived wrong by the most smokers. They are not substitutes for the cigarette – please pay attention to it! You cannot substitute the cigarette, you can only refuse it. The means on pharmacy windows are supposed to help you ease the process of overcoming the addiction, but that’s it. They do not replace the cigarette; they support those who quit smoking—please keep that in mind and do not confuse two different notions. Unfortunately, all the means cannot replace knowledge about how to behave in different situations, how to avoid mistakes, that besides using these “helpers”, you need to have a theoretical basis, pay attention to it!";
+"advice_12_message" = "Рынок насыщен массой средств, как то аэрозоли, безникотиновые, электронные сигареты, жевательные резинки, созданные с целью помочь снять абстинентный синдром. Однако многими курящими они расцениваются неправильно. Это не заменители сигареты - прошу обратить на это внимание! Сигарету заменить нельзя, от нее можно только отказаться. Средства на витринах аптек призваны помочь легче перенести процесс избавления от зависимости, и только. Это не замена сигареты, а поддержка бросающих курить - прошу это не забывать и не смешивать два разных понятия. К несчастью, все эти средства не заменят знаний, как вести себя в той или иной ситуации, как не допустить ошибок, так что помимо использования указанных «помощников», нужна теоретическая база, обратите на это внимание! ";
 
 /*13*/
 /*Fuzzy*/
-"advice_13_message" = "Before the next attempts to get over the addiction, get prepared, considering your previous experiences. Read the relevant literature, consult with your doctor, do not miss out any details and do not leave the problems faced by you unresolved.";
+"advice_13_message" = "Перед следующей попыткой избавиться от зависимости подготовьтесь, учитывая опыт прошлых раз. Прочтите соответствующую литературу, посоветуйтесь с лечащим врачом, не упускайте мелочи и не оставляйте неразрешенными проблемы, с которыми вы сталкивались. ";
 
 /*14*/
 /*Fuzzy*/
-"advice_14_message" = "No need to count how long you do not smoke. You quitted smoking, and that’s all. Counting the days and opening new frontiers, you leave room to restart smoking after a certain period. You are kindly requested not to do that. You quitted smoking, and that is all.";
+"advice_14_message" = "Не нужно считать, сколько вы не курите. Вы бросили курить – и точка. Подсчитывая дни и ставя новые рубежи, вы оставляете себе шанс вернуться к курению по прошествии энного периода. Не стоит этого делать, убедительная просьба. Вы бросили курить, точка. ";
 
 /*15*/
 /*Fuzzy*/
-"advice_15_message" = "Do not breathe in the smoke coming from the nearby smoker. If you do not want to make remarks, step away; just do not breathe in cigarette smoke. You did not overcome the addiction to be a passive smoker. Passive smoking kills tens of thousands of people in the world. Remember this!";
+"advice_15_message" = "Не вдыхайте дым от находящегося рядом человека. Если вам неудобно сделать замечание, отойдите в сторону, только не вдыхайте сигаретный дым. Вы избавились от зависимости не для того, чтобы становиться пассивным курильщиком. От пассивного курения в мире умирают десятки тысяч людей. Помните об этом. ";
 
 /*16*/
 /*Fuzzy*/
-"advice_16_message" = "Never and under any circumstances take the offered cigarette, even from the best friend handing it to you with pathetic tears in his eyes. He may not realize what he is doing at this moment. Once you already took the offered cigarette, which resulted in addiction lasting years and in losing health. Never forget that!";
+"advice_16_message" = "Никогда ни при каких обстоятельства не берите предложенную сигарету, даже от лучшего друга протягивающего вам ее со слезами жалости на глазах. Он может просто не понимать, что делает в эту минуту. Отойдите от человека, провоцирующего вас. Однажды вы уже взяли предложенную сигарету, и это обернулось годами зависимости и потерянным здоровьем. Не забывайте об этом никогда. ";
 
 /*17*/
 /*Fuzzy*/
-"advice_17_message" = "Are you triggered to smoke? Are you requested to prove? Never try to prove anyone that you really got over the addiction. Envy, reluctance to let you leave the group may suggest a person who triggers you a lot of arguments in favor of smoking, and, confused or excited, you may start convincing your interlocutor that you’re right and prove something that goes without any proof. Just each time firmly say no. Sadly, you will be triggered and offered a cigarette all the time. Regrettably, the majority of even the best friends cannot truly rejoice for the friend, who overcame the addiction…";
+"advice_17_message" = "Вас провоцируют закурить? Просят доказательств? Никогда никому не пытайтесь доказать, что вы действительно избавились от зависимости. Зависть, нежелание выпускать из своего коллектива могут подсказать провоцирующему вас человеку много аргументов в пользу курения, а вы, растерявшись или войдя в раж, можете начать убеждать вашего собеседника в своей правоте и доказывать то, что не нуждается ни в каких доказательствах. Просто каждый раз твердо говорите «нет». Увы, вас всегда будут провоцировать и предлагать сигарету. К сожалению, большинство даже самых лучших друзей не в состоянии искренне порадоваться за друга, избавившегося от зависимости... ";
 
 /*18*/
 /*Fuzzy*/
-"advice_18_message" = "We want to wait, prepare ourselves, wait for an opportune moment…And you wait, continue smoking, hope for something, deep down you realize quite well that you’re going nowhere, that another month or even year will pass, and nothing will change in your life. No opportune moment will come. As a result, you will remain a smoker, just you will lose your precious time. You have so much time until you start counting the remaining days. They will pass as a minute, and you will feel unbearably pity that you did not quit smoking much earlier, many years ago, fiercely trying to recall what happened that you were late, as it seemed like there is so much time ahead.";
+"advice_18_message" = "Нам хочется выждать, подготовить себя, дождаться более благоприятного момента… И вы ждете, продолжаете курить на что-то надеетесь, но в глубине души прекрасно понимаете, что это путь в никуда, что пройдет следующий месяц, год, но ничего в вашей жизни не изменится, а более благоприятного момента не наступит. В результате вы так и останетесь курящим, вот только драгоценное время будет упущено. Его так много до тех пор, пока не начинаешь считать оставшиеся дни. Они пролетят как одна минута, и вам станет невыносимо жаль, что вы не бросили курить раньше, гораздо раньше, много лет назад, напряженно пытаясь вспомнить, как так получилось, что вы опоздали, ведь казалось, что впереди столько времени... ";
 
 /*19*/
 /*Fuzzy*/
-"advice_19_message" = "No matter in which critical situation you are, how strong is your desire to give up, do not seek comfort in cigarettes or alcohol. They will take away your power, money, and health and will give nothing in return, nothing at all. Try to face this reality, not to be preoccupied with hopes and illusions that it'll all work out. The money saved on cigarettes will in the future be ground for your big house that does not exist yet, a lush garden, a strong wealthy family. Moreover, remember: in the worst situation, it is better to buy products, necessary things, rather than a pack of cigarettes. You know what to do. For the thousandth time, however difficult it may be, to roll up your sleeves and continue to work, hope, believe and succeed.";
+"advice_19_message" = "В какой бы критической ситуации вы ни находились, как бы сильно ни хотелось опустить руки, не стоит искать утешения в сигарете и алкоголе. Они заберут ваши силы, деньги и здоровье и не дадут взамен ничего, абсолютно ничего. Постарайтесь осознать эту реальность, а не тешить себя надеждами и иллюзиями, что все наладится само собой. Деньги, сэкономленные на сигаретах, в будущем станут основанием вашего большого дома, которого сегодня еще нет, цветущего сада, крепкой обеспеченной семьи. И помните: в самой тяжелой ситуации лучше купить продукты, нужные вещи, а не пачку сигарет. Вы знаете, что нужно делать. В тысячный раз, как бы тяжело ни было, закатать рукава и продолжать трудиться, надеяться, верить и добиваться успеха. ";
 
 /*20*/
 /*Fuzzy*/
-"advice_20_message" = "No, neither in a day nor in a week you will be free finally. Even stopping smoking and not feeling any discomfort, you may feel uncertainty when meeting with smokers every day. Several months will pass, maybe even a year, or probably it will happen much earlier, but one day you will understand that you won. I do not know when exactly you will realize this: perhaps, it will happen when you cough from the smoke of the smoker passing by, or in some other situation, but the main thing is that it will surely happen.  This thought will come to you, and in a second, suddenly you will realize that the war is over, you will never want to smoke anymore, and you defeated the addiction and set yourself free. You will never ever forget this second and you will keep it in your mind as one of the most beautiful memories.";
+"advice_20_message" = "Нет, ни через день или неделю вы станете свободны окончательно. Даже бросив курить и не чувствуя никакого дискомфорта, вы можете испытывать неуверенность в себе, сталкиваясь с курящими ежедневно. Пройдет несколько месяцев, может, даже год, а возможно это случиться гораздо раньше, но однажды вы поймете - вы победили. Я не знаю, в какой именно момент вы это осознаете: возможно, это случится, когда закашляетесь от дыма проходящего мимо человека, или в другой ситуации, но главное, что обязательно произойдет. Эта мысль пронесется молнией в вашей голове, в одну секунду вдруг осознаете, что война окончена, вам больше не захочется курить никогда, вы победили зависимость и стали свободны. Эту секунду не забудете никогда в своей жизни и будете хранить ее в памяти, как одно из самых прекрасных воспоминаний! ";
 
 /*1*/
 /*Fuzzy*/
-"advice_01_title" = "Lack of confidence";
+"advice_01_title" = "1. Неуверенность в себе.";
 
 /*2*/
 /*Fuzzy*/
-"advice_02_title" = "What is the reason for the previous failure?";
+"advice_02_title" = "2. В чем причина прошлого срыва?";
 
 /*3*/
 /*Fuzzy*/
-"advice_03_title" = "To quit smoking easily, instantly and right now!";
+"advice_03_title" = "3. Бросить курить легко, мгновенно, сейчас же!";
 
 /*4*/
 /*Fuzzy*/
-"advice_04_title" = "The company of smokers is not a motive to stay addicted.";
+"advice_04_title" = "4. Курящий коллектив не повод оставаться зависимым. ";
 
 /*5*/
 /*Fuzzy*/
-"advice_05_title" = "Promises, vows, hopes";
+"advice_05_title" = "5. Обещания, клятвы, надежды.";
 
 /*6*/
 /*Fuzzy*/
-"advice_06_title" = "Quit smoking along for the ride";
+"advice_06_title" = "6. Бросить курить за компанию. ";
 
 /*7*/
 /*Fuzzy*/
-"advice_07_title" = "When to quit smoking?";
+"advice_07_title" = "7. Когда лучше бросать курить? ";
 
 /*8*/
 /*Fuzzy*/
-"advice_08_title" = "Gradual smoking cessation";
+"advice_08_title" = "8. Постепенное бросание.";
 
 /*9*/
 /*Fuzzy*/
-"advice_09_title" = "To quit smoking is to overcome the addiction.";
+"advice_09_title" = "9. Бросить курить - избавиться от зависимости? ";
 
 /*10*/
 /*Fuzzy*/
-"advice_10_title" = "Lazy smoker";
+"advice_10_title" = "10. Ленивый курящий.";
 
 /*11*/
 /*Fuzzy*/
-"advice_11_title" = "Quit smoking and ruin your figure";
+"advice_11_title" = "11. Бросить курить и не испортить фигуру. ";
 
 /*12*/
 /*Fuzzy*/
-"advice_12_title" = "Substitutes, non-nicotine cigarettes, chewing gums et cetera…";
+"advice_12_title" = "12. Заменители, безникотиновые сигареты, жевательные резинки и прочее...";
 
 /*13*/
 /*Fuzzy*/
-"advice_13_title" = "Preparation";
+"advice_13_title" = "13. Подготовка. ";
 
 /*14*/
 /*Fuzzy*/
-"advice_14_title" = "For how many haven’t you smoked?";
+"advice_14_title" = "14. Сколько дней вы не курите?";
 
 /*15*/
 /*Fuzzy*/
-"advice_15_title" = "Smoking when you are around";
+"advice_15_title" = "15. При вас курят!";
 
 /*16*/
 /*Fuzzy*/
-"advice_16_title" = "You are invited to smoke";
+"advice_16_title" = "16. Вас угощают сигаретой...";
 
 /*17*/
 /*Fuzzy*/
-"advice_17_title" = "I will prove it now!";
+"advice_17_title" = "17. Сейчас докажу! ";
 
 /*18*/
 /*Fuzzy*/
-"advice_18_title" = "Stress. Waiting for an opportune moment";
+"advice_18_title" = "18. Стресс. Ожидание благоприятного момента для бросания курить.";
 
 /*19*/
 /*Fuzzy*/
-"advice_19_title" = "Smoking and the crisis";
+"advice_19_title" = "19. Курение и кризис. ";
 
 /*20*/
 /*Fuzzy*/
-"advice_20_title" = "When will it all end?";
-"share_text_message" = "Help save lives!\n\nHelp your friends and acquaintances get rid of nicotine addiction and you will give them ten or twenty extra years of life. They will see their children, grandchildren, do something deed, plant a tree, build a house, and help those in need.\n\nSaving a life is simple!\n\nShare this app, Let's Quit Smoking Together book, and our website www.quitsmokingtogether.org with your friends, acquaintances! Perhaps, you will save their life!\nIt’s so simple but so much! It’s all in your hands!";
-"advert_remove_text_message" = "Ads in this application help our organization provide support for nicotine-dependent people and adolescent smoking.\n\nThe money we receive from them goes to fund book and CD giveaways, app development, and campaigns in all countries of the world. Your help is very important to us whether it is tolerating ads or donating a few dollars to go ad-free.\n\nIf you find advertising disrupting, you can turn it off for just a few dollars that will be spent on fighting nicotine addiction globally.\nAlso, please see the Donate section if you can help us in some other way.\n\nThanks for helping!";
+"advice_20_title" = "20. Когда все закончится? ";
+"share_text_message" = "Спаси жизнь!\n\nПомоги своим друзьям и знакомым избавиться от никотиновой зависимости и ты подаришь им десять-двадцать лет жизни. Они увидят своих детей, внуков, сделают  доброе дело, посадят дерево, построят дом,  помогут нуждающимся. \n\nСпасти жизнь просто!\n\nПоделитесь этим приложением, книгой «Бросим курить вместе», нашим сайтом www.quitsmokingtogether.org с вашими друзьям, знакомыми  и  возможно вы спасете им жизнь! \nТак просто и так много, все в ваших руках!!!";
+"advert_remove_text_message" = "Показ рекламы в этом приложении немного помогает нашей организации в работе по оказанию помощи никотинозависимым людям и профилактике никотинозависимости у подростков. \n\nЗа деньги, которые получает наша организация, мы раздаем бесплатно книги, диски, разрабатываем приложения, проводим акции во всех странах мира и нам очень важна ваша помощь будь-то просмотр рекламы или несколько долларов за ее отключение. \n\nЕсли вам мешает реклама вы  можете ее отключить всего за несколько долларов, которые будут израсходованы на борьбу в никотинозависимостью в мире.\n\n Если вы можете оказать  нам другую помощь, зайдите пожалуйста в раздел Donate.\n\n Спасибо Вам за помощь!";
+"overview_screen_title" = "Главная";
+"donate_text_message" = "Общественная негосударственная неприбыльная организация «Бросим курить вместе» существует на протяжение шести лет за счет автора книги Бросим курить вместе Алексея Коваля и пожертвований частных лиц, небезразличных к судьбе людей, ставших никотинозависимыми";
+"greeting_01_message" = "Привет! Меня зовут Алексей Коваль. Я помогу тебе избавиться от никотиновой зависимости и вспомнить как это-быть некурящим!";
+"greeting_02_message" = "Моя книга посвящена «тяжелым случаям», людям, для которых курение стало частью жизни и бросить курить у них получается только на короткий период, а спустя некоторое время они снова берут в руки сигарету, несмотря на различные методики и способы борьбы с курением.";
+"greeting_03_message" = "В этот раз вы избавитесь от зависимости навсегда!  В течении девяти дней я буду с вами просыпаться, ходить на работу, проводить досуг, встречаться с друзьями, переживать неприятные моменты в отказе от курения и помогать в тяжелые минуты. Вы не будете один. У вас будет план, ответы на возникающие вопросы и моя помощь - все то, что отсутствовало в прошлые ваши попытки.";
+"greeting_04_message" = "После прочтения этой книги вы будете четко понимать, что, как, зачем и почему, а не искать компромиссов с сигаретой. Вы будете уверены в себе, в своих поступках, знать, что вас может ждать завтра, а что может произойти послезавтра, на что нужно обратить внимание через месяц, а на что через год, с какими опасностями можно столкнуться и как лучше с ними справиться.";
+"greeting_05_message" = "Сигарета больше не будет существовать для вас как средство собраться, не будет вызывать у вас каких-либо эмоций, она станет для вас только источником зловония, вы будете кашлять и морщиться, когда случайно вдохнете дым от проходящего мимо курильщика.";
+"greeting_06_message" = "Универсальность книги, позволит помочь курящим разных типов, независимо от того, сколько сигарет вы выкуриваете в день, сорок или только две, даст вам иммунитет к будущей жизни без сигарет.";
+"greeting_07_message" = "Как бы ни развивались события в вашей жизни, в любой, самой критической ситуации, когда кажется, что все вокруг рушится, вы не будет искать утешения или оправдания в сигарете, не возьмете ее в минуту слабости, когда ее вам предложит друг, приятель, подруга, коллега. Вы даже не подумаете о сигарете как о способе решения проблем или возможности расслабиться.";
+"greeting_08_message" = "Главное заключается в том, чтобы вы отнеслись к ней как к шансу - возможно, одному из самых главных в жизни - расстаться с курением навсегда.";
+"greeting_09_message" = "Вы хотите избавиться от зависимости? Тогда начнем!";
+"contacts_text_message" = "Адрес: 23Б ул. Большая Васильковская, 01004, Киев, Украина.";
+"contacts_text_organization" = "НПО \"Бросим курить вместе\"";
+"shirts_text_message" = "Общественная организация «Бросим курить вместе» - неприбыльная организация. Мы не продаем наши эксклюзивные футболки, чашки, другие брендовые вещи. Вы можете только выиграть такую футболку,  участвуя в наших конкурсах или оказав нам помощь в нашей работе, что бы все знали, что вы принимаете непосредственное участие в помощи никотино зависимым людям. \n\nПодробнее вы можете прочесть в разделе «Помощь»";
+"shirts_screen_title" = "Подарки";
+"ngo_screen_title" = "НПО \"Бросим курить вместе\"";
+"ngo_screen_message" = "";
+"shirts_text_title" = "Вам нравятся наши эксклюзивные футболки? Вы хотели бы иметь такую?";
+"share_title" = "Поделись и спаси жизнь!";
+"share_fragment" = "Помоги своим друзьям и знакомым избавиться от никотиновой зависимости и ты подаришь им десять-двадцать лет жизни. Они увидят своих детей, внуков, сделают  доброе дело, посадят дерево, построят дом,  помогут нуждающимся.";
+"button_readmore" = "Читать далее";
+"button_share" = "Поделиться";
+"button_continue_reading" = "Продолжить чтение";
+"tabbar_main" = "Главная";
+"tabbar_events" = "События";
+"tabbar_read" = "Читать";
+"tabbar_donate" = "Помощь";
+"tabbar_options" = "Настройки";
+"button_back" = "Назад";
+"button_next" = "Вперед";
+"button_begin" = "Начать";
+"section_advices" = "20 советов от Алексея Коваля";
+"advices_screen_title" = "20 Советов";
+"contacts_screen_title" = "Контакты";
 
 /*Fuzzy*/
-"overview_screen_title" = "Main";
-"donate_text_message" = "NGO \"Quit Smoking Together\"";
-"greeting_01_message" = "Hello! My name is Alexey Koval. I will help you get rid of nicotine addiction and remember what it’s like to be a non-smoker!";
-"greeting_02_message" = "My book is for “severe cases”—the people for whom smoking has become a part of life. Only for a short time can they suppress the habit, starting to smoke again after a while whatever the method or way of quitting they choose.";
-"greeting_03_message" = "This time, you will get rid of this addiction forever! Over the next nine days, we will wake up together, go to work, spend time, hang out with friends, experience unpleasant moments during quitting, and help you get through hard times. You will not be alone. You will have a plan, answers to questions that may arise, and my help—all that was missing during your past attempts.";
-"greeting_04_message" = "This book will give you a clear understanding of what, how, and why; you will not look for compromises with a cigarette. You will gain confidence in yourself and your actions. You will know what you can expect tomorrow, and what can happen the day after, what to keep in mind a month later, and what in a year, what dangers you may face and how to deal with them.";
-"greeting_05_message" = "Having a cigarette will no longer be a means of calming down, it won’t bring any emotions. It will become just a source of stench that makes you cough and frown, having accidentally inhaled the smoke from a passing smoker.";
-"greeting_06_message" = "The versatility of this book will help all kinds smokers, regardless of how many cigarettes they smoke daily—forty or only two; it will give you immunity to smoking for the rest of your life.";
-"greeting_07_message" = "Wherever the life takes you, in any critical situation, when everything seems to be falling apart, you will not seek solace or justification in a cigarette; don’t take it in a moment of weakness when your friend or colleague offers it. You will not even think about a cigarette as a way of solving problems or being able to relax.";
-"greeting_08_message" = "The most important is that you treat it like a chance—perhaps the only in your life—to quit smoking forever.";
-"greeting_09_message" = "Do you want to get rid of this addiction? Then let us begin!";
-"contacts_text_message" = "Address: 23B Velika Vasilkivska Street, 01004, Kyiv, Ukraine.";
-"contacts_text_organization" = "NGO \"Quit Smoking Together\"";
-"shirts_text_message" = "Quit Smoking Together is a Public Non-Profit NGO. We don’t sell our exclusive T-shirts, cups, and other merchandise. However, you can win such a T-shirt by participating in our contests or by helping us. Let everyone know that you help nicotine-dependent people!\n\nFor more information, see the Donate section.";
-"shirts_screen_title" = "Gifts";
-"ngo_screen_title" = "NGO \"Quit Smoking Together\"";
-"ngo_screen_message" = "\"Quit Smoking Together\" is a non-government initiative founded in 2012, right after the publication of the eponymous book by Aleksei Koval describing his method of fighting nicotine addiction for “difficult cases”—the people who lost their last hope. ";
-"shirts_text_title" = "How do you like our exclusive T-shirts? Want to get one?";
-"share_title" = "Share and help save lives!";
-"share_fragment" = "Help your friends and acquaintances get rid of nicotine addiction and you will give them ten or twenty extra years of life. They will see their children, grandchildren, do something deed, plant a tree, build a house, and help those in need.";
-"button_readmore" = "Read more";
-"button_share" = "Share";
-"button_continue_reading" = "Continue reading";
-"tabbar_main" = "Main";
-"tabbar_events" = "Events";
-"tabbar_read" = "Read";
-"tabbar_donate" = "Donate";
-"tabbar_options" = "Settings";
-"button_back" = "Back";
-"button_next" = "Next";
-"button_begin" = "Begin";
-"section_advices" = "20 tips from Alexey Koval to quit smoking";
-"advices_screen_title" = "20 Tips";
-"contacts_screen_title" = "Contacts";
-
-/*Fuzzy*/
-"contacts_fragment" = "Dear friend, you can contact with me and I will help you to quit smoking!";
-"events_screen_title" = "Events";
+"contacts_fragment" = "Дорогой друг, ты можешь связаться со мной и я помогу тебе бросить курить!";
+"events_screen_title" = "Новости";
 "donate_screen_title" = "Помочь";
-"settings_screen_title" = "Settings";
+"settings_screen_title" = "Настройки";
 "cell_account_title" = "";
-"cell_language_title" = "Languages";
-"cell_share_title" = "Share";
-"cell_likeOnAppStore_title" = "Like on AppStore";
-"cell_removeAdvert_title" = "Remove advert";
-"cell_about_title" = "About";
-"screen_language_title" = "Languages";
-"log_out" = "Log out";
-"placeholder_phone" = "Phone";
-"placeholder_firstname" = "First name";
-"placeholder_lastname" = "Last name";
+"cell_language_title" = "Языки";
+"cell_share_title" = "Поделиться";
+"cell_likeOnAppStore_title" = "Нравиться в AppStore";
+"cell_removeAdvert_title" = "Убрать рекламу";
+"cell_about_title" = "О приложении";
+"screen_language_title" = "Языки";
+"log_out" = "Выйти";
+"placeholder_phone" = "Телефон";
+"placeholder_firstname" = "Имя";
+"placeholder_lastname" = "Фамилия";
 "placeholder_email" = "Email";
-"placeholder_password" = "Password";
-"profile_screen_title" = "Profile";
-"share_screen_title" = "Share";
+"placeholder_password" = "Пароль";
+"profile_screen_title" = "Профиль";
+"share_screen_title" = "Поделиться";
 
 /*Fuzzy*/
-"alert_share_title" = "Share";
-"alert_share_message" = "Choose content for sharing";
-"share_app_text" = "Share this Application";
-"share_book_text" = "Share author's book";
-"share_website_text" = "Share author's website";
-"button_cancel" = "Cancel";
-"alert_share_error_title" = "Error";
-"alert_share_error_message" = "You are not connected to";
-"button_dismiss" = "Dismiss";
-"share_other_apps" = "Other apps";
-"remove_advert_screen_title" = "Remove advert";
-"button_remove_advert" = "Remove advert";
-"button_restore_purchases" = "Restore purchases";
-"button_is_pro" = "Is Pro";
+"alert_share_title" = "Поделиться";
+"alert_share_message" = "Выберите содержимое чтобы поделиться";
+"share_app_text" = "Поделиться этим приложением";
+"share_book_text" = "Поделиться книгой автора";
+"share_website_text" = "Поделиться сайтом автора";
+"button_cancel" = "Отмена";
+"alert_share_error_title" = "Ошибка";
+"alert_share_error_message" = "Вы не подключены";
+"button_dismiss" = "Отменить";
+"share_other_apps" = "Другие приложения";
+"remove_advert_screen_title" = "Убрать рекламу";
+"button_remove_advert" = "Убрать рекламу";
+"button_restore_purchases" = "Восстановить покупки";
+"button_is_pro" = "Pro Версия";
 "share_message_app" = "Друзья! Советую вам установить это приложение. \nОно содержит не только массу советов по борьбе с курением, но и книгу Алексея Коваля  \"Бросим курить вместе\", которая, благодаря своей бесплатной версии помогла сотням тысяч людей бросить курить во всем мире!\nhttps://itunes.apple.com/us/app/quitsmokingtogether";
 "share_message_website" = "Друзья! Обратите внимание на сайт международной общественной организации\n «Бросим курить вместе», оказывающей бесплатную помощь людям, которые страдают от никотиновой зависимостью.\nНа сайте вы сможете увидеть сотни отчетов о проведенных акциях и скачать совершенно бесплатно книгу Алексея Коваля  \"Бросим курить вместе\", которая благодаря своей бесплатной версии помогла бросить курить сотням тысячам людей во всем мире!\nhttp://quitsmokingtogether.org";
 "share_message_book" = "Загрузите прямо сейчас книгу Алексея Коваля \"Бросим курить вместе\" бесплатно! \nЭто подарок именно Вам от автора книги!\nhttp://quitsmokingtogether.org/buy.php";
-"profile_change_title" = "Change profile";
-"profile_change_message" = "Write your new profile data";
-"button_ok" = "ОК";
-"text_change" = "Change";
+"profile_change_title" = "Изменить профиль";
+"profile_change_message" = "Введите новые данные";
+"button_ok" = "OK";
+"text_change" = "Изменить";
 "text_first_name" = "Имя";
-"change_first_name" = "Change First name";
-"change_last_name" = "Change last name";
-"log_out_really_want" = "Do you really want to log out?";
-"change_email" = "Change Email";
-"change_password" = "Change password";
-"change_phone" = "Change phone";
-"email_is_okay" = "Email is correct";
-"email_is_invalid" = "Your Email is invalid";
-"password_is_okay" = "Password is correct";
-"password_is_invalid" = "Password is invalid";
-"phone_is_okay" = "Phone is valid";
-"phone_is_invalid" = "Phone is invalid";
+"change_first_name" = "Изменить Имя";
+"change_last_name" = "Изменить Фамилию";
+"log_out_really_want" = "Вы действительно хотите выйти?";
+"change_email" = "Изменить Email";
+"change_password" = "Изменить Пароль";
+"change_phone" = "Изменить Телефон";
+"email_is_okay" = "Email правильный";
+"email_is_invalid" = "Ваш Email не верный";
+"password_is_okay" = "Пароль правильный";
+"password_is_invalid" = "Пароль не верный";
+"phone_is_okay" = "Телефон правильный";
+"phone_is_invalid" = "Телефон не правильный";
+"write_correct_email" = "Пожалуйста, введите правильный Email";
+"email_should_be" = "Email должен быть ...";
+"alert_login_title" = "Авторизация";
+"check_email_restore_password" = "Проверьте Ваш Email для восстановления пароля";
+"button_login" = "Login";
+"button_signup" = "Зарегистрироваться!";
+"or_login_with" = "или войти с помощью";
+"button_continue_without_login" = "Продолжить без авторизации";
+"button_register" = "Register";
+"button_have_account_login" = "";
+"alert_register_title" = "Registration";
