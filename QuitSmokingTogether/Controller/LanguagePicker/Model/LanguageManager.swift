@@ -23,16 +23,21 @@ class LanguageManager {
         .russian
     ]
     
+    let arrayWithLanguagesForPickerView: [Language] = [
+        .english,
+        .russian
+    ]
+    
     func getNumberOfCells() -> Int {
-        return arrayWithLanguages.count
+        return arrayWithLanguagesForPickerView.count
     }
     
     func getLanguageFor(_ indexPath: IndexPath) -> Language {
-        return arrayWithLanguages[indexPath.row]
+        return arrayWithLanguagesForPickerView[indexPath.row]
     }
     
     func saveCurrentLanguageWith(_ indexPath: IndexPath) {
-        currentLanguage = arrayWithLanguages[indexPath.row]
+        currentLanguage = arrayWithLanguagesForPickerView[indexPath.row]
     }
     
 }

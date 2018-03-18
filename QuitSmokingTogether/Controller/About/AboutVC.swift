@@ -53,7 +53,7 @@ class AboutVC: UITableViewController {
         case [2,0]:
             Browser.openURLWith(.Surf_LinkedIn_Yaroslav)
         case [2,1]:
-            Browser.openURLWith(.Surf_LinkedIn_Yaroslav)
+            Browser.openURLWith(.Surf_LinkedIn_Vlad)
         default:
             break
         }
