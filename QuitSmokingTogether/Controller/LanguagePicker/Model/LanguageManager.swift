@@ -18,6 +18,7 @@ class LanguageManager {
     }
     
     let arrayWithLanguages: [Language] = [
+        .system,
         .english,
         .russian
     ]
