@@ -43,7 +43,7 @@ struct Constants {
     
     struct AppInfo {
         static var versionAndBuild: String {
-            return "\(version) (\(build))"
+            return "\(version).\(build)"
         }
         static var version: String {
             return Bundle.main.infoDictionary?["CFBundleShortVersionString"]  as? String ?? "Undefined"
