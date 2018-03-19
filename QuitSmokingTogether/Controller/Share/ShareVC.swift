@@ -92,19 +92,19 @@ extension ShareVC {
         
         let shareAppText = "share_app_text".localized()
         let shareAppAction = UIAlertAction(title: shareAppText, style: .default) { (action) in
-            self.shareWithProvider(provider, enumWithURL: .ThisApp)
+            self.shareWithProvider(provider, data: .ThisApp)
         }
         shareAppAction.setValue(UIImage(named: "icon-app"), forKey: "image")
         
         let shareBookText = "share_book_text".localized()
         let shareBookAction = UIAlertAction(title: shareBookText, style: .default) { (action) in
-            self.shareWithProvider(provider, enumWithURL: .Book)
+            self.shareWithProvider(provider, data: .Book)
         }
         shareBookAction.setValue(UIImage(named: "icon_book"), forKey: "image")
         
         let shareWebsiteText = "share_website_text".localized()
         let shareWebsiteAction = UIAlertAction(title: shareWebsiteText, style: .default) { (action) in
-            self.shareWithProvider(provider, enumWithURL: .Website)
+            self.shareWithProvider(provider, data: .Website)
         }
         shareWebsiteAction.setValue(UIImage(named: "icon-website"), forKey: "image")
         
@@ -120,22 +120,21 @@ extension ShareVC {
         
     }
     
-    func shareWithProvider(_ provider: ContentSharingProvider, enumWithURL: MessageForSharing) {
-        let urlText = enumWithURL.rawValue
-        let url = URL(string: urlText)!
+    func shareWithProvider(_ provider: ContentSharingProvider, data: DataForSharing) {
         
         switch provider {
         case .Facebook:
-            self.shareWithFacebook(url)
+            self.shareWithFacebook(data)
         case .ActivityVC:
-            self.shareWithOtherApps(url)
+            self.shareWithOtherApps(data)
         }
     }
     
-    func shareWithFacebook(_ url: URL) {
+    func shareWithFacebook(_ data: DataForSharing) {
 
         let shareContent = FBSDKShareLinkContent()
-        shareContent.contentURL = url
+        shareContent.contentURL = data.url
+        shareContent.quote = data.message
 
         let shareDialog = FBSDKShareDialog()
         shareDialog.fromViewController = self
@@ -151,8 +150,11 @@ extension ShareVC {
         shareDialog.show()
     }
     
-    func shareWithOtherApps(_ url: URL) {
-        let activityVC = UIActivityViewController(activityItems: [url], applicationActivities: nil)
+    func shareWithOtherApps(_ data: DataForSharing) {
+        let excludeActivities: [UIActivityType] = [.copyToPasteboard, .airDrop, .print, .saveToCameraRoll, .openInIBooks, .assignToContact, .addToReadingList]
+        let arrayWithData: [Any] = [data.message, data.url]
+        let activityVC = UIActivityViewController(activityItems: arrayWithData, applicationActivities: nil)
+        activityVC.excludedActivityTypes = excludeActivities
         
         if let popoverController = activityVC.popoverPresentationController {
             popoverController.sourceView = shareButtonsStack
@@ -189,10 +191,30 @@ extension ShareVC {
         case ActivityVC = "Other apps"
     }
     
-    enum MessageForSharing: String {
-        case ThisApp = "share_message_app"
-        case Website = "share_message_website"
-        case Book = "share_message_book"
+    enum DataForSharing {
+        case ThisApp
+        case Website
+        case Book
+        
+        public var message: String {
+            switch self {
+            case .ThisApp: return "share_app_message".localized()
+            case .Website: return "share_website_message".localized()
+            case .Book: return "share_book_message".localized()
+            }
+        }
+        
+        public var url: URL {
+            return URL(string: self.link) ?? URL(string: "http://quitsmokingtogether.org")!
+        }
+        
+        private var link: String {
+            switch self {
+            case .ThisApp: return "share_app_url".localized()
+            case .Website: return "share_website_url".localized()
+            case .Book: return "share_book_url".localized()
+            }
+        }
     }
     
 }

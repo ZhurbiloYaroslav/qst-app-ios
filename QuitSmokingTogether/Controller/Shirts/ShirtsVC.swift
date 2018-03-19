@@ -28,6 +28,7 @@ class ShirtsVC: UIViewController {
         navigationItem.title = "shirts_screen_title".localized()
         titleTextLabel.text = "shirts_text_title".localized()
         messageTextLabel.text = "shirts_text_message".localized()
+        donateButton.setTitle("button_donate".localized(), for: .normal)
     }
     
     @IBAction func donateButtonPressed(_ sender: UIButton) {

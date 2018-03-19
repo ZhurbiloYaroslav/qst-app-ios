@@ -163,7 +163,7 @@
 
 /*Fuzzy*/
 "overview_screen_title" = "Main";
-"donate_text_message" = "NGO \"Quit Smoking Together\"";
+"donate_text_message" = "Let's Quit Smoking Together has existed as a Public Non-Profit NGO for six years already. It is funded by Alexey Koval—the author of the eponymous book—and from donations of those concerned about the fate of nicotine-dependent people.";
 "greeting_01_message" = "Hello! My name is Alexey Koval. I will help you get rid of nicotine addiction and remember what it’s like to be a non-smoker!";
 "greeting_02_message" = "My book is for “severe cases”—the people for whom smoking has become a part of life. Only for a short time can they suppress the habit, starting to smoke again after a while whatever the method or way of quitting they choose.";
 "greeting_03_message" = "This time, you will get rid of this addiction forever! Over the next nine days, we will wake up together, go to work, spend time, hang out with friends, experience unpleasant moments during quitting, and help you get through hard times. You will not be alone. You will have a plan, answers to questions that may arise, and my help—all that was missing during your past attempts.";
@@ -178,7 +178,7 @@
 "shirts_text_message" = "Quit Smoking Together is a Public Non-Profit NGO. We don’t sell our exclusive T-shirts, cups, and other merchandise. However, you can win such a T-shirt by participating in our contests or by helping us. Let everyone know that you help nicotine-dependent people!\n\nFor more information, see the Donate section.";
 "shirts_screen_title" = "Gifts";
 "ngo_screen_title" = "NGO \"Quit Smoking Together\"";
-"ngo_screen_message" = "\"Quit Smoking Together\" is a non-government initiative founded in 2012, right after the publication of the eponymous book by Aleksei Koval describing his method of fighting nicotine addiction for “difficult cases”—the people who lost their last hope. ";
+"ngo_screen_message" = "\"Quit Smoking Together\" is a non-government initiative founded in 2012, right after the publication of the eponymous book by Aleksei Koval describing his method of fighting nicotine addiction for “difficult cases”—the people who lost their last hope.";
 "shirts_text_title" = "How do you like our exclusive T-shirts? Want to get one?";
 "share_title" = "Share and help save lives!";
 "share_fragment" = "Help your friends and acquaintances get rid of nicotine addiction and you will give them ten or twenty extra years of life. They will see their children, grandchildren, do something deed, plant a tree, build a house, and help those in need.";
@@ -200,9 +200,9 @@
 /*Fuzzy*/
 "contacts_fragment" = "Dear friend, you can contact with me and I will help you to quit smoking!";
 "events_screen_title" = "Events";
-"donate_screen_title" = "Помочь";
+"donate_screen_title" = "Donate";
 "settings_screen_title" = "Settings";
-"cell_account_title" = "";
+"cell_account_title" = "Account";
 "cell_language_title" = "Languages";
 "cell_share_title" = "Share";
 "cell_likeOnAppStore_title" = "Like on AppStore";
@@ -233,14 +233,16 @@
 "button_remove_advert" = "Remove advert";
 "button_restore_purchases" = "Restore purchases";
 "button_is_pro" = "Is Pro";
-"share_message_app" = "Друзья! Советую вам установить это приложение. \nОно содержит не только массу советов по борьбе с курением, но и книгу Алексея Коваля  \"Бросим курить вместе\", которая, благодаря своей бесплатной версии помогла сотням тысяч людей бросить курить во всем мире!\nhttps://itunes.apple.com/us/app/quitsmokingtogether";
-"share_message_website" = "Друзья! Обратите внимание на сайт международной общественной организации\n «Бросим курить вместе», оказывающей бесплатную помощь людям, которые страдают от никотиновой зависимостью.\nНа сайте вы сможете увидеть сотни отчетов о проведенных акциях и скачать совершенно бесплатно книгу Алексея Коваля  \"Бросим курить вместе\", которая благодаря своей бесплатной версии помогла бросить курить сотням тысячам людей во всем мире!\nhttp://quitsmokingtogether.org";
-"share_message_book" = "Загрузите прямо сейчас книгу Алексея Коваля \"Бросим курить вместе\" бесплатно! \nЭто подарок именно Вам от автора книги!\nhttp://quitsmokingtogether.org/buy.php";
+"share_app_message" = "Друзья! Советую вам установить это приложение. \nОно содержит не только массу советов по борьбе с курением, но и книгу Алексея Коваля  \"Бросим курить вместе\", которая, благодаря своей бесплатной версии помогла сотням тысяч людей бросить курить во всем мире!";
+"share_website_message" = "Друзья! Обратите внимание на сайт международной общественной организации\n «Бросим курить вместе», оказывающей бесплатную помощь людям, которые страдают от никотиновой зависимостью.\nНа сайте вы сможете увидеть сотни отчетов о проведенных акциях и скачать совершенно бесплатно книгу Алексея Коваля  \"Бросим курить вместе\", которая благодаря своей бесплатной версии помогла бросить курить сотням тысячам людей во всем мире!";
+
+/*Fuzzy*/
+"share_book_message" = "Загрузите прямо сейчас книгу Алексея Коваля \"Бросим курить вместе\" бесплатно! \nЭто подарок именно Вам от автора книги!";
 "profile_change_title" = "Change profile";
 "profile_change_message" = "Write your new profile data";
 "button_ok" = "ОК";
 "text_change" = "Change";
-"text_first_name" = "Имя";
+"text_first_name" = "First name";
 "change_first_name" = "Change First name";
 "change_last_name" = "Change last name";
 "log_out_really_want" = "Do you really want to log out?";
@@ -257,14 +259,22 @@
 "email_should_be" = "Email should be ...";
 "alert_login_title" = "User login";
 "check_email_restore_password" = "Check your Email to restore password";
-"button_login" = "Войти";
+"button_login" = "Login";
 "button_signup" = "New member? Sign Up!";
 "or_login_with" = "or login with";
 "button_continue_without_login" = "Continue without login";
-"button_register" = "Зарегистрироваться";
+"button_register" = "Register";
 "button_have_account_login" = "Have account? Log in!";
 "alert_register_title" = "Registration";
 "about_version" = "Version";
 "copyright_first" = "Alexey Koval";
 "copyright_second" = "All rights reserved";
 "about_softeng" = "Software engineer";
+"username_is_empty" = "Username is empty";
+"username_is_invalid" = "Username is invalid";
+"book_chapter_first_title" = "Introduction";
+"book_chapter_first_fragment" = "Dear friend! I hope reading these lines doesn't make you yawn and you took this book from your shelf not out of desperation to find something interesting to read. If it has somehow made its way to your library, I believe it's either you are a smoker or a member of your family, who did not bother to take off the shelf this manual that may have been gathering dust there for months. Smokers always tend to buy such publications; many even read a few chapters, but lose interest towards the end.";
+"share_app_url" = "https://itunes.apple.com";
+"share_book_url" = "http://quitsmokingtogether.org/buy.php";
+"share_website_url" = "http://quitsmokingtogether.org";
+"button_donate" = "Donate";

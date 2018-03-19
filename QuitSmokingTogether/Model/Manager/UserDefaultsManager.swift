@@ -40,10 +40,10 @@ class UserDefaultsManager {
 extension UserDefaultsManager {
     
     var chapterInText: String {
-        return defaults.object(forKey: "chapterInText") as? String ?? "Introduction"
+        return defaults.object(forKey: "chapterInText") as? String ?? "book_chapter_first_title".localized()
     }
     
     var firstParagraphInText: String {
-        return defaults.object(forKey: "firstParagraphInText") as? String ?? "Dear friend! I hope reading these lines doesn't make you yawn and you took this book from your shelf not out of desperation to find something interesting to read. If it has somehow made its way to your library, I believe it's either you are a smoker or a member of your family, who did not bother to take off the shelf this manual that may have been gathering dust there for months. Smokers always tend to buy such publications; many even read a few chapters, but lose interest towards the end."
+        return defaults.object(forKey: "firstParagraphInText") as? String ?? ""
     }
 }
