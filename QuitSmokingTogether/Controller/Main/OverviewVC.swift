@@ -30,7 +30,7 @@ class OverviewVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         updateUIWithLocalizedText()
-        tableView.reloadRows(at: [[0,0], [0,1], [0,2]], with: .fade)
+        tableView.reloadRows(at: [[0,0], [0,1], [0,2], [0,3], [0,4], [0,5], [0,6], [0,7]], with: .fade)
     }
     
     func setupTableView() {
@@ -191,7 +191,8 @@ extension OverviewVC {
     func showNGOView() {
         if let articleDescVC = ArticleDescVC.getInstance() {
             
-            guard let path = Bundle.main.path(forResource: "NGO", ofType: "html") else { return }
+            let ngoFileName = getLocalizedNGOFileName()
+            guard let path = Bundle.main.path(forResource: ngoFileName, ofType: "html") else { return }
             let ngoHtmlText = try! String(contentsOfFile: path).trimmingCharacters(in: .whitespacesAndNewlines)
             
             let articleWithNGO = Event(id: 0, date: "",
@@ -203,6 +204,15 @@ extension OverviewVC {
             articleWithNGO.arrayWithImageLinks = [absoluteURL]
             articleDescVC.currentArticle = articleWithNGO
             navigationController?.pushViewController(articleDescVC, animated: true)
+        }
+    }
+    
+    private func getLocalizedNGOFileName() -> String {
+        switch LanguageManager().currentLanguage {
+        case .russian:
+            return "NGO-ru"
+        default:
+            return "NGO-en"
         }
     }
     

@@ -16,6 +16,8 @@ class ShareVC: UIViewController {
     
     @IBOutlet weak var shareTextMessage: UILabel!
     @IBOutlet weak var shareButtonsStack: UIStackView!
+    @IBOutlet weak var facebookButton: UIButton!
+    @IBOutlet weak var otherAppsButton: UIButton!
     
     var presentThisVcFromReader: Bool?
     
@@ -31,6 +33,8 @@ class ShareVC: UIViewController {
     func updateUIWithLocalizedText() {
         navigationItem.title = "share_screen_title".localized()
         shareTextMessage.text = "share_text_message".localized()
+        facebookButton.setTitle("button_share_facebook".localized(), for: .normal)
+        otherAppsButton.setTitle("button_share_apps".localized(), for: .normal)
     }
     
     @IBAction func shareWithFacebookButtonPressed(_ sender: UIButton) {

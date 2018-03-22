@@ -233,11 +233,9 @@
 "button_remove_advert" = "Remove advert";
 "button_restore_purchases" = "Restore purchases";
 "button_is_pro" = "Is Pro";
-"share_app_message" = "Друзья! Советую вам установить это приложение. \nОно содержит не только массу советов по борьбе с курением, но и книгу Алексея Коваля  \"Бросим курить вместе\", которая, благодаря своей бесплатной версии помогла сотням тысяч людей бросить курить во всем мире!";
-"share_website_message" = "Друзья! Обратите внимание на сайт международной общественной организации\n «Бросим курить вместе», оказывающей бесплатную помощь людям, которые страдают от никотиновой зависимостью.\nНа сайте вы сможете увидеть сотни отчетов о проведенных акциях и скачать совершенно бесплатно книгу Алексея Коваля  \"Бросим курить вместе\", которая благодаря своей бесплатной версии помогла бросить курить сотням тысячам людей во всем мире!";
-
-/*Fuzzy*/
-"share_book_message" = "Загрузите прямо сейчас книгу Алексея Коваля \"Бросим курить вместе\" бесплатно! \nЭто подарок именно Вам от автора книги!";
+"share_app_message" = "Dear friends,\nI recommend that you install this application. It contains not only a lot of quit-smoking tips but also Aleksei Koval’s books “Quit Smoking Together” which due to its free version helped hundreds of people around the world quit smoking!";
+"share_website_message" = "Dear friends, \nPlease turn your attention to the website of the international non-governmental organization “Quit Smoking Together” providing free aid to persons addicted to nicotine.\nOn this website you can find hundreds of reports about the conducted campaigns and download the free book “Quit Smoking Together” by Alexey Koval which due to its free version helped hundreds of people around the world quit smoking!";
+"share_book_message" = "Download Aleksei Koval’s books “Quit Smoking Together” for free right now! \nThis is the author's gift just for you! ";
 "profile_change_title" = "Change profile";
 "profile_change_message" = "Write your new profile data";
 "button_ok" = "ОК";
@@ -278,3 +276,5 @@
 "share_book_url" = "http://quitsmokingtogether.org/buy.php";
 "share_website_url" = "http://quitsmokingtogether.org";
 "button_donate" = "Donate";
+"button_share_facebook" = "Share with Facebook";
+"button_share_apps" = "Share with other apps";

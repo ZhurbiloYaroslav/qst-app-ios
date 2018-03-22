@@ -45,6 +45,7 @@ class OverviewContactsCell: UITableViewCell {
                          title: "ngo_screen_title".localized(),
                          message: "ngo_screen_message".localized()
             )
+            titleLabel.numberOfLines = 2
             
         case .shirts:
             updateUIWith(image: UIImage(named: "image-shirt-1") ?? UIImage(),

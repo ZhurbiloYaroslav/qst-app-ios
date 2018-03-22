@@ -10,6 +10,7 @@ import UIKit
 
 class LanguageCell: UITableViewCell {
 
+    @IBOutlet weak var langImage: UIImageView!
     @IBOutlet weak var nativeTitleLabel: UILabel!
     
     var currentLanguage: Language!
@@ -21,7 +22,17 @@ class LanguageCell: UITableViewCell {
     
     func updateCellWith(_ language: Language) {
         currentLanguage = language
+        langImage.image = getLangImage(language)
         nativeTitleLabel.text = language.getNativeName()
+    }
+    
+    func getLangImage(_ language: Language) -> UIImage {
+        switch language {
+        case .russian:
+            return UIImage(named: "icon-lang-ru") ?? #imageLiteral(resourceName: "icon-lang-ru")
+        default:
+            return UIImage(named: "icon-lang-en") ?? #imageLiteral(resourceName: "icon-lang-en")
+        }
     }
 
 }

@@ -139,6 +139,8 @@
                     <nil key="simulatedBottomBarMetrics"/>
                     <size key="freeformSize" width="320" height="850"/>
                     <connections>
+                        <outlet property="facebookButton" destination="BnY-UP-Agc" id="LZJ-jq-ji4"/>
+                        <outlet property="otherAppsButton" destination="NSn-os-zDP" id="0V1-de-jtk"/>
                         <outlet property="shareButtonsStack" destination="v58-yf-YcW" id="jGL-wO-vvS"/>
                         <outlet property="shareTextMessage" destination="Eb4-6v-AKi" id="BKN-I1-2Va"/>
                     </connections>
@@ -149,6 +151,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="character-thumbs-up" width="1100" height="1100"/>
+        <image name="character-thumbs-up" width="1100" height="616"/>
     </resources>
 </document>

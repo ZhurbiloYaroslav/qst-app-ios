@@ -8,11 +8,6 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <customFonts key="customFonts">
-        <array key="Montserrat-Regular.ttf">
-            <string>Montserrat-Regular</string>
-        </array>
-    </customFonts>
     <scenes>
         <!--Languages-->
         <scene sceneID="4aX-x3-zyr">
@@ -23,33 +18,44 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <view key="tableFooterView" contentMode="scaleToFill" id="EaL-dB-v3R">
-                            <rect key="frame" x="0.0" y="106" width="375" height="44"/>
+                            <rect key="frame" x="0.0" y="98" width="375" height="44"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LanguageCell" rowHeight="78" id="pPe-rv-pc6" customClass="LanguageCell" customModule="QuitSmokingTogether" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="78"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="LanguageCell" rowHeight="70" id="pPe-rv-pc6" customClass="LanguageCell" customModule="QuitSmokingTogether" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="375" height="70"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="pPe-rv-pc6" id="h2x-QM-jzN">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="77.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="69.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Native Language Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OBB-s0-PeG">
-                                            <rect key="frame" x="16" y="16" width="343" height="45.5"/>
-                                            <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="17"/>
+                                            <rect key="frame" x="70" y="16" width="289" height="37.5"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-lang-en" translatesAutoresizingMaskIntoConstraints="NO" id="cMa-yt-8p7">
+                                            <rect key="frame" x="15" y="15" width="40" height="40"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="40" id="4mG-M9-Z8R"/>
+                                                <constraint firstAttribute="width" constant="40" id="Iu1-Gf-WWs"/>
+                                            </constraints>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstAttribute="bottom" secondItem="OBB-s0-PeG" secondAttribute="bottom" constant="16" id="IQe-i1-ZTC"/>
-                                        <constraint firstItem="OBB-s0-PeG" firstAttribute="leading" secondItem="h2x-QM-jzN" secondAttribute="leading" constant="16" id="Z2O-WH-P43"/>
+                                        <constraint firstItem="OBB-s0-PeG" firstAttribute="leading" secondItem="cMa-yt-8p7" secondAttribute="trailing" constant="15" id="IQm-1l-zXi"/>
+                                        <constraint firstItem="cMa-yt-8p7" firstAttribute="leading" secondItem="h2x-QM-jzN" secondAttribute="leading" constant="15" id="Pup-Pk-2JX"/>
+                                        <constraint firstItem="cMa-yt-8p7" firstAttribute="centerY" secondItem="h2x-QM-jzN" secondAttribute="centerY" id="RVd-Fh-y0c"/>
                                         <constraint firstAttribute="trailing" secondItem="OBB-s0-PeG" secondAttribute="trailing" constant="16" id="eiN-09-EtA"/>
                                         <constraint firstItem="OBB-s0-PeG" firstAttribute="top" secondItem="h2x-QM-jzN" secondAttribute="top" constant="16" id="erI-xh-UPd"/>
+                                        <constraint firstItem="OBB-s0-PeG" firstAttribute="centerY" secondItem="h2x-QM-jzN" secondAttribute="centerY" id="jaY-5j-bSq"/>
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="langImage" destination="cMa-yt-8p7" id="oOP-bW-K8Z"/>
                                     <outlet property="nativeTitleLabel" destination="OBB-s0-PeG" id="NXn-IU-w1P"/>
                                 </connections>
                             </tableViewCell>
@@ -67,4 +73,7 @@
             <point key="canvasLocation" x="-109.59999999999999" y="107.49625187406298"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon-lang-en" width="47" height="47"/>
+    </resources>
 </document>
