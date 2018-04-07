@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		4B7069F9E91F990C52B2571F /* Pods_QuitSmokingTogether.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7C0412BE51CB560767C46C63 /* Pods_QuitSmokingTogether.framework */; };
-		C40996CD20643092007095A0 /* QST-iBook-ru.epub in Resources */ = {isa = PBXBuildFile; fileRef = C40996CC20643092007095A0 /* QST-iBook-ru.epub */; };
 		C40F53431F9CE1C800DE58A1 /* ReaderText.swift in Sources */ = {isa = PBXBuildFile; fileRef = C40F53421F9CE1C800DE58A1 /* ReaderText.swift */; };
 		C410E7CE1F97BC5B00EEFB7B /* UIView+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C410E7CD1F97BC5B00EEFB7B /* UIView+IBInspectable.swift */; };
 		C410E7D01F97BEB200EEFB7B /* UIButton+IBInspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C410E7CF1F97BEB200EEFB7B /* UIButton+IBInspectable.swift */; };
@@ -141,7 +140,8 @@
 		C4E97695205C5BA60069ADB3 /* Donate-ru.html in Resources */ = {isa = PBXBuildFile; fileRef = C4E97694205C5B8E0069ADB3 /* Donate-ru.html */; };
 		C4EBF52F1FA5E74A00753D0C /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EBF52E1FA5E74A00753D0C /* RegisterVC.swift */; };
 		C4EBF5321FA61BE900753D0C /* HideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EBF5311FA61BE900753D0C /* HideKeyboard.swift */; };
-		C4FD07F2204C517300A02BA5 /* QST-iBook-en.epub in Resources */ = {isa = PBXBuildFile; fileRef = C4FD07F1204C517300A02BA5 /* QST-iBook-en.epub */; };
+		C4FBFC5A2078F4300049A2DE /* QST-iBook-ru.epub in Resources */ = {isa = PBXBuildFile; fileRef = C4FBFC592078F4300049A2DE /* QST-iBook-ru.epub */; };
+		C4FBFC5C2078FA030049A2DE /* QST-iBook-en.epub in Resources */ = {isa = PBXBuildFile; fileRef = C4FBFC5B2078FA020049A2DE /* QST-iBook-en.epub */; };
 		C4FD0807204C529400A02BA5 /* Language.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4FD0809204C529400A02BA5 /* Language.strings */; };
 		C4FE6F76202B0170000ACEAA /* ArticleStyles.css in Resources */ = {isa = PBXBuildFile; fileRef = C4FE6F75202B0170000ACEAA /* ArticleStyles.css */; };
 		C4FE6F78202B0321000ACEAA /* Formatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4FE6F77202B0321000ACEAA /* Formatter.swift */; };
@@ -152,7 +152,6 @@
 		4838F9FA089BC411AFE9FC69 /* Pods-QuitSmokingTogether.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuitSmokingTogether.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuitSmokingTogether/Pods-QuitSmokingTogether.debug.xcconfig"; sourceTree = "<group>"; };
 		7C0412BE51CB560767C46C63 /* Pods_QuitSmokingTogether.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_QuitSmokingTogether.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		85F707FB449E088EFD99AE21 /* Pods-QuitSmokingTogether.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuitSmokingTogether.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuitSmokingTogether/Pods-QuitSmokingTogether.release.xcconfig"; sourceTree = "<group>"; };
-		C40996CC20643092007095A0 /* QST-iBook-ru.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "QST-iBook-ru.epub"; sourceTree = "<group>"; };
 		C40F53421F9CE1C800DE58A1 /* ReaderText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderText.swift; sourceTree = "<group>"; };
 		C410E7CD1F97BC5B00EEFB7B /* UIView+IBInspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+IBInspectable.swift"; sourceTree = "<group>"; };
 		C410E7CF1F97BEB200EEFB7B /* UIButton+IBInspectable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+IBInspectable.swift"; sourceTree = "<group>"; };
@@ -289,7 +288,8 @@
 		C4E97694205C5B8E0069ADB3 /* Donate-ru.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Donate-ru.html"; sourceTree = "<group>"; };
 		C4EBF52E1FA5E74A00753D0C /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		C4EBF5311FA61BE900753D0C /* HideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboard.swift; sourceTree = "<group>"; };
-		C4FD07F1204C517300A02BA5 /* QST-iBook-en.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "QST-iBook-en.epub"; sourceTree = "<group>"; };
+		C4FBFC592078F4300049A2DE /* QST-iBook-ru.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "QST-iBook-ru.epub"; sourceTree = "<group>"; };
+		C4FBFC5B2078FA020049A2DE /* QST-iBook-en.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "QST-iBook-en.epub"; sourceTree = "<group>"; };
 		C4FD0808204C529400A02BA5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Language.strings; sourceTree = "<group>"; };
 		C4FD080A204C52AD00A02BA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Language.strings; sourceTree = "<group>"; };
 		C4FD080B204C52F000A02BA5 /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -359,8 +359,8 @@
 		C43624151F98DD3700ECD14A /* Books */ = {
 			isa = PBXGroup;
 			children = (
-				C40996CC20643092007095A0 /* QST-iBook-ru.epub */,
-				C4FD07F1204C517300A02BA5 /* QST-iBook-en.epub */,
+				C4FBFC592078F4300049A2DE /* QST-iBook-ru.epub */,
+				C4FBFC5B2078FA020049A2DE /* QST-iBook-en.epub */,
 			);
 			path = Books;
 			sourceTree = "<group>";
@@ -1028,6 +1028,7 @@
 				C4A12E7C1FE1B87B00E843F8 /* Auth.storyboard in Resources */,
 				C415AA941FE16D7C00BC5365 /* Contacts.storyboard in Resources */,
 				C46272572024F56200B7AEA8 /* Events.xcassets in Resources */,
+				C4FBFC5C2078FA030049A2DE /* QST-iBook-en.epub in Resources */,
 				C4554344203EE43A008B7882 /* image-burn-cigar.jpg in Resources */,
 				C463F86E1FF4317F001FBBC1 /* ContactCell.xib in Resources */,
 				C463F86A1FF4270B001FBBC1 /* OverviewEventCell.xib in Resources */,
@@ -1046,13 +1047,12 @@
 				C4D458431F8021D100565A3F /* TabBar.storyboard in Resources */,
 				C4A12E731FE1B56400E843F8 /* Settings.storyboard in Resources */,
 				C4D48C6C203DAF1100FA5E37 /* NGO-en.html in Resources */,
+				C4FBFC5A2078F4300049A2DE /* QST-iBook-ru.epub in Resources */,
 				C4C236491FE190B3005219A0 /* About.storyboard in Resources */,
-				C40996CD20643092007095A0 /* QST-iBook-ru.epub in Resources */,
 				C4FE6F76202B0170000ACEAA /* ArticleStyles.css in Resources */,
 				C4DD56932024955800BF3A04 /* Character.xcassets in Resources */,
 				C4B540032021F51C000D7C73 /* README.md in Resources */,
 				C4554343203EE43A008B7882 /* image-maidan.jpg in Resources */,
-				C4FD07F2204C517300A02BA5 /* QST-iBook-en.epub in Resources */,
 				C4554341203EE43A008B7882 /* image-sport.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
