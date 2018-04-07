@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FacebookCore
+import FirebaseAuth
 import FBSDKLoginKit
 import FBSDKShareKit
 
@@ -15,6 +17,7 @@ class SettingsVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     private var facebookLikeButton = FBSDKLikeControl()
+    private var facebookLoginButton = FBSDKLoginButton()
     
     private let userDefaultsManager = UserDefaultsManager()
     
@@ -25,13 +28,7 @@ class SettingsVC: UIViewController {
         
         setDelegates()
         setupFacebookLikeButton()
-    }
-    
-    func setupFacebookLikeButton() {
-        let likeButton:FBSDKLikeControl = FBSDKLikeControl()
-        likeButton.objectID = "http://quitsmokingtogether.org"
-        likeButton.likeControlStyle = .boxCount
-        facebookLikeButton = likeButton
+        setupFacebookLoginButton()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,6 +36,11 @@ class SettingsVC: UIViewController {
         tableView.reloadData()
         (tabBarController as! TabBarVC).localizeUI()
         localizeUI()
+        hideLoginButton()
+    }
+    
+    func hideLoginButton() {
+        facebookLoginButton.isHidden = isLoggedToFacebook
     }
     
     func setDelegates() {
@@ -95,11 +97,8 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
         case [1,2]: // Like on Facebook
             let cell = tableView.dequeueReusableCell(withIdentifier: "LikeOnFacebook", for: indexPath) as UITableViewCell
             // https://github.com/facebook/facebook-sdk-swift/blob/master/Sources/Share/Views/LikeButton.swift
-            if let fbSome = cell.viewWithTag(8) {
-                let bounds = fbSome.bounds
-                facebookLikeButton.frame = CGRect(x: 30, y: (bounds.midY - ((bounds.height + 4 ) / 2)), width: bounds.width, height: bounds.height)
-                fbSome.insertSubview(facebookLikeButton, aboveSubview: cell.viewWithTag(9)!)
-            }
+            showFacebookLikeButtonIn(cell)
+            showFacebookLoginButtonIn(cell)
             return cell
         case [2,0]: // Remove advert
             let cell = tableView.dequeueReusableCell(withIdentifier: "Advert", for: indexPath) as! SettingsCell
@@ -172,4 +171,47 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
         
     }
     
+}
+
+extension SettingsVC: FBSDKLoginButtonDelegate {
+    
+    private var isLoggedToFacebook: Bool {
+        return FBSDKAccessToken.current() != nil
+    }
+    
+    private func setupFacebookLoginButton() {
+        facebookLoginButton = FBSDKLoginButton()
+        facebookLoginButton.delegate = self
+    }
+    
+    func setupFacebookLikeButton() {
+        facebookLikeButton = FBSDKLikeControl()
+        facebookLikeButton.objectID = "http://quitsmokingtogether.org"
+        facebookLikeButton.likeControlStyle = .boxCount
+    }
+    
+    func showFacebookLikeButtonIn(_ cell: UITableViewCell) {
+        if let fbButtonView = cell.viewWithTag(8), isLoggedToFacebook {
+            let bounds = fbButtonView.bounds
+            facebookLikeButton.frame = CGRect(x: 30, y: (bounds.midY - ((bounds.height + 4 ) / 2)), width: bounds.width, height: bounds.height)
+            fbButtonView.insertSubview(facebookLikeButton, aboveSubview: cell.viewWithTag(9)!)
+        }
+    }
+    
+    func showFacebookLoginButtonIn(_ cell: UITableViewCell) {
+        hideLoginButton()
+        if let fbButtonView = cell.viewWithTag(8), !isLoggedToFacebook {
+            let bounds = fbButtonView.bounds
+            facebookLoginButton.frame = CGRect(x: 30, y: (bounds.midY - ((bounds.height + 4 ) / 2)), width: (bounds.width / 3), height: bounds.height)
+            fbButtonView.insertSubview(facebookLoginButton, aboveSubview: cell.viewWithTag(9)!)
+        }
+    }
+    
+    func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
+        hideLoginButton()
+    }
+    
+    func loginButtonDidLogOut(_ loginButton: FBSDKLoginButton!) {
+        print("Did logout")
+    }
 }

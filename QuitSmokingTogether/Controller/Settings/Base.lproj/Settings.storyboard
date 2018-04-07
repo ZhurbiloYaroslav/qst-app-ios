@@ -199,15 +199,15 @@
                                             <outlet property="languageLabel" destination="ZON-Ad-D4O" id="C4v-B4-0Cg"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LikeOnFacebook" rowHeight="60" id="6ON-fn-Zzv" userLabel="Like on Facebook">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="LikeOnFacebook" rowHeight="60" id="6ON-fn-Zzv" userLabel="Like on Facebook">
                                         <rect key="frame" x="0.0" y="305.5" width="375" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6ON-fn-Zzv" id="8tY-pf-jGC">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="59.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" tag="8" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="JrL-9I-5VJ">
-                                                    <rect key="frame" x="30" y="16" width="296" height="28"/>
+                                                    <rect key="frame" x="30" y="16" width="322" height="28"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" tag="9" contentMode="scaleAspectFit" image="icon-facebook" translatesAutoresizingMaskIntoConstraints="NO" id="fgp-ER-tJ4">
                                                             <rect key="frame" x="0.0" y="1.5" width="25" height="25"/>
@@ -217,7 +217,7 @@
                                                             </constraints>
                                                         </imageView>
                                                         <stackView opaque="NO" tag="10" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="RtU-IO-Smh">
-                                                            <rect key="frame" x="35" y="0.0" width="261" height="28"/>
+                                                            <rect key="frame" x="35" y="0.0" width="287" height="28"/>
                                                         </stackView>
                                                     </subviews>
                                                 </stackView>
