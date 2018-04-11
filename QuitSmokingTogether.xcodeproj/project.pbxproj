@@ -86,6 +86,7 @@
 		C4B057131FC6E35C00699B6F /* ContactsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B057121FC6E35C00699B6F /* ContactsVC.swift */; };
 		C4B057151FC6FF9400699B6F /* EventCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B057141FC6FF9400699B6F /* EventCell.swift */; };
 		C4B057251FC9806100699B6F /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B057241FC9806100699B6F /* ProfileVC.swift */; };
+		C4B0E8C2207EA2740012AC9C /* String+html2String.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B0E8C1207EA2740012AC9C /* String+html2String.swift */; };
 		C4B53FF82021F51C000D7C73 /* ic_cross_white@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4B53FE92021F51C000D7C73 /* ic_cross_white@2x.png */; };
 		C4B53FF92021F51C000D7C73 /* ic_cross_white@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4B53FEA2021F51C000D7C73 /* ic_cross_white@3x.png */; };
 		C4B53FFA2021F51C000D7C73 /* ActivityIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B53FED2021F51C000D7C73 /* ActivityIndicator.swift */; };
@@ -231,6 +232,7 @@
 		C4B057121FC6E35C00699B6F /* ContactsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsVC.swift; sourceTree = "<group>"; };
 		C4B057141FC6FF9400699B6F /* EventCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventCell.swift; sourceTree = "<group>"; };
 		C4B057241FC9806100699B6F /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
+		C4B0E8C1207EA2740012AC9C /* String+html2String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+html2String.swift"; sourceTree = "<group>"; };
 		C4B53FE92021F51C000D7C73 /* ic_cross_white@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_cross_white@2x.png"; sourceTree = "<group>"; };
 		C4B53FEA2021F51C000D7C73 /* ic_cross_white@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ic_cross_white@3x.png"; sourceTree = "<group>"; };
 		C4B53FED2021F51C000D7C73 /* ActivityIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivityIndicator.swift; sourceTree = "<group>"; };
@@ -342,6 +344,7 @@
 				C4488C5520360E5B002B152F /* Date+addedBy.swift */,
 				C439F613203E92AE00DA1A24 /* Date+offset.swift */,
 				C4E77CD1204066A900D1DF75 /* String+removeNewLine.swift */,
+				C4B0E8C1207EA2740012AC9C /* String+html2String.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -1173,6 +1176,7 @@
 				C4A4F5D92025A86400D65663 /* debugLog.swift in Sources */,
 				C4B5400820221E00000D7C73 /* Message.swift in Sources */,
 				C410E7D01F97BEB200EEFB7B /* UIButton+IBInspectable.swift in Sources */,
+				C4B0E8C2207EA2740012AC9C /* String+html2String.swift in Sources */,
 				C4B057251FC9806100699B6F /* ProfileVC.swift in Sources */,
 				C4B540052021F574000D7C73 /* FastInitialization.swift in Sources */,
 				C4E77CD2204066A900D1DF75 /* String+removeNewLine.swift in Sources */,

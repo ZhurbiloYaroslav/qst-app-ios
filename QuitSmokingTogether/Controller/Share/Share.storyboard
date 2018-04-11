@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gzz-8J-ZAm">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="gzz-8J-ZAm">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -31,9 +31,11 @@
                                                     <constraint firstAttribute="width" secondItem="QZr-6o-q7j" secondAttribute="height" multiplier="3:2" id="ZhD-Sf-zFq"/>
                                                 </constraints>
                                             </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eb4-6v-AKi">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eb4-6v-AKi">
                                                 <rect key="frame" x="16" y="227" width="288" height="358.5"/>
-                                                <string key="text">Спаси жизнь!
+                                                <attributedString key="attributedText">
+                                                    <fragment>
+                                                        <string key="content">Спаси жизнь!
 
 Помоги своим друзьям и знакомым избавиться от никотиновой зависимости и ты подаришь им десять-двадцать лет жизни. Они увидят своих детей, внуков, сделают  доброе дело, посадят дерево, построят дом,  помогут нуждающимся. 
 
@@ -42,11 +44,14 @@
 Поделитесь этим приложением, книгой «Бросим курить вместе», нашим сайтом www.quitsmokingtogether.org с вашими друзьям, знакомыми  и  возможно вы спасете им жизнь! 
 Так просто и так много, все в ваших руках!!!
 </string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                        <attributes>
+                                                            <color key="NSColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <font key="NSFont" metaFont="system" size="15"/>
+                                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                        </attributes>
+                                                    </fragment>
+                                                </attributedString>
                                                 <nil key="highlightedColor"/>
-                                                <variation key="widthClass=regular">
-                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                                </variation>
                                             </label>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="v58-yf-YcW" userLabel="ShareButtonsStack">
                                                 <rect key="frame" x="16" y="605.5" width="288" height="120"/>

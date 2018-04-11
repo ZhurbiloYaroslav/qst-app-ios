@@ -32,9 +32,15 @@ class ShareVC: UIViewController {
     
     func updateUIWithLocalizedText() {
         navigationItem.title = "share_screen_title".localized()
-        shareTextMessage.text = "share_text_message".localized()
+        shareTextMessage.attributedText = getShareAttributedText()
         facebookButton.setTitle("button_share_facebook".localized(), for: .normal)
         otherAppsButton.setTitle("button_share_apps".localized(), for: .normal)
+    }
+    
+    private func getShareAttributedText() -> NSAttributedString {
+        let shareHtmlText = "share_text_message".localized()
+        return shareHtmlText.html2AttributedString
+
     }
     
     @IBAction func shareWithFacebookButtonPressed(_ sender: UIButton) {

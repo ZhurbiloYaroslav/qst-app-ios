@@ -99,6 +99,7 @@ extension NetworkManager {
             var addressString = NetworkManager.currentServer.baseAddress
             addressString += "en/"
             addressString += self.address
+            addressString += "?lang=\(LanguageManager.shared.currentLanguage.getLanguageCodeForServer())"
             return URL(string: addressString)
         }
     }
