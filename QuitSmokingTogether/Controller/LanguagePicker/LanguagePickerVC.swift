@@ -46,9 +46,16 @@ class LanguagePickerVC: UITableViewController {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         languageManager.saveCurrentLanguageWith(indexPath)
+        resetBookTextInMain()
         
         updateUIWithLocalizedText()
         navigationController?.popViewController(animated: true)
+    }
+    
+    private func resetBookTextInMain() {
+        UserDefaults.standard.set("", forKey: "chapterInText")
+        UserDefaults.standard.set("", forKey: "firstParagraphInText")
+        UserDefaults.standard.synchronize()
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -65,7 +65,7 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
         case 0:
             return 2
         case 1:
-            return 3
+            return 2
         case 2:
             return 2
         case 3:
@@ -90,11 +90,11 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "Share", for: indexPath) as! SettingsCell
             cell.updateAs(.share)
             return cell
-        case [1,1]: // Like on App Store
-            let cell = tableView.dequeueReusableCell(withIdentifier: "LikeOnAppStore", for: indexPath) as! SettingsCell
-            cell.updateAs(.likeOnAppStore)
-            return cell
-        case [1,2]: // Like on Facebook
+//        case [1,1]: // Like on App Store
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "LikeOnAppStore", for: indexPath) as! SettingsCell
+//            cell.updateAs(.likeOnAppStore)
+//            return cell
+        case [1,1]: // Like on Facebook
             let cell = tableView.dequeueReusableCell(withIdentifier: "LikeOnFacebook", for: indexPath) as UITableViewCell
             // https://github.com/facebook/facebook-sdk-swift/blob/master/Sources/Share/Views/LikeButton.swift
             showFacebookLikeButtonIn(cell)
@@ -129,9 +129,9 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
             }
         case [1,0]: // Share
             performSegue(withIdentifier: "ShowShareFromSettings", sender: nil)
-        case [1,1]: // Like on App Store
-            Browser.openURLWith(.AppInItunes)
-        case [1,2]: // Like on Facebook
+//        case [1,1]: // Like on App Store
+//            Browser.openURLWith(.AppInItunes)
+        case [1,1]: // Like on Facebook
             break
         case [2,0]: // Remove advert
             performSegue(withIdentifier: "ShowRemoveAdvertFromSettings", sender: nil)

@@ -28,13 +28,13 @@ class OverviewVC: UIViewController {
 
     }
     
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         updateUIWithLocalizedText()
-        tableView.reloadRows(at: [[0,0], [0,1], [0,2], [0,3], [0,4], [0,5], [0,6], [0,7]], with: .fade)
+        tableView.reloadData()
     }
     
     func setupTableView() {
-        tableView.estimatedRowHeight = 80
+        tableView.estimatedRowHeight = 400
         tableView.rowHeight = UITableViewAutomaticDimension
         
         tableView.register(UINib(nibName: "OverviewEventCell", bundle: nil), forCellReuseIdentifier: "OverviewEventCell")
