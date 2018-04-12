@@ -3,32 +3,38 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'QuitSmokingTogether' do
+    
+    pod 'FolioReaderKit'
+    pod 'FacebookCore'
+    pod 'FacebookLogin'
+    pod 'FBSDKCoreKit'
+    pod 'FBSDKLoginKit'
+    pod 'FBSDKShareKit'
+    pod 'Firebase/Core'
+    pod 'Firebase/Auth'
+    pod 'Firebase/Database'
+    pod 'Google-Mobile-Ads-SDK'
+    pod 'KeychainSwift', '~> 9.0' # https://github.com/evgenyneu/keychain-swift
+    pod 'SDWebImage', '~> 4.0'
+    pod 'Alamofire', '~> 4.5'
+    pod 'SwiftSoup'
+    
+    pod 'OneSignal', '>= 2.6.2', '< 3.0'
+    
+end
 
-	pod 'FolioReaderKit'
-	pod 'FacebookCore'
-	pod 'FacebookLogin'
-	pod 'FBSDKCoreKit'
-	pod 'FBSDKLoginKit'
-	pod 'FBSDKShareKit'
-	pod 'Firebase/Core'
-	pod 'Firebase/Auth'
-	pod 'Firebase/Database'
-  pod 'Google-Mobile-Ads-SDK'
-	pod 'KeychainSwift', '~> 9.0' # https://github.com/evgenyneu/keychain-swift
-  pod 'SDWebImage', '~> 4.0'
-  pod 'Alamofire', '~> 4.5'
-  pod 'SwiftSoup'
-
+target 'OneSignalNotificationServiceExtension' do
+    pod 'OneSignal', '>= 2.6.2', '< 3.0'
 end
 
 post_install do |installer|
-        myTargets = ['Alamofire', 'FolioReaderKit', 'FontBlaster', 'MenuItemKit']
-
-        installer.pods_project.targets.each do |target|
-                if myTargets.include? target.name
-                        target.build_configurations.each do |config|
-                                config.build_settings['SWIFT_VERSION'] = '3.2'
-                        end
-                end
+    myTargets = ['Alamofire', 'FolioReaderKit', 'FontBlaster', 'MenuItemKit']
+    
+    installer.pods_project.targets.each do |target|
+        if myTargets.include? target.name
+            target.build_configurations.each do |config|
+                config.build_settings['SWIFT_VERSION'] = '3.2'
+            end
         end
+    end
 end
