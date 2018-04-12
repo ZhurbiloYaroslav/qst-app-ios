@@ -13,6 +13,7 @@ import Firebase
 import GoogleMobileAds
 import UserNotifications
 import FBSDKCoreKit
+import OneSignal
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -30,6 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         initializeAndConfigureFirebase()
         initializeGoogleMobileAds()
         
+        setupPushNotificationsWith(launchOptions)
         authForNotifications()
         checkForAllowedNotifications()
         UIApplication.shared.applicationIconBadgeNumber = 0
@@ -204,3 +206,59 @@ extension AppDelegate: GADInterstitialDelegate {
     }
 }
 
+// Notifications Push Remote
+extension AppDelegate {
+    
+    func setupPushNotificationsWith(_ launchOptions: [UIApplicationLaunchOptionsKey: Any]?) {
+        
+        let notificationOpenedBlock: OSHandleNotificationActionBlock = { result in
+            /*
+            guard let payload: OSNotificationPayload = result!.notification.payload
+                else { return }
+            guard let additionalData = payload.additionalData as? [String: Any]
+                else { return }
+            let articleData = DataFromPushNotification(withResult: additionalData)
+            
+            let revealVC = UIStoryboard(name: "Menu", bundle: nil).instantiateViewController(withIdentifier: "SWRevealViewController") as! SWRevealViewController
+            self.window?.rootViewController = revealVC
+            
+            if articleData.postType == "news" {
+                let eventsNavController = UIStoryboard(name: "News", bundle: nil).instantiateViewController(withIdentifier: "NewsNavBar") as! UINavigationController
+                let eventsListVC = UIStoryboard(name: "News", bundle: nil).instantiateViewController(withIdentifier: "NewsListVC") as! NewsListVC
+                eventsListVC.dataFromNotification = articleData
+                eventsNavController.viewControllers = [eventsListVC]
+                revealVC.setFront(eventsNavController, animated: true)
+            } else {
+                let eventsNavController = UIStoryboard(name: "Events", bundle: nil).instantiateViewController(withIdentifier: "EventsNavBar") as! UINavigationController
+                let eventsListVC = UIStoryboard(name: "Events", bundle: nil).instantiateViewController(withIdentifier: "EventsListVC") as! EventsListVC
+                eventsListVC.dataFromNotification = articleData
+                eventsNavController.viewControllers = [eventsListVC]
+                revealVC.setFront(eventsNavController, animated: true)
+            }
+            
+            self.window?.makeKeyAndVisible()
+            */
+            
+        }
+        
+        let onesignalInitSettings = [kOSSettingsKeyAutoPrompt: false, kOSSettingsKeyInAppLaunchURL: false]
+        OneSignal.initWithLaunchOptions(launchOptions,
+                                        appId: "fed69789-8f68-40d0-b5fc-18facebb54d8",
+                                        handleNotificationAction: notificationOpenedBlock,
+                                        settings: onesignalInitSettings)
+        
+        OneSignal.inFocusDisplayType = OSNotificationDisplayType.notification
+        
+        OneSignal.sendTag("first_name", value: CurrentUser.firstName)
+        OneSignal.sendTag("last_name", value: CurrentUser.lastName)
+        OneSignal.sendTag("email", value: CurrentUser.email)
+        OneSignal.sendTag("phone", value: CurrentUser.phone)
+        
+        // Recommend moving the below line to prompt for push after informing the user about
+        //   how your app will use them.
+        OneSignal.promptForPushNotifications(userResponse: { accepted in
+            print("User accepted notifications: \(accepted)")
+        })
+    }
+    
+}
