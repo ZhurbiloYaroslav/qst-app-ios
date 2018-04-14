@@ -32,6 +32,7 @@
 		C439F614203E92AE00DA1A24 /* Date+offset.swift in Sources */ = {isa = PBXBuildFile; fileRef = C439F613203E92AE00DA1A24 /* Date+offset.swift */; };
 		C4488C5420360DC3002B152F /* LocalNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4488C5320360DC3002B152F /* LocalNotification.swift */; };
 		C4488C5620360E5B002B152F /* Date+addedBy.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4488C5520360E5B002B152F /* Date+addedBy.swift */; };
+		C44A34792081E67100E3BFE1 /* DataFromPushNotification.swift in Sources */ = {isa = PBXBuildFile; fileRef = C44A34782081E67100E3BFE1 /* DataFromPushNotification.swift */; };
 		C455432D203EA899008B7882 /* ShirtsVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C455432C203EA899008B7882 /* ShirtsVC.storyboard */; };
 		C455432F203EA8CB008B7882 /* ShirtsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C455432E203EA8CB008B7882 /* ShirtsVC.swift */; };
 		C4554331203EC196008B7882 /* Shirts.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C4554330203EC196008B7882 /* Shirts.xcassets */; };
@@ -205,6 +206,8 @@
 		C439F613203E92AE00DA1A24 /* Date+offset.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+offset.swift"; sourceTree = "<group>"; };
 		C4488C5320360DC3002B152F /* LocalNotification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalNotification.swift; sourceTree = "<group>"; };
 		C4488C5520360E5B002B152F /* Date+addedBy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+addedBy.swift"; sourceTree = "<group>"; };
+		C44A34782081E67100E3BFE1 /* DataFromPushNotification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataFromPushNotification.swift; sourceTree = "<group>"; };
+		C44A347A2081F40500E3BFE1 /* OneSignalNotificationServiceExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = OneSignalNotificationServiceExtension.entitlements; sourceTree = "<group>"; };
 		C455432C203EA899008B7882 /* ShirtsVC.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = ShirtsVC.storyboard; sourceTree = "<group>"; };
 		C455432E203EA8CB008B7882 /* ShirtsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShirtsVC.swift; sourceTree = "<group>"; };
 		C4554330203EC196008B7882 /* Shirts.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Shirts.xcassets; sourceTree = "<group>"; };
@@ -412,6 +415,14 @@
 			path = Books;
 			sourceTree = "<group>";
 		};
+		C44A34772081E65200E3BFE1 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				C44A34782081E67100E3BFE1 /* DataFromPushNotification.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
 		C4554329203EA80E008B7882 /* Shirts */ = {
 			isa = PBXGroup;
 			children = (
@@ -424,11 +435,12 @@
 		C455D5821F8CFDEE002846D9 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C4554332203ECB34008B7882 /* AssetExtractor.swift */,
+				C44A34772081E65200E3BFE1 /* Entities */,
 				C4A4F5DA2025AE6000D65663 /* Functions */,
 				C48768291FFDFE4A006D1FE8 /* Enums */,
 				C4F195081FE70D7F001A7FDF /* Constants */,
 				C4F195071FE70D49001A7FDF /* Manager */,
+				C4554332203ECB34008B7882 /* AssetExtractor.swift */,
 				C4A4D3051FA87B3F00EC9D50 /* CurrentUser.swift */,
 				C4E5F0DC1FD7FFBB00AE1D93 /* Validator.swift */,
 				C4E5F0DE1FD8026400AE1D93 /* Alert.swift */,
@@ -845,6 +857,7 @@
 		C4CE228E207FFD90007BDD04 /* OneSignalNotificationServiceExtension */ = {
 			isa = PBXGroup;
 			children = (
+				C44A347A2081F40500E3BFE1 /* OneSignalNotificationServiceExtension.entitlements */,
 				C4CE228F207FFD90007BDD04 /* NotificationService.swift */,
 				C4CE2291207FFD90007BDD04 /* Info.plist */,
 			);
@@ -1048,6 +1061,11 @@
 					C4CE228C207FFD90007BDD04 = {
 						CreatedOnToolsVersion = 9.3;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 					C4D458391F8021D100565A3F = {
 						CreatedOnToolsVersion = 9.0;
@@ -1363,6 +1381,7 @@
 				C4B540052021F574000D7C73 /* FastInitialization.swift in Sources */,
 				C4E77CD2204066A900D1DF75 /* String+removeNewLine.swift in Sources */,
 				C4968DD8202ADF5B009DC678 /* ResultData.swift in Sources */,
+				C44A34792081E67100E3BFE1 /* DataFromPushNotification.swift in Sources */,
 				C47317901F8D0C1700A6AE43 /* OverviewReadCell.swift in Sources */,
 				C461A2D21F8F9EF400B698FA /* NavBarVC.swift in Sources */,
 				C4A4F5DC2025BAB300D65663 /* UIViewController+fastInitialization.swift in Sources */,

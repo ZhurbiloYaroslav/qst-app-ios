@@ -14,6 +14,8 @@ class EventsListVC: UIViewController {
     @IBOutlet weak var filterStack: UIStackView!
     @IBOutlet weak var constraintHeightForFilterStack: NSLayoutConstraint!
     
+    public var dataFromNotification: DataFromPushNotification?
+    
     let eventsManager = EventsManager.shared
     let eventsFilter = EventsFilter.shared
     
@@ -27,6 +29,7 @@ class EventsListVC: UIViewController {
         
         eventsManager.eventsData.getEventsFromServer {
             self.tableView.reloadData()
+            self.presentNewsFromNotification()
         }
         setDelegates()
         switchFilterVisibility()
@@ -43,16 +46,16 @@ class EventsListVC: UIViewController {
         localizeUI()
     }
     
-    func setDelegates() {
+    private func setDelegates() {
         tableView.delegate = self
         tableView.dataSource = self
     }
     
-    func localizeUI() {
+    private func localizeUI() {
         navigationItem.title = "events_screen_title".localized()
     }
     
-    func presentEventFromOverview() {
+    private func presentEventFromOverview() {
 
         if let event = eventToPresentFromOverview, doWePresentEventFromOverview {
             doWePresentEventFromOverview = false
@@ -64,18 +67,27 @@ class EventsListVC: UIViewController {
         }
     }
     
-    func updateUI() {
+    private func updateUI() {
         tableView.estimatedRowHeight = 80
         tableView.rowHeight = UITableViewAutomaticDimension
     }
     
-    func switchFilterVisibility() {
+    private func switchFilterVisibility() {
         if constraintHeightForFilterStack.constant == 0 {
             constraintHeightForFilterStack.constant = 71
             filterStack.isHidden = !filterStack.isHidden
         } else {
             constraintHeightForFilterStack.constant = 0
             filterStack.isHidden = !filterStack.isHidden
+        }
+    }
+    
+    func presentNewsFromNotification() {
+        if let data = dataFromNotification, data.isNews,
+            let articleDescVC = ArticleDescVC.getInstance(),
+            let currentNews = eventsManager.getNewsByPostID(data.postIDs) {
+            articleDescVC.currentArticle = currentNews
+            navigationController?.pushViewController(articleDescVC, animated: true)
         }
     }
     
@@ -110,7 +122,7 @@ class EventsListVC: UIViewController {
 
 extension EventsListVC: UITableViewDataSource, UITableViewDelegate {
     
-    func setupTableView() {
+    private func setupTableView() {
         tableView.estimatedRowHeight = 200
         tableView.rowHeight = UITableViewAutomaticDimension
         
@@ -118,7 +130,7 @@ extension EventsListVC: UITableViewDataSource, UITableViewDelegate {
         
     }
     
-    func reloadTable() {
+    private func reloadTable() {
         tableView.reloadData()
     }
     

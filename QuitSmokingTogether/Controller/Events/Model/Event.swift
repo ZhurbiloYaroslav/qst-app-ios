@@ -133,3 +133,14 @@ public class Event: NSObject {
     }
 }
 
+extension Event {
+    
+    func getPostID() -> Int {
+        return id
+    }
+    
+    func getStringWithID() -> String {
+        return String(describing: id)
+    }
+}
+

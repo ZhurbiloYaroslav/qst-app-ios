@@ -32,8 +32,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         initializeGoogleMobileAds()
         
         setupPushNotificationsWith(launchOptions)
-        authForNotifications()
-        checkForAllowedNotifications()
+        //authForNotifications()
+        //checkForAllowedNotifications()
         UIApplication.shared.applicationIconBadgeNumber = 0
         
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
@@ -66,7 +66,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         FBSDKAppEvents.activateApp()
         UIApplication.shared.applicationIconBadgeNumber = 0
-        scheduleNotification()
+        //scheduleNotification()
 
     }
     
@@ -85,27 +85,28 @@ extension AppDelegate {
         EventsData.shared.getEventsFromServer {}
     }
     
-    func initializeGoogleMobileAds() {
+    private func initializeGoogleMobileAds() {
         let googleAdMobAppID = AdMobManager.AppID.ThisAppID.rawValue
         GADMobileAds.configure(withApplicationID: googleAdMobAppID)
     }
     
-    func initializeAndConfigureFirebase() {
+    private func initializeAndConfigureFirebase() {
         FirebaseApp.configure()
     }
     
-    func chooseViewControllerToPresent() {
+    private func chooseViewControllerToPresent() {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         chooseScreenToLoad()
     }
     
-    func chooseScreenToLoad() {
+    private func chooseScreenToLoad() {
         loadLoginOrOverviewViewController()
     }
     
-    func loadLoginOrOverviewViewController() {
+    fileprivate func loadLoginOrOverviewViewController(_ notificationData: DataFromPushNotification? = nil) {
         if CurrentUser.isLoggedIn {
             let overviewVC = UIStoryboard(name: "TabBar", bundle: nil).instantiateViewController(withIdentifier: "TabBarVC") as! TabBarVC
+            overviewVC.setupWithNotificationData(notificationData)
             self.window?.rootViewController = overviewVC
         } else {
             if let messageVC = AdviceVC.getInstance() {
@@ -117,75 +118,72 @@ extension AppDelegate {
     }
 }
 
-// MARK: Methods related with Notifications
-extension AppDelegate: UNUserNotificationCenterDelegate {
-    
-    /// Local and Push Notifications in IOS 9 and 10 using swift3
-    /// https://stackoverflow.com/questions/42688760/local-and-push-notifications-in-ios-9-and-10-using-swift3
-    
-    func scheduleNotification() {
-        // timeInterval is in seconds, so 60*60*12*3 = 3 days, set repeats to true if you want to repeat the trigger
-        //let time = Constants.Time.didNotOpenApp
-        let time = Constants.Time.didNotOpenApp
-        let requestTrigger = UNTimeIntervalNotificationTrigger(timeInterval: time, repeats: false)
-        
-        let requestContent = UNMutableNotificationContent()
-        requestContent.title = "Continue quit smoking"
-        requestContent.subtitle = "You haven't open the App within 2 days"
-        requestContent.body = "Open the App and continue reading!"
-        requestContent.badge = 1
-        requestContent.sound = UNNotificationSound.default()
-        
-        let notifID = NotificationID.RemindUserOpenApp.rawValue
-        let request = UNNotificationRequest(identifier: notifID, content: requestContent, trigger: requestTrigger)
-        
-        UNUserNotificationCenter.current().add(request) { error in
-            if let error = error {
-                print(error.localizedDescription)
-            } else {
-                
-            }
-        }
-    }
-    
-    enum NotificationID: String {
-        case RemindUserOpenApp = "RemindUserAboutOpenApp"
-    }
-    
-    func authForNotifications() {
-        let notifCenter = UNUserNotificationCenter.current()
-        let options: UNAuthorizationOptions = [.alert, .badge, .sound]
-        notifCenter.requestAuthorization(options: options) { (boolValue, error) in
-            if error == nil {
-
-            } else {
-                print(error?.localizedDescription ?? "")
-            }
-        }
-//        /// In case you want to register for the remote notifications
-//        let application = UIApplication.shared
-//        application.registerForRemoteNotifications()
-    }
-
-    func checkForAllowedNotifications() {
-        let notifCenter = UNUserNotificationCenter.current()
-        notifCenter.getNotificationSettings { (settings) in
-            if settings.authorizationStatus != .authorized {
-                // Notifications not allowed
-            }
-        }
-    }
-
-    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
-        let deviceTokenString = deviceToken.reduce("", {$0 + String(format: "%02X", $1)})
-        print(deviceTokenString)
-        // Send to your server here...
-    }
-
-    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
-        print("i am not available in simulator \(error)")
-    }
-}
+//// MARK: Methods related with Notifications
+//extension AppDelegate: UNUserNotificationCenterDelegate {
+//
+//    /// Local and Push Notifications in IOS 9 and 10 using swift3
+//    /// https://stackoverflow.com/questions/42688760/local-and-push-notifications-in-ios-9-and-10-using-swift3
+//
+//    func scheduleNotification() {
+//        // timeInterval is in seconds, so 60*60*12*3 = 3 days, set repeats to true if you want to repeat the trigger
+//        //let time = Constants.Time.didNotOpenApp
+//        let time = Constants.Time.didNotOpenApp
+//        let requestTrigger = UNTimeIntervalNotificationTrigger(timeInterval: time, repeats: false)
+//
+//        let requestContent = UNMutableNotificationContent()
+//        requestContent.title = "Continue quit smoking"
+//        requestContent.subtitle = "You haven't open the App within 2 days"
+//        requestContent.body = "Open the App and continue reading!"
+//        requestContent.badge = 1
+//        requestContent.sound = UNNotificationSound.default()
+//
+//        let notifID = NotificationID.RemindUserOpenApp.rawValue
+//        let request = UNNotificationRequest(identifier: notifID, content: requestContent, trigger: requestTrigger)
+//
+//        UNUserNotificationCenter.current().add(request) { error in
+//            if let error = error {
+//                print(error.localizedDescription)
+//            } else {
+//
+//            }
+//        }
+//    }
+//
+//    enum NotificationID: String {
+//        case RemindUserOpenApp = "RemindUserAboutOpenApp"
+//    }
+//
+//    func authForNotifications() {
+//        let notifCenter = UNUserNotificationCenter.current()
+//        let options: UNAuthorizationOptions = [.alert, .badge, .sound]
+//        notifCenter.requestAuthorization(options: options) { (boolValue, error) in
+//            if error == nil {
+//
+//            } else {
+//                print(error?.localizedDescription ?? "")
+//            }
+//        }
+//    }
+//
+//    func checkForAllowedNotifications() {
+//        let notifCenter = UNUserNotificationCenter.current()
+//        notifCenter.getNotificationSettings { (settings) in
+//            if settings.authorizationStatus != .authorized {
+//                // Notifications not allowed
+//            }
+//        }
+//    }
+//
+////    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+////        let deviceTokenString = deviceToken.reduce("", {$0 + String(format: "%02X", $1)})
+////        print(deviceTokenString)
+////        // Send to your server here...
+////    }
+////
+////    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+////        print("i am not available in simulator \(error)")
+////    }
+//}
 
 extension AppDelegate: GADInterstitialDelegate {
     func showAdmobInterstitial() {
@@ -212,33 +210,12 @@ extension AppDelegate {
     func setupPushNotificationsWith(_ launchOptions: [UIApplicationLaunchOptionsKey: Any]?) {
         
         let notificationOpenedBlock: OSHandleNotificationActionBlock = { result in
-            /*
             guard let payload: OSNotificationPayload = result!.notification.payload
                 else { return }
             guard let additionalData = payload.additionalData as? [String: Any]
                 else { return }
             let articleData = DataFromPushNotification(withResult: additionalData)
-            
-            let revealVC = UIStoryboard(name: "Menu", bundle: nil).instantiateViewController(withIdentifier: "SWRevealViewController") as! SWRevealViewController
-            self.window?.rootViewController = revealVC
-            
-            if articleData.postType == "news" {
-                let eventsNavController = UIStoryboard(name: "News", bundle: nil).instantiateViewController(withIdentifier: "NewsNavBar") as! UINavigationController
-                let eventsListVC = UIStoryboard(name: "News", bundle: nil).instantiateViewController(withIdentifier: "NewsListVC") as! NewsListVC
-                eventsListVC.dataFromNotification = articleData
-                eventsNavController.viewControllers = [eventsListVC]
-                revealVC.setFront(eventsNavController, animated: true)
-            } else {
-                let eventsNavController = UIStoryboard(name: "Events", bundle: nil).instantiateViewController(withIdentifier: "EventsNavBar") as! UINavigationController
-                let eventsListVC = UIStoryboard(name: "Events", bundle: nil).instantiateViewController(withIdentifier: "EventsListVC") as! EventsListVC
-                eventsListVC.dataFromNotification = articleData
-                eventsNavController.viewControllers = [eventsListVC]
-                revealVC.setFront(eventsNavController, animated: true)
-            }
-            
-            self.window?.makeKeyAndVisible()
-            */
-            
+            self.loadLoginOrOverviewViewController(articleData)
         }
         
         let onesignalInitSettings = [kOSSettingsKeyAutoPrompt: false, kOSSettingsKeyInAppLaunchURL: false]

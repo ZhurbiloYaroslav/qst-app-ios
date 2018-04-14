@@ -24,7 +24,7 @@ extension NetworkManager {
             switch self {
                 
             // MARK: Change Addresses of the SERVERS
-            case .production: return ""
+            case .production: return "http://app.quitsmokingtogether.com.ua/"
             case .development: return "http://qst.1gb.ua/"
             }
         }
