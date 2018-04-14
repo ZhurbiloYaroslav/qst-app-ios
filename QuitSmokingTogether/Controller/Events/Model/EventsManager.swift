@@ -21,6 +21,16 @@ class EventsManager: NSObject {
         return eventsData.arrayWithEvents.count
     }
     
+    public func getNewsByPostID(_ postIDs: [Int]) -> Event? {
+        var resultEvent: Event? = nil
+        eventsData.arrayWithEvents.forEach { event in
+            if postIDs.contains(event.getPostID()) {
+                resultEvent = event
+            }
+        }
+        return resultEvent
+    }
+    
     
     func getEventFor(_ indexPath: IndexPath) -> Event {
         return eventsData.arrayWithEvents[indexPath.row]

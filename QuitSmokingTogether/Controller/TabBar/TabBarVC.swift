@@ -22,7 +22,21 @@ class TabBarVC: UITabBarController {
         localizeUI()
     }
     
-    func localizeUI() {
+    public func setupWithNotificationData(_ notificationData: DataFromPushNotification?) {
+        if let notificationData = notificationData,
+            let eventNavBarVC = viewControllers![1] as? NavBarVC,
+            let eventsListVC = EventsListVC.getInstance() {
+            eventsListVC.dataFromNotification = notificationData
+            eventNavBarVC.viewControllers = [eventsListVC]
+            selectEventsListVcAsInitialTab()
+        }
+    }
+    
+    private func selectEventsListVcAsInitialTab() {
+        self.selectedIndex = 1
+    }
+    
+    public func localizeUI() {
         guard let items = tabBar.items else { return }
         
         items[0].title = "tabbar_main".localized()
@@ -32,7 +46,7 @@ class TabBarVC: UITabBarController {
         items[4].title = "tabbar_options".localized()
     }
     
-    func giveShadowToView() {
+    private func giveShadowToView() {
         tabBar.layer.shadowColor = UIColor.black.cgColor
         tabBar.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
         tabBar.layer.shadowRadius = 4.0
@@ -40,7 +54,7 @@ class TabBarVC: UITabBarController {
         tabBar.layer.masksToBounds = false
     }
     
-    func changeColorOfTabBarItems() {
+    private func changeColorOfTabBarItems() {
         
         let selectedColor   = Constants.Color.green
         
