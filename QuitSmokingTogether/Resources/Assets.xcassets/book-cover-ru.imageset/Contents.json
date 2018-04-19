@@ -2,17 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "book-cover.png",
+      "filename" : "book-cover-ru.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "book-cover@2x.png",
+      "filename" : "book-cover-ru@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "book-cover@3x.png",
+      "filename" : "book-cover-ru@3x.png",
       "scale" : "3x"
     }
   ],
