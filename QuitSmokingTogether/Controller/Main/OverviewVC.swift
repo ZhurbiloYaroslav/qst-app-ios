@@ -8,6 +8,7 @@
 
 import UIKit
 import FolioReaderKit
+import OneSignal // TODO: Remove it!
 
 class OverviewVC: UIViewController {
 
@@ -31,6 +32,10 @@ class OverviewVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         updateUIWithLocalizedText()
         tableView.reloadData()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        PushNotificationsManager.handlePushNotifications()
     }
     
     func setupTableView() {

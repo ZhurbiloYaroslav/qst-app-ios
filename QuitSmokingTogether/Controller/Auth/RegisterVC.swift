@@ -71,10 +71,12 @@ extension RegisterVC {
         
         var validationErrors: [String] = [String]()
         
+        /* TODO: WBhPMw ) - Resolve issue with multiple words in User Name
         if Validator.isNameValid(nameField.text) == false || Validator.isEmpty(nameField.text) == true {
-            validationErrors.append(ValidationErrors.passwordInvalid.message)
-            validationErrors.append(ValidationErrors.passwordMustBe.message)
+            validationErrors.append(ValidationErrors.userNameInvalid.message)
+            validationErrors.append(ValidationErrors.userNameMustBe.message)
         }
+        */
         
         if Validator.isEmailValid(emailField.text) == false || Validator.isEmpty(emailField.text) == true {
             validationErrors.append(ValidationErrors.emailInvalid.message)

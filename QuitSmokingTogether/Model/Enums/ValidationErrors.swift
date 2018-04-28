@@ -18,7 +18,7 @@ enum ValidationErrors: String {
     
     case passwordEmpty = "Password is empty"
     case passwordInvalid = "Password is invalid"
-    case passwordMustBe = "\nPassword must be 8 characters including 1 uppercase letter, 1 special character, alphanumeric characters"
+    case passwordMustBe = "\nPassword must be 6 characters"
     
     var message: String { return self.rawValue }
 }

@@ -225,17 +225,6 @@ extension AppDelegate {
                                         settings: onesignalInitSettings)
         
         OneSignal.inFocusDisplayType = OSNotificationDisplayType.notification
-        
-        OneSignal.sendTag("first_name", value: CurrentUser.firstName)
-        OneSignal.sendTag("last_name", value: CurrentUser.lastName)
-        OneSignal.sendTag("email", value: CurrentUser.email)
-        OneSignal.sendTag("phone", value: CurrentUser.phone)
-        
-        // Recommend moving the below line to prompt for push after informing the user about
-        //   how your app will use them.
-        OneSignal.promptForPushNotifications(userResponse: { accepted in
-            print("User accepted notifications: \(accepted)")
-        })
     }
     
 }

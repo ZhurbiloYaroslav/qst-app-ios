@@ -112,6 +112,7 @@
 		C4B8088E1F9F2CCF0099DA49 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B8088D1F9F2CCF0099DA49 /* LoginVC.swift */; };
 		C4B808921F9F36FA0099DA49 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C4B808911F9F36F60099DA49 /* GoogleService-Info.plist */; };
 		C4B808941F9F3C2A0099DA49 /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B808931F9F3C2A0099DA49 /* FirebaseAuthManager.swift */; };
+		C4B88ED92094C050002A1614 /* PushNotificationsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4B88ED82094C050002A1614 /* PushNotificationsManager.swift */; };
 		C4BF37721FCC3A1500BFD881 /* UIImageView+downloadedFromURL.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4BF37711FCC3A1500BFD881 /* UIImageView+downloadedFromURL.swift */; };
 		C4C0EEC51FCEF07C00CA258B /* FirebaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C0EEC41FCEF07C00CA258B /* FirebaseManager.swift */; };
 		C4C0EEDF1FD040BD00CA258B /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4C0EEDE1FD040BD00CA258B /* Event.swift */; };
@@ -288,6 +289,7 @@
 		C4B808911F9F36F60099DA49 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C4B808931F9F3C2A0099DA49 /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
 		C4B808971F9F8AB80099DA49 /* QuitSmokingTogether.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = QuitSmokingTogether.entitlements; sourceTree = "<group>"; };
+		C4B88ED82094C050002A1614 /* PushNotificationsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushNotificationsManager.swift; sourceTree = "<group>"; };
 		C4BF37711FCC3A1500BFD881 /* UIImageView+downloadedFromURL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+downloadedFromURL.swift"; sourceTree = "<group>"; };
 		C4C0EEC41FCEF07C00CA258B /* FirebaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseManager.swift; sourceTree = "<group>"; };
 		C4C0EEDE1FD040BD00CA258B /* Event.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Event.swift; sourceTree = "<group>"; };
@@ -983,6 +985,7 @@
 				C47FE0BE1FDB36B2008232CA /* AdMobManager.swift */,
 				C48744E92026002500672523 /* NetworkManager.swift */,
 				C4488C5320360DC3002B152F /* LocalNotification.swift */,
+				C4B88ED82094C050002A1614 /* PushNotificationsManager.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -1354,6 +1357,7 @@
 				C4D4583E1F8021D100565A3F /* AppDelegate.swift in Sources */,
 				C4E5F0DD1FD7FFBB00AE1D93 /* Validator.swift in Sources */,
 				C47FE0BD1FDB35EE008232CA /* RemoveAdvertVC.swift in Sources */,
+				C4B88ED92094C050002A1614 /* PushNotificationsManager.swift in Sources */,
 				C4B53FFF2021F51C000D7C73 /* UIImage+AspectFit.swift in Sources */,
 				C4A4D3061FA87B3F00EC9D50 /* CurrentUser.swift in Sources */,
 				C4B53FFE2021F51C000D7C73 /* InputSource.swift in Sources */,
