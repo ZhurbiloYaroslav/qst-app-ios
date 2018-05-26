@@ -119,9 +119,10 @@ extension ArticleDescVC {
         
         var arrayWithImages = [SDWebImageSource]()
         
-        if event.arrayWithImageLinks.count > 0 {
-            for imageLink in event.arrayWithImageLinks {
-                arrayWithImages.append(SDWebImageSource(urlString: imageLink)!)
+        let arrayWithImagesURL = event.getArrayWithImageURL()
+        if arrayWithImagesURL.count > 0 {
+            for imageURL in arrayWithImagesURL {
+                arrayWithImages.append(SDWebImageSource(url: imageURL))
             }
             slideshow.setImageInputs(arrayWithImages)
         } else {

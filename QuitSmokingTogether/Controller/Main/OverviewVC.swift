@@ -36,6 +36,7 @@ class OverviewVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         PushNotificationsManager.handlePushNotifications()
+        PushNotificationsManager.saveTagInfo()
     }
     
     func setupTableView() {

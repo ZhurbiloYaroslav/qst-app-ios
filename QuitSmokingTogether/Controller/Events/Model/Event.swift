@@ -41,7 +41,10 @@ public class Event: NSObject {
             let els: Elements = try SwiftSoup.parse(htmlContent).select("img")
             for link: Element in els.array(){
                 let linkSrc: String = try link.attr("src")
-                arrayWithImageLinks.append(linkSrc)
+                let escapedLink = linkSrc.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
+                if let escapedLink = escapedLink {
+                    arrayWithImageLinks.append(escapedLink)
+                }
             }
             arrayWithImageLinks.uniqInPlace()
             
@@ -135,12 +138,22 @@ public class Event: NSObject {
 
 extension Event {
     
-    func getPostID() -> Int {
+    public func getPostID() -> Int {
         return id
     }
     
-    func getStringWithID() -> String {
+    public func getStringWithID() -> String {
         return String(describing: id)
+    }
+    
+    public func getArrayWithImageURL() -> [URL] {
+        var result = [URL]()
+        for imageLinkString in arrayWithImageLinks {
+            if let imageURL = URL(string: imageLinkString) {
+                result.append(imageURL)
+            }
+        }
+        return result
     }
 }
 
