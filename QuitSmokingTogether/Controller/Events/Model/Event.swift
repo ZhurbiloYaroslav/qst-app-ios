@@ -121,8 +121,8 @@ public class Event: NSObject {
                 else { return .Undefined }
             
             switch name {
-            case "News": return .News
-            case "Competitions": return .Competition
+            case "News", "Новости": return .News
+            case "Competitions", "Конкурсы", "События": return .Competition
             default: return .Undefined
             }
         }
