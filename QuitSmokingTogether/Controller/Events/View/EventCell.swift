@@ -29,6 +29,7 @@ class EventCell: UITableViewCell {
         currentEvent = event
         eventTitle.text = event.title
         eventDescription.text = event.textContent
+        readMoreLabel.text = "button_readmore".localized()
         
         if event.arrayWithImageLinks.count > 0 {
             eventImage.sd_setImage(with: URL(string: event.arrayWithImageLinks[0]), placeholderImage: UIImage())

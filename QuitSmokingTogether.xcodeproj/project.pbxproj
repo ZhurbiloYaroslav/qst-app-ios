@@ -66,6 +66,7 @@
 		C487682B1FFDFE9C006D1FE8 /* EventsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C487682A1FFDFE9C006D1FE8 /* EventsManager.swift */; };
 		C487682D1FFE16B2006D1FE8 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C487682C1FFE16B2006D1FE8 /* NetworkError.swift */; };
 		C48768351FFE2B59006D1FE8 /* Array+uniq.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48768341FFE2B59006D1FE8 /* Array+uniq.swift */; };
+		C48A11A520BC7A59005C7782 /* QST-iBook-ru.epub in Resources */ = {isa = PBXBuildFile; fileRef = C48A11A420BC7A58005C7782 /* QST-iBook-ru.epub */; };
 		C48D3646202C4513001D3D1A /* UIView+setters.swift in Sources */ = {isa = PBXBuildFile; fileRef = C48D3645202C4513001D3D1A /* UIView+setters.swift */; };
 		C4968DD8202ADF5B009DC678 /* ResultData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4968DD7202ADF5B009DC678 /* ResultData.swift */; };
 		C4968DDC202AF64D009DC678 /* ArticleDesc.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4968DDA202AF64D009DC678 /* ArticleDesc.storyboard */; };
@@ -146,7 +147,6 @@
 		C4E97695205C5BA60069ADB3 /* Donate-ru.html in Resources */ = {isa = PBXBuildFile; fileRef = C4E97694205C5B8E0069ADB3 /* Donate-ru.html */; };
 		C4EBF52F1FA5E74A00753D0C /* RegisterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EBF52E1FA5E74A00753D0C /* RegisterVC.swift */; };
 		C4EBF5321FA61BE900753D0C /* HideKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4EBF5311FA61BE900753D0C /* HideKeyboard.swift */; };
-		C4FBFC5A2078F4300049A2DE /* QST-iBook-ru.epub in Resources */ = {isa = PBXBuildFile; fileRef = C4FBFC592078F4300049A2DE /* QST-iBook-ru.epub */; };
 		C4FBFC5C2078FA030049A2DE /* QST-iBook-en.epub in Resources */ = {isa = PBXBuildFile; fileRef = C4FBFC5B2078FA020049A2DE /* QST-iBook-en.epub */; };
 		C4FD0807204C529400A02BA5 /* Language.strings in Resources */ = {isa = PBXBuildFile; fileRef = C4FD0809204C529400A02BA5 /* Language.strings */; };
 		C4FE6F76202B0170000ACEAA /* ArticleStyles.css in Resources */ = {isa = PBXBuildFile; fileRef = C4FE6F75202B0170000ACEAA /* ArticleStyles.css */; };
@@ -242,6 +242,7 @@
 		C487682A1FFDFE9C006D1FE8 /* EventsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventsManager.swift; sourceTree = "<group>"; };
 		C487682C1FFE16B2006D1FE8 /* NetworkError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		C48768341FFE2B59006D1FE8 /* Array+uniq.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+uniq.swift"; sourceTree = "<group>"; };
+		C48A11A420BC7A58005C7782 /* QST-iBook-ru.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "QST-iBook-ru.epub"; sourceTree = "<group>"; };
 		C48D3645202C4513001D3D1A /* UIView+setters.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+setters.swift"; sourceTree = "<group>"; usesTabs = 0; };
 		C48D3648202CA766001D3D1A /* Greetings.plist */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = Greetings.plist; sourceTree = "<group>"; };
 		C4968DD7202ADF5B009DC678 /* ResultData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultData.swift; sourceTree = "<group>"; };
@@ -326,7 +327,6 @@
 		C4E97694205C5B8E0069ADB3 /* Donate-ru.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = "Donate-ru.html"; sourceTree = "<group>"; };
 		C4EBF52E1FA5E74A00753D0C /* RegisterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterVC.swift; sourceTree = "<group>"; };
 		C4EBF5311FA61BE900753D0C /* HideKeyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboard.swift; sourceTree = "<group>"; };
-		C4FBFC592078F4300049A2DE /* QST-iBook-ru.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "QST-iBook-ru.epub"; sourceTree = "<group>"; };
 		C4FBFC5B2078FA020049A2DE /* QST-iBook-en.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "QST-iBook-en.epub"; sourceTree = "<group>"; };
 		C4FD0808204C529400A02BA5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Language.strings; sourceTree = "<group>"; };
 		C4FD080A204C52AD00A02BA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Language.strings; sourceTree = "<group>"; };
@@ -411,7 +411,7 @@
 		C43624151F98DD3700ECD14A /* Books */ = {
 			isa = PBXGroup;
 			children = (
-				C4FBFC592078F4300049A2DE /* QST-iBook-ru.epub */,
+				C48A11A420BC7A58005C7782 /* QST-iBook-ru.epub */,
 				C4FBFC5B2078FA020049A2DE /* QST-iBook-en.epub */,
 			);
 			path = Books;
@@ -1162,12 +1162,12 @@
 				C4D458431F8021D100565A3F /* TabBar.storyboard in Resources */,
 				C4A12E731FE1B56400E843F8 /* Settings.storyboard in Resources */,
 				C4D48C6C203DAF1100FA5E37 /* NGO-en.html in Resources */,
-				C4FBFC5A2078F4300049A2DE /* QST-iBook-ru.epub in Resources */,
 				C4C236491FE190B3005219A0 /* About.storyboard in Resources */,
 				C4FE6F76202B0170000ACEAA /* ArticleStyles.css in Resources */,
 				C4DD56932024955800BF3A04 /* Character.xcassets in Resources */,
 				C4B540032021F51C000D7C73 /* README.md in Resources */,
 				C4554343203EE43A008B7882 /* image-maidan.jpg in Resources */,
+				C48A11A520BC7A59005C7782 /* QST-iBook-ru.epub in Resources */,
 				C4554341203EE43A008B7882 /* image-sport.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
