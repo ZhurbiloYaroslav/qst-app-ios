@@ -158,7 +158,7 @@
 /*20*/
 /*Fuzzy*/
 "advice_20_title" = "When will it all end?";
-"share_text_message" = "<p style=\"text-align: center;\"><strong>Help save lives!</strong></p>\n<p>Help your friends and acquaintances get rid of nicotine addiction and you will give them ten or twenty extra years of life. They will see their children, grandchildren, do something deed, plant a tree, build a house, and help those in need.</p>\n<p style=\"text-align: center;\"><strong>Saving a life is simple!</strong></p>\n<p>Share this app, Let's Quit Smoking Together book, and our website www.quitsmokingtogether.org with your friends, acquaintances! Perhaps, you will save their life!<br />\n It’s so simple but so much! It’s all in your hands!</p>";
+"share_text_message" = "<p style=\"text-align: center;\"><span style=\"font-family: helvetica, arial, sans-serif; font-size: 12pt;\"><strong>Help save lives!</strong></span></p>\n<p><span style=\"font-family: helvetica, arial, sans-serif; font-size: 12pt;\">Help your friends and acquaintances get rid of nicotine addiction and you will give them ten or twenty extra years of life. They will see their children, grandchildren, do something deed, plant a tree, build a house, and help those in need.</span></p>\n<p style=\"text-align: center;\"><span style=\"font-family: helvetica, arial, sans-serif; font-size: 12pt;\"><strong>Saving a life is simple!</strong></span></p>\n<p><span style=\"font-family: helvetica, arial, sans-serif; font-size: 12pt;\">Share this app, Let's Quit Smoking Together book, and our website www.quitsmokingtogether.org with your friends, acquaintances! Perhaps, you will save their life!</span><br />\n <span style=\"font-family: helvetica, arial, sans-serif; font-size: 12pt;\"> It’s so simple but so much! It’s all in your hands!</span></p>";
 "advert_remove_text_message" = "Ads in this application help our organization provide support for nicotine-dependent people and adolescent smoking.\n\nThe money we receive from them goes to fund book and CD giveaways, app development, and campaigns in all countries of the world. Your help is very important to us whether it is tolerating ads or donating a few dollars to go ad-free.\n\nIf you find advertising disrupting, you can turn it off for just a few dollars that will be spent on fighting nicotine addiction globally.\nAlso, please see the Donate section if you can help us in some other way.\n\nThanks for helping!";
 
 /*Fuzzy*/
@@ -272,7 +272,7 @@
 "username_is_invalid" = "Username is invalid";
 "book_chapter_first_title" = "Introduction";
 "book_chapter_first_fragment" = "Dear friend! I hope reading these lines doesn't make you yawn and you took this book from your shelf not out of desperation to find something interesting to read. If it has somehow made its way to your library, I believe it's either you are a smoker or a member of your family, who did not bother to take off the shelf this manual that may have been gathering dust there for months. Smokers always tend to buy such publications; many even read a few chapters, but lose interest towards the end.";
-"share_app_url" = "https://itunes.apple.com";
+"share_app_url" = "https://itunes.apple.com/us/app/quit-smoking-together/id1299702689?mt=8&ign-mpt=uo%3D4";
 "share_book_url" = "http://quitsmokingtogether.org/buy.php";
 "share_website_url" = "http://quitsmokingtogether.org";
 "button_donate" = "Donate";
