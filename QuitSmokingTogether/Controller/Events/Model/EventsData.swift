@@ -12,17 +12,17 @@ class EventsData {
     
     static var shared = EventsData()
     
-    public var arrayWithEvents = [Event]()
+    private var arrayWithEvents = [Event]()
     
-    var networkManager = NetworkManager()
+    private var networkManager = NetworkManager()
     
-    func getEventsFromServer(completionHandler: @escaping CompletionHandlerEmpty) {
+    public func getEventsFromServer(completionHandler: @escaping CompletionHandlerEmpty) {
         
         self.networkManager.get(.events) { resultData in
             switch resultData {
                 
             case .withEvents(let arrayWithEvents):
-                self.arrayWithEvents = arrayWithEvents
+                self.arrayWithEvents = self.sortEvents(arrayWithEvents)
                 completionHandler()
                 
             default:
@@ -31,7 +31,7 @@ class EventsData {
         }
     }
     
-    func getFirstEventWithType(_ type: Event.EventType, andStatus status: Event.EventStatus) -> Event {
+    public func getFirstEventWithType(_ type: Event.EventType, andStatus status: Event.EventStatus) -> Event {
 
         if getAllEventsWithType(type, andStatus: status).count > 0 {
             return getAllEventsWithType(type, andStatus: status)[0]
@@ -40,7 +40,7 @@ class EventsData {
         }
     }
     
-    func getAllEventsWithType(_ type: Event.EventType, andStatus status: Event.EventStatus) -> [Event] {
+    public func getAllEventsWithType(_ type: Event.EventType, andStatus status: Event.EventStatus) -> [Event] {
 
         var resultArrayWithEvents = [Event]()
 
@@ -67,8 +67,16 @@ class EventsData {
         return resultArrayWithEvents
         
     }
+    
+    private func sortEvents(_ sourceArrayWithEvents: [Event]) -> [Event] {
+        var result = [Event]()
+        result = sourceArrayWithEvents.sorted { event1, event2 in
+            return event1.getDate() > event2.getDate()
+        }
+        return result
+    }
 
-    func getArrayWithEvents() -> [Event] {
+    public func getArrayWithEvents() -> [Event] {
 
         if arrayWithEvents.count == 0 {
             getEventsFromServer() {}

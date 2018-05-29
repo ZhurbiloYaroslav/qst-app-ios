@@ -18,12 +18,12 @@ class EventsManager: NSObject {
     public let eventsData = EventsData.shared
     
     func getNumberOfEvents() -> Int {
-        return eventsData.arrayWithEvents.count
+        return eventsData.getArrayWithEvents().count
     }
     
     public func getNewsByPostID(_ postIDs: [Int]) -> Event? {
         var resultEvent: Event? = nil
-        eventsData.arrayWithEvents.forEach { event in
+        eventsData.getArrayWithEvents().forEach { event in
             if postIDs.contains(event.getPostID()) {
                 resultEvent = event
             }
@@ -31,9 +31,8 @@ class EventsManager: NSObject {
         return resultEvent
     }
     
-    
     func getEventFor(_ indexPath: IndexPath) -> Event {
-        return eventsData.arrayWithEvents[indexPath.row]
+        return eventsData.getArrayWithEvents()[indexPath.row]
     }
     
     //        arrayWithEvents = EventsList.getAllEventsWithType(eventsFilter.eventType, andStatus: eventsFilter.eventStatus)

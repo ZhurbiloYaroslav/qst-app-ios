@@ -142,6 +142,11 @@ extension Event {
         return id
     }
     
+    public func getDate() -> Date {
+        let stringWithEventDate = date
+        return Formatter.getDateFrom(stringWithEventDate)
+    }
+    
     public func getStringWithID() -> String {
         return String(describing: id)
     }
