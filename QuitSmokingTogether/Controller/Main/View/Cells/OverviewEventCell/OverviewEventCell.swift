@@ -36,10 +36,10 @@ class OverviewEventCell: UITableViewCell {
         switch eventType {
         case .News:
             readMoreButton.tag = ReadMoreButtonTag.News.rawValue
-            eventTitle += "News: "
+            eventTitle += "cell_title_prefix_news".localized()
         case .Competition:
             readMoreButton.tag = ReadMoreButtonTag.Competitions.rawValue
-            eventTitle += "Events: "
+            eventTitle += "cell_title_prefix_events".localized()
         default:
             break
         }

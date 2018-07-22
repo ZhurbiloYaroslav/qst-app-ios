@@ -282,3 +282,5 @@
 "button_donate" = "Помочь";
 "button_share_facebook" = "Поделиться в Facebook";
 "button_share_apps" = "Поделиться в других приложениях";
+"cell_title_prefix_events" = "События: ";
+"cell_title_prefix_news" = "Новости: ";

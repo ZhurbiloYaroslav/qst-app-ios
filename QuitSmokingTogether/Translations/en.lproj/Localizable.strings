@@ -278,3 +278,5 @@
 "button_donate" = "Donate";
 "button_share_facebook" = "Share with Facebook";
 "button_share_apps" = "Share with other apps";
+"cell_title_prefix_events" = "Events: ";
+"cell_title_prefix_news" = "News: ";
