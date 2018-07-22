@@ -57,7 +57,7 @@ class SettingsVC: UIViewController {
 extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 4
+        return 3
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -68,8 +68,6 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
             return 2
         case 2:
             return 2
-        case 3:
-            return 1
         default:
             return 0
         }
@@ -100,15 +98,15 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
             showFacebookLikeButtonIn(cell)
             showFacebookLoginButtonIn(cell)
             return cell
-        case [2,0]: // Remove advert
-            let cell = tableView.dequeueReusableCell(withIdentifier: "Advert", for: indexPath) as! SettingsCell
-            cell.updateAs(.removeAdvert)
-            return cell
-        case [2,1]: // Donate
+//        case [2,0]: // Remove advert
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "Advert", for: indexPath) as! SettingsCell
+//            cell.updateAs(.removeAdvert)
+//            return cell
+        case [2,0]: // Contacts
             let cell = tableView.dequeueReusableCell(withIdentifier: "Contacts", for: indexPath) as! SettingsCell
             cell.updateAs(.contacts)
             return cell
-        case [3,0]: // About
+        case [2,1]: // About
             let cell = tableView.dequeueReusableCell(withIdentifier: "About", for: indexPath) as! SettingsCell
             cell.updateAs(.about)
             return cell
@@ -133,11 +131,11 @@ extension SettingsVC: UITableViewDelegate, UITableViewDataSource {
 //            Browser.openURLWith(.AppInItunes)
         case [1,1]: // Like on Facebook
             break
-        case [2,0]: // Remove advert
-            performSegue(withIdentifier: "ShowRemoveAdvertFromSettings", sender: nil)
-        case [2,1]: // Donate
-            performSegue(withIdentifier: "ShowDonateFromSettings", sender: nil)
-        case [3,0]: // About
+//        case [2,0]: // Remove advert
+//            performSegue(withIdentifier: "ShowRemoveAdvertFromSettings", sender: nil)
+        case [2,0]: // Contacts
+            performSegue(withIdentifier: "ShowContactsFromSettings", sender: nil)
+        case [2,1]: // About
             performSegue(withIdentifier: "ShowAboutFromSettings", sender: nil)
         default:
             print("was selected undefined cell")
