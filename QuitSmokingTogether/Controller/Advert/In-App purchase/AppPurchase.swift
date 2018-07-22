@@ -11,7 +11,8 @@ import Foundation
 class AppPurchase {
     
     private var isPRO: Bool {
-        return UserDefaultsManager().isProVersion
+        return true
+        //return UserDefaultsManager().isProVersion
     }
     
     public func doWeShowAdvert() -> Bool {
