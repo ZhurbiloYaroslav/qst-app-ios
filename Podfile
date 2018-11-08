@@ -4,7 +4,7 @@ use_frameworks!
 
 target 'QuitSmokingTogether' do
     
-    pod 'FolioReaderKit'
+    pod 'FolioReaderKit', :git => 'https://github.com/FolioReader/FolioReaderKit', :branch => 'master'
     pod 'FacebookCore'
     pod 'FacebookLogin'
     pod 'FBSDKCoreKit'
