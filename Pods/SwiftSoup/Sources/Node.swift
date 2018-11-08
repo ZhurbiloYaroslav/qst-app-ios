@@ -10,7 +10,7 @@ import Foundation
 
 open class Node: Equatable, Hashable {
     private static let abs = "abs:"
-    private static let empty = ""
+    fileprivate static let empty = ""
     private static let EMPTY_NODES: Array<Node>  = Array<Node>()
     weak var parentNode: Node?
     var childNodes: Array <Node>
@@ -76,10 +76,10 @@ open class Node: Equatable, Hashable {
      */
     open func attr(_ attributeKey: String)throws ->String {
         let val: String = try attributes!.getIgnoreCase(key: attributeKey)
-        if (val.characters.count > 0) {
+        if (val.count > 0) {
             return val
         } else if (attributeKey.lowercased().startsWith(Node.abs)) {
-            return try absUrl(attributeKey.substring(Node.abs.characters.count))
+            return try absUrl(attributeKey.substring(Node.abs.count))
         } else {return Node.empty}
     }
 
@@ -113,7 +113,7 @@ open class Node: Equatable, Hashable {
 			return false
 		}
         if (attributeKey.startsWith(Node.abs)) {
-            let key: String = attributeKey.substring(Node.abs.characters.count)
+            let key: String = attributeKey.substring(Node.abs.count)
             do {
                 let abs = try absUrl(key)
                 if (attributes.hasKeyIgnoreCase(key: key) &&  !Node.empty.equals(abs)) {
@@ -560,7 +560,7 @@ open class Node: Equatable, Hashable {
      @return next sibling, or null if this is the last sibling
      */
     open func nextSibling() -> Node? {
-        guard let siblings: Array<Node> =  parentNode?.childNodes else{
+        guard let siblings: Array<Node> =  parentNode?.childNodes else {
             return nil
         }
 
@@ -708,7 +708,7 @@ open class Node: Equatable, Hashable {
 			let currParent: Node = nodesToProcess.removeFirst()
 
 			for i in 0..<currParent.childNodes.count {
-				let childClone: Node = currParent.childNodes[i].copy(parent:currParent)
+				let childClone: Node = currParent.childNodes[i].copy(parent: currParent)
 				currParent.childNodes[i] = childClone
 				nodesToProcess.append(childClone)
 			}
@@ -778,7 +778,7 @@ open class Node: Equatable, Hashable {
 
 }
 
-extension Node : CustomStringConvertible {
+extension Node: CustomStringConvertible {
 	public var description: String {
 		do {
 			return try outerHtml()
@@ -789,7 +789,7 @@ extension Node : CustomStringConvertible {
 	}
 }
 
-extension Node : CustomDebugStringConvertible {
+extension Node: CustomDebugStringConvertible {
     private static let space = " "
 	public var debugDescription: String {
 		do {

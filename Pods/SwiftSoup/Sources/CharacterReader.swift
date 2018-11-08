@@ -169,7 +169,7 @@ public final class CharacterReader {
         let val = input
 
         while (pos < remaining) {
-            
+
             if chars.contains(val[pos]) {
                 break
             }
@@ -454,4 +454,10 @@ public final class CharacterReader {
 //        }
 //        return false
 //    }
+}
+
+extension CharacterReader: CustomDebugStringConvertible {
+    public var debugDescription: String {
+        return  self.toString()
+    }
 }
