@@ -55,16 +55,16 @@ class CurrentUser {
 
 extension CurrentUser {
     
-    static func saveInfoFor(_ user: User?, andProvider provider: Provider, andName username: String? = nil) {
-        guard let userID = user?.uid else { return }
+    static func saveInfoFor(_ dataResult: AuthDataResult?, andProvider provider: Provider, andName username: String? = nil) {
+        guard let user = dataResult?.user else { return }
 
-        saveUserID(userID, andProvider: provider)
-        if let email = user?.email {
+        saveUserID(user.providerID, andProvider: provider)
+        if let email = user.email {
             self.email = email
         }
         if let username = username {
             self.name = username
-        } else if let displayName = user?.displayName {
+        } else if let displayName = user.displayName {
             self.name = displayName
         } else {
             self.name = "Anonymous"
