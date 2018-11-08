@@ -36,10 +36,11 @@ class Browser {
     
     enum UrlAdress: String {
         //TODO: Change address to the App
-        case Call_Phone = "tel://+380502022302"
+        case Call_Phone_1 = "tel://+380962718866"
+        case Call_Phone_2 = "tel://+380630648117"
         case Call_Skype = "skype:alexeykovalua"
-        case Call_Viber = "viber://add?number=380502022302"
-        case Call_WhatsApp = "https://api.whatsapp.com/send?phone=380502022302&text=Hello Alex, I need your help in quit smoking!"
+        case Call_Viber = "viber://add?number=380962718866"
+        case Call_WhatsApp = "https://api.whatsapp.com/send?phone=380962718866&text=Hello Alex, I need your help in quit smoking!"
         
         case Mail_Alexeykovalua = "mailto:quitsmokingtogether@gmail.com"
         

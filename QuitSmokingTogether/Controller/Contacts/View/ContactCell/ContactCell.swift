@@ -18,10 +18,11 @@ class ContactCell: UITableViewCell {
     var arrayWithCells: [Cell] = [
         Cell(type: .undefined, icon: UIImage(), title: "", value: ""), // This will be Image cell
         Cell(type: .undefined, icon: UIImage(), title: "", value: ""), // This will be Address cell
-        Cell(type: .call, icon: #imageLiteral(resourceName: "icon-call"), title: "Phone/fax:", value: "+380502022302"),
+        Cell(type: .call, icon: #imageLiteral(resourceName: "icon-call"), title: "Phone/fax:", value: "+380962718866"),
+        Cell(type: .call, icon: #imageLiteral(resourceName: "icon-call"), title: "Phone/fax:", value: "+380630648117"),
         Cell(type: .skype, icon: #imageLiteral(resourceName: "icon-skype"), title: "Skype:", value: "alexeykovalua"),
-        Cell(type: .viber, icon: #imageLiteral(resourceName: "icon-viber"), title: "Viber:", value: "+380502022302"),
-        Cell(type: .whatsApp, icon: #imageLiteral(resourceName: "icon-whatsapp"), title: "WhatsApp:", value: "+380502022302"),
+        Cell(type: .viber, icon: #imageLiteral(resourceName: "icon-viber"), title: "Viber:", value: "+380962718866"),
+        Cell(type: .whatsApp, icon: #imageLiteral(resourceName: "icon-whatsapp"), title: "WhatsApp:", value: "+380962718866"),
         Cell(type: .email, icon: #imageLiteral(resourceName: "icon-gmail-online"), title: "Email:", value: "quitsmokingtogether@gmail.com")
     ]
     
@@ -31,21 +32,17 @@ class ContactCell: UITableViewCell {
         iconBackground.setRadius(30, withWidth: 1, andColor: UIColor.clear)
     }
     
-    func configureCellWithType(_ cellType: CellType) {
+    func configureCellWith(_ cellModel: Cell) {
         
-        if cellType == .text {
+        if cellModel.type == .text {
             contactIcon.isHidden = true
             contactTitle.isHidden = true
             contactAddress.textColor = UIColor.darkGray
         }
         
-        for cell in arrayWithCells {
-            if cell.type == cellType {
-                contactIcon.image = cell.icon
-                contactTitle.text = cell.title
-                contactAddress.text = cell.value
-            }
-        }
+        contactIcon.image = cellModel.icon
+        contactTitle.text = cellModel.title
+        contactAddress.text = cellModel.value
     }
     
     struct Cell {

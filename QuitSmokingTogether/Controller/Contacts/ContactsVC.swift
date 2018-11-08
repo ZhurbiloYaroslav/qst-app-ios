@@ -49,14 +49,10 @@ class ContactsVC: UIViewController {
 extension ContactsVC: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return ContactCell().arrayWithCells.count + 1 // Added 1 image cell
+        return ContactCell().arrayWithCells.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath) as? ContactCell else {
-            return UITableViewCell()
-        }
         
         switch indexPath {
         case [0,0]:
@@ -65,23 +61,13 @@ extension ContactsVC: UITableViewDelegate, UITableViewDataSource {
         case [0,1]:
             let cell = tableView.dequeueReusableCell(withIdentifier: "AddressCell", for: indexPath) as! AddressCell
             return cell
-        case [0,2]:
-            cell.configureCellWithType(.call)
-            return cell
-        case [0,3]:
-            cell.configureCellWithType(.skype)
-            return cell
-        case [0,4]:
-            cell.configureCellWithType(.viber)
-            return cell
-        case [0,5]:
-            cell.configureCellWithType(.whatsApp)
-            return cell
-        case [0,6]:
-            cell.configureCellWithType(.email)
-            return cell
         default:
-            return UITableViewCell()
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "ContactCell", for: indexPath) as? ContactCell
+                else { return UITableViewCell() }
+            let index = indexPath.row
+            let cellModel = ContactCell().arrayWithCells[index]
+            cell.configureCellWith(cellModel)
+            return cell
         }
     }
     
@@ -92,14 +78,16 @@ extension ContactsVC: UITableViewDelegate, UITableViewDataSource {
         case [0,1]: // Address cell
             Browser.openURLWith(.Map_QST)
         case [0,2]:
-            Browser.openURLWith(.Call_Phone)
+            Browser.openURLWith(.Call_Phone_1)
         case [0,3]:
-            Browser.openURLWith(.Call_Skype)
+            Browser.openURLWith(.Call_Phone_2)
         case [0,4]:
-            Browser.openURLWith(.Call_Viber)
+            Browser.openURLWith(.Call_Skype)
         case [0,5]:
-            Browser.openURLWith(.Call_WhatsApp)
+            Browser.openURLWith(.Call_Viber)
         case [0,6]:
+            Browser.openURLWith(.Call_WhatsApp)
+        case [0,7]:
             Browser.openURLWith(.Mail_Alexeykovalua)
         default:
             print("was selected undefined cell")
