@@ -1203,8 +1203,10 @@ open class FolioReaderCenter: UIViewController, UICollectionViewDelegate, UIColl
             currentPage.webView?.setMenuVisible(false)
 
             //ZHURBILO
-            saveTextFromCurrentPage(webView: currentPage.webView)
-            delegate?.pageDidAppear?(currentPage)
+            if let webView = currentPage.webView {
+                saveTextFromCurrentPage(webView: webView)
+                delegate?.pageDidAppear?(currentPage)
+            }
             //ZHURBILO
         }
 

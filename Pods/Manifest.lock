@@ -123,7 +123,7 @@ DEPENDENCIES:
   - Firebase/Auth
   - Firebase/Core
   - Firebase/Database
-  - FolioReaderKit (from `https://github.com/YaroslavZhurbilo/FolioReaderKit.git`, commit `c7e57f0`)
+  - FolioReaderKit (from `https://github.com/YaroslavZhurbilo/FolioReaderKit.git`, commit `f3d2b31`)
   - Google-Mobile-Ads-SDK
   - KeychainSwift
   - OneSignal (< 3.0, >= 2.6.2)
@@ -167,12 +167,12 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   FolioReaderKit:
-    :commit: c7e57f0
+    :commit: f3d2b31
     :git: https://github.com/YaroslavZhurbilo/FolioReaderKit.git
 
 CHECKOUT OPTIONS:
   FolioReaderKit:
-    :commit: c7e57f0
+    :commit: f3d2b31
     :git: https://github.com/YaroslavZhurbilo/FolioReaderKit.git
 
 SPEC CHECKSUMS:
@@ -210,6 +210,6 @@ SPEC CHECKSUMS:
   SwiftSoup: 92f5b348c131aed8af04f4326db1579ab19fa08c
   ZFDragableModalTransition: 0d294eaaba6edfcb9839595de765f9ca06a4b524
 
-PODFILE CHECKSUM: 9e7bcd23b1f6dac3f721651c8a538298c043b120
+PODFILE CHECKSUM: 4af8ad42573586f9b42276e06abf11baeb8b202b
 
 COCOAPODS: 1.5.3
