@@ -17,7 +17,7 @@ class OverviewEventCell: UITableViewCell {
     @IBOutlet weak var readMoreLabel: UILabel!
     @IBOutlet weak var readMoreButton: UIButton!
     
-    var currentEvent: Event!
+    var currentEvent: QSTEvent!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -30,7 +30,7 @@ class OverviewEventCell: UITableViewCell {
         case Competitions = 1
     }
     
-    func updateCellFor(eventType: Event.EventType) {
+    func updateCellFor(eventType: QSTEvent.EventType) {
         
         var eventTitle = ""
         switch eventType {

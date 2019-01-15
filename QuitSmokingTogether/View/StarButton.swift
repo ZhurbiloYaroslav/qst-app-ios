@@ -21,13 +21,13 @@ class StarButton: UIButton {
         self.tintColor = Constants.Color.starInactive
     }
     
-    func makeButtonActiveIfActive(_ event: Event) {
+    func makeButtonActiveIfActive(_ event: QSTEvent) {
         if event.status == .Starred {
             self.tintColor = Constants.Color.starActive
         }
     }
     
-    func starredButtonPressedFor(_ event: Event) {
+    func starredButtonPressedFor(_ event: QSTEvent) {
         if event.status == .Starred {
             event.status = .Read
             self.tintColor = Constants.Color.starInactive

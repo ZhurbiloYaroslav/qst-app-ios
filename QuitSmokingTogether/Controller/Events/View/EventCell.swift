@@ -16,7 +16,7 @@ class EventCell: UITableViewCell {
     @IBOutlet weak var readMoreLabel: UILabel!
     @IBOutlet weak var eventStarredButton: StarButton!
     
-    var currentEvent: Event!
+    var currentEvent: QSTEvent!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,7 +24,7 @@ class EventCell: UITableViewCell {
         readMoreLabel.setRadius(10, withWidth: 1, andColor: UIColor.clear)
     }
     
-    func updateWith(_ event: Event) {
+    func updateWith(_ event: QSTEvent) {
         
         currentEvent = event
         eventTitle.text = event.title

@@ -46,10 +46,10 @@ public enum ImagePreload {
 open class ImageSlideshow: UIView {
 
     /// Scroll View to wrap the slideshow
-    open let scrollView = UIScrollView()
+    public let scrollView = UIScrollView()
 
     /// Page Control shown in the slideshow
-    open let pageControl = UIPageControl()
+    public let pageControl = UIPageControl()
 
     /// Activity indicator shown when loading image
     open var activityIndicator: ActivityIndicatorFactory? {

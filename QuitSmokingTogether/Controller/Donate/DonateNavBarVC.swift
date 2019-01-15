@@ -23,7 +23,7 @@ class DonateNavBarVC: NavBarVC {
             guard let path = Bundle.main.path(forResource: donateFileName, ofType: "html") else { return }
             let ngoHtmlText = try! String(contentsOfFile: path).trimmingCharacters(in: .whitespacesAndNewlines)
             
-            let articleWithNGO = Event(id: 0, date: "",
+            let articleWithNGO = QSTEvent(id: 0, date: "",
                                        title: "", htmlContent: ngoHtmlText,
                                        type: [.Undefined], status: .All)
             guard let linkForNGOTitle = AssetExtractor.createLocalUrl(forImageNamed: "image-donate")

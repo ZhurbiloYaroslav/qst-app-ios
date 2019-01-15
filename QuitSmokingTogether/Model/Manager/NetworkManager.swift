@@ -72,9 +72,9 @@ extension NetworkManager {
             return ResultData.withErrors([NetworkError.undefined])
         }
                 
-        var arrayWithEvents = [Event]()
+        var arrayWithEvents = [QSTEvent]()
         for dictWithResult in arrayWithEventsResult {
-            let event = Event(withResult: dictWithResult)
+            let event = QSTEvent(withResult: dictWithResult)
             arrayWithEvents.append(event)
         }
         

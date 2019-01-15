@@ -12,7 +12,7 @@ class EventsData {
     
     static var shared = EventsData()
     
-    private var arrayWithEvents = [Event]()
+    private var arrayWithEvents = [QSTEvent]()
     
     private var networkManager = NetworkManager()
     
@@ -31,18 +31,18 @@ class EventsData {
         }
     }
     
-    public func getFirstEventWithType(_ type: Event.EventType, andStatus status: Event.EventStatus) -> Event {
+    public func getFirstEventWithType(_ type: QSTEvent.EventType, andStatus status: QSTEvent.EventStatus) -> QSTEvent {
 
         if getAllEventsWithType(type, andStatus: status).count > 0 {
             return getAllEventsWithType(type, andStatus: status)[0]
         } else {
-            return Event()
+            return QSTEvent()
         }
     }
     
-    public func getAllEventsWithType(_ type: Event.EventType, andStatus status: Event.EventStatus) -> [Event] {
+    public func getAllEventsWithType(_ type: QSTEvent.EventType, andStatus status: QSTEvent.EventStatus) -> [QSTEvent] {
 
-        var resultArrayWithEvents = [Event]()
+        var resultArrayWithEvents = [QSTEvent]()
 
         for event in getArrayWithEvents() {
             switch (type, status) {
@@ -68,19 +68,19 @@ class EventsData {
         
     }
     
-    private func sortEvents(_ sourceArrayWithEvents: [Event]) -> [Event] {
-        var result = [Event]()
+    private func sortEvents(_ sourceArrayWithEvents: [QSTEvent]) -> [QSTEvent] {
+        var result = [QSTEvent]()
         result = sourceArrayWithEvents.sorted { event1, event2 in
             return event1.getDate() > event2.getDate()
         }
         return result
     }
 
-    public func getArrayWithEvents() -> [Event] {
+    public func getArrayWithEvents() -> [QSTEvent] {
 
         if arrayWithEvents.count == 0 {
             getEventsFromServer() {}
-            return [Event]()
+            return [QSTEvent]()
         }
         
         return arrayWithEvents
@@ -90,7 +90,7 @@ class EventsData {
 
 extension EventsData {
     typealias CompletionHandlerWithErrors = (_ errorMessages: [NetworkError]?)->()
-    typealias CompletionHandlerWithEvents = () -> ([Event])
+    typealias CompletionHandlerWithEvents = () -> ([QSTEvent])
     typealias CompletionHandlerEmpty = () -> ()
 }
 

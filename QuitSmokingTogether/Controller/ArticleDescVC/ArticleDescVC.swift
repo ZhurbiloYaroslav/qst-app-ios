@@ -19,7 +19,7 @@ class ArticleDescVC: UIViewController {
     
     @IBOutlet var slideshow: ImageSlideshow!
     
-    var currentArticle: Event?
+    var currentArticle: QSTEvent?
     
     let networkManager = NetworkManager()
     
@@ -115,7 +115,7 @@ extension ArticleDescVC {
         slideshow.addGestureRecognizer(recognizer)
     }
     
-    func setupSlideShowFor(_ event: Event) {
+    func setupSlideShowFor(_ event: QSTEvent) {
         
         var arrayWithImages = [SDWebImageSource]()
         

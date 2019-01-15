@@ -216,7 +216,7 @@ class ProfileVC: UITableViewController {
         guard let fieldText = textField.text else { return }
         var newMessage = ""
         var attributes = [ NSAttributedStringKey.foregroundColor : UIColor.black ]
-        
+        guard let textFieldTypeInCurrentAlertVC = textFieldTypeInCurrentAlertVC else { return }
         switch textFieldTypeInCurrentAlertVC {
             
         case .Email:

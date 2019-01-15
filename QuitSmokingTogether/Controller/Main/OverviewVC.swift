@@ -14,7 +14,7 @@ class OverviewVC: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var eventToPresent: Event?
+    var eventToPresent: QSTEvent?
     var eventsManager = EventsManager.shared
     
     override func viewDidLoad() {
@@ -174,7 +174,7 @@ extension OverviewVC {
         }
     }
     
-    func showEventDescriptionWith(type: Event.EventType) {
+    func showEventDescriptionWith(type: QSTEvent.EventType) {
         
         if let navController = self.tabBarController?.viewControllers?[1] as? UINavigationController{
             if let eventsListController = navController.childViewControllers.first as? EventsListVC {
@@ -201,7 +201,7 @@ extension OverviewVC {
             guard let path = Bundle.main.path(forResource: ngoFileName, ofType: "html") else { return }
             let ngoHtmlText = try! String(contentsOfFile: path).trimmingCharacters(in: .whitespacesAndNewlines)
             
-            let articleWithNGO = Event(id: 0, date: "",
+            let articleWithNGO = QSTEvent(id: 0, date: "",
                               title: "", htmlContent: ngoHtmlText,
                               type: [.Undefined], status: .All)
             guard let linkForNGOTitle = AssetExtractor.createLocalUrl(forImageNamed: "image-ngo")

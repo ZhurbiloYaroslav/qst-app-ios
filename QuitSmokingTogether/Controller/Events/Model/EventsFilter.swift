@@ -12,10 +12,10 @@ class EventsFilter {
     
     static var shared = EventsFilter()
     
-    var eventType: Event.EventType!
-    var eventStatus: Event.EventStatus!
+    var eventType: QSTEvent.EventType!
+    var eventStatus: QSTEvent.EventStatus!
     
-    init(type: Event.EventType, status: Event.EventStatus) {
+    init(type: QSTEvent.EventType, status: QSTEvent.EventStatus) {
         self.eventType = type
         self.eventStatus = status
     }

@@ -19,7 +19,7 @@ class EventsListVC: UIViewController {
     let eventsManager = EventsManager.shared
     let eventsFilter = EventsFilter.shared
     
-    var eventToPresentFromOverview: Event?
+    var eventToPresentFromOverview: QSTEvent?
     var doWePresentEventFromOverview = false
     
     override func viewDidLoad() {

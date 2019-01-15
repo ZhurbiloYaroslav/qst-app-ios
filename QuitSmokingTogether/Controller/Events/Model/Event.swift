@@ -1,5 +1,5 @@
 //
-//  Event.swift
+//  QSTEvent.swift
 //  QuitSmokingTogether
 //
 //  Created by Yaroslav Zhurbilo on 30.11.17.
@@ -11,7 +11,7 @@ import UIKit
 import Foundation
 import SwiftSoup
 
-public class Event: NSObject {
+public class QSTEvent: NSObject {
     
     var id: Int
     var date: String
@@ -136,7 +136,7 @@ public class Event: NSObject {
     }
 }
 
-extension Event {
+extension QSTEvent {
     
     public func getPostID() -> Int {
         return id

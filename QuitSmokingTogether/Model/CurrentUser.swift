@@ -239,8 +239,8 @@ extension CurrentUser {
         }
     }
     
-    static var eventsInfo: [String: Event] {
-        return ["1": Event()]
+    static var eventsInfo: [String: QSTEvent] {
+        return ["1": QSTEvent()]
     }
     
     public enum Provider: String {
