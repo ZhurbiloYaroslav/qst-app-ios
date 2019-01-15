@@ -5,7 +5,7 @@ inhibit_all_warnings!
 
 target 'QuitSmokingTogether' do
     
-    pod 'FolioReaderKit', :git => 'https://github.com/YaroslavZhurbilo/FolioReaderKit.git', :commit => 'f3d2b31'
+    pod 'FolioReaderKit', :git => 'https://github.com/YaroslavZhurbilo/FolioReaderKit.git', :commit => '8d28b36'
     pod 'FacebookCore'
     pod 'FacebookLogin'
     pod 'FBSDKCoreKit'
