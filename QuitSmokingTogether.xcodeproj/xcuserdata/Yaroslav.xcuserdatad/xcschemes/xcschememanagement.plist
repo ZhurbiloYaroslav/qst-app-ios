@@ -9,6 +9,11 @@
 			<key>orderHint</key>
 			<integer>29</integer>
 		</dict>
+		<key>OneSignalNotificationServiceExtension.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>29</integer>
+		</dict>
 		<key>QuitSmokingTogether.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
